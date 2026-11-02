@@ -171,6 +171,8 @@ func _sees_target() -> bool:
 	return get_world_2d().direct_space_state.intersect_ray(ray).is_empty()
 
 func _damaged(_amount: int, direction: Vector2) -> void:
+	melee.cancel()
+	telegraph.hide()
 	if health.current > 0:
 		state = State.HURT
 		state_time = HURT_DURATION

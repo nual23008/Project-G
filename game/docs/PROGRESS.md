@@ -1,5 +1,75 @@
 # Tiến độ
 
+## 2026-11-02 — Bàn giao phiên: skill Pixelorama và rà soát asset hiện tại
+
+Người dùng kết thúc phiên vì hết quota và yêu cầu ghi lại để tiếp tục lần sau. Đã tạo skill và đọc bộ asset hiện tại; chưa có yêu cầu sản xuất hoặc thay thế đồ họa tiếp theo. Việc rà soát này không sửa asset, scene, gameplay hoặc save.
+
+### Skill đã tạo
+
+- [pixelorama-pixel-artist](../../.agents/skills/pixelorama-pixel-artist/SKILL.md) nằm trong `.agents/skills/pixelorama-pixel-artist/`, có đủ ba template style/asset/animation và ba script `validate_assets.py`, `check_animation_sheet.py`, `export_manifest.py`. Các reference giải thích schema JSON, Godot import và ví dụ main character idle/walk bốn hướng, export 40 frame thành sheet 256×160.
+- Pixelorama là editor chính; khi thiếu automation thì hướng dẫn thao tác thủ công, không tuyên bố đã vẽ khi chưa có file. Không dùng paid API nếu chưa được người dùng chấp thuận. Script dùng Python 3.10+/Pillow, chạy offline; xuất metadata và tùy chọn SpriteFrames `.tres`, tileset được hướng dẫn cấu hình thủ công.
+- Schema `art_spec.json` của skill là định dạng staging riêng, **không phải** schema manifest đang dùng trong game. Khi tích hợp cần thích ứng theo registry hiện có, giữ ID và resource/runtime consumer.
+- Trong bước tạo skill đã chạy: skill validator, **25 test Python**, **147 kiểm tra Godot 4.7.2** trong project tạm (region/frame/FPS/loop/pivot/timing biến thiên/playback), và `bash game/tools/check.sh` **1.222/1.222 đạt**, import sạch. Forward test độc lập với potion/water cũng đạt. Đây là fixture kiểm công cụ, không phải artwork Pixelorama hoàn chỉnh.
+
+### Bộ asset thực tế đã đọc và xem
+
+- Nguồn chuẩn: [manifest](../resources/art/manifest.json), [danh mục asset](asset-manifest.md), [brief đồ họa hiện tại](ART_REFRESH_BRIEF.md), [hướng mỹ thuật](ART_DIRECTION.md), [kiến trúc](ARCHITECTURE.md). Runtime dùng `assets/art_refresh/sheets/**` và `resources/art/*.tres`; `art_stage1`/sprites cũ giữ làm lịch sử. Ảnh trong `art_v3/sources` vẫn được một số generator active sử dụng làm nguồn.
+- Đếm trực tiếp manifest: **40 loại, 75 state, 546 lượt frame**, 40 resource và **38 PNG texture** tính cả override của state. Grass/stone_path/water/shore dùng chung atlas `terrain.png`; state đường viền dùng thêm `paths.png`. Cần giữ layout pha của atlas khi chỉnh terrain.
+- Đối chiếu PNG theo indices/columns từng state: không thấy resource thiếu, frame vượt biên, count sai hoặc clip hoàn toàn tĩnh. Đây là kiểm cấu trúc/khác biệt pixel, không thay thế đánh giá chuyển động và contact trong engine. Một số pose có hold hợp lệ: player idle 8 lượt/6 hình khác; guardian idle 8 lượt/3 hình khác.
+
+| Nhóm | Quy cách đang dùng |
+|---|---|
+| Player | **96×64, pivot 48,60**; 20 state = idle/walk/attack/hurt/death × bốn hướng. Idle 8 lượt @5 FPS; walk 6 @9; attack 9 @33,33; hurt 5 @22,73; death 9 @10. Không ép về mặc định 32×32/48×48 của skill. |
+| Rowan / guardian | Rowan 48×64 pivot24,60, idle_down; guardian 48×56 pivot24,52, idle/walk/windup/attack/hurt/death. |
+| World props | Nhà144×128, pine80×112, oak104×112; đá/đèn/crystal/hàng rào/biển/cây nhỏ/rương/cổng có canvas và idle riêng. |
+| Terrain / items | Tile16×16 có ambient; kiếm/thuốc/herb/ore/echo_shard24×24, icon và idle riêng; orb XP16×20 có idle/collect. |
+| UI / VFX | Panel/nút/thanh HP/XP/mana/stamina và bảng chỉ số có animation; slash/telegraph/hit spark/level-up có play riêng. |
+
+Đã xem ảnh render đang lưu `tests/output/village.png`, bảng chỉ số, dải frame Rowan/guardian/player và `tests/output/progression-art-contact.png`; không chạy lại renderer trong bước đọc asset. Nhận xét bằng mắt: fantasy top-down, ánh hổ phách trên trái, burgundy/indigo/plum, gỗ nâu/đá kem và rừng olive/emerald. Nhà/cây/nhân vật chi tiết hơn rõ so với props nhỏ, item, địa hình và VFX; đây là điểm cần đồng bộ nếu người dùng muốn nâng mỹ thuật tiếp.
+
+### Điểm cần giữ cho phiên sau
+
+- **Chưa có file `.pxo` trong `game/`**. Nguồn hiện là PNG, pixel grid và generator Python (`tools/build_art_refresh.py` cùng năm nhóm generator). Chưa có master Pixelorama layered; không ghi nhận như đã chuyển pipeline sang Pixelorama.
+- `docs/art-bible.md` còn mô tả bộ `art_stage1` cũ (actor24×32, palette/terrain tĩnh). Khi làm tiếp ưu tiên manifest, ART_REFRESH_BRIEF, ART_DIRECTION và quy tắc mới trong AGENTS; chưa sửa tài liệu cũ trong phiên này.
+- Có **9 candidate player SpriteFusion** tại `assets/sprites/player/spritefusion_v1/candidates/`. [design_review.json](../assets/sprites/player/spritefusion_v1/design_review.json) còn `approved_asset_id: null`, `runtime_modified: false`; đề xuất frame48×48 đang chờ duyệt, player active vẫn96×64. Chưa chọn hoặc tích hợp candidate nào.
+- Giữ mọi state cùng nhân dạng/palette/canvas/pivot; mọi loại persistent mới có idle/ambient nhiều hình thật ngay khi không tương tác. Body/slash/hitbox contact phải cùng tick damage, giữ nhịp combat hiện tại và save v2.
+- Bắt đầu phiên sau bằng đọc mục bàn giao này, ARCHITECTURE, AGENTS và skill Pixelorama nếu tiếp tục công việc art. Khi có yêu cầu chỉnh asset: xác định đúng bộ active và phạm vi, rồi mới sửa; cập nhật manifest/resource/runtime, xem sheet và motion/render thật, chạy `bash game/tools/check.sh`, ghi kết quả mới.
+- Ảnh tổng hợp và JSON khảo sát tạm ở `/tmp/project-g-current-assets.png`, `/tmp/project-g-player-animation-frames.png`, `/tmp/project-g-current-assets-inspection.json`; có thể mất sau khi dọn `/tmp`. Các kết luận cần thiết đã được ghi trong mục này; ảnh/preview gốc vẫn có trong `assets/art_refresh/previews` và `tests/output`.
+
+## 2026-11-02 — XP, cấp 9999, bảy chỉ số và bộ chỉ số khởi đầu
+
+Đã phân tích yêu cầu thành [prompt/đặc tả triển khai](PROGRESSION_IMPLEMENTATION_PROMPT.md), gồm công thức, khởi đầu, giao dịch, save/migration, rào file và nghiệm thu. Người dùng chọn bảy chỉ số và đòn chém cường hóa. Architecture làm model/save; Gameplay làm vitals/combat; UI làm HUD/bảng; root tích hợp Main/world/orb/respawn/art và kiểm tra. Giữ bộ nhân dạng đồ họa mới.
+
+### Đã triển khai
+- Khởi đầu: cấp 1, XP 0/100, 0 điểm; HP 100, năng lượng 50, thể lực 100, đi/chạy 72/112 px/s, May mắn 0, Sức mạnh 10, Phòng thủ 0. Mỗi cấp nhận đúng 5 điểm; tối đa cấp 9999 và 49.990 điểm. XP dư chuyển qua nhiều cấp. Ở MAX, orb vẫn được thu/xóa nhưng không thêm XP hoặc điểm.
+- Quái thường rơi 60 XP, guardian 120 XP. Orb có idle/collect riêng, tự hút trong 64 px và thu trong 12 px khi player sống, đang chơi và không bị tường che. Không chiếm túi, không cộng ngay lúc giết. Orb chưa nhặt và vị trí đang hút được lưu, không mất hoặc nhân đôi khi đổi vùng/tải lại.
+- C mở bảng bảy chỉ số, xem giá trị hiệu dụng và tiêu 1/5/10/100 điểm mỗi lần. HP +20/điểm, mana/stamina +10, Strength +2 damage; Speed/Luck/Defense dùng soft curve trong prompt. Tăng max giữ lượng vital đã mất, không hồi đầy bằng mở bảng hoặc nhận XP. Bảng pause world và hỗ trợ chuột/bàn phím, đóng bằng C/Esc.
+- Shift dùng 18 thể lực/s khi thực sự chạy, hồi 20/s sau 0,6 s; kiệt sức đi bộ tới khi hồi 20 rồi chạy lại. Mana hồi 3/s sau 1,5 s; R dùng 20 cho slash ×1,8. Đòn bị chặn không tiêu mana. Crit ×1,5 chỉ roll một lần mỗi swing; Defense có giới hạn, luôn nhận ít nhất 1 damage. Nhịp bước theo Speed, action/idle giữ nhịp riêng.
+- Scout hồi sinh khi rời/vào lại rừng; guardian không hồi sinh. Item loot chỉ rơi lần đầu, các vòng sau cấp XP. Orb chưa nhặt cùng nguồn được gộp để giới hạn số node. Loading không kích hoạt respawn; quest/chest/loot cũ vẫn one-shot. Player hồi sinh đầy theo max vitals hiện tại, giữ progression và không autosave.
+- Save v2 lưu profile/vitals/orb/cycle. V1 qua checksum/schema rồi mới migrate trong bộ nhớ; chỉ ghi v2 khi chủ động Save. Giữ inventory/quest/HP/position/world. V1 có field dành riêng cho v2 bị từ chối để tránh hạ version làm reset XP; backup hợp lệ được dùng. Hurt ngắt hit đang chờ và ẩn VFX ở cả hai phía, giữ mana đã tiêu/cooldown.
+- Bảy asset mới có resource/manifest/source grid riêng: orb XP, lên cấp, slash cường hóa, ba thanh HUD và bảng chỉ số. Bộ active hiện có **40 loại, 75 state, 546 lượt frame**. Nguồn: `tools/build_progression_art.py` và `assets/art_refresh/grids/progression`. Giữ palette/vật liệu/canvas/pivot và contact của body/sword.
+
+### Nghiệm thu trên mã cuối
+
+Godot 4.7.2, Linux/Compatibility. `bash game/tools/check.sh`: **1.222/1.222 assertions đạt**, import không có lỗi script/resource/parse.
+
+| Bộ | Đạt | Bằng chứng |
+|---|---|---|
+| Model/cấp/điểm/stats/JSON/migration/backup/downgrade | 128/128 | [model](../tests/output/progression-model.log) |
+| Physics/vitals/regen/sprint/crit/defense/cường hóa/interruption | 83/83 | [combat](../tests/output/progression-combat.log) |
+| UI/batch/focus/giá trị lớn/mọi stat ở full budget/MAX/ambient | 35/35 | [UI](../tests/output/progression-ui.log) |
+| Kill → drop → save/load → collect → level → allocate → respawn → merge → reload/MAX | 30/30 | [integration](../tests/output/progression-integration.log) |
+| Art/idle/pivot/FPS/contact/runtime | 808/808 | [art](../tests/output/art-contract.log) |
+| Hồi quy làng/UI, RPG/save và journey bằng input thật | 68+57+13 | [làng](../tests/output/phase2-regression.log), [RPG](../tests/output/phase2-integration.log), [journey](../tests/output/phase2-journey.log) |
+
+- Integration hạ guardian/scout bằng R/J và hitbox thật, dùng thuốc hữu hạn, không gán HP địch để giết. Fixture có teleport và dời pending orb để thử merge; journey độc lập vẫn đi bằng input, không teleport. Save/load giữ orb, thu một lần, phục hồi đúng điểm/vitals. Cap 9999 thử bằng grant tổng hợp; không tuyên bố đã chơi tay tới cấp đó.
+- Đã tìm và sửa: comparator Dictionary phân biệt int/float sau JSON (test dùng structural comparator có bite checks); version flip có thể reset profile (đã chặn); Hurt trước contact vẫn gây ghost damage (đã hủy). Bộ combat mới trên hành vi cũ thất bại đúng 5 check, 78/83; sau sửa đạt 83/83.
+- Renderer thật: 9 ảnh progression và 8 ảnh hồi quy menu/thoại/pause/settings, không tràn label/thoại được phát hiện. Đã xem [bảng khởi đầu](../tests/output/progression_starting_stats.png), [điểm kiếm được](../tests/output/progression_earned_points.png), [MAX](../tests/output/progression_level_9999.png), [contact sheet](../tests/output/progression-ui-contact.png). Log [progression](../tests/output/progression-render.log) và [hồi quy render](../tests/output/progression-regression-render.log).
+- **36 frame renderer cách 100 ms**, 35/35 chuyển tiếp có đổi pixel, đóng thành [GIF animation](../tests/output/progression-animation.gif). Có [contact sheet nguồn](../tests/output/progression-art-contact.png) và GIF riêng cho đủ 8 clip mới. Fixture playback phát FX để review; chứng minh thưởng gameplay nằm ở integration riêng. [Motion log](../tests/output/progression-motion.log), [review JSON](../tests/output/progression-animation-review.json).
+- `gd_review.image_checks` kiểm ảnh/frame; shell syntax, Python compile và JSON parse đều đã chạy. Tests chỉ dùng tên save riêng, không ghi đè primary người chơi. Số ảnh và kết quả cuối ở [image review](../tests/output/progression-image-review.json).
+
+Giới hạn: đây là bảng nâng stat, chưa phải cây ability nhiều nhánh; mana hiện dùng đòn R. Hai vùng/quái vẫn là nội dung đầu game; chưa cân bằng endgame 1..9999 hoặc playtest tay dài/Windows/gamepad. Công thức và trần đã kiểm tra, chưa có nội dung quái cấp cao. Chạy `bash run_game.sh`, C mở nhân vật, R cường hóa.
+
 ## 2026-11-02 — Sửa đúng yêu cầu: thay đồ họa mới, idle riêng và đồng bộ state
 
 Bộ `art_stage1` ở mục lịch sử dưới đây vẫn dựa trên sprite cũ đổi màu nên **không đáp ứng yêu cầu thay đồ họa**. Bộ đó đã được thay khỏi runtime. Active hiện tại là `assets/art_refresh`: **33 loại, 67 state, 486 lượt frame**, toàn bộ texture trong manifest trỏ vào thư mục mới, không fallback về sprite cũ.

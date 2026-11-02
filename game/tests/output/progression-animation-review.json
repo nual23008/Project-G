@@ -1,0 +1,70 @@
+{
+  "resources": {
+    "experience_orb": {
+      "idle": {
+        "frames": 8,
+        "distinct": 8,
+        "fps": 8,
+        "loop": true
+      },
+      "collect": {
+        "frames": 8,
+        "distinct": 8,
+        "fps": 24,
+        "loop": false
+      }
+    },
+    "level_up": {
+      "play": {
+        "frames": 12,
+        "distinct": 12,
+        "fps": 20,
+        "loop": false
+      }
+    },
+    "empowered_slash": {
+      "play": {
+        "frames": 8,
+        "distinct": 8,
+        "fps": 33.333333333333336,
+        "loop": false
+      }
+    },
+    "ui_experience": {
+      "idle": {
+        "frames": 6,
+        "distinct": 6,
+        "fps": 3,
+        "loop": true
+      }
+    },
+    "ui_energy": {
+      "idle": {
+        "frames": 6,
+        "distinct": 6,
+        "fps": 3,
+        "loop": true
+      }
+    },
+    "ui_stamina": {
+      "idle": {
+        "frames": 6,
+        "distinct": 6,
+        "fps": 3,
+        "loop": true
+      }
+    },
+    "ui_stats_panel": {
+      "idle": {
+        "frames": 6,
+        "distinct": 6,
+        "fps": 2,
+        "loop": true
+      }
+    }
+  },
+  "renderer_frames": 36,
+  "interval_ms": 100,
+  "changing_transitions": 35,
+  "fixture_note": "Resource playback showcase; the final orb collection is real. Gameplay rewards are verified by progression_integration_test.gd."
+}

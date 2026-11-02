@@ -12,9 +12,15 @@ Chạy bằng terminal:
 
 WASD / phím mũi tên: đi · Shift: chạy · E: tương tác / tiếp tục hội thoại · J: đánh theo hướng nhìn · Chuột trái: đánh hướng con trỏ · H: uống thuốc · I: túi đồ · Q: nhật ký · F5: lưu · Esc: tạm dừng / quay lại · F11: toàn màn hình. Chuột và Tab / Enter điều khiển menu.
 
+**C: bảng nhân vật/chỉ số · R: chém cường hóa** (20 năng lượng, sát thương ×1.8). Chạy dùng thể lực; nghỉ sẽ hồi thể lực/năng lượng. Quái thường rơi 60 XP, guardian 120 XP; tới gần để hút/nhặt, không chiếm ô túi. Mỗi cấp nhận 5 điểm, tối đa cấp 9999. Bảng C có 7 chỉ số và các mức phân bổ 1/5/10/100 điểm. Scout hồi sinh khi rời rừng rồi vào lại; các lượt sau chỉ rơi XP, loot vật liệu rơi lần đầu. Guardian không hồi sinh.
+
+Khởi đầu: cấp 1, XP 0/100, 0 điểm; máu 100, năng lượng 50, thể lực 100, đi/chạy 72/112 px/s, may mắn 0, sức mạnh 10, phòng thủ 0. Prompt/phân tích/công thức đầy đủ ở [PROGRESSION_IMPLEMENTATION_PROMPT](game/docs/PROGRESSION_IMPLEMENTATION_PROMPT.md). Xem [bảng chỉ số](game/tests/output/progression_starting_stats.png), [điểm sau lên cấp](game/tests/output/progression_earned_points.png) và [preview animation](game/tests/output/progression-animation.gif).
+
 Bản chơi hiện tại: chọn **Hành trình mới**, trò chuyện xong với Rowan rồi tới cổng bắc và nhấn E. Theo đường đá lên vòng đá phía bắc rừng, hạ sinh vật canh giữ rồi E nhặt mảnh tinh thể. Theo đường xuống nam và E ở vòng sáng để về làng, báo tin cho Rowan để nhận thưởng. Q hiển thị từng mục tiêu. Khởi đầu có kiếm và ba thuốc; kẻ địch rơi quặng và thuốc, rừng có thảo dược và rương.
 
 **Lưu là thủ công:** F5 hoặc Esc → Lưu hành trình. Một ô lưu và một bản dự phòng; Hành trình mới và Về menu không ghi đè bản lưu. **Tiếp tục bản lưu** chỉ bật khi bản chính hoặc dự phòng hợp lệ. Save nằm tại `user://journey.json` (Linux: `~/.local/share/godot/app_userdata/Dư Âm Thế Giới Lãng Quên/`). Chết sẽ hồi sinh ở làng, giữ đồ/tiến trình; bản lưu trên đĩa không tự đổi.
+
+Save hiện là version 2, lưu cả XP/level/điểm/chỉ số, HP/năng lượng/thể lực hiện tại, orb chưa nhặt và vòng hồi sinh scout. Save version 1 được xác minh rồi chuyển trong bộ nhớ khi tải; chỉ khi bạn chủ động lưu mới ghi v2, giữ backup hợp lệ. Chết giữ cấp/XP/điểm và hồi đầy theo chỉ số tối đa đã nâng.
 
 Phase 2 hoàn thành chặng thám hiểm của The First Echo. Lyra, sự kiện ký ức, Mira và các lựa chọn có hậu quả thuộc Phase 3; chưa phải bản chơi thử 20–40 phút. Chưa có audio hoặc bản export Windows.
 

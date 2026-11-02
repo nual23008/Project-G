@@ -1,0 +1,51 @@
+{
+  "status": "design_pending_generation_and_user_review",
+  "frame_size": [
+    48,
+    48
+  ],
+  "source_player_texture": "game/assets/art_refresh/sheets/player.png",
+  "source_sha256": "721d0d4e2902b162265cac9720e13f09ffd40e202afa0e3485811cfd733dc688",
+  "source_resource": "res://resources/art/player.tres",
+  "source_frame_size": [
+    96,
+    64
+  ],
+  "source_pivot": [
+    48,
+    60
+  ],
+  "source_design_id": "new_20261102:player",
+  "source_states": [
+    "idle_down",
+    "walk_down",
+    "attack_down",
+    "hurt_down",
+    "death_down",
+    "idle_left",
+    "walk_left",
+    "attack_left",
+    "hurt_left",
+    "death_left",
+    "idle_right",
+    "walk_right",
+    "attack_right",
+    "hurt_right",
+    "death_right",
+    "idle_up",
+    "walk_up",
+    "attack_up",
+    "hurt_up",
+    "death_up"
+  ],
+  "style": {
+    "camera": "top-down three-quarter",
+    "light": "upper left warm amber",
+    "identity": "chestnut hair, cream scarf, indigo coat, burgundy waistcoat, brown leather boots and belt",
+    "shadows": "plum",
+    "ground": "cream stone against dark forest"
+  },
+  "credits_before": 15,
+  "approved_asset_id": null,
+  "runtime_modified": false
+}

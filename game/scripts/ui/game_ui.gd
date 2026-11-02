@@ -16,6 +16,8 @@ signal load_requested
 signal overlay_close_requested
 signal item_use_requested(index: int)
 signal respawn_requested
+signal allocate_stat_requested(stat: String, amount: int)
+signal character_requested
 
 const GOLD := Color("d6bd82")
 const CREAM := Color("ece5cc")
@@ -23,6 +25,19 @@ const MUTED := Color("c1b29f")
 const PANEL_ART: SpriteFrames = preload("res://resources/art/ui_panel.tres")
 const BUTTON_ART: SpriteFrames = preload("res://resources/art/ui_button.tres")
 const HEALTH_ART: SpriteFrames = preload("res://resources/art/ui_health.tres")
+const EXPERIENCE_ART: SpriteFrames = preload("res://resources/art/ui_experience.tres")
+const ENERGY_ART: SpriteFrames = preload("res://resources/art/ui_energy.tres")
+const STAMINA_ART: SpriteFrames = preload("res://resources/art/ui_stamina.tres")
+const STATS_PANEL_ART: SpriteFrames = preload("res://resources/art/ui_stats_panel.tres")
+const STAT_ROWS: Array[Dictionary] = [
+	{"key": "health", "name": "Máu", "description": "+20 máu tối đa mỗi điểm."},
+	{"key": "energy", "name": "Năng lượng", "description": "+10 tối đa/điểm. R tốn 20; đòn ×1.8."},
+	{"key": "stamina", "name": "Thể lực", "description": "+10 tối đa/điểm. Chạy 18/s; hồi 20/s."},
+	{"key": "speed", "name": "Tốc độ", "description": "Đi / chạy; tăng giảm dần đến 180 / 280."},
+	{"key": "luck", "name": "May mắn", "description": "Tăng chí mạng và XP, mỗi tỷ lệ dưới 50%."},
+	{"key": "strength", "name": "Sức mạnh", "description": "+1 sức mạnh, +2 sát thương mỗi điểm."},
+	{"key": "defense", "name": "Phòng thủ", "description": "Giảm sát thương dưới 80%; luôn nhận ≥1."}
+]
 const ROWAN_ART: SpriteFrames = preload("res://resources/art/rowan.tres")
 const CRYSTAL_ART: SpriteFrames = preload("res://resources/art/crystal.tres")
 const ITEM_ART: Dictionary = {
@@ -78,6 +93,25 @@ var material_styles: Array[Dictionary] = []
 var health_crop := AtlasTexture.new()
 var portrait_art: SpriteFrames
 var portrait_state: StringName = &"idle"
+var level_label: Label
+var xp_label: Label
+var xp_bar: TextureRect
+var energy_label: Label
+var energy_bar: TextureRect
+var stamina_label: Label
+var stamina_bar: TextureRect
+var character_button: Button
+var character_panel: Control
+var character_title: Label
+var character_summary: Label
+var unspent_label: Label
+var allocated_summary: Label
+var character_close: Button
+var allocation_batch: int = 1
+var batch_buttons: Array[Button] = []
+var stat_widgets: Dictionary = {}
+var progression_model: RefCounted
+var progression_bars: Array[Dictionary] = []
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -89,6 +123,7 @@ func _ready() -> void:
 	_build_settings()
 	_build_dialogue()
 	_build_rpg_panels()
+	_build_character_panel()
 	show_screen("menu")
 
 func _create_theme() -> void:
@@ -124,6 +159,11 @@ func _art_style(frames: SpriteFrames, state: StringName) -> StyleBoxTexture:
 	style.texture_margin_right = 4
 	style.texture_margin_top = 4
 	style.texture_margin_bottom = 4
+	if frames == STATS_PANEL_ART:
+		style.texture_margin_left = 6
+		style.texture_margin_right = 6
+		style.texture_margin_top = 6
+		style.texture_margin_bottom = 6
 	style.content_margin_left = 8
 	style.content_margin_right = 8
 	style.content_margin_top = 0
@@ -147,6 +187,11 @@ func _animate_art(delta: float) -> void:
 			var style: StyleBoxTexture = entry.style
 			style.texture = frames.get_frame_texture(entry.state, index)
 	health_crop.atlas = _art_frame(HEALTH_ART, &"idle")
+	for entry: Dictionary in progression_bars:
+		var crop: AtlasTexture = entry.crop
+		crop.atlas = _art_frame(entry.frames, &"idle")
+		var track: TextureRect = entry.track
+		track.texture = crop.atlas
 	if dialogue_panel.visible and portrait_art != null:
 		portrait.texture = _art_frame(portrait_art, portrait_state)
 	if inventory_panel.visible and inventory_model != null:
@@ -218,12 +263,14 @@ func _build_menu() -> void:
 
 func _build_hud() -> void:
 	hud = _root()
-	var health := _panel(hud, Rect2(12, 12, 153, 43))
+	var health := _panel(hud, Rect2(12, 12, 190, 82))
 	health.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_label(health, "LỮ KHÁCH", Rect2(10, 4, 85, 18), 10, GOLD)
-	hp_label = _label(health, "100 / 100", Rect2(94, 4, 54, 18), 9, CREAM)
+	level_label = _label(health, "LỮ KHÁCH · CẤP —", Rect2(8, 2, 174, 17), 9, GOLD)
+	_label(health, "Máu", Rect2(8, 18, 56, 14), 8, MUTED)
+	hp_label = _label(health, "100 / 100", Rect2(68, 18, 114, 14), 8, CREAM)
+	hp_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	var bar := TextureRect.new()
-	bar.position = Vector2(10, 29)
+	bar.position = Vector2(8, 32)
 	bar.size = Vector2(132, 5)
 	bar.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	bar.stretch_mode = TextureRect.STRETCH_KEEP
@@ -234,12 +281,27 @@ func _build_hud() -> void:
 	bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	health.add_child(bar)
 	hp_bar = bar
+	_label(health, "Năng lượng", Rect2(8, 37, 56, 14), 8, MUTED)
+	energy_label = _label(health, "—", Rect2(68, 37, 114, 14), 8, CREAM)
+	energy_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	energy_bar = _progression_bar(health, Vector2(8, 51), ENERGY_ART)
+	_label(health, "Thể lực", Rect2(8, 56, 56, 14), 8, MUTED)
+	stamina_label = _label(health, "—", Rect2(68, 56, 114, 14), 8, CREAM)
+	stamina_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	stamina_bar = _progression_bar(health, Vector2(8, 70), STAMINA_ART)
+	var experience := _panel(hud, Rect2(212, 12, 182, 39))
+	experience.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	xp_label = _label(experience, "XP —", Rect2(8, 3, 166, 18), 8, GOLD)
+	xp_bar = _progression_bar(experience, Vector2(8, 26), EXPERIENCE_ART)
+	character_button = _button(hud, "Nhân vật  [C]", Rect2(285, 58, 109, 25), character_requested.emit)
+	character_button.add_theme_font_size_override("font_size", 10)
+	character_button.tooltip_text = "Xem chỉ số và phân bổ điểm tăng cấp"
 	var location_bg := _panel(hud, Rect2(402, 12, 226, 39))
 	location_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var location := _label(location_bg, "LÀNG BÌNH MINH\nBình yên trong những khoảng quên", Rect2(6, 2, 214, 35), 10, CREAM)
 	location.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	location_label = location
-	var objective_bg := _panel(hud, Rect2(12, 64, 269, 44))
+	var objective_bg := _panel(hud, Rect2(12, 98, 269, 43))
 	objective_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	objective = _label(objective_bg, "BƯỚC CHÂN ĐẦU TIÊN\nTìm Rowan bên đài tinh thể, phía bắc.", Rect2(9, 3, 254, 37), 10, GOLD)
 	objective.add_theme_color_override("font_shadow_color", Color("102731"))
@@ -343,9 +405,11 @@ func show_screen(screen: String) -> void:
 	inventory_panel.visible = screen == "inventory"
 	journal_panel.visible = screen == "journal"
 	death_panel.visible = screen == "death"
+	character_panel.visible = screen == "character"
+	character_button.disabled = screen != "play"
 	prompt.visible = screen == "play"
 	notification.visible = screen == "play"
-	control_tips.text = "E / ENTER  Hiện chữ / tiếp     TAB / ENTER  Chọn     ESC  Đóng" if screen == "dialogue" else "WASD Đi  SHIFT Chạy  J/Chuột Đánh  E Tương tác  H Thuốc  I Túi  Q Nhật ký  F5 Lưu"
+	control_tips.text = "E / ENTER  Hiện chữ / tiếp     TAB / ENTER  Chọn     ESC  Đóng" if screen == "dialogue" else "WASD Đi · Shift Chạy · J Đánh · R Cường hóa · E Tương tác · H Thuốc · I Túi · Q Nhật ký · C Nhân vật · F5 Lưu · Esc Dừng"
 	if screen != "dialogue":
 		typing = false
 	match screen:
@@ -361,6 +425,10 @@ func show_screen(screen: String) -> void:
 		"inventory": inventory_buttons[selected_slot].grab_focus()
 		"journal": (journal_panel.find_child("JournalClose",true,false) as Button).grab_focus()
 		"death": (death_panel.find_child("Respawn",true,false) as Button).grab_focus()
+		"character":
+			if progression_model != null:
+				update_progression(progression_model)
+			batch_buttons[0].grab_focus()
 
 func show_line(speaker: String, role: String, text: String, choices: Array, face: String) -> void:
 	show_screen("dialogue")
@@ -479,7 +547,7 @@ func set_save_available(available: bool) -> void:
 	continue_button.tooltip_text = "Tải bản lưu đã kiểm tra hợp lệ" if available else "Chưa có bản lưu hợp lệ"
 
 func set_health(current: int, maximum: int) -> void:
-	hp_label.text = str(current)+" / "+str(maximum)
+	hp_label.text = _group_int(current)+" / "+_group_int(maximum)
 	var width: float = floorf(132.0 * clampf(float(current) / maxf(1.0, float(maximum)), 0.0, 1.0))
 	hp_bar.size.x = width
 	hp_bar.visible = width > 0
@@ -518,3 +586,165 @@ func update_quest(model: RefCounted) -> void:
 	for i: int in range(model.definition.objectives.size()):
 		journal_text.text += ("[✓] " if model.done(i) else "[  ] ")+str(model.definition.objectives[i].text)+"\n"
 	journal_text.text += "\nThưởng: 2 thuốc hồi phục, 3 quặng ký ức.\n"+str(model.definition.description)
+
+func _progression_bar(parent: Node, point: Vector2, frames: SpriteFrames) -> TextureRect:
+	var track := TextureRect.new()
+	track.position = point
+	track.size = Vector2(132, 5)
+	track.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	track.stretch_mode = TextureRect.STRETCH_KEEP
+	track.texture = frames.get_frame_texture(&"idle", 0)
+	track.modulate = Color(0.30, 0.30, 0.30, 1.0)
+	track.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	parent.add_child(track)
+	var bar := TextureRect.new()
+	bar.position = point
+	bar.size = Vector2(132, 5)
+	bar.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	bar.stretch_mode = TextureRect.STRETCH_KEEP
+	bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var crop := AtlasTexture.new()
+	crop.atlas = frames.get_frame_texture(&"idle", 0)
+	crop.region = Rect2(0, 0, 132, 5)
+	crop.filter_clip = true
+	bar.texture = crop
+	bar.set_meta(&"progression_crop", crop)
+	bar.hide()
+	parent.add_child(bar)
+	progression_bars.append({"crop": crop, "frames": frames, "track": track})
+	return bar
+
+func _fill_progression_bar(bar: TextureRect, fraction: float) -> void:
+	var width: float = floorf(132.0 * clampf(fraction, 0.0, 1.0))
+	bar.size.x = width
+	bar.visible = width > 0
+	var crop: AtlasTexture = bar.get_meta(&"progression_crop")
+	crop.region = Rect2(0, 0, maxf(1.0, width), 5)
+
+func set_resources(energy: float, max_energy: float, stamina: float, max_stamina: float) -> void:
+	energy_label.text = _group_int(int(floorf(maxf(0.0, energy)))) + " / " + _group_int(int(max_energy))
+	stamina_label.text = _group_int(int(floorf(maxf(0.0, stamina)))) + " / " + _group_int(int(max_stamina))
+	_fill_progression_bar(energy_bar, energy / maxf(1.0, max_energy))
+	_fill_progression_bar(stamina_bar, stamina / maxf(1.0, max_stamina))
+	energy_label.tooltip_text = "Năng lượng hiện tại / tối đa · R dùng 20"
+	stamina_label.tooltip_text = "Thể lực hiện tại / tối đa · Chạy dùng 18 mỗi giây"
+
+func _build_character_panel() -> void:
+	character_panel = _root()
+	character_panel.name = "CharacterScreen"
+	_shade(character_panel, 0.78)
+	var panel := _panel(character_panel, Rect2(14, 12, 612, 336))
+	panel.name = "StatsPanel"
+	panel.add_theme_stylebox_override("panel", _art_style(STATS_PANEL_ART, &"idle"))
+	character_title = _label(panel, "NHÂN VẬT", Rect2(16, 8, 338, 25), 16, GOLD)
+	unspent_label = _label(panel, "—", Rect2(357, 12, 237, 20), 11, GOLD)
+	unspent_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	character_summary = _label(panel, "", Rect2(16, 35, 578, 20), 10, CREAM)
+	_label(panel, "Mỗi lần:", Rect2(16, 61, 70, 20), 10, MUTED)
+	for i: int in range(4):
+		var amount: int = [1, 5, 10, 100][i]
+		var button := _button(panel, str(amount), Rect2(88 + i * 52, 59, 45, 23), func() -> void: _set_allocation_batch(amount))
+		button.name = "Batch" + str(amount)
+		button.toggle_mode = true
+		button.button_pressed = amount == allocation_batch
+		button.tooltip_text = "Phân bổ " + str(amount) + " điểm mỗi lần"
+		batch_buttons.append(button)
+	for i: int in range(STAT_ROWS.size()):
+		var spec: Dictionary = STAT_ROWS[i]
+		var key: String = str(spec.key)
+		var y: float = 88 + i * 28
+		var name_label := _label(panel, str(spec.name), Rect2(16, y, 90, 27), 11, CREAM)
+		name_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		var assigned := _label(panel, "—", Rect2(108, y, 62, 27), 10, GOLD)
+		assigned.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+		assigned.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		var value := _label(panel, "—", Rect2(180, y, 144, 27), 9, CREAM)
+		value.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		var description := _label(panel, str(spec.description), Rect2(327, y, 205, 27), 9, MUTED)
+		description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		description.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		var button := _button(panel, "+1", Rect2(542, y + 1, 50, 25), func() -> void: _request_allocation(key))
+		button.name = "Allocate" + key.capitalize()
+		button.add_theme_font_size_override("font_size", 10)
+		button.disabled = true
+		stat_widgets[key] = {"allocated": assigned, "value": value, "button": button}
+	_label(panel, "Điểm có tác dụng ngay · Tab / mũi tên chọn · Enter phân bổ · C / Esc đóng", Rect2(16, 285, 578, 17), 9, MUTED)
+	allocated_summary = _label(panel, "", Rect2(16, 310, 420, 19), 9, CREAM)
+	character_close = _button(panel, "Đóng  [C / Esc]", Rect2(452, 305, 142, 25), overlay_close_requested.emit)
+	character_close.name = "CharacterClose"
+	# Tab order is predictable even when all allocation buttons are disabled.
+	for i: int in range(batch_buttons.size()):
+		var previous: Button = character_close if i == 0 else batch_buttons[i - 1]
+		batch_buttons[i].focus_previous = batch_buttons[i].get_path_to(previous)
+
+func _set_allocation_batch(amount: int) -> void:
+	allocation_batch = amount
+	for i: int in range(batch_buttons.size()):
+		batch_buttons[i].set_pressed_no_signal([1, 5, 10, 100][i] == amount)
+	if progression_model != null:
+		update_progression(progression_model)
+
+func _request_allocation(stat: String) -> void:
+	if progression_model == null or int(progression_model.unspent_points) < allocation_batch:
+		return
+	allocate_stat_requested.emit(stat, allocation_batch)
+
+func update_progression(model: RefCounted) -> void:
+	progression_model = model
+	var level: int = int(model.level)
+	var experience: int = int(model.experience)
+	var free: int = int(model.unspent_points)
+	var maximum: bool = level >= 9999
+	level_label.text = "LỮ KHÁCH · CẤP " + str(level) + (" · MAX" if maximum else "")
+	character_title.text = "NHÂN VẬT · CẤP " + str(level)
+	unspent_label.text = _group_int(free) + " điểm chưa phân bổ"
+	if maximum:
+		xp_label.text = "XP MAX"
+		character_summary.text = "XP MAX · Đã đạt cấp 9999"
+		_fill_progression_bar(xp_bar, 1.0)
+	else:
+		var required: int = int(model.xp_required())
+		xp_label.text = "XP " + _group_int(experience) + " / " + _group_int(required)
+		character_summary.text = "XP " + _group_int(experience) + " / " + _group_int(required) + " · Mỗi cấp nhận 5 điểm tự phân bổ"
+		_fill_progression_bar(xp_bar, float(experience) / maxf(1.0, float(required)))
+	xp_label.tooltip_text = character_summary.text
+	var values: Dictionary = model.derived_stats()
+	var allocated_total: int = 0
+	for spec: Dictionary in STAT_ROWS:
+		var key: String = str(spec.key)
+		var row: Dictionary = stat_widgets[key]
+		var allocated: int = int(model.allocated[key])
+		allocated_total += allocated
+		var assigned: Label = row.allocated
+		assigned.text = _group_int(allocated) + " đ"
+		var effect: Label = row.value
+		effect.text = _stat_value(key, values)
+		var button: Button = row.button
+		button.text = "+" + str(allocation_batch)
+		button.disabled = free < allocation_batch
+		button.tooltip_text = ("Cần " + str(allocation_batch) + " điểm chưa phân bổ") if button.disabled else ("Thêm " + str(allocation_batch) + " điểm " + str(spec.name).to_lower() + "; áp dụng ngay")
+	allocated_summary.text = "Đã phân bổ " + _group_int(allocated_total) + " · Còn " + _group_int(free) + " điểm"
+	if character_panel.visible:
+		var focused: Control = get_viewport().gui_get_focus_owner()
+		if focused is Button and focused.disabled:
+			batch_buttons[[1, 5, 10, 100].find(allocation_batch)].grab_focus()
+
+func _stat_value(stat: String, values: Dictionary) -> String:
+	match stat:
+		"health": return _group_int(int(values.max_health)) + " HP tối đa"
+		"energy": return _group_int(int(values.max_energy)) + " tối đa"
+		"stamina": return _group_int(int(values.max_stamina)) + " tối đa"
+		"speed": return "%.1f / %.1f px/s" % [values.walk_speed, values.run_speed]
+		"luck": return "CM %.1f%% · XP +%.1f%%" % [float(values.crit_chance) * 100, float(values.xp_bonus) * 100]
+		"strength": return _group_int(int(values.strength)) + " · +" + _group_int(int(values.damage_bonus)) + " sát thương"
+		"defense": return _group_int(int(values.defense)) + " · −%.1f%%" % (float(values.damage_reduction) * 100)
+	return ""
+
+func _group_int(value: int) -> String:
+	var digits: String = str(absi(value))
+	var groups: PackedStringArray = []
+	while digits.length() > 3:
+		groups.insert(0, digits.right(3))
+		digits = digits.left(digits.length() - 3)
+	groups.insert(0, digits)
+	return ("−" if value < 0 else "") + ",".join(groups)

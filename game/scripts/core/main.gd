@@ -7,7 +7,10 @@ const FOREST_SCENE := preload("res://scenes/world/whispering_forest.tscn")
 const INVENTORY := preload("res://scripts/inventory/inventory.gd")
 const QUESTS := preload("res://scripts/quests/quest_manager.gd")
 const SAVES := preload("res://scripts/save/save_service.gd")
-enum Mode { MENU, PLAYING, DIALOGUE, PAUSED, SETTINGS, INVENTORY_OPEN, JOURNAL, DEAD }
+const PROGRESSION := preload("res://scripts/progression/progression.gd")
+const EFFECT := preload("res://scripts/combat/sprite_effect.gd")
+const LEVEL_UP: SpriteFrames = preload("res://resources/art/level_up.tres")
+enum Mode { MENU, PLAYING, DIALOGUE, PAUSED, SETTINGS, INVENTORY_OPEN, JOURNAL, DEAD, CHARACTER }
 var mode: Mode = Mode.MENU
 var settings_return: Mode = Mode.MENU
 var world: Node2D
@@ -17,6 +20,7 @@ var effects_enabled: bool = true
 var inventory: RefCounted
 var quests: RefCounted
 var saves: RefCounted
+var progression: RefCounted
 var save_path: String = "user://journey.json"
 var zone: String = "dawn_village"
 var areas: Dictionary = {}
@@ -26,6 +30,9 @@ func _ready() -> void:
 	INPUT_SETUP.configure()
 	inventory = INVENTORY.new()
 	quests = QUESTS.new()
+	progression = PROGRESSION.new()
+	progression.changed.connect(_on_progression_changed)
+	progression.level_gained.connect(_on_level_gained)
 	saves = SAVES.new()
 	saves.path = save_path
 	inventory.changed.connect(_refresh_inventory)
@@ -50,9 +57,12 @@ func _ready() -> void:
 	ui.overlay_close_requested.connect(close_overlay)
 	ui.item_use_requested.connect(use_item)
 	ui.respawn_requested.connect(respawn)
+	ui.character_requested.connect(open_character)
+	ui.allocate_stat_requested.connect(allocate_stat)
 	_replace_world(false)
 	_refresh_inventory()
 	ui.update_quest(quests)
+	ui.update_progression(progression)
 	ui.set_save_available(saves.has_save())
 	_set_mode(Mode.MENU)
 
@@ -67,13 +77,18 @@ func _replace_world(playing: bool, next_zone: String = "dawn_village") -> void:
 	add_child(world)
 	move_child(world, 0)
 	world.player.visible = playing
+	world.player.apply_stats(progression.derived_stats(), true)
 	world.player.interaction.target_changed.connect(ui.set_prompt)
 	world.player.health.changed.connect(ui.set_health)
+	world.player.resources_changed.connect(ui.set_resources)
+	world.player.action_failed.connect(ui.notify)
 	world.player.fallen.connect(func() -> void: _set_mode(Mode.DEAD))
 	world.enemy_defeated.connect(func(id: String) -> void: quests.record("enemy_defeated",id))
+	world.experience_collected.connect(_gain_experience)
 	world.open_gate(quests.status != "available")
 	ui.location_label.text = "RỪNG THÌ THẦM\nVòng đá ở phía bắc • Lối về phía nam" if zone == "whispering_forest" else "LÀNG BÌNH MINH\nBình yên trong những khoảng quên"
 	ui.set_health(world.player.hp,world.player.max_hp)
+	ui.set_resources(world.player.energy, world.player.max_energy, world.player.stamina, world.player.max_stamina)
 	world.get_node("Atmosphere").visible = effects_enabled
 	if not playing:
 		world.camera.position = Vector2(512, 400)
@@ -85,6 +100,7 @@ func start_game() -> void:
 	dialogue.cancel()
 	met_rowan = false
 	areas.clear()
+	progression.reset()
 	inventory.clear()
 	inventory.add("rust_sword",1)
 	inventory.add("potion",3)
@@ -107,7 +123,7 @@ func _set_mode(next_mode: Mode) -> void:
 	get_tree().paused = mode != Mode.PLAYING
 	world.player.input_enabled = mode == Mode.PLAYING
 	world.player.stop()
-	var screens: Dictionary = {Mode.MENU:"menu", Mode.PLAYING:"play", Mode.DIALOGUE:"dialogue", Mode.PAUSED:"pause", Mode.SETTINGS:"settings",Mode.INVENTORY_OPEN:"inventory",Mode.JOURNAL:"journal",Mode.DEAD:"death"}
+	var screens: Dictionary = {Mode.MENU:"menu", Mode.PLAYING:"play", Mode.DIALOGUE:"dialogue", Mode.PAUSED:"pause", Mode.SETTINGS:"settings",Mode.INVENTORY_OPEN:"inventory",Mode.JOURNAL:"journal",Mode.DEAD:"death",Mode.CHARACTER:"character"}
 	ui.show_screen(screens[mode])
 
 func pause_game() -> void:
@@ -193,7 +209,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			Mode.PAUSED: resume_game()
 			Mode.DIALOGUE: close_dialogue()
 			Mode.SETTINGS: close_settings()
-			Mode.INVENTORY_OPEN, Mode.JOURNAL: close_overlay()
+			Mode.INVENTORY_OPEN, Mode.JOURNAL, Mode.CHARACTER: close_overlay()
 		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("interact"):
 		if mode == Mode.PLAYING:
@@ -216,6 +232,13 @@ func _unhandled_input(event: InputEvent) -> void:
 			close_overlay()
 	elif event.is_action_pressed("attack") and mode == Mode.PLAYING:
 		world.player.attack(event is InputEventMouseButton)
+	elif event.is_action_pressed("empowered_attack") and mode == Mode.PLAYING:
+		world.player.empowered_attack()
+	elif event.is_action_pressed("character"):
+		if mode == Mode.PLAYING:
+			open_character()
+		elif mode == Mode.CHARACTER:
+			close_overlay()
 	elif event.is_action_pressed("quick_heal") and mode == Mode.PLAYING:
 		for i: int in range(inventory.slots.size()):
 			if inventory.slots[i].get("id","") == "potion":
@@ -225,13 +248,44 @@ func _unhandled_input(event: InputEvent) -> void:
 		save_game()
 
 func close_overlay() -> void:
-	if mode in [Mode.INVENTORY_OPEN,Mode.JOURNAL]:
+	if mode in [Mode.INVENTORY_OPEN,Mode.JOURNAL,Mode.CHARACTER]:
 		_set_mode(Mode.PLAYING)
+
+func open_character() -> void:
+	if mode == Mode.PLAYING and world.player.hp > 0:
+		ui.update_progression(progression)
+		_set_mode(Mode.CHARACTER)
+
+func allocate_stat(stat: String, amount: int) -> void:
+	if mode == Mode.CHARACTER:
+		if not progression.allocate(stat, amount):
+			ui.notify("Không đủ điểm để tăng chỉ số này.")
+
+func _on_progression_changed() -> void:
+	ui.update_progression(progression)
+	if is_instance_valid(world):
+		world.player.apply_stats(progression.derived_stats())
+		_refresh_inventory()
+
+func _on_level_gained(_old_level: int, new_level: int, points: int) -> void:
+	if is_instance_valid(world):
+		EFFECT.spawn(world.actors, LEVEL_UP, world.player.global_position + Vector2(0,-18), Vector2(48,48))
+	ui.notify("Lên cấp "+str(new_level)+"! +"+str(points)+" điểm chỉ số · Nhấn C để phân bổ.")
+
+func _gain_experience(amount: int) -> void:
+	if mode != Mode.PLAYING or world.player.hp <= 0:
+		return
+	var credited: int = roundi(amount * (1.0 + float(progression.derived_stats().xp_bonus)))
+	var result: Dictionary = progression.gain_experience(credited)
+	if progression.level == PROGRESSION.MAX_LEVEL and int(result.levels_gained) == 0:
+		ui.notify("Đã đạt cấp 9999 · XP MAX.")
+	elif int(result.levels_gained) == 0:
+		ui.notify("+"+str(credited)+" kinh nghiệm")
 
 func _refresh_inventory() -> void:
 	ui.update_inventory(inventory)
 	if is_instance_valid(world):
-		world.player.weapon_damage = int(inventory.database.rust_sword.damage) if inventory.count("rust_sword")>0 else 0
+		world.player.weapon_damage = int(inventory.database.rust_sword.damage) + int(progression.derived_stats().damage_bonus) if inventory.count("rust_sword")>0 else 0
 
 func use_item(index: int) -> void:
 	if mode not in [Mode.PLAYING,Mode.INVENTORY_OPEN]:
@@ -270,8 +324,13 @@ func travel(destination: String) -> void:
 		return
 	areas[zone] = world.snapshot()
 	var hp: int = world.player.hp
+	var energy: float = world.player.energy
+	var stamina: float = world.player.stamina
+	if destination == "whispering_forest":
+		_prepare_scout_respawns()
 	_replace_world(true,destination)
 	world.player.health.restore(hp)
+	world.player.restore_vitals(energy, stamina)
 	if destination == "dawn_village":
 		world.player.position = Vector2(520,224)
 		quests.record("area_entered","dawn_village_return")
@@ -284,6 +343,18 @@ func travel(destination: String) -> void:
 	world.modulate.a = 0.0
 	world.create_tween().tween_property(world,"modulate:a",1.0,0.25)
 	ui.notify("Đã đến "+str(world.definition.name))
+
+func _prepare_scout_respawns() -> void:
+	if not areas.has("whispering_forest"):
+		return
+	var state: Dictionary = areas.whispering_forest.duplicate(true)
+	var cycles: Dictionary = state.get("spawn_cycles", {}).duplicate(true)
+	for id: String in ["scout_a", "scout_b"]:
+		if state.defeated.has(id) and int(cycles.get(id,0)) < 1000000000000:
+			state.defeated.erase(id)
+			cycles[id] = int(cycles.get(id,0)) + 1
+	state.spawn_cycles = cycles
+	areas.whispering_forest = state
 
 func _reward_quest(rewards: Array) -> void:
 	for i: int in range(rewards.size()):
@@ -301,13 +372,14 @@ func respawn() -> void:
 	_replace_world(true,"dawn_village")
 	if previous_zone == "whispering_forest":
 		quests.record("area_entered","dawn_village_return")
-	world.player.health.restore(100)
+	world.player.health.restore(world.player.max_hp)
+	world.player.restore_vitals(world.player.max_energy, world.player.max_stamina)
 	_set_mode(Mode.PLAYING)
 	ui.notify("Bạn tỉnh lại ở làng. Đồ đạc và tiến trình được giữ nguyên.")
 
 func snapshot() -> Dictionary:
 	areas[zone] = world.snapshot()
-	return {"zone":zone,"position":[world.player.position.x,world.player.position.y],"hp":world.player.hp,"inventory":inventory.slots.duplicate(true),"quest":quests.snapshot(),"flags":{"met_rowan":met_rowan},"areas":areas.duplicate(true)}
+	return {"zone":zone,"position":[world.player.position.x,world.player.position.y],"hp":world.player.hp,"inventory":inventory.slots.duplicate(true),"quest":quests.snapshot(),"flags":{"met_rowan":met_rowan},"areas":areas.duplicate(true),"progression":progression.snapshot(),"vitals":{"energy":world.player.energy,"stamina":world.player.stamina}}
 
 func save_game() -> bool:
 	if mode not in [Mode.PLAYING,Mode.PAUSED] or world.player.hp<=0:
@@ -328,6 +400,8 @@ func load_game() -> bool:
 		ui.set_save_available(false)
 		return false
 	dialogue.cancel()
+	if not progression.restore(data.progression):
+		return false
 	areas = data.areas.duplicate(true)
 	met_rowan = bool(data.flags.met_rowan)
 	inventory.restore(data.inventory)
@@ -335,6 +409,7 @@ func load_game() -> bool:
 	_replace_world(true,str(data.zone))
 	world.player.position = Vector2(data.position[0],data.position[1])
 	world.player.health.restore(int(data.hp))
+	world.player.restore_vitals(float(data.vitals.energy), float(data.vitals.stamina))
 	world.player.health.immunity = 0.8
 	world.camera.position = world.player.position.round()
 	world.camera.reset_smoothing()

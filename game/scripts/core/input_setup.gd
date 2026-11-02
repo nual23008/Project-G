@@ -8,7 +8,8 @@ static func configure() -> void:
 		"sprint": [KEY_SHIFT], "interact": [KEY_E],
 		"pause_game": [KEY_ESCAPE], "fullscreen": [KEY_F11],
 		"attack": [KEY_J], "inventory": [KEY_I], "journal": [KEY_Q],
-		"quick_heal": [KEY_H], "save_game": [KEY_F5]
+		"quick_heal": [KEY_H], "save_game": [KEY_F5],
+		"character": [KEY_C], "empowered_attack": [KEY_R]
 	}
 	for action: String in bindings:
 		if InputMap.has_action(action):

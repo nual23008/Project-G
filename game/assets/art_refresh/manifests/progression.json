@@ -1,0 +1,247 @@
+{
+  "experience_orb": {
+    "resource": "res://resources/art/experience_orb.tres",
+    "texture": "res://assets/art_refresh/sheets/experience_orb.png",
+    "frame_size": [
+      16,
+      20
+    ],
+    "pivot": [
+      8,
+      16
+    ],
+    "columns": 12,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 8,
+        "loop": true
+      },
+      "collect": {
+        "indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "count": 8,
+        "fps": 24,
+        "loop": false
+      }
+    },
+    "source": "Original native faceted XP crystal, editable pixel grids; plum/gold identity and eight phase float/facet loop",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh"
+  },
+  "ui_experience": {
+    "resource": "res://resources/art/ui_experience.tres",
+    "texture": "res://assets/art_refresh/sheets/ui_experience.png",
+    "frame_size": [
+      132,
+      5
+    ],
+    "pivot": [
+      0,
+      0
+    ],
+    "columns": 6,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "count": 6,
+        "fps": 3,
+        "loop": true
+      }
+    },
+    "source": "Original native animated vital strip; matches existing brass/plum HUD; editable pixel grids",
+    "backend": "Theme",
+    "revision": "art_refresh"
+  },
+  "ui_energy": {
+    "resource": "res://resources/art/ui_energy.tres",
+    "texture": "res://assets/art_refresh/sheets/ui_energy.png",
+    "frame_size": [
+      132,
+      5
+    ],
+    "pivot": [
+      0,
+      0
+    ],
+    "columns": 6,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "count": 6,
+        "fps": 3,
+        "loop": true
+      }
+    },
+    "source": "Original native animated vital strip; matches existing brass/plum HUD; editable pixel grids",
+    "backend": "Theme",
+    "revision": "art_refresh"
+  },
+  "ui_stamina": {
+    "resource": "res://resources/art/ui_stamina.tres",
+    "texture": "res://assets/art_refresh/sheets/ui_stamina.png",
+    "frame_size": [
+      132,
+      5
+    ],
+    "pivot": [
+      0,
+      0
+    ],
+    "columns": 6,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "count": 6,
+        "fps": 3,
+        "loop": true
+      }
+    },
+    "source": "Original native animated vital strip; matches existing brass/plum HUD; editable pixel grids",
+    "backend": "Theme",
+    "revision": "art_refresh"
+  },
+  "ui_stats_panel": {
+    "resource": "res://resources/art/ui_stats_panel.tres",
+    "texture": "res://assets/art_refresh/sheets/ui_stats_panel.png",
+    "frame_size": [
+      64,
+      64
+    ],
+    "pivot": [
+      0,
+      0
+    ],
+    "columns": 6,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "count": 6,
+        "fps": 2,
+        "loop": true
+      }
+    },
+    "source": "Dedicated animated stat board skin built from the same carved-brass/plum design as existing UI",
+    "backend": "Theme",
+    "revision": "art_refresh"
+  },
+  "level_up": {
+    "resource": "res://resources/art/level_up.tres",
+    "texture": "res://assets/art_refresh/sheets/level_up.png",
+    "frame_size": [
+      96,
+      96
+    ],
+    "pivot": [
+      48,
+      48
+    ],
+    "columns": 12,
+    "states": {
+      "play": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "count": 12,
+        "fps": 20,
+        "loop": false
+      }
+    },
+    "source": "Original ascending rune/amber motes for level-up; no character rescaling",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh"
+  },
+  "empowered_slash": {
+    "resource": "res://resources/art/empowered_slash.tres",
+    "texture": "res://assets/art_refresh/sheets/empowered_slash.png",
+    "frame_size": [
+      72,
+      72
+    ],
+    "pivot": [
+      36,
+      36
+    ],
+    "columns": 8,
+    "states": {
+      "play": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 33.333333333333336,
+        "loop": false
+      }
+    },
+    "source": "Empowered state of the existing blade ribbon: identical curve/canvas/pivot/contact; violet energy and warm cream highlight",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "contact_frame": 2,
+    "contact_time": 0.084,
+    "duration": 0.24
+  }
+}

@@ -4,12 +4,15 @@ const NPC_SCRIPT := preload("res://scripts/dialogue/npc.gd")
 const TILE: int = 16
 const OBJECT_SCRIPT := preload("res://scripts/world/world_object.gd")
 const ENEMY_SCRIPT := preload("res://scripts/combat/enemy.gd")
+const EXPERIENCE_ORB := preload("res://scripts/world/experience_orb.gd")
 @export_file("*.json") var definition_path: String = "res://resources/world/dawn_village.json"
 var content_state: Dictionary = {"collected":[],"defeated":[],"enemies":[],"drops":[]}
 var navigation := AStarGrid2D.new()
 signal enemy_defeated(id: String)
+signal experience_collected(amount: int)
 var definition: Dictionary = {}
 var art_manifest: Dictionary = {}
+var progression_rules: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://resources/progression/rules.json"))
 var obstacle_count: int = 0
 @onready var player: CharacterBody2D = $Actors/Player
 @onready var rowan: StaticBody2D = $Actors/ElderRowan
@@ -18,6 +21,8 @@ var obstacle_count: int = 0
 @onready var camera: Camera2D = $Camera
 
 func _ready() -> void:
+	if not content_state.has("spawn_cycles"):
+		content_state.spawn_cycles = {}
 	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(definition_path))
 	if not parsed is Dictionary:
 		push_error("Village data invalid.")
@@ -220,6 +225,13 @@ func open_gate(open: bool) -> void:
 			node.collision_layer = 0 if open else 1
 
 func spawn_object(entry: Dictionary) -> Node2D:
+	if entry.kind == "experience":
+		var orb := EXPERIENCE_ORB.new()
+		orb.setup(entry)
+		orb.target = player
+		orb.collected.connect(_collect_experience)
+		actors.add_child(orb)
+		return orb
 	var object := OBJECT_SCRIPT.new()
 	object.setup(entry)
 	actors.add_child(object)
@@ -246,14 +258,51 @@ func _on_enemy_defeated(id: String, point: Vector2, loot: Array) -> void:
 	if content_state.defeated.has(id):
 		return
 	content_state.defeated.append(id)
-	for i: int in range(loot.size()):
-		drop_item(str(loot[i].item),int(loot[i].count),point+Vector2(i*20-10,0),id+"_loot_"+str(i))
+	# Material loot is one-time; repeat scout encounters supply renewable XP.
+	if int(content_state.spawn_cycles.get(id, 0)) == 0:
+		for i: int in range(loot.size()):
+			drop_item(str(loot[i].item),int(loot[i].count),point+Vector2(i*20-10,0),id+"_loot_"+str(i))
+	var reward: int = int(progression_rules.xp_drop.get("guardian" if id == "guardian" else "scout",60))
+	_drop_experience(id, reward, point)
 	enemy_defeated.emit(id)
+
+func _drop_experience(source_id: String, amount: int, point: Vector2) -> void:
+	# Merge a still-unclaimed drop from the same scout across respawn cycles.
+	# This bounds the number of XP nodes without deleting progress on the floor.
+	for entry: Dictionary in content_state.drops:
+		if entry.kind == "experience" and entry.get("source_enemy", "") == source_id:
+			entry.amount = mini(2000000000000, int(entry.amount) + amount)
+			for orb: Node in actors.get_children():
+				if orb.is_in_group("experience_orbs") and orb.object_id == entry.id:
+					orb.data.amount = entry.amount
+			return
+	var cycle: int = int(content_state.spawn_cycles.get(source_id, 0))
+	var entry: Dictionary = {"id":source_id+"_c"+str(cycle)+"_xp", "kind":"experience", "source_enemy":source_id, "amount":amount, "at":[clampf(point.x,16,1008),clampf(point.y,16,752)]}
+	content_state.drops.append(entry)
+	spawn_object(entry)
+
+func _collect_experience(orb: Node2D) -> void:
+	var amount: int = 0
+	for i: int in range(content_state.drops.size() - 1, -1, -1):
+		var entry: Dictionary = content_state.drops[i]
+		if entry.id == orb.object_id and entry.kind == "experience":
+			amount = int(entry.amount)
+			content_state.drops.remove_at(i)
+			break
+	if amount > 0:
+		orb.play_collected()
+		orb.remove_from_group("experience_orbs")
+		orb.queue_free()
+		experience_collected.emit(amount)
 
 func snapshot() -> Dictionary:
 	var state: Dictionary = content_state.duplicate(true)
 	state.enemies = []
 	for child: Node in actors.get_children():
+		if child.is_in_group("experience_orbs") and not child.claimed:
+			for entry: Dictionary in state.drops:
+				if entry.id == child.object_id:
+					entry.at = [child.position.x, child.position.y]
 		if child.is_in_group("enemies") and not child.is_queued_for_deletion() and child.health.current > 0:
 			state.enemies.append({"id":child.enemy_id,"at":[child.position.x,child.position.y],"hp":child.health.current})
 	return state

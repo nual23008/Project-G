@@ -6,6 +6,7 @@ const CONTACT_TIME: float = 0.084
 const CONTACT_FRAME: int = 2
 const PLAYER_EFFECT: SpriteFrames = preload("res://resources/art/sword_slash.tres")
 const ENEMY_EFFECT: SpriteFrames = preload("res://resources/art/enemy_strike.tres")
+const EMPOWERED_EFFECT: SpriteFrames = preload("res://resources/art/empowered_slash.tres")
 var damage: int = 18
 var remaining: float = 0.0
 var duration: float = SWING_DURATION
@@ -14,6 +15,7 @@ var struck: Dictionary = {}
 var team: String = "player"
 var hit_applied: bool = false
 var visual: AnimatedSprite2D
+var empowered_swing: bool = false
 
 func _ready() -> void:
 	visual = AnimatedSprite2D.new()
@@ -27,11 +29,13 @@ func _ready() -> void:
 	visual.hide()
 	add_child(visual)
 
-func begin(aim: Vector2, amount: int) -> bool:
+func begin(aim: Vector2, amount: int, empowered: bool = false) -> bool:
 	if remaining > 0.0:
 		return false
 	direction = aim.normalized() if aim.length_squared() > 0 else Vector2.DOWN
 	damage = amount
+	empowered_swing = empowered and team == "player"
+	visual.sprite_frames = EMPOWERED_EFFECT if empowered_swing else PLAYER_EFFECT if team == "player" else ENEMY_EFFECT
 	remaining = duration
 	hit_applied = false
 	struck.clear()

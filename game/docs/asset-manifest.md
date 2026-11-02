@@ -1,6 +1,6 @@
 # Bộ đồ họa mới đang dùng
 
-Manifest chuẩn: `resources/art/manifest.json`. 33 loại, 67 state, 486 lượt frame. Dựng lại bằng `python3 game/tools/build_art_refresh.py`; runtime không cần Python/Pillow.
+Manifest chuẩn: `resources/art/manifest.json`. 40 loại, 75 state, 546 lượt frame. Dựng lại bằng `python3 game/tools/build_art_refresh.py`; runtime không cần Python/Pillow.
 
 Mọi loại tồn tại thường xuyên có idle/ambient loop riêng, cả terrain/UI. Hiệu ứng ngắn có play riêng. Mọi state của cùng loại dùng cùng nhân dạng, canvas và pivot; `design_id` mô tả hợp đồng đó, đánh giá đồ họa vẫn cần xem preview thật.
 
@@ -39,9 +39,18 @@ Mọi loại tồn tại thường xuyên có idle/ambient loop riêng, cả ter
 | enemy_strike | 72×72 | 36,36 | play (8 @ 33.3) |
 | hit_spark | 32×32 | 16,16 | play (8 @ 30) |
 | enemy_telegraph | 72×72 | 36,36 | play (8 @ 19) |
+| experience_orb | 16×20 | 8,16 | idle (8 @ 8), collect (8 @ 24) |
+| ui_experience | 132×5 | 0,0 | idle (6 @ 3) |
+| ui_energy | 132×5 | 0,0 | idle (6 @ 3) |
+| ui_stamina | 132×5 | 0,0 | idle (6 @ 3) |
+| ui_stats_panel | 64×64 | 0,0 | idle (6 @ 2) |
+| level_up | 96×96 | 48,48 | play (12 @ 20) |
+| empowered_slash | 72×72 | 36,36 | play (8 @ 33.3) |
 
 Nguồn: house/pine/oak/Rowan/enemy/hero_walk từ bộ ImageGen mới trong `assets/art_v3/sources`, hero_attack tạo mới bằng built-in image_gen (record ở `assets/art_refresh/sources/hero_attack_generation.json`). Props phụ/items/terrain/UI/VFX thiết kế mới từ canvas trống. Không lấy pixel `assets/sprites` hoặc `art_stage1` làm nguồn bộ active.
 
 Một số keyframe được hold theo nhịp để giữ chuyển động pixel nguyên tự nhiên (ví dụ enemy idle có 3 hình khác nhau trong 8 tick). Không công bố mọi lượt frame đều là hình độc nhất. `tests/output/art-refresh-animation-integrity.json` đếm hình khác nhau từng clip; không clip nào tĩnh hoàn toàn.
 
 Ảnh/GIF nguồn trong `assets/art_refresh/previews`; render engine trong `tests/output`. Body/slash contact index2 đồng tick damage; swing .24s. Kiểm tra biên cả202frame actor trong `assets/art_refresh/previews/actors_bounds.json`. Các generator/resources cũ giữ làm lịch sử, không còn được scene dùng.
+
+XP/chỉ số: bảy loại mới do `tools/build_progression_art.py` tạo từ pixel grid, cùng palette/vật liệu hiện tại. Orb có idle/collect; level-up/empowered slash có play; UI có idle. Preview đủ tám clip ở `tests/output/progression-art-contact.png` và GIF từng state; motion engine ở `tests/output/progression-animation.gif`.

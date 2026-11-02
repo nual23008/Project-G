@@ -1,0 +1,12 @@
+{
+  "max_level": 9999,
+  "points_per_level": 5,
+  "stat_keys": ["health", "energy", "stamina", "speed", "luck", "strength", "defense"],
+  "xp_formula": "100 + 25*(level-1) + 5*(level-1)^2",
+  "xp_drop": {"scout": 60, "guardian": 120},
+  "allocation_budget": "5*(level-1)",
+  "base": {"level":1, "experience":0, "unspent_points":0, "max_health": 100, "max_energy": 50, "max_stamina": 100, "walk_speed": 72, "run_speed": 112, "luck":0, "strength": 10, "defense":0},
+  "per_point": {"health": 20, "energy": 10, "stamina": 10, "damage_bonus": 2},
+  "soft_caps": {"walk_speed": 180, "run_speed": 280, "crit_chance": 0.5, "xp_bonus": 0.5, "damage_reduction": 0.8},
+  "resource_tuning": {"empowered_cost": 20, "empowered_multiplier": 1.8, "stamina_sprint_cost_per_second": 18, "stamina_regen_per_second": 20, "stamina_regen_delay": 0.6, "sprint_recovery_threshold": 20, "energy_regen_per_second": 3, "energy_regen_delay": 1.5}
+}

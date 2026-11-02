@@ -22,6 +22,7 @@ func run() -> void:
 		return
 	var registry: Dictionary = parsed
 	var required_ids: Array[String] = ["player", "rowan", "enemy", "house", "pine", "oak", "rock", "lamp", "crystal", "fence", "sign", "fern", "flowers", "chest", "portal", "rust_sword", "potion", "herb", "ore", "echo_shard", "sword_slash", "enemy_strike", "enemy_telegraph", "hit_spark", "grass", "stone_path", "water", "shore", "ui_panel", "ui_button", "ui_health", "firefly", "glow"]
+	required_ids.append_array(["experience_orb", "level_up", "empowered_slash", "ui_experience", "ui_energy", "ui_stamina", "ui_stats_panel"])
 	for id: String in required_ids:
 		check(registry.has(id), "Visible type has a registered art resource: " + id)
 	for id: String in registry:
@@ -118,7 +119,7 @@ func validate_asset(id: String, entry: Dictionary) -> void:
 	if not resource is SpriteFrames or not texture is Texture2D:
 		return
 	var sprite_frames: SpriteFrames = resource
-	if not id in ["sword_slash", "enemy_strike", "enemy_telegraph", "hit_spark"]:
+	if not id in ["sword_slash", "enemy_strike", "enemy_telegraph", "hit_spark", "empowered_slash", "level_up"]:
 		var idle_states: Array[String] = []
 		for state: StringName in sprite_frames.get_animation_names():
 			if str(state).begins_with("idle") or state == &"normal":
@@ -145,7 +146,7 @@ func validate_asset(id: String, entry: Dictionary) -> void:
 				continue
 			state_rows = alternate.get_height() / frame_size.y
 		validate_state(id, state_name, state_record, sprite_frames, state_texture, frame_size, state_columns, state_rows)
-	if id in ["sword_slash", "enemy_strike"]:
+	if id in ["sword_slash", "enemy_strike", "empowered_slash"]:
 		validate_contact(id, entry, sprite_frames)
 	if id == "player":
 		for direction: String in ["down", "left", "right", "up"]:

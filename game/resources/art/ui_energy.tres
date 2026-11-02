@@ -1,0 +1,22 @@
+[gd_resource type="SpriteFrames" format=3]
+[ext_resource type="Texture2D" path="res://assets/art_refresh/sheets/ui_energy.png" id="1"]
+[sub_resource type="AtlasTexture" id="idle_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 132, 5)
+[sub_resource type="AtlasTexture" id="idle_1"]
+atlas = ExtResource("1")
+region = Rect2(132, 0, 132, 5)
+[sub_resource type="AtlasTexture" id="idle_2"]
+atlas = ExtResource("1")
+region = Rect2(264, 0, 132, 5)
+[sub_resource type="AtlasTexture" id="idle_3"]
+atlas = ExtResource("1")
+region = Rect2(396, 0, 132, 5)
+[sub_resource type="AtlasTexture" id="idle_4"]
+atlas = ExtResource("1")
+region = Rect2(528, 0, 132, 5)
+[sub_resource type="AtlasTexture" id="idle_5"]
+atlas = ExtResource("1")
+region = Rect2(660, 0, 132, 5)
+[resource]
+animations = [{"name":&"idle","speed":3,"loop":true,"frames":[{"duration":1.0,"texture":SubResource("idle_0")},{"duration":1.0,"texture":SubResource("idle_1")},{"duration":1.0,"texture":SubResource("idle_2")},{"duration":1.0,"texture":SubResource("idle_3")},{"duration":1.0,"texture":SubResource("idle_4")},{"duration":1.0,"texture":SubResource("idle_5")}]}]

@@ -1,0 +1,200 @@
+{
+  "request_id": "req_bb375313-852b-4f16-a387-c44e9d7ef499",
+  "status": "succeeded",
+  "output_count": 9,
+  "outputs": [
+    {
+      "id": "85d57ae6-ae52-4961-b0cc-82bbe2d54e4a",
+      "type": "image",
+      "createdAt": "2026-11-02T15:06:49.462Z",
+      "updatedAt": "2026-11-02T15:06:49.462Z",
+      "prompt": "A fantasy wandering swordsman for a top-down role-playing game, facing south in a relaxed neutral standing pose, seen from a slightly elevated three-quarter game camera. Use the reference for the adventurer's identity and material palette: tousled chestnut brown hair, cream scarf with a short trailing end, indigo short coat over a burgundy waistcoat, warm brown leather belt, gloves and boots, small amber brass buckles, a slender steel sword sheathed at his left hip. Whole body clearly visible, compact balanced proportions with readable separated boots, plenty of breathing room around the silhouette for later sword actions. Warm upper-left amber highlights, deep plum shadows, crisp material clusters and restrained outlining matching the reference. Keep the recognizable outfit, hairstyle, body proportions and color relationships together as one coherent character design.",
+      "width": 48,
+      "height": 48,
+      "assetUrl": "https://media.spritefusion.com/pixel-art-assets/6d1226a2-3825-4074-835d-e698da8487df/85d57ae6-ae52-4961-b0cc-82bbe2d54e4a/image.png?v=1793632009462",
+      "style": "default",
+      "tags": [
+        "du-am-the-gioi-lang-quen"
+      ],
+      "contentType": "image/png",
+      "batchId": "67b47f12-deee-4f18-896d-cd30be0c479b",
+      "batchIndex": 0,
+      "batchSize": 9,
+      "action": {
+        "kind": "same-style"
+      }
+    },
+    {
+      "id": "2ce92584-88ab-42eb-a709-1c5e439d02aa",
+      "type": "image",
+      "createdAt": "2026-11-02T15:06:50.269Z",
+      "updatedAt": "2026-11-02T15:06:50.269Z",
+      "prompt": "A fantasy wandering swordsman for a top-down role-playing game, facing south in a relaxed neutral standing pose, seen from a slightly elevated three-quarter game camera. Use the reference for the adventurer's identity and material palette: tousled chestnut brown hair, cream scarf with a short trailing end, indigo short coat over a burgundy waistcoat, warm brown leather belt, gloves and boots, small amber brass buckles, a slender steel sword sheathed at his left hip. Whole body clearly visible, compact balanced proportions with readable separated boots, plenty of breathing room around the silhouette for later sword actions. Warm upper-left amber highlights, deep plum shadows, crisp material clusters and restrained outlining matching the reference. Keep the recognizable outfit, hairstyle, body proportions and color relationships together as one coherent character design.",
+      "width": 48,
+      "height": 48,
+      "assetUrl": "https://media.spritefusion.com/pixel-art-assets/6d1226a2-3825-4074-835d-e698da8487df/2ce92584-88ab-42eb-a709-1c5e439d02aa/image.png?v=1793632010269",
+      "style": "default",
+      "tags": [
+        "du-am-the-gioi-lang-quen"
+      ],
+      "contentType": "image/png",
+      "batchId": "67b47f12-deee-4f18-896d-cd30be0c479b",
+      "batchIndex": 1,
+      "batchSize": 9,
+      "action": {
+        "kind": "same-style"
+      }
+    },
+    {
+      "id": "d28ff2c0-276c-4866-b646-1199512a41dd",
+      "type": "image",
+      "createdAt": "2026-11-02T15:06:50.751Z",
+      "updatedAt": "2026-11-02T15:06:50.751Z",
+      "prompt": "A fantasy wandering swordsman for a top-down role-playing game, facing south in a relaxed neutral standing pose, seen from a slightly elevated three-quarter game camera. Use the reference for the adventurer's identity and material palette: tousled chestnut brown hair, cream scarf with a short trailing end, indigo short coat over a burgundy waistcoat, warm brown leather belt, gloves and boots, small amber brass buckles, a slender steel sword sheathed at his left hip. Whole body clearly visible, compact balanced proportions with readable separated boots, plenty of breathing room around the silhouette for later sword actions. Warm upper-left amber highlights, deep plum shadows, crisp material clusters and restrained outlining matching the reference. Keep the recognizable outfit, hairstyle, body proportions and color relationships together as one coherent character design.",
+      "width": 48,
+      "height": 48,
+      "assetUrl": "https://media.spritefusion.com/pixel-art-assets/6d1226a2-3825-4074-835d-e698da8487df/d28ff2c0-276c-4866-b646-1199512a41dd/image.png?v=1793632010751",
+      "style": "default",
+      "tags": [
+        "du-am-the-gioi-lang-quen"
+      ],
+      "contentType": "image/png",
+      "batchId": "67b47f12-deee-4f18-896d-cd30be0c479b",
+      "batchIndex": 2,
+      "batchSize": 9,
+      "action": {
+        "kind": "same-style"
+      }
+    },
+    {
+      "id": "23782aad-986e-44a6-ba56-dc604f5f82e9",
+      "type": "image",
+      "createdAt": "2026-11-02T15:06:51.252Z",
+      "updatedAt": "2026-11-02T15:06:51.252Z",
+      "prompt": "A fantasy wandering swordsman for a top-down role-playing game, facing south in a relaxed neutral standing pose, seen from a slightly elevated three-quarter game camera. Use the reference for the adventurer's identity and material palette: tousled chestnut brown hair, cream scarf with a short trailing end, indigo short coat over a burgundy waistcoat, warm brown leather belt, gloves and boots, small amber brass buckles, a slender steel sword sheathed at his left hip. Whole body clearly visible, compact balanced proportions with readable separated boots, plenty of breathing room around the silhouette for later sword actions. Warm upper-left amber highlights, deep plum shadows, crisp material clusters and restrained outlining matching the reference. Keep the recognizable outfit, hairstyle, body proportions and color relationships together as one coherent character design.",
+      "width": 48,
+      "height": 48,
+      "assetUrl": "https://media.spritefusion.com/pixel-art-assets/6d1226a2-3825-4074-835d-e698da8487df/23782aad-986e-44a6-ba56-dc604f5f82e9/image.png?v=1793632011252",
+      "style": "default",
+      "tags": [
+        "du-am-the-gioi-lang-quen"
+      ],
+      "contentType": "image/png",
+      "batchId": "67b47f12-deee-4f18-896d-cd30be0c479b",
+      "batchIndex": 3,
+      "batchSize": 9,
+      "action": {
+        "kind": "same-style"
+      }
+    },
+    {
+      "id": "af0265de-e1dd-4eae-90f2-308bb4a859e9",
+      "type": "image",
+      "createdAt": "2026-11-02T15:06:52.020Z",
+      "updatedAt": "2026-11-02T15:06:52.020Z",
+      "prompt": "A fantasy wandering swordsman for a top-down role-playing game, facing south in a relaxed neutral standing pose, seen from a slightly elevated three-quarter game camera. Use the reference for the adventurer's identity and material palette: tousled chestnut brown hair, cream scarf with a short trailing end, indigo short coat over a burgundy waistcoat, warm brown leather belt, gloves and boots, small amber brass buckles, a slender steel sword sheathed at his left hip. Whole body clearly visible, compact balanced proportions with readable separated boots, plenty of breathing room around the silhouette for later sword actions. Warm upper-left amber highlights, deep plum shadows, crisp material clusters and restrained outlining matching the reference. Keep the recognizable outfit, hairstyle, body proportions and color relationships together as one coherent character design.",
+      "width": 48,
+      "height": 48,
+      "assetUrl": "https://media.spritefusion.com/pixel-art-assets/6d1226a2-3825-4074-835d-e698da8487df/af0265de-e1dd-4eae-90f2-308bb4a859e9/image.png?v=1793632012020",
+      "style": "default",
+      "tags": [
+        "du-am-the-gioi-lang-quen"
+      ],
+      "contentType": "image/png",
+      "batchId": "67b47f12-deee-4f18-896d-cd30be0c479b",
+      "batchIndex": 4,
+      "batchSize": 9,
+      "action": {
+        "kind": "same-style"
+      }
+    },
+    {
+      "id": "736b4c82-cfd4-4519-9189-9ef3b2a32031",
+      "type": "image",
+      "createdAt": "2026-11-02T15:06:52.586Z",
+      "updatedAt": "2026-11-02T15:06:52.586Z",
+      "prompt": "A fantasy wandering swordsman for a top-down role-playing game, facing south in a relaxed neutral standing pose, seen from a slightly elevated three-quarter game camera. Use the reference for the adventurer's identity and material palette: tousled chestnut brown hair, cream scarf with a short trailing end, indigo short coat over a burgundy waistcoat, warm brown leather belt, gloves and boots, small amber brass buckles, a slender steel sword sheathed at his left hip. Whole body clearly visible, compact balanced proportions with readable separated boots, plenty of breathing room around the silhouette for later sword actions. Warm upper-left amber highlights, deep plum shadows, crisp material clusters and restrained outlining matching the reference. Keep the recognizable outfit, hairstyle, body proportions and color relationships together as one coherent character design.",
+      "width": 48,
+      "height": 48,
+      "assetUrl": "https://media.spritefusion.com/pixel-art-assets/6d1226a2-3825-4074-835d-e698da8487df/736b4c82-cfd4-4519-9189-9ef3b2a32031/image.png?v=1793632012586",
+      "style": "default",
+      "tags": [
+        "du-am-the-gioi-lang-quen"
+      ],
+      "contentType": "image/png",
+      "batchId": "67b47f12-deee-4f18-896d-cd30be0c479b",
+      "batchIndex": 5,
+      "batchSize": 9,
+      "action": {
+        "kind": "same-style"
+      }
+    },
+    {
+      "id": "94df5d37-bca3-4b54-86ba-368d7eefcde4",
+      "type": "image",
+      "createdAt": "2026-11-02T15:06:53.234Z",
+      "updatedAt": "2026-11-02T15:06:53.234Z",
+      "prompt": "A fantasy wandering swordsman for a top-down role-playing game, facing south in a relaxed neutral standing pose, seen from a slightly elevated three-quarter game camera. Use the reference for the adventurer's identity and material palette: tousled chestnut brown hair, cream scarf with a short trailing end, indigo short coat over a burgundy waistcoat, warm brown leather belt, gloves and boots, small amber brass buckles, a slender steel sword sheathed at his left hip. Whole body clearly visible, compact balanced proportions with readable separated boots, plenty of breathing room around the silhouette for later sword actions. Warm upper-left amber highlights, deep plum shadows, crisp material clusters and restrained outlining matching the reference. Keep the recognizable outfit, hairstyle, body proportions and color relationships together as one coherent character design.",
+      "width": 48,
+      "height": 48,
+      "assetUrl": "https://media.spritefusion.com/pixel-art-assets/6d1226a2-3825-4074-835d-e698da8487df/94df5d37-bca3-4b54-86ba-368d7eefcde4/image.png?v=1793632013234",
+      "style": "default",
+      "tags": [
+        "du-am-the-gioi-lang-quen"
+      ],
+      "contentType": "image/png",
+      "batchId": "67b47f12-deee-4f18-896d-cd30be0c479b",
+      "batchIndex": 6,
+      "batchSize": 9,
+      "action": {
+        "kind": "same-style"
+      }
+    },
+    {
+      "id": "da0a1273-139e-4e3f-9e14-c70e9d65d081",
+      "type": "image",
+      "createdAt": "2026-11-02T15:06:53.831Z",
+      "updatedAt": "2026-11-02T15:06:53.831Z",
+      "prompt": "A fantasy wandering swordsman for a top-down role-playing game, facing south in a relaxed neutral standing pose, seen from a slightly elevated three-quarter game camera. Use the reference for the adventurer's identity and material palette: tousled chestnut brown hair, cream scarf with a short trailing end, indigo short coat over a burgundy waistcoat, warm brown leather belt, gloves and boots, small amber brass buckles, a slender steel sword sheathed at his left hip. Whole body clearly visible, compact balanced proportions with readable separated boots, plenty of breathing room around the silhouette for later sword actions. Warm upper-left amber highlights, deep plum shadows, crisp material clusters and restrained outlining matching the reference. Keep the recognizable outfit, hairstyle, body proportions and color relationships together as one coherent character design.",
+      "width": 48,
+      "height": 48,
+      "assetUrl": "https://media.spritefusion.com/pixel-art-assets/6d1226a2-3825-4074-835d-e698da8487df/da0a1273-139e-4e3f-9e14-c70e9d65d081/image.png?v=1793632013831",
+      "style": "default",
+      "tags": [
+        "du-am-the-gioi-lang-quen"
+      ],
+      "contentType": "image/png",
+      "batchId": "67b47f12-deee-4f18-896d-cd30be0c479b",
+      "batchIndex": 7,
+      "batchSize": 9,
+      "action": {
+        "kind": "same-style"
+      }
+    },
+    {
+      "id": "383e906a-1618-465b-b824-1214e58e2cd1",
+      "type": "image",
+      "createdAt": "2026-11-02T15:06:54.364Z",
+      "updatedAt": "2026-11-02T15:06:54.364Z",
+      "prompt": "A fantasy wandering swordsman for a top-down role-playing game, facing south in a relaxed neutral standing pose, seen from a slightly elevated three-quarter game camera. Use the reference for the adventurer's identity and material palette: tousled chestnut brown hair, cream scarf with a short trailing end, indigo short coat over a burgundy waistcoat, warm brown leather belt, gloves and boots, small amber brass buckles, a slender steel sword sheathed at his left hip. Whole body clearly visible, compact balanced proportions with readable separated boots, plenty of breathing room around the silhouette for later sword actions. Warm upper-left amber highlights, deep plum shadows, crisp material clusters and restrained outlining matching the reference. Keep the recognizable outfit, hairstyle, body proportions and color relationships together as one coherent character design.",
+      "width": 48,
+      "height": 48,
+      "assetUrl": "https://media.spritefusion.com/pixel-art-assets/6d1226a2-3825-4074-835d-e698da8487df/383e906a-1618-465b-b824-1214e58e2cd1/image.png?v=1793632014364",
+      "style": "default",
+      "tags": [
+        "du-am-the-gioi-lang-quen"
+      ],
+      "contentType": "image/png",
+      "batchId": "67b47f12-deee-4f18-896d-cd30be0c479b",
+      "batchIndex": 8,
+      "batchSize": 9,
+      "action": {
+        "kind": "same-style"
+      }
+    }
+  ],
+  "credits": {
+    "used": 15,
+    "remaining": 0
+  }
+}
