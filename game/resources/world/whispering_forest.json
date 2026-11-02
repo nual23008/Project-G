@@ -1,0 +1,243 @@
+{
+  "id": "whispering_forest",
+  "name": "Rừng Thì Thầm",
+  "width": 64,
+  "height": 48,
+  "spawn": [
+    512,
+    656
+  ],
+  "rowan": [
+    -100,
+    -100
+  ],
+  "paths": [
+    [
+      30,
+      12,
+      5,
+      31
+    ],
+    [
+      25,
+      12,
+      15,
+      9
+    ],
+    [
+      24,
+      27,
+      18,
+      4
+    ],
+    [
+      38,
+      25,
+      4,
+      12
+    ]
+  ],
+  "pond": [
+    9,
+    17,
+    9,
+    9
+  ],
+  "groves": [
+    [
+      6,
+      9,
+      8,
+      6
+    ],
+    [
+      49,
+      10,
+      8,
+      17
+    ],
+    [
+      7,
+      30,
+      9,
+      10
+    ]
+  ],
+  "flowers": [
+    [
+      450,
+      602
+    ],
+    [
+      575,
+      592
+    ],
+    [
+      440,
+      288
+    ],
+    [
+      616,
+      300
+    ]
+  ],
+  "props": [
+    {
+      "kind": "crystal",
+      "at": [
+        512,
+        250
+      ]
+    },
+    {
+      "kind": "rock",
+      "at": [
+        424,
+        288
+      ]
+    },
+    {
+      "kind": "rock",
+      "at": [
+        600,
+        288
+      ]
+    },
+    {
+      "kind": "rock",
+      "at": [
+        424,
+        206
+      ]
+    },
+    {
+      "kind": "rock",
+      "at": [
+        600,
+        206
+      ]
+    },
+    {
+      "kind": "oak",
+      "at": [
+        400,
+        480
+      ]
+    },
+    {
+      "kind": "oak",
+      "at": [
+        656,
+        480
+      ]
+    },
+    {
+      "kind": "pine",
+      "at": [
+        368,
+        352
+      ]
+    },
+    {
+      "kind": "pine",
+      "at": [
+        680,
+        336
+      ]
+    },
+    {
+      "kind": "lamp",
+      "at": [
+        472,
+        632
+      ]
+    },
+    {
+      "kind": "lamp",
+      "at": [
+        568,
+        632
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "return_village",
+      "kind": "portal",
+      "name": "Về làng Bình Minh",
+      "at": [
+        512,
+        690
+      ],
+      "destination": "dawn_village"
+    },
+    {
+      "id": "ancient_shard",
+      "kind": "shard",
+      "name": "Tinh thể cổ — kiểm tra",
+      "at": [
+        512,
+        284
+      ],
+      "item": "echo_shard",
+      "count": 1,
+      "requires_defeated": "guardian"
+    },
+    {
+      "id": "forest_chest",
+      "kind": "chest",
+      "name": "Rương của người đi rừng",
+      "at": [
+        640,
+        560
+      ],
+      "item": "potion",
+      "count": 2
+    },
+    {
+      "id": "herb_a",
+      "kind": "pickup",
+      "name": "Hái lá sương",
+      "at": [
+        464,
+        566
+      ],
+      "item": "herb",
+      "count": 3
+    },
+    {
+      "id": "herb_b",
+      "kind": "pickup",
+      "name": "Hái lá sương",
+      "at": [
+        605,
+        407
+      ],
+      "item": "herb",
+      "count": 2
+    }
+  ],
+  "enemies": [
+    {
+      "id": "scout_a",
+      "at": [
+        556,
+        488
+      ]
+    },
+    {
+      "id": "scout_b",
+      "at": [
+        638,
+        402
+      ]
+    },
+    {
+      "id": "guardian",
+      "at": [
+        512,
+        326
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+ "rust_sword":{"name":"Kiếm lữ hành","description":"Lưỡi kiếm cũ nhưng đáng tin. Mang trong túi để dùng đòn cận chiến.","type":"weapon","max_stack":1,"damage":18,"icon":0},
+ "potion":{"name":"Thuốc hồi phục","description":"Hồi 40 HP. Không tiêu hao khi máu đã đầy.","type":"consumable","max_stack":9,"heal":40,"icon":1},
+ "herb":{"name":"Lá sương","description":"Thảo dược mọc bên những phiến đá ẩm.","type":"resource","max_stack":20,"icon":2},
+ "ore":{"name":"Quặng ký ức","description":"Quặng nhạt màu thu được từ sinh vật tinh thể.","type":"resource","max_stack":20,"icon":3},
+ "echo_shard":{"name":"Mảnh dư âm cổ","description":"Mảnh tinh thể tìm trong rừng. Giữ lại để Lyra nghiên cứu ở chương tiếp theo.","type":"quest","max_stack":1,"icon":4}
+}

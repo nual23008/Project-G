@@ -1,0 +1,91 @@
+{
+  "rowan": {
+    "name": "Trưởng làng Rowan",
+    "role": "Người giữ ngọn lửa cuối cùng",
+    "portrait": "rowan",
+    "start": "greeting",
+    "nodes": {
+      "greeting": {
+        "text": "Cháu tỉnh rồi à? Ta đã thấy cháu nằm bên đường, tay vẫn nắm chặt viên tinh thể ấy. Đừng vội đứng dậy nếu đầu còn choáng.",
+        "next": "name"
+      },
+      "name": {
+        "text": "Ta là Rowan. Đây là làng Bình Minh. Từ sau Đêm Lặng, chúng ta học cách sống với những khoảng trống trong ký ức… nhưng viên đá của cháu vẫn còn sáng.",
+        "next": "questions"
+      },
+      "questions": {
+        "text": "Ta không có tất cả câu trả lời. Nhưng cháu có thể hỏi. Ở đây, không ai phải tỉnh dậy một mình.",
+        "choices": [
+          {
+            "text": "Viên tinh thể này là gì?",
+            "next": "crystal"
+          },
+          {
+            "text": "Đã có chuyện gì với ngôi làng?",
+            "next": "village"
+          },
+          {
+            "text": "Cháu sẽ đi một vòng quanh làng.",
+            "next": "farewell"
+          }
+        ]
+      },
+      "crystal": {
+        "text": "Ngày xưa, tinh thể gìn giữ ký ức của cả Aetheria. Ta từng tin chúng không bao giờ tắt. Rồi Đêm Lặng đến… Lyra vẫn tìm cách hiểu chuyện gì đã xảy ra.",
+        "next": "warning"
+      },
+      "warning": {
+        "text": "Ta muốn tin ánh sáng ấy là hy vọng. Nhưng ta cũng đã thấy những điều con người làm khi quá sợ quên lãng. Hãy giữ nó cẩn thận, được không?",
+        "next": "questions"
+      },
+      "village": {
+        "text": "Mỗi sáng ta thắp những ngọn đèn này, kể cả trước những căn nhà đã vắng người. Nếu một ngày họ trở về, ta muốn họ nhận ra lối đi.",
+        "next": "boundary"
+      },
+      "boundary": {
+        "text": "Con đường phía bắc dẫn đến Rừng Thì Thầm. Hãy chuẩn bị trước khi đi: J hoặc chuột trái để đánh, I mở túi, Q xem nhật ký. Ta có một việc muốn nhờ khi cháu sẵn sàng.",
+        "next": "questions"
+      },
+      "farewell": {
+        "text": "Cháu có thể giúp ta tìm nguồn sáng ở vòng đá phía bắc Rừng Thì Thầm không? Ta sẽ mở cổng. Mang kiếm theo, và dùng H để uống thuốc khi bị thương. Hãy trở về an toàn.",
+        "next": ""
+      }
+    }
+  },
+  "forest_sign": {
+    "name": "Biển chỉ đường",
+    "role": "Lối bắc",
+    "portrait": "",
+    "start": "start",
+    "nodes": {
+      "start": {
+        "text": "↑ RỪNG THÌ THẦM\n\nNói chuyện xong với Rowan để nhận việc và mở cổng. Đứng bên cổng, nhấn E để đi vào rừng. F5 lưu nhanh; H uống thuốc.",
+        "next": ""
+      }
+    }
+  },
+  "village_sign": {
+    "name": "Bảng ghi chép",
+    "role": "Một nét chữ đã nhạt",
+    "portrait": "",
+    "start": "start",
+    "nodes": {
+      "start": {
+        "text": "Nếu cậu còn nhớ bài hát về mặt trời, hãy hát bên bờ hồ lúc hoàng hôn.\n\n— M.\n\nBên dưới là những nét gạch đếm ngày, kéo dài đến tận mép gỗ.",
+        "next": ""
+      }
+    }
+  },
+  "rowan_return": {
+    "name": "Trưởng làng Rowan",
+    "role": "Ngọn đèn chờ người trở về",
+    "portrait": "rowan",
+    "start": "start",
+    "nodes": {
+      "start": {
+        "text": "Cháu đã trở về, và mảnh tinh thể vẫn sáng! Cảm ơn cháu. Nhận lấy ít thuốc và quặng này. Hãy giữ mảnh dư âm; Lyra sẽ giúp chúng ta đọc ký ức trong chặng tiếp theo.",
+        "next": ""
+      }
+    }
+  }
+}

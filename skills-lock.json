@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "scenario-godot-2d": {
+      "source": "scenario-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/game-engines/godot/scenario-godot-2d/SKILL.md",
+      "computedHash": "6e403b20cca7d3a5b9048f9bfa916232ede44299bbee57ff462722c6ba05d522"
+    },
+    "scenario-godot-architecture": {
+      "source": "scenario-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/game-engines/godot/scenario-godot-architecture/SKILL.md",
+      "computedHash": "6a4d63779739ea291da3e57ec2142033234be29ae18e6c483c63d6578af6ea3a"
+    },
+    "scenario-godot-expert": {
+      "source": "scenario-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/game-engines/godot/scenario-godot-expert/SKILL.md",
+      "computedHash": "0eca7b50246e9a3093d48d4a0e0d061b3bedee056d39841443640bbbcdaeec83"
+    },
+    "scenario-godot-gameplay": {
+      "source": "scenario-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/game-engines/godot/scenario-godot-gameplay/SKILL.md",
+      "computedHash": "6e64646fc79e9e82d3155a28d23408335ef0e017d975a5de7c4555dca3903b2d"
+    },
+    "scenario-godot-ui": {
+      "source": "scenario-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/game-engines/godot/scenario-godot-ui/SKILL.md",
+      "computedHash": "93d31127e8d366f1fd2defbfc45201864b5d3afd811294da4217a46a586fb6ca"
+    }
+  }
+}
