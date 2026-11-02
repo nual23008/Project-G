@@ -1,0 +1,537 @@
+{
+  "rowan": {
+    "idle_down": {
+      "frame_references": 8,
+      "distinct_images": 5,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:rowan"
+    }
+  },
+  "enemy": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 3,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:enemy"
+    },
+    "walk": {
+      "frame_references": 8,
+      "distinct_images": 5,
+      "fps": 8,
+      "loop": true,
+      "design_id": "new_20261102:enemy"
+    },
+    "windup": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 19.047619047619047,
+      "loop": false,
+      "design_id": "new_20261102:enemy"
+    },
+    "attack": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 33.333333333333336,
+      "loop": false,
+      "design_id": "new_20261102:enemy"
+    },
+    "hurt": {
+      "frame_references": 5,
+      "distinct_images": 3,
+      "fps": 27.77777777777778,
+      "loop": false,
+      "design_id": "new_20261102:enemy"
+    },
+    "death": {
+      "frame_references": 9,
+      "distinct_images": 8,
+      "fps": 16.363636363636363,
+      "loop": false,
+      "design_id": "new_20261102:enemy"
+    }
+  },
+  "player": {
+    "idle_down": {
+      "frame_references": 8,
+      "distinct_images": 6,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:player"
+    },
+    "walk_down": {
+      "frame_references": 6,
+      "distinct_images": 6,
+      "fps": 9,
+      "loop": true,
+      "design_id": "new_20261102:player"
+    },
+    "attack_down": {
+      "frame_references": 9,
+      "distinct_images": 9,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    },
+    "hurt_down": {
+      "frame_references": 5,
+      "distinct_images": 4,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    },
+    "death_down": {
+      "frame_references": 9,
+      "distinct_images": 9,
+      "fps": 10.0,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    },
+    "idle_left": {
+      "frame_references": 8,
+      "distinct_images": 6,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:player"
+    },
+    "walk_left": {
+      "frame_references": 6,
+      "distinct_images": 6,
+      "fps": 9,
+      "loop": true,
+      "design_id": "new_20261102:player"
+    },
+    "attack_left": {
+      "frame_references": 9,
+      "distinct_images": 9,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    },
+    "hurt_left": {
+      "frame_references": 5,
+      "distinct_images": 4,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    },
+    "death_left": {
+      "frame_references": 9,
+      "distinct_images": 9,
+      "fps": 10.0,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    },
+    "idle_right": {
+      "frame_references": 8,
+      "distinct_images": 6,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:player"
+    },
+    "walk_right": {
+      "frame_references": 6,
+      "distinct_images": 6,
+      "fps": 9,
+      "loop": true,
+      "design_id": "new_20261102:player"
+    },
+    "attack_right": {
+      "frame_references": 9,
+      "distinct_images": 9,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    },
+    "hurt_right": {
+      "frame_references": 5,
+      "distinct_images": 4,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    },
+    "death_right": {
+      "frame_references": 9,
+      "distinct_images": 9,
+      "fps": 10.0,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    },
+    "idle_up": {
+      "frame_references": 8,
+      "distinct_images": 6,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:player"
+    },
+    "walk_up": {
+      "frame_references": 6,
+      "distinct_images": 6,
+      "fps": 9,
+      "loop": true,
+      "design_id": "new_20261102:player"
+    },
+    "attack_up": {
+      "frame_references": 9,
+      "distinct_images": 9,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    },
+    "hurt_up": {
+      "frame_references": 5,
+      "distinct_images": 4,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    },
+    "death_up": {
+      "frame_references": 9,
+      "distinct_images": 9,
+      "fps": 10.0,
+      "loop": false,
+      "design_id": "new_20261102:player"
+    }
+  },
+  "house": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:house"
+    }
+  },
+  "pine": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 4,
+      "loop": true,
+      "design_id": "new_20261102:pine"
+    }
+  },
+  "oak": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 4,
+      "loop": true,
+      "design_id": "new_20261102:oak"
+    }
+  },
+  "rock": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 3,
+      "loop": true,
+      "design_id": "new_20261102:rock"
+    }
+  },
+  "lamp": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 5,
+      "fps": 8,
+      "loop": true,
+      "design_id": "new_20261102:lamp"
+    }
+  },
+  "crystal": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 7,
+      "fps": 6,
+      "loop": true,
+      "design_id": "new_20261102:crystal"
+    }
+  },
+  "fence": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 5,
+      "fps": 4,
+      "loop": true,
+      "design_id": "new_20261102:fence"
+    }
+  },
+  "sign": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 5,
+      "fps": 4,
+      "loop": true,
+      "design_id": "new_20261102:sign"
+    }
+  },
+  "fern": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:fern"
+    }
+  },
+  "flowers": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 4,
+      "loop": true,
+      "design_id": "new_20261102:flowers"
+    }
+  },
+  "chest": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 6,
+      "fps": 4,
+      "loop": true,
+      "design_id": "new_20261102:chest"
+    },
+    "open": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 16,
+      "loop": false,
+      "design_id": "new_20261102:chest"
+    }
+  },
+  "portal": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 7,
+      "loop": true,
+      "design_id": "new_20261102:portal"
+    }
+  },
+  "rust_sword": {
+    "icon": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:rust_sword"
+    },
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:rust_sword"
+    }
+  },
+  "potion": {
+    "icon": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:potion"
+    },
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:potion"
+    }
+  },
+  "herb": {
+    "icon": {
+      "frame_references": 8,
+      "distinct_images": 3,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:herb"
+    },
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 3,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:herb"
+    }
+  },
+  "ore": {
+    "icon": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:ore"
+    },
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:ore"
+    }
+  },
+  "echo_shard": {
+    "icon": {
+      "frame_references": 8,
+      "distinct_images": 5,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:echo_shard"
+    },
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 5,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:echo_shard"
+    }
+  },
+  "grass": {
+    "idle": {
+      "frame_references": 4,
+      "distinct_images": 4,
+      "fps": 2,
+      "loop": true,
+      "design_id": "new_20261102:grass"
+    }
+  },
+  "stone_path": {
+    "idle": {
+      "frame_references": 4,
+      "distinct_images": 4,
+      "fps": 0.8,
+      "loop": true,
+      "design_id": "new_20261102:stone_path"
+    },
+    "edges": {
+      "frame_references": 4,
+      "distinct_images": 4,
+      "fps": 0.8,
+      "loop": true,
+      "design_id": "new_20261102:stone_path"
+    }
+  },
+  "water": {
+    "idle": {
+      "frame_references": 4,
+      "distinct_images": 4,
+      "fps": 5,
+      "loop": true,
+      "design_id": "new_20261102:water"
+    }
+  },
+  "shore": {
+    "idle": {
+      "frame_references": 4,
+      "distinct_images": 4,
+      "fps": 1.2,
+      "loop": true,
+      "design_id": "new_20261102:shore"
+    }
+  },
+  "firefly": {
+    "idle": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 6,
+      "loop": true,
+      "design_id": "new_20261102:firefly"
+    }
+  },
+  "glow": {
+    "idle": {
+      "frame_references": 4,
+      "distinct_images": 4,
+      "fps": 3,
+      "loop": true,
+      "design_id": "new_20261102:glow"
+    }
+  },
+  "ui_panel": {
+    "idle": {
+      "frame_references": 6,
+      "distinct_images": 6,
+      "fps": 2,
+      "loop": true,
+      "design_id": "new_20261102:ui_panel"
+    }
+  },
+  "ui_button": {
+    "normal": {
+      "frame_references": 6,
+      "distinct_images": 6,
+      "fps": 3,
+      "loop": true,
+      "design_id": "new_20261102:ui_button"
+    },
+    "hover": {
+      "frame_references": 6,
+      "distinct_images": 6,
+      "fps": 3,
+      "loop": true,
+      "design_id": "new_20261102:ui_button"
+    },
+    "pressed": {
+      "frame_references": 6,
+      "distinct_images": 6,
+      "fps": 3,
+      "loop": true,
+      "design_id": "new_20261102:ui_button"
+    },
+    "focus": {
+      "frame_references": 6,
+      "distinct_images": 6,
+      "fps": 3,
+      "loop": true,
+      "design_id": "new_20261102:ui_button"
+    }
+  },
+  "ui_health": {
+    "idle": {
+      "frame_references": 6,
+      "distinct_images": 6,
+      "fps": 3,
+      "loop": true,
+      "design_id": "new_20261102:ui_health"
+    }
+  },
+  "sword_slash": {
+    "play": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 33.333333333333336,
+      "loop": false,
+      "design_id": "new_20261102:sword_slash"
+    }
+  },
+  "enemy_strike": {
+    "play": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 33.333333333333336,
+      "loop": false,
+      "design_id": "new_20261102:enemy_strike"
+    }
+  },
+  "hit_spark": {
+    "play": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 30,
+      "loop": false,
+      "design_id": "new_20261102:hit_spark"
+    }
+  },
+  "enemy_telegraph": {
+    "play": {
+      "frame_references": 8,
+      "distinct_images": 8,
+      "fps": 19.047619047619047,
+      "loop": false,
+      "design_id": "new_20261102:enemy_telegraph"
+    }
+  }
+}

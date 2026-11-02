@@ -61,6 +61,7 @@ func click(point: Vector2) -> void:
 
 func _run() -> void:
 	main = load("res://scenes/main/main.tscn").instantiate()
+	main.save_path = "user://phase1_automated_only.json"
 	root.add_child(main)
 	await frames(3)
 	check(main.mode == main.Mode.MENU and paused, "Boot reaches menu and freezes world")

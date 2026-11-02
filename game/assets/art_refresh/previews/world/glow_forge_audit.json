@@ -1,0 +1,54 @@
+{
+  "file": "/home/luan/Desktop/project G/game/assets/art_refresh/previews/world/audit_frames/glow/idle/0.png",
+  "size": [
+    64,
+    64
+  ],
+  "opaque_px": 2996,
+  "results": [
+    {
+      "check": "colour count",
+      "value": 5,
+      "pass": true,
+      "detail": "limit 32"
+    },
+    {
+      "check": "anti-alias suspects",
+      "value": 0,
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "check": "isolated pixels",
+      "value": "0 (0.0%)",
+      "pass": true,
+      "detail": "limit 2% \u2014 these read as noise, not detail"
+    },
+    {
+      "check": "dominant run length",
+      "value": "6px (39% of runs)",
+      "pass": true,
+      "detail": "want one clear feature scale; 10 distinct run lengths seen"
+    },
+    {
+      "check": "banded shading",
+      "value": "0 touching near-tone pairs",
+      "pass": true,
+      "detail": "every touching tone pair differs by >= 6.0 luminance"
+    },
+    {
+      "check": "light consistency",
+      "value": "0/1 auto-groups lit correctly (advisory)",
+      "pass": true,
+      "detail": "auto-grouping is a hint only \u2014 it mis-groups ramp ends, so it never fails the audit. Declare the ramps to judge exactly: --material \"c1,c2,c3\""
+    },
+    {
+      "check": "silhouette cleanliness",
+      "value": "0 notches, 0 spikes",
+      "pass": true,
+      "detail": "limit 8 \u2014 1px edge jitter is the machine-made tell"
+    }
+  ],
+  "exit_code": 0,
+  "note": "Lamp glow is emissive; directional light check is advisory, not a declared material-light gate. Palette is the exact RGBA grid legend."
+}

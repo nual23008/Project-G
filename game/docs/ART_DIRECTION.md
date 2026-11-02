@@ -1,5 +1,9 @@
 # Hướng mỹ thuật — lần nâng cấp đầu tiên
 
+## Bộ đang dùng sau yêu cầu thay đồ họa
+
+`assets/art_refresh` là bộ active, dựng bằng `tools/build_art_refresh.py`; `art_stage1` cũ đã bị thay. House/pine/oak/Rowan/guardian/hero_walk dùng nguồn ảnh mới chi tiết trong `art_v3/sources`, hero_attack tạo mới cùng identity; props/item/terrain/UI/VFX còn lại thiết kế lại từ canvas trống. Không đổi màu sprite cũ rồi gọi là bộ mới. Mỗi loại có idle/ambient ngay khi không tương tác; UI/địa hình cũng cần loop riêng. State mới phải giữ cùng thiết kế, frame canvas/pivot, màu/vật liệu và contact timing của bộ state cùng loại. Xem AGENTS.md và ART_REFRESH_BRIEF.md.
+
 Ảnh quán trọ người dùng cung cấp là tham chiếu màu, độ chi tiết và vật liệu. Giữ góc nhìn top-down để bảo toàn bản đồ/collision/save Phase 2; không chuyển toàn bộ game sang isometric trong lần sửa hình ảnh này.
 
 ## Bảng màu và vật liệu

@@ -1,0 +1,197 @@
+{
+  "grass": {
+    "resource": "res://resources/art/grass.tres",
+    "texture": "res://assets/art_refresh/sheets/terrain.png",
+    "frame_size": [
+      16,
+      16
+    ],
+    "pivot": [
+      0,
+      0
+    ],
+    "columns": 32,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          8,
+          16,
+          24
+        ],
+        "count": 4,
+        "fps": 2,
+        "loop": true
+      }
+    },
+    "backend": "TileSetAtlasSource",
+    "revision": "art_refresh",
+    "source": "New original hand-authored material geometry from empty canvases; editable world grids rendered by pixel_draw.py; no old asset pixels used",
+    "ambient": "rooted blade tips lean one pixel; quiet moss islands remain fixed"
+  },
+  "stone_path": {
+    "resource": "res://resources/art/stone_path.tres",
+    "texture": "res://assets/art_refresh/sheets/terrain.png",
+    "frame_size": [
+      16,
+      16
+    ],
+    "pivot": [
+      0,
+      0
+    ],
+    "columns": 32,
+    "states": {
+      "idle": {
+        "indices": [
+          32,
+          40,
+          48,
+          56
+        ],
+        "count": 4,
+        "fps": 0.8,
+        "loop": true
+      },
+      "edges": {
+        "indices": [
+          0,
+          16,
+          32,
+          48
+        ],
+        "count": 4,
+        "fps": 0.8,
+        "loop": true,
+        "texture": "res://assets/art_refresh/sheets/paths.png",
+        "columns": 64
+      }
+    },
+    "backend": "TileSetAtlasSource",
+    "revision": "art_refresh",
+    "source": "New original hand-authored material geometry from empty canvases; editable world grids rendered by pixel_draw.py; no old asset pixels used",
+    "ambient": "tiny wet stone bevel catches warm light; fixed slab geometry"
+  },
+  "water": {
+    "resource": "res://resources/art/water.tres",
+    "texture": "res://assets/art_refresh/sheets/terrain.png",
+    "frame_size": [
+      16,
+      16
+    ],
+    "pivot": [
+      0,
+      0
+    ],
+    "columns": 32,
+    "states": {
+      "idle": {
+        "indices": [
+          64,
+          72,
+          80,
+          88
+        ],
+        "count": 4,
+        "fps": 5,
+        "loop": true
+      }
+    },
+    "backend": "TileSetAtlasSource",
+    "revision": "art_refresh",
+    "source": "New original hand-authored material geometry from empty canvases; editable world grids rendered by pixel_draw.py; no old asset pixels used",
+    "ambient": "wrapped stepped wavelets flow in four distinct phases"
+  },
+  "shore": {
+    "resource": "res://resources/art/shore.tres",
+    "texture": "res://assets/art_refresh/sheets/terrain.png",
+    "frame_size": [
+      16,
+      16
+    ],
+    "pivot": [
+      0,
+      0
+    ],
+    "columns": 32,
+    "states": {
+      "idle": {
+        "indices": [
+          96,
+          104,
+          112,
+          120
+        ],
+        "count": 4,
+        "fps": 1.2,
+        "loop": true
+      }
+    },
+    "backend": "TileSetAtlasSource",
+    "revision": "art_refresh",
+    "source": "New original hand-authored material geometry from empty canvases; editable world grids rendered by pixel_draw.py; no old asset pixels used",
+    "ambient": "rooted moss leaf tips move gently; stones remain rigid"
+  },
+  "firefly": {
+    "resource": "res://resources/art/firefly.tres",
+    "texture": "res://assets/art_refresh/sheets/firefly.png",
+    "frame_size": [
+      8,
+      8
+    ],
+    "pivot": [
+      4,
+      4
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 6,
+        "loop": true
+      }
+    },
+    "source": "New original lantern-moth pixel design from empty 8x8 canvas; eight real wing/pulse frames rendered through pixel_draw.py",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh"
+  },
+  "glow": {
+    "resource": "res://resources/art/glow.tres",
+    "texture": "res://assets/art_refresh/sheets/glow.png",
+    "frame_size": [
+      64,
+      64
+    ],
+    "pivot": [
+      32,
+      32
+    ],
+    "columns": 4,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "count": 4,
+        "fps": 3,
+        "loop": true
+      }
+    },
+    "source": "New original stepped amber lamp-light design from blank canvas; discrete alpha bands at two-pixel feature scale; four material intensity frames rendered by pixel_draw.py",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh"
+  }
+}

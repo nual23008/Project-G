@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" format=3]
+[ext_resource type="Texture2D" path="res://assets/art_refresh/sheets/rust_sword.png" id="1"]
+[sub_resource type="AtlasTexture" id="icon_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="icon_1"]
+atlas = ExtResource("1")
+region = Rect2(24, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="icon_2"]
+atlas = ExtResource("1")
+region = Rect2(48, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="icon_3"]
+atlas = ExtResource("1")
+region = Rect2(72, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="icon_4"]
+atlas = ExtResource("1")
+region = Rect2(96, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="icon_5"]
+atlas = ExtResource("1")
+region = Rect2(120, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="icon_6"]
+atlas = ExtResource("1")
+region = Rect2(144, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="icon_7"]
+atlas = ExtResource("1")
+region = Rect2(168, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="idle_0"]
+atlas = ExtResource("1")
+region = Rect2(192, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="idle_1"]
+atlas = ExtResource("1")
+region = Rect2(216, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="idle_2"]
+atlas = ExtResource("1")
+region = Rect2(240, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="idle_3"]
+atlas = ExtResource("1")
+region = Rect2(264, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="idle_4"]
+atlas = ExtResource("1")
+region = Rect2(0, 24, 24, 24)
+[sub_resource type="AtlasTexture" id="idle_5"]
+atlas = ExtResource("1")
+region = Rect2(24, 24, 24, 24)
+[sub_resource type="AtlasTexture" id="idle_6"]
+atlas = ExtResource("1")
+region = Rect2(48, 24, 24, 24)
+[sub_resource type="AtlasTexture" id="idle_7"]
+atlas = ExtResource("1")
+region = Rect2(72, 24, 24, 24)
+[resource]
+animations = [{"name":&"icon","speed":5,"loop":true,"frames":[{"duration":1.0,"texture":SubResource("icon_0")},{"duration":1.0,"texture":SubResource("icon_1")},{"duration":1.0,"texture":SubResource("icon_2")},{"duration":1.0,"texture":SubResource("icon_3")},{"duration":1.0,"texture":SubResource("icon_4")},{"duration":1.0,"texture":SubResource("icon_5")},{"duration":1.0,"texture":SubResource("icon_6")},{"duration":1.0,"texture":SubResource("icon_7")}]},
+{"name":&"idle","speed":5,"loop":true,"frames":[{"duration":1.0,"texture":SubResource("idle_0")},{"duration":1.0,"texture":SubResource("idle_1")},{"duration":1.0,"texture":SubResource("idle_2")},{"duration":1.0,"texture":SubResource("idle_3")},{"duration":1.0,"texture":SubResource("idle_4")},{"duration":1.0,"texture":SubResource("idle_5")},{"duration":1.0,"texture":SubResource("idle_6")},{"duration":1.0,"texture":SubResource("idle_7")}]}]

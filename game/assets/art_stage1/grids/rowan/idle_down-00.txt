@@ -1,0 +1,46 @@
+name: rowan/idle_down-00
+legend:
+  ".": "#00000000"
+  "1": "#493543ff"
+  "b": "#a57550ff"
+  "h": "#938368ff"
+  "t": "#d49b58ff"
+  "x": "#dfaf80ff"
+  "z": "#d2ccaaff"
+  "G": "#b99362ff"
+  "H": "#e9c58bff"
+  "K": "#203a3eff"
+  "M": "#0c181d60"
+grid:
+........................
+........................
+........................
+........................
+........................
+........................
+........zzzzzzzz........
+......zzzzzzzzzzzz......
+......zzzHHHHHHzzz......
+......zzzHHHHHHzzz.HHHH.
+......zzzHHHHHHzzz.HHHH.
+......zzzH1HHH1zzz.tttH.
+......zzzHHHHHHzzz.HHHH.
+......zzzHHHHHHzzz...bb.
+......zzzzzzzzzzzz...bb.
+......zzzzzzzzzzzz...bb.
+.......1xzzzzzzz11...bb.
+......1GxzzzzzzGG1...bb.
+......1GxxzzzzzGG1...bb.
+......1GxxzzzzGGG1...bb.
+......1xxGGGGzGGG11..b..
+......1xxGGGGGGGG11.bb..
+......GxxGGGGGGGGG1.bb..
+.....1GxxGGGGGGGGG1.bb..
+.....1GGGGGGGGGGGG11bb..
+.....11111GGGGGG1111bb..
+.....MMMKK111G1111MMbb..
+....MMMMKKKMMMK1KMMMbb..
+....MMMMhhhhMMhhhhMMbb..
+.....MMMhhhhMMhhhhMM....
+........MMMMMMMMM.......
+........................

@@ -26,6 +26,7 @@ var death_duration: float = 0.0
 var path_clock: float = 0.0
 var waypoint := Vector2.ZERO
 var towards_end: bool = true
+var ambient_time: float = 0.0
 
 func _ready() -> void:
 	add_to_group("enemies")
@@ -55,7 +56,7 @@ func _ready() -> void:
 	sprite = AnimatedSprite2D.new()
 	sprite.sprite_frames = ENEMY_FRAMES
 	sprite.centered = false
-	sprite.offset = Vector2(-16,-26)
+	sprite.offset = Vector2(-24,-52)
 	sprite.play("walk")
 	add_child(sprite)
 	telegraph = AnimatedSprite2D.new()
@@ -69,6 +70,7 @@ func _ready() -> void:
 	add_child(telegraph)
 
 func _physics_process(delta: float) -> void:
+	ambient_time += delta
 	cooldown = maxf(0.0,cooldown-delta)
 	state_time -= delta
 	path_clock -= delta
@@ -179,6 +181,7 @@ func _damaged(_amount: int, direction: Vector2) -> void:
 func _died() -> void:
 	state = State.DEAD
 	velocity = Vector2.ZERO
+	melee.cancel()
 	remove_from_group("enemies")
 	set_deferred("collision_layer",0)
 	set_deferred("collision_mask",0)
@@ -192,10 +195,15 @@ func _died() -> void:
 	_sync_action_frame("death",0.0)
 	# The quest and save state change now; the corpse is only a transient visual.
 	defeated.emit(enemy_id,position,definition.loot)
+	queue_redraw()
+
+func health_skin_texture() -> Texture2D:
+	var frame: int = posmod(int(ambient_time * HEALTH_SKIN.get_animation_speed(&"idle")), HEALTH_SKIN.get_frame_count(&"idle"))
+	return HEALTH_SKIN.get_frame_texture(&"idle", frame)
 
 func _draw() -> void:
 	if health != null and health.current > 0 and health.current < health.maximum:
-		var skin: Texture2D = HEALTH_SKIN.get_frame_texture(&"idle",0)
-		draw_texture_rect_region(skin,Rect2(-13,-28,26,3),Rect2(0,0,26,3),Color(0.2,0.18,0.2))
+		var skin: Texture2D = health_skin_texture()
+		draw_texture_rect_region(skin,Rect2(-13,-54,26,3),Rect2(0,0,26,3),Color(0.2,0.18,0.2))
 		var width: float = floorf(26.0*health.current/health.maximum)
-		draw_texture_rect_region(skin,Rect2(-13,-28,width,3),Rect2(0,0,width,3))
+		draw_texture_rect_region(skin,Rect2(-13,-54,width,3),Rect2(0,0,width,3))

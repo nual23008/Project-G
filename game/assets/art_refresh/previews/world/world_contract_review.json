@@ -1,0 +1,163 @@
+{
+  "states": {
+    "grass/idle": {
+      "frames": 4,
+      "distinct": 4,
+      "changed_pixels_each_transition": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "fps": 2,
+      "gif_frame_ms": [
+        500,
+        500,
+        500,
+        500
+      ],
+      "loop": true,
+      "loopcheck_exit_code": 0,
+      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 8/256 px (3.1%), median step 8 px\n  ok    last->first change 8/256 px (3.1%)\nloopcheck: 4 frames, PASS"
+    },
+    "stone_path/idle": {
+      "frames": 4,
+      "distinct": 4,
+      "changed_pixels_each_transition": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "fps": 0.8,
+      "gif_frame_ms": [
+        1250,
+        1250,
+        1250,
+        1250
+      ],
+      "loop": true,
+      "loopcheck_exit_code": 0,
+      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 1/256 px (0.4%), median step 1 px\n  ok    last->first change 1/256 px (0.4%)\nloopcheck: 4 frames, PASS"
+    },
+    "stone_path/edges": {
+      "frames": 4,
+      "distinct": 4,
+      "changed_pixels_each_transition": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "fps": 0.8,
+      "gif_frame_ms": [
+        1250,
+        1250,
+        1250,
+        1250
+      ],
+      "loop": true,
+      "loopcheck_exit_code": 0,
+      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 1/256 px (0.4%), median step 1 px\n  ok    last->first change 1/256 px (0.4%)\nloopcheck: 4 frames, PASS"
+    },
+    "water/idle": {
+      "frames": 4,
+      "distinct": 4,
+      "changed_pixels_each_transition": [
+        25,
+        22,
+        22,
+        24
+      ],
+      "fps": 5,
+      "gif_frame_ms": [
+        200,
+        200,
+        200,
+        200
+      ],
+      "loop": true,
+      "loopcheck_exit_code": 0,
+      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 25/256 px (9.8%), median step 22 px\n  ok    last->first change 24/256 px (9.4%)\nloopcheck: 4 frames, PASS"
+    },
+    "shore/idle": {
+      "frames": 4,
+      "distinct": 4,
+      "changed_pixels_each_transition": [
+        6,
+        6,
+        5,
+        6
+      ],
+      "fps": 1.2,
+      "gif_frame_ms": [
+        830,
+        840,
+        830,
+        830
+      ],
+      "loop": true,
+      "loopcheck_exit_code": 0,
+      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 6/256 px (2.3%), median step 6 px\n  ok    last->first change 6/256 px (2.3%)\nloopcheck: 4 frames, PASS"
+    },
+    "firefly/idle": {
+      "frames": 8,
+      "distinct": 8,
+      "changed_pixels_each_transition": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "fps": 6,
+      "gif_frame_ms": [
+        170,
+        160,
+        170,
+        170,
+        160,
+        170,
+        170,
+        160
+      ],
+      "loop": true,
+      "loopcheck_exit_code": 0,
+      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 12/64 px (18.8%), median step 12 px\n  ok    last->first change 12/64 px (18.8%)\nloopcheck: 8 frames, PASS"
+    },
+    "glow/idle": {
+      "frames": 4,
+      "distinct": 4,
+      "changed_pixels_each_transition": [
+        2996,
+        2996,
+        2996,
+        2996
+      ],
+      "fps": 3,
+      "gif_frame_ms": [
+        330,
+        340,
+        330,
+        330
+      ],
+      "loop": true,
+      "loopcheck_exit_code": 0,
+      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 2996/4096 px (73.1%), median step 2996 px\n  ok    last->first change 2996/4096 px (73.1%)\nloopcheck: 4 frames, PASS"
+    }
+  },
+  "all_cells": {
+    "terrain": {
+      "variants_checked": 32,
+      "bad_duplicate_cells": []
+    },
+    "paths": {
+      "variants_checked": 64,
+      "bad_duplicate_cells": []
+    }
+  },
+  "new_pixels_source": "All material geometry was authored on blank canvases; no previous asset was an input."
+}

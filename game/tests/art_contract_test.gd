@@ -21,7 +21,7 @@ func run() -> void:
 		finish()
 		return
 	var registry: Dictionary = parsed
-	var required_ids: Array[String] = ["player", "rowan", "enemy", "house", "pine", "oak", "rock", "lamp", "crystal", "fence", "sign", "fern", "flowers", "chest", "portal", "rust_sword", "potion", "herb", "ore", "echo_shard", "sword_slash", "enemy_strike", "hit_spark", "grass", "stone_path", "water", "shore", "ui_panel", "ui_button", "ui_health", "firefly", "glow"]
+	var required_ids: Array[String] = ["player", "rowan", "enemy", "house", "pine", "oak", "rock", "lamp", "crystal", "fence", "sign", "fern", "flowers", "chest", "portal", "rust_sword", "potion", "herb", "ore", "echo_shard", "sword_slash", "enemy_strike", "enemy_telegraph", "hit_spark", "grass", "stone_path", "water", "shore", "ui_panel", "ui_button", "ui_health", "firefly", "glow"]
 	for id: String in required_ids:
 		check(registry.has(id), "Visible type has a registered art resource: " + id)
 	for id: String in registry:
@@ -29,9 +29,78 @@ func run() -> void:
 			check(false, id + ": manifest entry is a dictionary")
 			continue
 		validate_asset(id, registry[id])
+	await validate_contact_in_physics()
+	await validate_idle_without_interaction()
 	finish()
 
+func validate_idle_without_interaction() -> void:
+	var main: Node = load("res://scenes/main/main.tscn").instantiate()
+	main.save_path = "user://art_refresh_idle_only.json"
+	root.add_child(main)
+	main.start_game()
+	for _i: int in range(3):
+		await physics_frame
+	var player_position: Vector2 = main.world.player.position
+	var observations: Array[Dictionary] = []
+	var stopped: Array[String] = []
+	var enemy: Node2D = load("res://scripts/combat/enemy.gd").new()
+	enemy.position = Vector2(880, 690)
+	enemy.target = main.world.player
+	main.world.actors.add_child(enemy)
+	enemy.health.restore(enemy.health.maximum - 1)
+	var enemy_health_frames: Dictionary = {}
+	var ui_frames: Dictionary = {}
+	var hud_health_frames: Dictionary = {}
+	for node: Node in main.world.find_children("*", "AnimatedSprite2D", true, false):
+		var sprite := node as AnimatedSprite2D
+		if not sprite.is_visible_in_tree():
+			continue
+		if not sprite.is_playing() or not sprite.sprite_frames.get_animation_loop(sprite.animation):
+			stopped.append(str(sprite.get_path()))
+		observations.append({"sprite": sprite, "frames": {}})
+	for _i: int in range(150):
+		await physics_frame
+		enemy_health_frames[enemy.health_skin_texture().get_instance_id()] = true
+		hud_health_frames[main.ui.health_crop.atlas.get_instance_id()] = true
+		for style_entry: Dictionary in main.ui.material_styles:
+			var id: int = style_entry.style.get_instance_id()
+			if not ui_frames.has(id): ui_frames[id] = {}
+			ui_frames[id][style_entry.style.texture.get_instance_id()] = true
+		for observation: Dictionary in observations:
+			var sprite: AnimatedSprite2D = observation.sprite
+			observation.frames[sprite.frame] = true
+	var static_objects: Array[String] = []
+	for observation: Dictionary in observations:
+		if observation.frames.size() < 2:
+			static_objects.append(str(observation.sprite.get_path()))
+	if not stopped.is_empty(): print("STOPPED_IDLE: ", stopped)
+	if not static_objects.is_empty(): print("STATIC_IDLE: ", static_objects)
+	check(not observations.is_empty() and stopped.is_empty(), "All persistent world sprites play their own ambient animation while no input is sent")
+	check(static_objects.is_empty(), "Idle frame advances on all " + str(observations.size()) + " visible sprites without interaction")
+	check(main.world.player.position == player_position and main.world.player.state == main.world.player.State.IDLE, "Idle verification leaves the player standing still")
+	var terrain: TileSetAtlasSource = main.world.ground.tile_set.get_source(0)
+	var paths: TileSetAtlasSource = main.world.ground.tile_set.get_source(1)
+	var animated_tiles: bool = true
+	for y: int in range(4):
+		animated_tiles = animated_tiles and terrain.get_tile_animation_frames_count(Vector2i(0, y)) > 1 and paths.get_tile_animation_frames_count(Vector2i(0, y)) > 1
+	check(animated_tiles, "Terrain and path variants retain ambient loops in the actual TileSet")
+	var animated_ui: bool = true
+	for id: int in ui_frames:
+		animated_ui = animated_ui and ui_frames[id].size() > 1
+	check(animated_ui and hud_health_frames.size() > 1, "UI panel/button states and HUD health texture animate while the player waits")
+	check(enemy_health_frames.size() > 1, "Enemy health skin uses the ambient frames used by its drawing code")
+	main._set_mode(main.Mode.INVENTORY_OPEN)
+	var item_frames: Dictionary = {}
+	for _i: int in range(90):
+		await process_frame
+		item_frames[main.ui.inventory_buttons[0].icon.get_instance_id()] = true
+	check(item_frames.size() > 1, "Inventory item animates without selection/use while the world is paused")
+	main.close_overlay()
+	main.queue_free()
+	await process_frame
+
 func validate_asset(id: String, entry: Dictionary) -> void:
+	check(str(entry.get("design_id", "")) != "", id + ": stable visual design declared for animation consistency")
 	var metadata_valid: bool = entry.get("resource") is String and entry.get("texture") is String and entry.get("source") is String and not str(entry.get("source", "")).is_empty() and entry.get("backend") is String and entry.get("frame_size") is Array and entry.frame_size.size() == 2 and entry.get("pivot") is Array and entry.pivot.size() == 2 and entry.get("states") is Dictionary and not entry.states.is_empty() and is_integer(entry.get("columns")) and int(entry.columns) > 0
 	check(metadata_valid, id + ": source, dimensions, pivot and state metadata declared")
 	if not metadata_valid:
@@ -49,6 +118,14 @@ func validate_asset(id: String, entry: Dictionary) -> void:
 	if not resource is SpriteFrames or not texture is Texture2D:
 		return
 	var sprite_frames: SpriteFrames = resource
+	if not id in ["sword_slash", "enemy_strike", "enemy_telegraph", "hit_spark"]:
+		var idle_states: Array[String] = []
+		for state: StringName in sprite_frames.get_animation_names():
+			if str(state).begins_with("idle") or state == &"normal":
+				idle_states.append(str(state))
+		check(not idle_states.is_empty(), id + ": persistent visible object has its own idle/ambient loop")
+		for state: String in idle_states:
+			check(sprite_frames.get_frame_count(state) >= 2 and sprite_frames.get_animation_loop(state), id + "/" + state + ": idle plays real multiple frames without interaction")
 	var sheet: Texture2D = texture
 	var expected_width: int = frame_size.x * int(entry.columns)
 	var sheet_valid: bool = sheet.get_width() == expected_width and sheet.get_height() % frame_size.y == 0
@@ -89,9 +166,49 @@ func validate_contact(id: String, entry: Dictionary, sprite_frames: SpriteFrames
 	check(contact >= 0 and contact < count and float(entry.contact_time) >= contact / fps and float(entry.contact_time) < (contact + 1) / fps, id + ": damage time falls within visible contact frame")
 	check(is_equal_approx(count / fps, float(entry.duration)) and is_equal_approx(float(entry.duration), 0.24), id + ": slash playback preserves combat duration")
 
+func validate_contact_in_physics() -> void:
+	# A real Area2D receiver and Health signal catch one-frame visual/damage drift
+	# without driving AI or mutating quest state in another gameplay fixture.
+	var arena := Node2D.new()
+	root.add_child(arena)
+	var attacker := Node2D.new()
+	attacker.position = Vector2(100, 100)
+	attacker.add_to_group("player")
+	arena.add_child(attacker)
+	var melee: Node2D = load("res://scripts/combat/melee.gd").new()
+	attacker.add_child(melee)
+	var receiver := Node2D.new()
+	receiver.position = Vector2(100, 126)
+	receiver.add_to_group("enemies")
+	var health: Node = load("res://scripts/combat/health.gd").new()
+	health.name = "Health"
+	receiver.add_child(health)
+	var hurtbox: Area2D = load("res://scripts/combat/hurtbox.gd").new()
+	receiver.add_child(hurtbox)
+	arena.add_child(receiver)
+	var observation: Dictionary = {"hits": 0, "frame": -1, "elapsed": 0.0}
+	health.damaged.connect(func(_amount: int, _direction: Vector2) -> void:
+		observation.hits += 1
+		var visual: AnimatedSprite2D = melee.get("visual")
+		observation.frame = visual.frame if visual != null else -1
+		observation.elapsed = float(melee.get("duration")) - float(melee.get("remaining"))
+	)
+	for _i: int in range(3):
+		await physics_frame
+	check(melee.begin(Vector2.DOWN, 18), "Real slash begins against a physics receiver")
+	for _i: int in range(18):
+		await physics_frame
+	check(observation.hits == 1 and health.current == 82, "Real slash damages the overlapping target once")
+	check(observation.frame == 2, "Damage signal occurs on visible slash contact frame 2")
+	check(float(observation.elapsed) >= 0.084 and float(observation.elapsed) <= 0.084 + 1.0 / 60.0 + 0.0001, "Damage timing preserves 0.084 s contact with one physics tick tolerance")
+	arena.queue_free()
+	await process_frame
+
 func validate_state(id: String, state_name: String, record: Variant, sprite_frames: SpriteFrames, texture_path: String, frame_size: Vector2i, columns: int, rows: int) -> void:
 	var label: String = id + "/" + state_name
 	var valid: bool = record is Dictionary and record.get("indices") is Array and is_integer(record.get("count")) and int(record.count) > 0 and record.indices.size() == int(record.count) and is_number(record.get("fps")) and float(record.fps) > 0 and record.get("loop") is bool
+	var manifest: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(MANIFEST_PATH))
+	check(record is Dictionary and str(record.get("design_id", "")) == str(manifest[id].get("design_id", "")), label + ": state belongs to the same visual design as the existing animation set")
 	check(valid and sprite_frames.has_animation(state_name), label + ": state metadata and animation exist")
 	if not valid or not sprite_frames.has_animation(state_name):
 		return

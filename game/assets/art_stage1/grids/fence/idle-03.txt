@@ -1,0 +1,24 @@
+name: fence/idle-03
+legend:
+  ".": "#00000000"
+  "g": "#726952ff"
+  "h": "#938368ff"
+  "j": "#d0bc91ff"
+  "D": "#a5a26bff"
+grid:
+................................................
+...DDDD................DDDD................DDDD.
+...gggg................gggg................gggg.
+...gggg................gggg................gggg.
+...gggg................gggg................gggg.
+...hhhhhhhhhhhhhhhhhhhhjjjhhhhhhhhhhhhhhhhhhhhh.
+...hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.
+...hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.
+...gggg................gggg................gggg.
+...gggg................gggg................gggg.
+...gggggggggggggggggggggggggggggggggggggggggggg.
+...gggggggggggggggggggggggggggggggggggggggggggg.
+...gggggggggggggggggggggggggggggggggggggggggggg.
+...gggg................gggg................gggg.
+...gggg................gggg................gggg.
+...gggg................gggg................gggg.

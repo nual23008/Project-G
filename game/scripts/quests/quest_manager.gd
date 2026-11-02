@@ -48,7 +48,7 @@ func objective_text() -> String:
 	if status == "available":
 		return "Trò chuyện với Rowan ở quảng trường"
 	if status == "completed":
-		return "Đã báo tin · Chặng tiếp: Lyra (Phase 3)"
+		return "Đã báo tin · Hoàn thành chặng thám hiểm"
 	for i: int in range(definition.objectives.size()):
 		if not done(i):
 			return str(definition.objectives[i].text)

@@ -1,0 +1,18 @@
+{
+  "grass_shadow": "#214c43",
+  "grass": "#315b43",
+  "grass_patch": "#47704a",
+  "grass_light": "#64814e",
+  "grass_tip": "#87915c",
+  "stone_shadow": "#726952",
+  "stone_edge": "#938368",
+  "stone": "#ad9474",
+  "stone_lit": "#d0bc91",
+  "stone_glint": "#f6e3b0",
+  "water_shadow": "#214c58",
+  "water": "#346b70",
+  "water_lit": "#508b87",
+  "water_crest": "#80b4a4",
+  "mote": "#f0bc73",
+  "mote_core": "#ffe2a0"
+}

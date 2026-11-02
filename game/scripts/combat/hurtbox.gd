@@ -18,5 +18,5 @@ func _ready() -> void:
 func receive(amount: int, origin: Vector2) -> bool:
 	var accepted: bool = health.damage(amount, (global_position-origin).normalized())
 	if accepted:
-		EFFECT.spawn(get_parent().get_parent(), HIT_SPARK, global_position+Vector2(0,-10), Vector2(24,24))
+		EFFECT.spawn(get_parent().get_parent(), HIT_SPARK, global_position+Vector2(0,-25), Vector2(16,16))
 	return accepted

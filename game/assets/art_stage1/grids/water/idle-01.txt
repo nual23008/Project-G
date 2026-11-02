@@ -1,0 +1,23 @@
+name: water/idle-01
+legend:
+  "l": "#214c58ff"
+  "m": "#346b70ff"
+  "n": "#508b87ff"
+  "o": "#80b4a4ff"
+grid:
+llmmmmmlllllllll
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+lllllllnnonlllll
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+mlllllllllllmmmm
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+lnnnnlllllllllll
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll

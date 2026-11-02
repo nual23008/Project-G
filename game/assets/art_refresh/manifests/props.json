@@ -1,0 +1,682 @@
+{
+  "house": {
+    "resource": "res://resources/art/house.tres",
+    "texture": "res://assets/art_refresh/sheets/house.png",
+    "frame_size": [
+      144,
+      128
+    ],
+    "pivot": [
+      72,
+      124
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      }
+    },
+    "source": "NEW selected project ImageGen source res://assets/art_v3/sources/house.png; nearest fixed-canvas import, material-only ambient animation; no retired sprite seed",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "source_files": [
+      "res://assets/art_v3/sources/house.png",
+      "res://assets/art_v3/sources/generation.json"
+    ],
+    "ambient_notes": "Firelight and chimney smoke; structure fixed"
+  },
+  "pine": {
+    "resource": "res://resources/art/pine.tres",
+    "texture": "res://assets/art_refresh/sheets/pine.png",
+    "frame_size": [
+      80,
+      112
+    ],
+    "pivot": [
+      40,
+      108
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 4,
+        "loop": true
+      }
+    },
+    "source": "NEW selected project ImageGen source res://assets/art_v3/sources/pine.png; nearest fixed-canvas import, material-only ambient animation; no retired sprite seed",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "source_files": [
+      "res://assets/art_v3/sources/pine.png",
+      "res://assets/art_v3/sources/generation.json"
+    ],
+    "ambient_notes": "Canopy wind; root/trunk foot fixed"
+  },
+  "oak": {
+    "resource": "res://resources/art/oak.tres",
+    "texture": "res://assets/art_refresh/sheets/oak.png",
+    "frame_size": [
+      104,
+      112
+    ],
+    "pivot": [
+      52,
+      108
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 4,
+        "loop": true
+      }
+    },
+    "source": "NEW selected project ImageGen source res://assets/art_v3/sources/oak.png; nearest fixed-canvas import, material-only ambient animation; no retired sprite seed",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "source_files": [
+      "res://assets/art_v3/sources/oak.png",
+      "res://assets/art_v3/sources/generation.json"
+    ],
+    "ambient_notes": "Canopy wind; root/trunk foot fixed"
+  },
+  "rock": {
+    "resource": "res://resources/art/rock.tres",
+    "texture": "res://assets/art_refresh/sheets/rock.png",
+    "frame_size": [
+      48,
+      40
+    ],
+    "pivot": [
+      24,
+      36
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 3,
+        "loop": true
+      }
+    },
+    "source": "Fresh constructive limestone outcrop with quartz seam and moss; tools/build_refresh_props.py",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Light travels along quartz seam; rigid rock silhouette fixed"
+  },
+  "lamp": {
+    "resource": "res://resources/art/lamp.tres",
+    "texture": "res://assets/art_refresh/sheets/lamp.png",
+    "frame_size": [
+      24,
+      48
+    ],
+    "pivot": [
+      6,
+      44
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 8,
+        "loop": true
+      }
+    },
+    "source": "Fresh constructive walnut post, curved brass hanger and glazed flame lantern; tools/build_refresh_props.py",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Flame moves inside stationary brass cage"
+  },
+  "crystal": {
+    "resource": "res://resources/art/crystal.tres",
+    "texture": "res://assets/art_refresh/sheets/crystal.png",
+    "frame_size": [
+      64,
+      80
+    ],
+    "pivot": [
+      32,
+      74
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 6,
+        "loop": true
+      }
+    },
+    "source": "Fresh constructive faceted memory crystal on carved limestone/brass plinth; tools/build_refresh_props.py",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Inner crystal refraction and runic light; plinth fixed"
+  },
+  "fence": {
+    "resource": "res://resources/art/fence.tres",
+    "texture": "res://assets/art_refresh/sheets/fence.png",
+    "frame_size": [
+      64,
+      32
+    ],
+    "pivot": [
+      32,
+      28
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 4,
+        "loop": true
+      }
+    },
+    "source": "Fresh constructive carved walnut posts, braided rope and burgundy wind tag; tools/build_refresh_props.py",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Rope and cloth tag sway; posts fixed"
+  },
+  "sign": {
+    "resource": "res://resources/art/sign.tres",
+    "texture": "res://assets/art_refresh/sheets/sign.png",
+    "frame_size": [
+      40,
+      48
+    ],
+    "pivot": [
+      20,
+      44
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 4,
+        "loop": true
+      }
+    },
+    "source": "Fresh constructive thick carved direction board with brass pins and living ivy; tools/build_refresh_props.py",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Ivy foliage moves; carved sign and post fixed"
+  },
+  "fern": {
+    "resource": "res://resources/art/fern.tres",
+    "texture": "res://assets/art_refresh/sheets/fern.png",
+    "frame_size": [
+      32,
+      40
+    ],
+    "pivot": [
+      16,
+      36
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      }
+    },
+    "source": "Fresh constructive seven-frond forest fern, branching leaflets and planted root; tools/build_refresh_props.py",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Individual fronds bend in wind with fixed root"
+  },
+  "flowers": {
+    "resource": "res://resources/art/flowers.tres",
+    "texture": "res://assets/art_refresh/sheets/flowers.png",
+    "frame_size": [
+      32,
+      32
+    ],
+    "pivot": [
+      16,
+      28
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 4,
+        "loop": true
+      }
+    },
+    "source": "Fresh constructive flowering thyme bush with cream petals and amber hearts; tools/build_refresh_props.py",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Flower heads and stems move in light wind; root fixed"
+  },
+  "chest": {
+    "resource": "res://resources/art/chest.tres",
+    "texture": "res://assets/art_refresh/sheets/chest.png",
+    "frame_size": [
+      40,
+      32
+    ],
+    "pivot": [
+      20,
+      28
+    ],
+    "columns": 12,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 4,
+        "loop": true
+      },
+      "open": {
+        "indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "count": 8,
+        "fps": 16,
+        "loop": false
+      }
+    },
+    "source": "Fresh constructive walnut travel chest, forged iron bands, brass lock and hinged lid; tools/build_refresh_props.py",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Brass clasp reflection while closed; separate rigid-lid opening"
+  },
+  "portal": {
+    "resource": "res://resources/art/portal.tres",
+    "texture": "res://assets/art_refresh/sheets/portal.png",
+    "frame_size": [
+      56,
+      64
+    ],
+    "pivot": [
+      28,
+      58
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 7,
+        "loop": true
+      }
+    },
+    "source": "Fresh constructive limestone runic arch, brass keystone and layered memory current; tools/build_refresh_props.py",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Runes and inner energy flow; arch stone remains rigid"
+  },
+  "rust_sword": {
+    "resource": "res://resources/art/rust_sword.tres",
+    "texture": "res://assets/art_refresh/sheets/rust_sword.png",
+    "frame_size": [
+      24,
+      24
+    ],
+    "pivot": [
+      12,
+      20
+    ],
+    "columns": 12,
+    "states": {
+      "icon": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      },
+      "idle": {
+        "indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      }
+    },
+    "source": "Fresh 24px constructive rust_sword icon and pickup; new silhouette/material layers in tools/build_refresh_props.py; no old icon pixels",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Steel sheen"
+  },
+  "potion": {
+    "resource": "res://resources/art/potion.tres",
+    "texture": "res://assets/art_refresh/sheets/potion.png",
+    "frame_size": [
+      24,
+      24
+    ],
+    "pivot": [
+      12,
+      20
+    ],
+    "columns": 12,
+    "states": {
+      "icon": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      },
+      "idle": {
+        "indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      }
+    },
+    "source": "Fresh 24px constructive potion icon and pickup; new silhouette/material layers in tools/build_refresh_props.py; no old icon pixels",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Liquid surface and bubbles inside glass"
+  },
+  "herb": {
+    "resource": "res://resources/art/herb.tres",
+    "texture": "res://assets/art_refresh/sheets/herb.png",
+    "frame_size": [
+      24,
+      24
+    ],
+    "pivot": [
+      12,
+      20
+    ],
+    "columns": 12,
+    "states": {
+      "icon": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      },
+      "idle": {
+        "indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      }
+    },
+    "source": "Fresh 24px constructive herb icon and pickup; new silhouette/material layers in tools/build_refresh_props.py; no old icon pixels",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Leaves bend at stem"
+  },
+  "ore": {
+    "resource": "res://resources/art/ore.tres",
+    "texture": "res://assets/art_refresh/sheets/ore.png",
+    "frame_size": [
+      24,
+      24
+    ],
+    "pivot": [
+      12,
+      20
+    ],
+    "columns": 12,
+    "states": {
+      "icon": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      },
+      "idle": {
+        "indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      }
+    },
+    "source": "Fresh 24px constructive ore icon and pickup; new silhouette/material layers in tools/build_refresh_props.py; no old icon pixels",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Ore-vein reflection"
+  },
+  "echo_shard": {
+    "resource": "res://resources/art/echo_shard.tres",
+    "texture": "res://assets/art_refresh/sheets/echo_shard.png",
+    "frame_size": [
+      24,
+      24
+    ],
+    "pivot": [
+      12,
+      20
+    ],
+    "columns": 12,
+    "states": {
+      "icon": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      },
+      "idle": {
+        "indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "count": 8,
+        "fps": 5,
+        "loop": true
+      }
+    },
+    "source": "Fresh 24px constructive echo_shard icon and pickup; new silhouette/material layers in tools/build_refresh_props.py; no old icon pixels",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh",
+    "ambient_notes": "Internal crystal refraction"
+  }
+}

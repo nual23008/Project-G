@@ -35,6 +35,7 @@ func _physics_process(delta: float) -> void:
 		if state != State.DEATH:
 			state = State.DEATH
 			state_time = DEATH_DURATION
+			melee.cancel()
 		_sync_action_frame("death_"+facing, DEATH_DURATION-state_time)
 		velocity = Vector2.ZERO
 		if state_time <= 0 and not death_announced:

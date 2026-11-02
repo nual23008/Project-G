@@ -1,22 +1,47 @@
-# Asset bản chơi mở đầu
+# Bộ đồ họa mới đang dùng
 
-Manifest máy đọc: `resources/art/manifest.json`. Mỗi loại dùng PNG và SpriteFrames riêng; cùng loại chia sẻ tài nguyên. Pivot tính từ góc trên trái. Frame, FPS, loop và nguồn ghi trong JSON. Generator: `python3 game/tools/build_stage1_art.py` (Pillow và skill `pixel_draw.py` chỉ cần khi build lại).
+Manifest chuẩn: `resources/art/manifest.json`. 33 loại, 67 state, 486 lượt frame. Dựng lại bằng `python3 game/tools/build_art_refresh.py`; runtime không cần Python/Pillow.
 
-| Loại | Frame | Pivot | States |
+Mọi loại tồn tại thường xuyên có idle/ambient loop riêng, cả terrain/UI. Hiệu ứng ngắn có play riêng. Mọi state của cùng loại dùng cùng nhân dạng, canvas và pivot; `design_id` mô tả hợp đồng đó, đánh giá đồ họa vẫn cần xem preview thật.
+
+| Loại | Frame | Pivot | State (số frame @ FPS) |
 |---|---|---|---|
-| player | 24×32 | 12,28 | idle/walk/attack/hurt/death × down/left/right/up |
-| rowan | 24×32 | 12,28 | idle_down |
-| enemy | 32×32 | 16,26 | idle/walk/windup/attack/hurt/death |
-| pine/oak | 64×88 / 80×88 | 32,80 / 40,80 | idle lá lay |
-| house | 112×96 | 56,88 | idle khói/cửa sổ |
-| rock/lamp/crystal | 32×32 / 16×32 / 48×64 | 16,28 / 8,28 / 24,56 | idle glint/lửa/tinh thể |
-| fence/sign/fern/flowers | 48×16 / 32×32 / 16×24 / 16×16 | đáy giữa−4 | idle đinh bắt sáng/lá/hoa |
-| chest/portal | 24×20 / 32×32 | 12,16 / 16,24 | idle; chest thêm open |
-| rust_sword/potion/herb/ore/echo_shard | 16×16 | 8,12 | icon, idle |
-| sword_slash/enemy_strike | 72×72 | 36,36 | play8@33.333fps, contact2 tại .084s |
-| hit_spark | 32×32 | 16,16 | play8@30fps |
-| grass/stone_path/water/shore | 16×16 | 0,0 | idle; chỉ water4@5fps, đất1 frame |
-| ui_panel/ui_button/ui_health | 48×48 / 48×24 / 132×5 | 0,0 | panel idle; button normal/hover/pressed/focus; health idle |
-| firefly/glow | 8×8 / 64×64 | 4,4 / 32,32 | idle |
+| rowan | 48×64 | 24,60 | idle_down (8 @ 5) |
+| enemy | 48×56 | 24,52 | idle (8 @ 5), walk (8 @ 8), windup (8 @ 19), attack (8 @ 33.3), hurt (5 @ 27.8), death (9 @ 16.4) |
+| player | 96×64 | 48,60 | idle_down (8 @ 5), walk_down (6 @ 9), attack_down (9 @ 33.3), hurt_down (5 @ 22.7), death_down (9 @ 10), idle_left (8 @ 5), walk_left (6 @ 9), attack_left (9 @ 33.3), hurt_left (5 @ 22.7), death_left (9 @ 10), idle_right (8 @ 5), walk_right (6 @ 9), attack_right (9 @ 33.3), hurt_right (5 @ 22.7), death_right (9 @ 10), idle_up (8 @ 5), walk_up (6 @ 9), attack_up (9 @ 33.3), hurt_up (5 @ 22.7), death_up (9 @ 10) |
+| house | 144×128 | 72,124 | idle (8 @ 5) |
+| pine | 80×112 | 40,108 | idle (8 @ 4) |
+| oak | 104×112 | 52,108 | idle (8 @ 4) |
+| rock | 48×40 | 24,36 | idle (8 @ 3) |
+| lamp | 24×48 | 6,44 | idle (8 @ 8) |
+| crystal | 64×80 | 32,74 | idle (8 @ 6) |
+| fence | 64×32 | 32,28 | idle (8 @ 4) |
+| sign | 40×48 | 20,44 | idle (8 @ 4) |
+| fern | 32×40 | 16,36 | idle (8 @ 5) |
+| flowers | 32×32 | 16,28 | idle (8 @ 4) |
+| chest | 40×32 | 20,28 | idle (8 @ 4), open (8 @ 16) |
+| portal | 56×64 | 28,58 | idle (8 @ 7) |
+| rust_sword | 24×24 | 12,20 | icon (8 @ 5), idle (8 @ 5) |
+| potion | 24×24 | 12,20 | icon (8 @ 5), idle (8 @ 5) |
+| herb | 24×24 | 12,20 | icon (8 @ 5), idle (8 @ 5) |
+| ore | 24×24 | 12,20 | icon (8 @ 5), idle (8 @ 5) |
+| echo_shard | 24×24 | 12,20 | icon (8 @ 5), idle (8 @ 5) |
+| grass | 16×16 | 0,0 | idle (4 @ 2) |
+| stone_path | 16×16 | 0,0 | idle (4 @ 0.8), edges (4 @ 0.8) |
+| water | 16×16 | 0,0 | idle (4 @ 5) |
+| shore | 16×16 | 0,0 | idle (4 @ 1.2) |
+| firefly | 8×8 | 4,4 | idle (8 @ 6) |
+| glow | 64×64 | 32,32 | idle (4 @ 3) |
+| ui_panel | 64×64 | 0,0 | idle (6 @ 2) |
+| ui_button | 64×24 | 0,0 | normal (6 @ 3), hover (6 @ 3), pressed (6 @ 3), focus (6 @ 3) |
+| ui_health | 132×5 | 0,0 | idle (6 @ 3) |
+| sword_slash | 72×72 | 36,36 | play (8 @ 33.3) |
+| enemy_strike | 72×72 | 36,36 | play (8 @ 33.3) |
+| hit_spark | 32×32 | 16,16 | play (8 @ 30) |
+| enemy_telegraph | 72×72 | 36,36 | play (8 @ 19) |
 
-Ảnh review và GIF trong `assets/art_stage1/previews`. Preview này cho phép kiểm tra sheet, nhịp và phối màu; ảnh engine và hồi quy do root chạy trước khi nghiệm thu. Các asset này vẫn là bộ gốc nhỏ phục vụ bản chơi, chưa phải mức minh họa chi tiết của tham chiếu thương mại.
+Nguồn: house/pine/oak/Rowan/enemy/hero_walk từ bộ ImageGen mới trong `assets/art_v3/sources`, hero_attack tạo mới bằng built-in image_gen (record ở `assets/art_refresh/sources/hero_attack_generation.json`). Props phụ/items/terrain/UI/VFX thiết kế mới từ canvas trống. Không lấy pixel `assets/sprites` hoặc `art_stage1` làm nguồn bộ active.
+
+Một số keyframe được hold theo nhịp để giữ chuyển động pixel nguyên tự nhiên (ví dụ enemy idle có 3 hình khác nhau trong 8 tick). Không công bố mọi lượt frame đều là hình độc nhất. `tests/output/art-refresh-animation-integrity.json` đếm hình khác nhau từng clip; không clip nào tĩnh hoàn toàn.
+
+Ảnh/GIF nguồn trong `assets/art_refresh/previews`; render engine trong `tests/output`. Body/slash contact index2 đồng tick damage; swing .24s. Kiểm tra biên cả202frame actor trong `assets/art_refresh/previews/actors_bounds.json`. Các generator/resources cũ giữ làm lịch sử, không còn được scene dùng.

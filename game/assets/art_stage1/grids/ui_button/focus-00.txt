@@ -1,0 +1,33 @@
+name: ui_button/focus-00
+legend:
+  ".": "#00000000"
+  "c": "#c79b67ff"
+  "u": "#f0bc73ff"
+  "v": "#ffe2a0ff"
+  "F": "#795d4cff"
+  "H": "#e9c58bff"
+grid:
+uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+uHHH........................................HHHu
+uHHHFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFHHHu
+uHHHccccccccccccccccccccccccccccccccccccccccHHHu
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+u.F..........................................F.u
+uHHH.vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv.HHHu
+uHHHFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFHHHu
+uHHH........................................HHHu
+uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu

@@ -1,0 +1,12 @@
+Fresh prop refresh brief
+subject: village and forest props and five inventory icons
+role: replace all retired prop designs while preserving gameplay IDs/collision
+canvas: house144x128 pine80x112 oak104x112; other props24–80px, items24x24
+palette: amber, walnut, burgundy, plum, cream, olive, pale crystal; light top-left
+block: 1 logical pixel, hard edges, no smoothing
+must read as: distinct authored materials and silhouettes, clearly different from retired sprites
+states: every object idle8frame loop; chest open8; item icon8 matched to idle8
+deliverable: SpriteFrames+PNG, manifest fragment, geometry source+editable grids, visual boards+GIF
+process: selected NEW ImageGen house/pine/oak sources; all other art constructive fresh geometry
+gate: source identity, same size/pivot across states, real distinct idle frames, anchored rigid parts
+report: root performs Godot import, runtime idle, interaction and regression renders

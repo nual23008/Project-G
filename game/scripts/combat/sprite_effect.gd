@@ -1,8 +1,8 @@
-extends AnimatedSprite2D
+extends RefCounted
 ## Short-lived sprite effects stay below the pausable world and never mutate saves.
 
 static func spawn(parent: Node, frames: SpriteFrames, at: Vector2, pivot: Vector2, state: StringName = &"play") -> AnimatedSprite2D:
-	var effect := new()
+	var effect := AnimatedSprite2D.new()
 	effect.name = "SpriteEffect"
 	effect.sprite_frames = frames
 	effect.centered = false

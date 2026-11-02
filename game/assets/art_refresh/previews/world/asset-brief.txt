@@ -1,0 +1,6 @@
+Must read as quiet emerald meadow, hand-set cream flagstones and calm teal pond.
+Tile16x16, terrain512x64 with phase offsets128; paths1024x64 with phase offsets256.
+One-pixel material features; lamp glow2px. Light top-left.
+Every idle has four real frames (firefly eight), no global texture scroll or scaling.
+Root must check active TileSet animation and seam/collision preservation in Godot.
+Source pixels: all new drawings; previous assets are not inputs.

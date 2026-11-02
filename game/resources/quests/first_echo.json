@@ -1,6 +1,6 @@
 {
  "id":"first_echo", "name":"Dư Âm Đầu Tiên", "giver":"rowan",
- "description":"Rowan nhờ bạn tìm nguồn sáng trong Rừng Thì Thầm. Đây là chặng thám hiểm mở đầu; ký ức cùng Lyra sẽ tiếp nối ở Phase 3.",
+ "description":"Rowan nhờ bạn tìm nguồn sáng trong Rừng Thì Thầm. Tìm tinh thể, thu hồi mảnh dư âm và trở về báo tin cho ông.",
  "objectives":[
   {"event":"area_entered","target":"whispering_forest","count":1,"text":"Đi qua cổng bắc vào Rừng Thì Thầm"},
   {"event":"object_interacted","target":"ancient_shard","count":1,"text":"Tìm tinh thể tại vòng đá phía bắc rừng"},

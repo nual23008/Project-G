@@ -1,0 +1,11 @@
+{
+  "ids": [
+    "rowan",
+    "enemy",
+    "player"
+  ],
+  "walk_common_scale": 0.21875,
+  "attack_common_scale": 0.2640467171717172,
+  "alpha_threshold": 210,
+  "renderer": "Pillow packing only; Godot rendering is run by integration owner"
+}

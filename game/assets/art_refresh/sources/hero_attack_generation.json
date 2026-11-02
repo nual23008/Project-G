@@ -1,0 +1,9 @@
+{
+  "source": "Built-in image_gen, 2026-11-02",
+  "source_file": "hero_attack.png",
+  "references": ["res://assets/art_v3/sources/hero.png", "res://assets/art_v3/sources/hero_walk.png"],
+  "use_case": "identity-preserve",
+  "grid": [8,4],
+  "contact_frame": 2,
+  "prompt": "Production sword attack sprite sheet preserving the referenced brown-haired adventurer, ivory scarf, indigo gold-trim coat, oxblood waistcoat, gray trousers, satchel and boots. Exact 8 columns x 4 rows: down, left, right, up. Frame1 ready, frame2 anticipation, frame3 contact, frame4 follow-through, frames5-6 deceleration, frames7-8 recover. Same body scale and feet baseline in every cell, true limb articulation. Crisp pixel art intended for 48x64 frames, plum outlines and warm amber highlights. Transparent background, no halo, no ground, no text/grid, no sword VFX. Separate full-body sprites with margins."
+}

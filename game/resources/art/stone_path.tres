@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" format=3]
+[ext_resource type="Texture2D" path="res://assets/art_refresh/sheets/terrain.png" id="1"]
+[ext_resource type="Texture2D" path="res://assets/art_refresh/sheets/paths.png" id="2"]
+[sub_resource type="AtlasTexture" id="idle_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="idle_1"]
+atlas = ExtResource("1")
+region = Rect2(128, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="idle_2"]
+atlas = ExtResource("1")
+region = Rect2(256, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="idle_3"]
+atlas = ExtResource("1")
+region = Rect2(384, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="edges_0"]
+atlas = ExtResource("2")
+region = Rect2(0, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="edges_1"]
+atlas = ExtResource("2")
+region = Rect2(256, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="edges_2"]
+atlas = ExtResource("2")
+region = Rect2(512, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="edges_3"]
+atlas = ExtResource("2")
+region = Rect2(768, 0, 16, 16)
+[resource]
+animations = [{"name":&"idle","speed":0.8,"loop":true,"frames":[{"duration":1.0,"texture":SubResource("idle_0")},{"duration":1.0,"texture":SubResource("idle_1")},{"duration":1.0,"texture":SubResource("idle_2")},{"duration":1.0,"texture":SubResource("idle_3")}]},
+{"name":&"edges","speed":0.8,"loop":true,"frames":[{"duration":1.0,"texture":SubResource("edges_0")},{"duration":1.0,"texture":SubResource("edges_1")},{"duration":1.0,"texture":SubResource("edges_2")},{"duration":1.0,"texture":SubResource("edges_3")}]}]

@@ -19,8 +19,19 @@ signal respawn_requested
 
 const GOLD := Color("d6bd82")
 const CREAM := Color("ece5cc")
-const MUTED := Color("92aaa0")
-const MINT := Color("8cc8b1")
+const MUTED := Color("c1b29f")
+const PANEL_ART: SpriteFrames = preload("res://resources/art/ui_panel.tres")
+const BUTTON_ART: SpriteFrames = preload("res://resources/art/ui_button.tres")
+const HEALTH_ART: SpriteFrames = preload("res://resources/art/ui_health.tres")
+const ROWAN_ART: SpriteFrames = preload("res://resources/art/rowan.tres")
+const CRYSTAL_ART: SpriteFrames = preload("res://resources/art/crystal.tres")
+const ITEM_ART: Dictionary = {
+	"rust_sword": preload("res://resources/art/rust_sword.tres"),
+	"potion": preload("res://resources/art/potion.tres"),
+	"herb": preload("res://resources/art/herb.tres"),
+	"ore": preload("res://resources/art/ore.tres"),
+	"echo_shard": preload("res://resources/art/echo_shard.tres")
+}
 var menu: Control
 var pause_panel: Control
 var settings_panel: Control
@@ -36,6 +47,7 @@ var choice_box: VBoxContainer
 var prompt: Label
 var objective: Label
 var notification: Label
+var notification_bg: Panel
 var new_button: Button
 var resume_button: Button
 var back_button: Button
@@ -49,7 +61,7 @@ var pending_choices: Array = []
 var current_screen: String = "menu"
 var continue_button: Button
 var hp_label: Label
-var hp_bar: ColorRect
+var hp_bar: TextureRect
 var location_label: Label
 var inventory_panel: Control
 var journal_panel: Control
@@ -61,6 +73,11 @@ var journal_text: RichTextLabel
 var save_status: Label
 var selected_slot: int = 0
 var inventory_model: RefCounted
+var art_clock: float = 0.0
+var material_styles: Array[Dictionary] = []
+var health_crop := AtlasTexture.new()
+var portrait_art: SpriteFrames
+var portrait_state: StringName = &"idle"
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -78,27 +95,66 @@ func _create_theme() -> void:
 	theme = Theme.new()
 	theme.default_font = preload("res://assets/fonts/NotoSans-Regular.ttf")
 	theme.default_font_size = 12
-	var normal := _style(Color("122f38"), Color("586a57"))
-	var hover := _style(Color("23453f"), GOLD)
-	var pressed := _style(Color("34574b"), MINT)
+	var normal := _art_style(BUTTON_ART, &"normal")
+	var hover := _art_style(BUTTON_ART, &"hover")
+	var pressed := _art_style(BUTTON_ART, &"pressed")
 	theme.set_stylebox("normal", "Button", normal)
 	theme.set_stylebox("hover", "Button", hover)
 	theme.set_stylebox("pressed", "Button", pressed)
-	theme.set_stylebox("focus", "Button", _style(Color(0, 0, 0, 0), GOLD))
+	theme.set_stylebox("hover_pressed", "Button", pressed)
+	var focus := _art_style(BUTTON_ART, &"focus")
+	focus.draw_center = false
+	theme.set_stylebox("focus", "Button", focus)
+	var disabled := _art_style(BUTTON_ART, &"normal")
+	disabled.modulate_color = Color(0.67, 0.61, 0.64, 1.0)
+	theme.set_stylebox("disabled", "Button", disabled)
 	theme.set_color("font_color", "Button", CREAM)
 	theme.set_color("font_hover_color", "Button", GOLD)
-	theme.set_stylebox("panel", "Panel", _style(Color(0.035, 0.10, 0.14, 0.97), Color("617561")))
+	theme.set_color("font_focus_color", "Button", CREAM)
+	theme.set_color("font_disabled_color", "Button", Color("b5a899"))
+	theme.set_constant("icon_max_width", "Button", 24)
+	theme.set_stylebox("panel", "Panel", _art_style(PANEL_ART, &"idle"))
 	theme.set_color("font_color", "Label", CREAM)
 	theme.set_color("font_color", "CheckBox", CREAM)
 
-func _style(bg: Color, border: Color) -> StyleBoxFlat:
-	var style := StyleBoxFlat.new()
-	style.bg_color = bg
-	style.border_color = border
-	style.set_border_width_all(1)
+func _art_style(frames: SpriteFrames, state: StringName) -> StyleBoxTexture:
+	var style := StyleBoxTexture.new()
+	style.texture = frames.get_frame_texture(state, 0)
+	style.texture_margin_left = 4
+	style.texture_margin_right = 4
+	style.texture_margin_top = 4
+	style.texture_margin_bottom = 4
 	style.content_margin_left = 8
 	style.content_margin_right = 8
+	style.content_margin_top = 0
+	style.content_margin_bottom = 0
+	material_styles.append({"style": style, "frames": frames, "state": state, "frame": 0})
 	return style
+
+func _art_frame(frames: SpriteFrames, state: StringName) -> Texture2D:
+	var count: int = frames.get_frame_count(state)
+	var index: int = int(art_clock * frames.get_animation_speed(state))
+	index = posmod(index, count) if frames.get_animation_loop(state) else mini(index, count - 1)
+	return frames.get_frame_texture(state, index)
+
+func _animate_art(delta: float) -> void:
+	art_clock += delta
+	for entry: Dictionary in material_styles:
+		var frames: SpriteFrames = entry.frames
+		var index: int = posmod(int(art_clock * frames.get_animation_speed(entry.state)), frames.get_frame_count(entry.state))
+		if index != int(entry.frame):
+			entry.frame = index
+			var style: StyleBoxTexture = entry.style
+			style.texture = frames.get_frame_texture(entry.state, index)
+	health_crop.atlas = _art_frame(HEALTH_ART, &"idle")
+	if dialogue_panel.visible and portrait_art != null:
+		portrait.texture = _art_frame(portrait_art, portrait_state)
+	if inventory_panel.visible and inventory_model != null:
+		for i: int in range(inventory_buttons.size()):
+			var slot: Dictionary = inventory_model.slots[i]
+			if not slot.is_empty():
+				var frames: SpriteFrames = ITEM_ART[str(slot.id)]
+				inventory_buttons[i].icon = _art_frame(frames, &"idle")
 
 func _root() -> Control:
 	var node := Control.new()
@@ -147,10 +203,7 @@ func _shade(parent: Node, alpha: float) -> void:
 func _build_menu() -> void:
 	menu = _root()
 	_shade(menu, 0.28)
-	var side := ColorRect.new()
-	side.color = Color(0.025, 0.075, 0.105, 0.93)
-	side.size = Vector2(330, 360)
-	menu.add_child(side)
+	_panel(menu, Rect2(0, 0, 330, 360))
 	_label(menu, "E C H O E S   O F   A E T H E R I A", Rect2(36, 25, 300, 18), 9, GOLD)
 	_label(menu, "DƯ ÂM\nTHẾ GIỚI\nLÃNG QUÊN", Rect2(33, 54, 290, 117), 29)
 	_label(menu, "Có những điều thế giới chưa kịp quên.", Rect2(36, 183, 285, 20), 10, MUTED)
@@ -158,7 +211,7 @@ func _build_menu() -> void:
 	continue_button = _button(menu, "Tiếp tục bản lưu", Rect2(36, 246, 248, 29), continue_requested.emit)
 	_button(menu, "Cài đặt", Rect2(36, 281, 120, 27), settings_requested.emit)
 	_button(menu, "Thoát", Rect2(164, 281, 120, 27), quit_requested.emit)
-	_label(menu, "CORE RPG LOOP  /  PHASE 2", Rect2(36, 315, 280, 17), 9, GOLD)
+	_label(menu, "HÀNH TRÌNH KHỞI ĐẦU", Rect2(36, 315, 280, 17), 9, GOLD)
 	_label(menu, "Làng Bình Minh • Rừng Thì Thầm", Rect2(36, 333, 290, 16), 9, MUTED)
 	var caption := _label(menu, "LÀNG BÌNH MINH\nMột buổi sớm sau Đêm Lặng", Rect2(365, 302, 245, 43), 11)
 	caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
@@ -169,10 +222,15 @@ func _build_hud() -> void:
 	health.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_label(health, "LỮ KHÁCH", Rect2(10, 4, 85, 18), 10, GOLD)
 	hp_label = _label(health, "100 / 100", Rect2(94, 4, 54, 18), 9, CREAM)
-	var bar := ColorRect.new()
+	var bar := TextureRect.new()
 	bar.position = Vector2(10, 29)
 	bar.size = Vector2(132, 5)
-	bar.color = MINT
+	bar.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	bar.stretch_mode = TextureRect.STRETCH_KEEP
+	health_crop.atlas = HEALTH_ART.get_frame_texture(&"idle", 0)
+	health_crop.region = Rect2(0, 0, 132, 5)
+	health_crop.filter_clip = true
+	bar.texture = health_crop
 	bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	health.add_child(bar)
 	hp_bar = bar
@@ -191,10 +249,15 @@ func _build_hud() -> void:
 	prompt.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	prompt.add_theme_color_override("font_shadow_color", Color("102731"))
 	prompt.add_theme_constant_override("shadow_offset_y", 1)
+	var footer_bg := _panel(hud, Rect2(0, 334, 640, 26))
+	footer_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	control_tips = _label(hud, "WASD  Đi lại     SHIFT  Chạy     E  Tương tác     ESC  Tạm dừng", Rect2(0, 338, 640, 19), 9, CREAM)
 	control_tips.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	control_tips.add_theme_color_override("font_shadow_color", Color("102731"))
 	control_tips.add_theme_constant_override("shadow_offset_y", 1)
+	notification_bg = _panel(hud, Rect2(91, 304, 458, 27))
+	notification_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	notification_bg.hide()
 	notification = _label(hud, "", Rect2(95, 306, 450, 23), 10, CREAM)
 	notification.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 
@@ -247,7 +310,9 @@ func _build_dialogue() -> void:
 	portrait = TextureRect.new()
 	portrait.position = Vector2(18, 50)
 	portrait.size = Vector2(48, 64)
+	portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	portrait.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	dialogue_panel.add_child(portrait)
 	dialogue_text = RichTextLabel.new()
 	dialogue_text.position = Vector2(88, 47)
@@ -316,12 +381,12 @@ func show_line(speaker: String, role: String, text: String, choices: Array, face
 	dialogue_text.size.y = 112 if expanded and choices.is_empty() else 64
 	next_button.position.y = 163 if expanded else 109
 	if face == "rowan":
-		var atlas := AtlasTexture.new()
-		atlas.atlas = preload("res://assets/sprites/rowan.png")
-		atlas.region = Rect2(0, 0, 24, 32)
-		portrait.texture = atlas
+		portrait_art = ROWAN_ART
+		portrait_state = &"idle_down"
 	else:
-		portrait.texture = preload("res://assets/sprites/crystal.png")
+		portrait_art = CRYSTAL_ART
+		portrait_state = &"idle"
+	portrait.texture = _art_frame(portrait_art, portrait_state)
 	for i: int in range(choices.size()):
 		var option := Button.new()
 		option.text = str(i+1) + "   " + str(choices[i].text)
@@ -361,6 +426,8 @@ func notify(text: String) -> void:
 	notify_clock = 6.0
 
 func _process(delta: float) -> void:
+	_animate_art(delta)
+	notification_bg.visible = current_screen == "play" and notify_clock > 0.0 and not notification.text.is_empty()
 	if typing:
 		letter_clock += delta * 38.0
 		dialogue_text.visible_characters = int(letter_clock)
@@ -379,6 +446,7 @@ func _build_rpg_panels() -> void:
 	for i: int in range(16):
 		var button := _button(panel,"",Rect2(18+(i%4)*51,76+(i/4)*42,46,37),func() -> void: select_slot(i))
 		button.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		button.expand_icon = true
 		button.add_theme_font_size_override("font_size",9)
 		inventory_buttons.append(button)
 	inventory_detail = _label(panel,"",Rect2(237,76,274,126),12,CREAM)
@@ -412,8 +480,11 @@ func set_save_available(available: bool) -> void:
 
 func set_health(current: int, maximum: int) -> void:
 	hp_label.text = str(current)+" / "+str(maximum)
-	hp_bar.size.x = 132.0*current/maximum
-	hp_bar.color = MINT if current>maximum/3 else Color("d77b69")
+	var width: float = floorf(132.0 * clampf(float(current) / maxf(1.0, float(maximum)), 0.0, 1.0))
+	hp_bar.size.x = width
+	hp_bar.visible = width > 0
+	health_crop.region = Rect2(0, 0, maxf(1.0, width), 5)
+	hp_bar.modulate = Color.WHITE if current > maximum / 3 else Color("e6a28e")
 
 func update_inventory(model: RefCounted) -> void:
 	inventory_model = model
@@ -425,10 +496,8 @@ func update_inventory(model: RefCounted) -> void:
 		button.tooltip_text = "Ô trống"
 		if not slot.is_empty():
 			var item: Dictionary = model.database[slot.id]
-			var atlas := AtlasTexture.new()
-			atlas.atlas = preload("res://assets/sprites/items.png")
-			atlas.region = Rect2(int(item.icon)*16,0,16,16)
-			button.icon = atlas
+			var frames: SpriteFrames = ITEM_ART[str(slot.id)]
+			button.icon = _art_frame(frames, &"idle")
 			button.text = str(slot.count)
 			button.tooltip_text = str(item.name)+"\n"+str(item.description)
 	select_slot(selected_slot)

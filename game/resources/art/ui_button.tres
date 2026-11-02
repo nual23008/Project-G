@@ -1,0 +1,79 @@
+[gd_resource type="SpriteFrames" format=3]
+[ext_resource type="Texture2D" path="res://assets/art_refresh/sheets/ui_button.png" id="1"]
+[sub_resource type="AtlasTexture" id="normal_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="normal_1"]
+atlas = ExtResource("1")
+region = Rect2(64, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="normal_2"]
+atlas = ExtResource("1")
+region = Rect2(128, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="normal_3"]
+atlas = ExtResource("1")
+region = Rect2(192, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="normal_4"]
+atlas = ExtResource("1")
+region = Rect2(256, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="normal_5"]
+atlas = ExtResource("1")
+region = Rect2(320, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="hover_0"]
+atlas = ExtResource("1")
+region = Rect2(384, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="hover_1"]
+atlas = ExtResource("1")
+region = Rect2(448, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="hover_2"]
+atlas = ExtResource("1")
+region = Rect2(512, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="hover_3"]
+atlas = ExtResource("1")
+region = Rect2(576, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="hover_4"]
+atlas = ExtResource("1")
+region = Rect2(640, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="hover_5"]
+atlas = ExtResource("1")
+region = Rect2(704, 0, 64, 24)
+[sub_resource type="AtlasTexture" id="pressed_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 24, 64, 24)
+[sub_resource type="AtlasTexture" id="pressed_1"]
+atlas = ExtResource("1")
+region = Rect2(64, 24, 64, 24)
+[sub_resource type="AtlasTexture" id="pressed_2"]
+atlas = ExtResource("1")
+region = Rect2(128, 24, 64, 24)
+[sub_resource type="AtlasTexture" id="pressed_3"]
+atlas = ExtResource("1")
+region = Rect2(192, 24, 64, 24)
+[sub_resource type="AtlasTexture" id="pressed_4"]
+atlas = ExtResource("1")
+region = Rect2(256, 24, 64, 24)
+[sub_resource type="AtlasTexture" id="pressed_5"]
+atlas = ExtResource("1")
+region = Rect2(320, 24, 64, 24)
+[sub_resource type="AtlasTexture" id="focus_0"]
+atlas = ExtResource("1")
+region = Rect2(384, 24, 64, 24)
+[sub_resource type="AtlasTexture" id="focus_1"]
+atlas = ExtResource("1")
+region = Rect2(448, 24, 64, 24)
+[sub_resource type="AtlasTexture" id="focus_2"]
+atlas = ExtResource("1")
+region = Rect2(512, 24, 64, 24)
+[sub_resource type="AtlasTexture" id="focus_3"]
+atlas = ExtResource("1")
+region = Rect2(576, 24, 64, 24)
+[sub_resource type="AtlasTexture" id="focus_4"]
+atlas = ExtResource("1")
+region = Rect2(640, 24, 64, 24)
+[sub_resource type="AtlasTexture" id="focus_5"]
+atlas = ExtResource("1")
+region = Rect2(704, 24, 64, 24)
+[resource]
+animations = [{"name":&"normal","speed":3,"loop":true,"frames":[{"duration":1.0,"texture":SubResource("normal_0")},{"duration":1.0,"texture":SubResource("normal_1")},{"duration":1.0,"texture":SubResource("normal_2")},{"duration":1.0,"texture":SubResource("normal_3")},{"duration":1.0,"texture":SubResource("normal_4")},{"duration":1.0,"texture":SubResource("normal_5")}]},
+{"name":&"hover","speed":3,"loop":true,"frames":[{"duration":1.0,"texture":SubResource("hover_0")},{"duration":1.0,"texture":SubResource("hover_1")},{"duration":1.0,"texture":SubResource("hover_2")},{"duration":1.0,"texture":SubResource("hover_3")},{"duration":1.0,"texture":SubResource("hover_4")},{"duration":1.0,"texture":SubResource("hover_5")}]},
+{"name":&"pressed","speed":3,"loop":true,"frames":[{"duration":1.0,"texture":SubResource("pressed_0")},{"duration":1.0,"texture":SubResource("pressed_1")},{"duration":1.0,"texture":SubResource("pressed_2")},{"duration":1.0,"texture":SubResource("pressed_3")},{"duration":1.0,"texture":SubResource("pressed_4")},{"duration":1.0,"texture":SubResource("pressed_5")}]},
+{"name":&"focus","speed":3,"loop":true,"frames":[{"duration":1.0,"texture":SubResource("focus_0")},{"duration":1.0,"texture":SubResource("focus_1")},{"duration":1.0,"texture":SubResource("focus_2")},{"duration":1.0,"texture":SubResource("focus_3")},{"duration":1.0,"texture":SubResource("focus_4")},{"duration":1.0,"texture":SubResource("focus_5")}]}]

@@ -1,0 +1,37 @@
+{
+  "environment": {
+    "frames": 60,
+    "changing_transitions": 59,
+    "durations_ms": 100
+  },
+  "attack": {
+    "frames": 18,
+    "changing_transitions": 16,
+    "durations_ms": [
+      20,
+      10,
+      20,
+      20,
+      10,
+      20,
+      20,
+      10,
+      20,
+      20,
+      10,
+      20,
+      20,
+      10,
+      20,
+      20,
+      10,
+      20
+    ]
+  },
+  "death": {
+    "frames": 24,
+    "changing_transitions": 19,
+    "durations_ms": 50
+  },
+  "note": "Actual engine frames; exact damage/contact is asserted by art_contract_test.gd."
+}

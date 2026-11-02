@@ -1,5 +1,60 @@
 # Tiến độ
 
+## 2026-11-02 — Sửa đúng yêu cầu: thay đồ họa mới, idle riêng và đồng bộ state
+
+Bộ `art_stage1` ở mục lịch sử dưới đây vẫn dựa trên sprite cũ đổi màu nên **không đáp ứng yêu cầu thay đồ họa**. Bộ đó đã được thay khỏi runtime. Active hiện tại là `assets/art_refresh`: **33 loại, 67 state, 486 lượt frame**, toàn bộ texture trong manifest trỏ vào thư mục mới, không fallback về sprite cũ.
+
+### Bộ mới đã tích hợp
+- Nhà/cây/Rowan/guardian/hero_walk lấy từ ảnh ImageGen mới chi tiết trong `art_v3/sources`, trước đây chưa được dùng. Hero tóc nâu, khăn kem, áo indigo/waistcoat đỏ; Rowan áo plum; nhà mái burgundy nhiều chi tiết. Hero attack tạo mới bằng **built-in image_gen** cùng identity; ảnh và prompt/reference record đã lưu ở `assets/art_refresh/sources/hero_attack.png` và `hero_attack_generation.json`.
+- 17 props/items (gồm nhà/cây), terrain, UI và VFX có generator riêng. Props phụ/items/terrain/UI/VFX vẽ mới từ canvas trống, không lấy pixel `assets/sprites` hay `art_stage1` làm nguồn. File/nguồn/size/pivot/state chuẩn: [manifest](../resources/art/manifest.json), [asset-manifest](asset-manifest.md), [brief](ART_REFRESH_BRIEF.md). Dựng lại bằng `python3 game/tools/build_art_refresh.py`.
+- Đã ghi **quy tắc bắt buộc trong [AGENTS.md](../../AGENTS.md)**: mọi loại mới có idle/ambient riêng ngay khi đứng yên/không tương tác, kể cả terrain/UI; state thêm mới phải cùng nhân dạng, silhouette, trang phục, vật liệu, palette, hướng sáng, frame size/pivot với bộ state cùng loại. Khi thay hình phải chuyển đồng bộ mọi state, không ghép bộ cũ với mới. Body/slash/hitbox giữ contact index2 cùng tick damage.
+- Player mọi state96×64 pivot48,60 để giữ đủ kiếm, body cao khoảng52px; Rowan48×64 pivot24,60; enemy48×56 pivot24,52. Không đổi collision, map/object IDs, stats hay save version1. Tán lá/khói/cửa/lửa/áo/khăn/nước có chuyển động vật liệu; đá và UI phản sáng nhẹ, không kéo giãn cả khối.
+- Review subagent phát hiện death bị cắt7–13px và HP địch hardcodeframe0: đã sửa bằng canvas đệm trước khi xoay/neo đất, HP lấy frame ambient thật; glow lệch pha giữa đèn. Chữ footer/thông báo thêm nền panel tối để đọc được trên cây vàng. Đã trực tiếp xem render mới và dải frame death/slash sau sửa.
+
+### Nghiệm thu trên mã cuối
+- `bash game/tools/check.sh`: import sạch và **837/837 kiểm tra đạt** =699 art/idle/contact +68 hồi quy làng/UI +57 combat/inventory/save +13 journey đầy đủ. Log: [art contract](../tests/output/art-contract.log), [làng](../tests/output/phase2-regression.log), [RPG](../tests/output/phase2-integration.log), [journey](../tests/output/phase2-journey.log). Save test riêng, không ghi đè save người chơi.
+- Idle fixture không gửi input: **385 sprite** quan sát đều đổi frame; player đứng nguyên. Theme/button/HUD HP, HP địch và icon túi khi world pause cũng đổi frame. TileSet thật giữ loop cho cả4loại nền và đường mask. Kiểm tra metadata/canvas/design_id không thay thế review phong cách bằng mắt.
+- Toàn bộ **202 frame actor** đạt guard không chạm biên/cắt hình, death đặt đáy tại pivot; [actors_bounds.json](../assets/art_refresh/previews/actors_bounds.json). Một số pose được hold theo nhịp tự nhiên (ví dụ enemyidle3 hình khác trong8tick); không công bố mọi lượt frame đều độc nhất. [Animation integrity](../tests/output/art-refresh-animation-integrity.json) đếm hình khác nhau từng clip, không clip nào hoàn toàn tĩnh.
+- Renderer thật Intel Iris Xe/Compatibility: **17 ảnh UI/gameplay**, không overflow label/thoại được phát hiện; [làng](../tests/output/village.png), [trước/sau cùng camera](../tests/output/art-refresh-before-after.png), [UI contact sheet](../tests/output/art-refresh-ui-contact.png), log [UI](../tests/output/art-refresh-render.log) / [RPG](../tests/output/art-refresh-rpg-render.log).
+- Motion engine thật: **60 frame làng cách100ms,18 frame chém theo60Hz,24 frame chết cách50ms**. Có GIF [môi trường](../tests/output/stage1_village.gif), [chém](../tests/output/stage1_slash.gif), [chết](../tests/output/stage1_death.gif); đã xem dải [contact](../tests/output/stage1-slash-contact.png) và [death](../tests/output/art-refresh-death-contact.png). Source previews/GIF trong `assets/art_refresh/previews`. [Motion log](../tests/output/art-refresh-motion.log), [timing JSON](../tests/output/stage1-motion-review.json).
+- `gd_review.image_checks`:17ảnh +102frame motion đều đạt, không flag; [JSON](../tests/output/art-refresh-image-review.json). Mẫu120frame render khoảng2s/~60FPS trên máy này, không phải benchmark dài. Driver NVIDIA cảnh báo khởi tạo rồi Intel render được; log cuối không SCRIPT ERROR/ERROR/FAIL.
+
+Giới hạn: đồ phụ native ít chi tiết hơn nguồn house/trees/actors, chưa công bố đạt toàn bộ Forge/commercial art gate. Chưa QA thủ công dài, jitter144Hz, từng mép nhà sau đổi silhouette, gamepad hay export Windows. Thế giới vẫn chỉ hai vùng nhỏ. Đợt này thay hình/animation và giữ vòng chơi/save, không thêm chương truyện. Các ghi chú art_stage1/Phase1/2 phía dưới là lịch sử.
+
+## 2026-11-02 — Củng cố bản chơi mở đầu bằng các nhóm chuyên môn
+
+Yêu cầu bắt đầu từ làng, tám hướng, Rowan và nhiệm vụ mở đầu đã có trong dự án, cùng chặng rừng/save Phase 2. Đợt này giữ vòng chơi đó, không dựng lại hoặc tự mở rộng Phase 3. Đã áp dụng các skills Studio/Architecture/Gameplay/2D/UI/Pixel Art/QA; các subagent nhận rào file trong [STAGE_PLAN](STAGE_PLAN.md). Root tích hợp World Design; subagent World Design review độc lập và xem render thật. Brief ở [design-brief](design-brief.md).
+
+### Thay đổi đang dùng trong game
+- **Art:** 33 loại, 67 state, 297 lượt frame trong [manifest](../resources/art/manifest.json), PNG/SpriteFrames riêng theo loại; 298 character grid có thể chỉnh sửa. `tools/build_stage1_art.py` dựng `assets/art_stage1` qua `pixel_draw.py`, dùng palette amber/gỗ/burgundy/plum. Nguồn/pivot/frame/FPS/loop khai báo đầy đủ. Bộ art_v3 thử nghiệm không được runtime dùng.
+- **Actors/combat:** player idle/walk/attack/hurt/death bốn hướng nhìn, di chuyển vẫn tám hướng; Rowan idle riêng. Địch có idle/walk/windup/attack/hurt/death; quest/loot cập nhật ngay khi chết, animation xác chết tồn tại tạm thời. Chém/báo đòn/hit spark dùng sheet riêng, bỏ cung tròn tức thời. Body/slash theo physics; sprint không làm nhanh action animation. Contact frame index2 được giữ tại tick damage: danh nghĩa .084s, physics60Hz lấy tick đầu vượt mốc (~.100s), giữ cân bằng cũ.
+- **World:** props dùng pivot manifest, giữ collision/layout/save IDs. Nhà đổi khói/cửa sáng, cây đổi tán, đèn đổi lửa, đá glint nhẹ; không kéo giãn nhà/đá. Nước 4 frame thật @5FPS, đất/đường/bờ tĩnh một frame khai báo trung thực. Glow/đom đóm, cổng, rương và từng loại pickup có resource riêng. Rương mở animation sau giao dịch inventory thành công.
+- **UI:** nine-slice texture panel/button với các trạng thái, HP crop texture, chân dung/icon mới. Giữ layout/focus/typewriter Việt và khóa world khi UI mở. Bỏ nhãn Phase khỏi menu/nội dung quest. Save schema version1 và inventory model không đổi.
+
+### Bằng chứng đã thực sự chạy
+
+Godot **4.7.2.stable**, Linux, Compatibility/Intel Iris Xe. `bash game/tools/check.sh` đạt **669/669 kiểm tra**, import không parse/script/resource error:
+
+| Bộ | Kết quả | Log |
+|---|---|---|
+| Registry/resource/size/pivot/FPS/loop/frame thật và contact physics | 531/531 | [art-contract.log](../tests/output/art-contract.log) |
+| Làng, tám hướng, collision, Rowan, thoại, UI | 68/68 | [phase2-regression.log](../tests/output/phase2-regression.log) |
+| Combat/AI/inventory/quest/death/save | 57/57 | [phase2-integration.log](../tests/output/phase2-integration.log) |
+| Đi trọn tuyến bằng input, hoàn thành nhiệm vụ, save rồi Continue mới | 13/13 | [phase2-journey.log](../tests/output/phase2-journey.log) |
+
+- Renderer thật: `tests/render_preview.gd` + `tests/phase2_render.gd`, **17 ảnh**, kiểm biên Label/chiều cao thoại đạt. Đã trực tiếp xem làng, thoại, túi và [contact sheet UI](../tests/output/stage1-ui-contact.png). `gd_review.image_checks`:17/17 đạt, không flag; [JSON](../tests/output/stage1-image-review.json). Log [làng/UI](../tests/output/stage1-render.log), [RPG](../tests/output/stage1-rpg-render.log).
+- `tests/stage1_motion_preview.gd` ghi animation engine thật: **16 frame làng cách100ms + 18 frame attack theo physics60Hz**, 0 lỗi; 34/34 ảnh đạt image_checks. Có15/15 chuyển tiếp môi trường và15/17 chuyển tiếp attack thay pixel. Đã xem [dải frame contact](../tests/output/stage1-slash-contact.png); [timing JSON](../tests/output/stage1-motion-review.json), [log](../tests/output/stage1-motion.log), [GIF làng](../tests/output/stage1_village.gif), [GIF chém](../tests/output/stage1_slash.gif). `tools/package_motion_preview.py` chỉ đóng gói capture.
+- Art nguồn có [contact sheet](../assets/art_stage1/previews/contact_sheet.png), [GIF animation](../assets/art_stage1/previews/animation_preview.gif). Kiểm thời điểm damage bằng test physics, không suy từ screenshot.
+- Mẫu120frame: làng **1.985s≈60.5FPS**, rừng **1.980s≈60.6FPS**, cap60; chỉ mẫu ngắn trên máy hiện tại. Driver NVIDIA cảnh báo rồi Intel render thành công. Không có SCRIPT ERROR/ERROR/FAIL trong log cuối.
+- `bash -n`, Python compile/generator/packaging đạt. Fixture dùng tên save test riêng, không ghi đè `journey.json`. Import đầu trong sandbox bị chặn socket/config; đã chạy lại ngoài sandbox theo quyền cấp và đạt.
+
+### Giới hạn trung thực
+- Vẫn chỉ **hai vùng nhỏ, một NPC truyện, một quest, một loại địch**; chưa phải open world đầy đủ. Audio, gamepad, export Windows/Linux và các chương sau chưa triển khai/QA trong đợt này.
+- Art gốc kích thước nhỏ, **chưa đạt độ chi tiết của tham chiếu thương mại**. Forge audit còn flag craft ở nhà/cây/đá (cụm pixel, silhouette lá, midtone) và viền HP5px; [forge_audit.json](../assets/art_stage1/previews/forge_audit.json). UI panel/button đạt audit tương ứng; không công bố đạt toàn bộ Forge gate hoặc hoàn tất nâng chất lượng art.
+- Chưa playtest thủ công dài, đánh giá jitter144Hz hay đi quanh mọi prop duyệt y-sort. Boundary/navigation cố định64×48 phù hợp hai map hiện tại; cần tổng quát hóa trước map kích thước khác. Giữ hồi quy xanh trước giai đoạn nội dung tiếp theo.
+
+Chơi bằng `bash run_game.sh`: Hành trình mới → WASD/mũi tên → Rowan → E/Enter → Q xem nhiệm vụ. Không cần Python/Pillow để chơi.
+
 ## 2026-11-02 — Phase 2 hoàn tất: Core RPG Loop
 
 Đọc lại Phase 1 và giữ kiến trúc scene + composition + signals, mở rộng bằng model Inventory/Quest/Save độc lập. Các ghi chú Phase 1 phía dưới là lịch sử, không còn mô tả giới hạn của bản hiện tại.

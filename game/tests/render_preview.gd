@@ -32,6 +32,7 @@ func capture(path: String) -> void:
 
 func _run() -> void:
 	main = load("res://scenes/main/main.tscn").instantiate()
+	main.save_path = "user://phase1_render_only.json"
 	root.add_child(main)
 	await capture("res://tests/output/menu.png")
 	main.start_game()

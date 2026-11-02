@@ -1,0 +1,451 @@
+{
+  "house": {
+    "exit": 1,
+    "file": "/home/luan/Desktop/project G/game/assets/art_stage1/previews/qa_frames/house.png",
+    "size": [
+      112,
+      96
+    ],
+    "opaque_px": 6891,
+    "results": [
+      {
+        "check": "colour count",
+        "value": 18,
+        "pass": true,
+        "detail": "limit 48, palette stage1 has 55"
+      },
+      {
+        "check": "palette drift",
+        "value": 0,
+        "pass": true,
+        "detail": "all on palette"
+      },
+      {
+        "check": "anti-alias suspects",
+        "value": 1,
+        "pass": false,
+        "detail": "#c79b67"
+      },
+      {
+        "check": "isolated pixels",
+        "value": "0 (0.0%)",
+        "pass": true,
+        "detail": "limit 2% \u2014 these read as noise, not detail"
+      },
+      {
+        "check": "dominant run length",
+        "value": "8px (19% of runs)",
+        "pass": false,
+        "detail": "want one clear feature scale; 43 distinct run lengths seen"
+      },
+      {
+        "check": "banded shading",
+        "value": "1 touching near-tone pairs",
+        "pass": true,
+        "detail": "closest seams: #47704a/#795d4c x57"
+      },
+      {
+        "check": "light consistency",
+        "value": "2/4 auto-groups lit correctly (advisory)",
+        "pass": true,
+        "detail": "auto-grouping is a hint only \u2014 it mis-groups ramp ends, so it never fails the audit. Declare the ramps to judge exactly: --material \"c1,c2,c3\""
+      },
+      {
+        "check": "silhouette cleanliness",
+        "value": "0 notches, 6 spikes",
+        "pass": true,
+        "detail": "limit 8 \u2014 1px edge jitter is the machine-made tell"
+      }
+    ]
+  },
+  "pine": {
+    "exit": 1,
+    "file": "/home/luan/Desktop/project G/game/assets/art_stage1/previews/qa_frames/pine.png",
+    "size": [
+      64,
+      88
+    ],
+    "opaque_px": 2750,
+    "results": [
+      {
+        "check": "colour count",
+        "value": 10,
+        "pass": true,
+        "detail": "limit 48, palette stage1 has 55"
+      },
+      {
+        "check": "palette drift",
+        "value": 0,
+        "pass": true,
+        "detail": "all on palette"
+      },
+      {
+        "check": "anti-alias suspects",
+        "value": 0,
+        "pass": true,
+        "detail": "none"
+      },
+      {
+        "check": "isolated pixels",
+        "value": "0 (0.0%)",
+        "pass": true,
+        "detail": "limit 2% \u2014 these read as noise, not detail"
+      },
+      {
+        "check": "dominant run length",
+        "value": "3px (31% of runs)",
+        "pass": true,
+        "detail": "want one clear feature scale; 32 distinct run lengths seen"
+      },
+      {
+        "check": "banded shading",
+        "value": "2 touching near-tone pairs",
+        "pass": true,
+        "detail": "closest seams: #153a3b/#203a3e x76; #153a3b/#3d2f38 x7"
+      },
+      {
+        "check": "light consistency",
+        "value": "2/2 auto-groups lit correctly (advisory)",
+        "pass": true,
+        "detail": "auto-grouping is a hint only \u2014 it mis-groups ramp ends, so it never fails the audit. Declare the ramps to judge exactly: --material \"c1,c2,c3\""
+      },
+      {
+        "check": "silhouette cleanliness",
+        "value": "17 notches, 18 spikes",
+        "pass": false,
+        "detail": "limit 8 \u2014 1px edge jitter is the machine-made tell"
+      }
+    ]
+  },
+  "oak": {
+    "exit": 1,
+    "file": "/home/luan/Desktop/project G/game/assets/art_stage1/previews/qa_frames/oak.png",
+    "size": [
+      80,
+      88
+    ],
+    "opaque_px": 4210,
+    "results": [
+      {
+        "check": "colour count",
+        "value": 7,
+        "pass": true,
+        "detail": "limit 48, palette stage1 has 55"
+      },
+      {
+        "check": "palette drift",
+        "value": 0,
+        "pass": true,
+        "detail": "all on palette"
+      },
+      {
+        "check": "anti-alias suspects",
+        "value": 0,
+        "pass": true,
+        "detail": "none"
+      },
+      {
+        "check": "isolated pixels",
+        "value": "0 (0.0%)",
+        "pass": true,
+        "detail": "limit 2% \u2014 these read as noise, not detail"
+      },
+      {
+        "check": "dominant run length",
+        "value": "4px (34% of runs)",
+        "pass": true,
+        "detail": "want one clear feature scale; 33 distinct run lengths seen"
+      },
+      {
+        "check": "banded shading",
+        "value": "0 touching near-tone pairs",
+        "pass": true,
+        "detail": "every touching tone pair differs by >= 6.0 luminance"
+      },
+      {
+        "check": "light consistency",
+        "value": "1/1 auto-groups lit correctly (advisory)",
+        "pass": true,
+        "detail": "auto-grouping is a hint only \u2014 it mis-groups ramp ends, so it never fails the audit. Declare the ramps to judge exactly: --material \"c1,c2,c3\""
+      },
+      {
+        "check": "silhouette cleanliness",
+        "value": "8 notches, 1 spikes",
+        "pass": false,
+        "detail": "limit 8 \u2014 1px edge jitter is the machine-made tell"
+      }
+    ]
+  },
+  "rock": {
+    "exit": 1,
+    "file": "/home/luan/Desktop/project G/game/assets/art_stage1/previews/qa_frames/rock.png",
+    "size": [
+      32,
+      32
+    ],
+    "opaque_px": 511,
+    "results": [
+      {
+        "check": "colour count",
+        "value": 6,
+        "pass": true,
+        "detail": "limit 48, palette stage1 has 55"
+      },
+      {
+        "check": "palette drift",
+        "value": 0,
+        "pass": true,
+        "detail": "all on palette"
+      },
+      {
+        "check": "anti-alias suspects",
+        "value": 0,
+        "pass": true,
+        "detail": "none"
+      },
+      {
+        "check": "isolated pixels",
+        "value": "0 (0.0%)",
+        "pass": true,
+        "detail": "limit 2% \u2014 these read as noise, not detail"
+      },
+      {
+        "check": "dominant run length",
+        "value": "5px (15% of runs)",
+        "pass": false,
+        "detail": "want one clear feature scale; 18 distinct run lengths seen"
+      },
+      {
+        "check": "banded shading",
+        "value": "0 touching near-tone pairs",
+        "pass": true,
+        "detail": "every touching tone pair differs by >= 6.0 luminance"
+      },
+      {
+        "check": "light consistency",
+        "value": "2/2 auto-groups lit correctly (advisory)",
+        "pass": true,
+        "detail": "auto-grouping is a hint only \u2014 it mis-groups ramp ends, so it never fails the audit. Declare the ramps to judge exactly: --material \"c1,c2,c3\""
+      },
+      {
+        "check": "silhouette cleanliness",
+        "value": "0 notches, 1 spikes",
+        "pass": true,
+        "detail": "limit 8 \u2014 1px edge jitter is the machine-made tell"
+      }
+    ]
+  },
+  "ui_panel": {
+    "exit": 0,
+    "file": "/home/luan/Desktop/project G/game/assets/art_stage1/previews/qa_frames/ui_panel.png",
+    "size": [
+      48,
+      48
+    ],
+    "opaque_px": 2304,
+    "results": [
+      {
+        "check": "colour count",
+        "value": 6,
+        "pass": true,
+        "detail": "limit 48, palette stage1 has 55"
+      },
+      {
+        "check": "palette drift",
+        "value": 0,
+        "pass": true,
+        "detail": "all on palette"
+      },
+      {
+        "check": "anti-alias suspects",
+        "value": 0,
+        "pass": true,
+        "detail": "none"
+      },
+      {
+        "check": "isolated pixels",
+        "value": "0 (0.0%)",
+        "pass": true,
+        "detail": "limit 2% \u2014 these read as noise, not detail"
+      },
+      {
+        "check": "dominant run length",
+        "value": "42px (69% of runs)",
+        "pass": true,
+        "detail": "want one clear feature scale; 3 distinct run lengths seen"
+      },
+      {
+        "check": "banded shading",
+        "value": "0 touching near-tone pairs",
+        "pass": true,
+        "detail": "every touching tone pair differs by >= 6.0 luminance"
+      },
+      {
+        "check": "light consistency",
+        "value": "0/1 auto-groups lit correctly (advisory)",
+        "pass": true,
+        "detail": "auto-grouping is a hint only \u2014 it mis-groups ramp ends, so it never fails the audit. Declare the ramps to judge exactly: --material \"c1,c2,c3\""
+      },
+      {
+        "check": "silhouette cleanliness",
+        "value": "0 notches, 0 spikes",
+        "pass": true,
+        "detail": "limit 8 \u2014 1px edge jitter is the machine-made tell"
+      },
+      {
+        "check": "UI border thickness",
+        "value": "{'top': 1, 'bottom': 1, 'left': 1, 'right': 1} (spread 0px)",
+        "pass": true,
+        "detail": "a UI border must keep constant thickness on all four sides"
+      },
+      {
+        "check": "UI interior flatness",
+        "value": "89% one tone (#493543), 4 tones",
+        "pass": true,
+        "detail": "want >= 45% in one tone and <= 6 tones; a bar's fill/empty split passes, a sprite's detail does not"
+      }
+    ]
+  },
+  "ui_button": {
+    "exit": 0,
+    "file": "/home/luan/Desktop/project G/game/assets/art_stage1/previews/qa_frames/ui_button.png",
+    "size": [
+      48,
+      24
+    ],
+    "opaque_px": 1152,
+    "results": [
+      {
+        "check": "colour count",
+        "value": 6,
+        "pass": true,
+        "detail": "limit 48, palette stage1 has 55"
+      },
+      {
+        "check": "palette drift",
+        "value": 0,
+        "pass": true,
+        "detail": "all on palette"
+      },
+      {
+        "check": "anti-alias suspects",
+        "value": 0,
+        "pass": true,
+        "detail": "none"
+      },
+      {
+        "check": "isolated pixels",
+        "value": "0 (0.0%)",
+        "pass": true,
+        "detail": "limit 2% \u2014 these read as noise, not detail"
+      },
+      {
+        "check": "dominant run length",
+        "value": "42px (47% of runs)",
+        "pass": true,
+        "detail": "want one clear feature scale; 3 distinct run lengths seen"
+      },
+      {
+        "check": "banded shading",
+        "value": "0 touching near-tone pairs",
+        "pass": true,
+        "detail": "every touching tone pair differs by >= 6.0 luminance"
+      },
+      {
+        "check": "light consistency",
+        "value": "0/1 auto-groups lit correctly (advisory)",
+        "pass": true,
+        "detail": "auto-grouping is a hint only \u2014 it mis-groups ramp ends, so it never fails the audit. Declare the ramps to judge exactly: --material \"c1,c2,c3\""
+      },
+      {
+        "check": "silhouette cleanliness",
+        "value": "0 notches, 0 spikes",
+        "pass": true,
+        "detail": "limit 8 \u2014 1px edge jitter is the machine-made tell"
+      },
+      {
+        "check": "UI border thickness",
+        "value": "{'top': 1, 'bottom': 1, 'left': 1, 'right': 1} (spread 0px)",
+        "pass": true,
+        "detail": "a UI border must keep constant thickness on all four sides"
+      },
+      {
+        "check": "UI interior flatness",
+        "value": "81% one tone (#493543), 4 tones",
+        "pass": true,
+        "detail": "want >= 45% in one tone and <= 6 tones; a bar's fill/empty split passes, a sprite's detail does not"
+      }
+    ]
+  },
+  "ui_health": {
+    "exit": 1,
+    "file": "/home/luan/Desktop/project G/game/assets/art_stage1/previews/qa_frames/ui_health.png",
+    "size": [
+      132,
+      5
+    ],
+    "opaque_px": 660,
+    "results": [
+      {
+        "check": "colour count",
+        "value": 3,
+        "pass": true,
+        "detail": "limit 48, palette stage1 has 55"
+      },
+      {
+        "check": "palette drift",
+        "value": 0,
+        "pass": true,
+        "detail": "all on palette"
+      },
+      {
+        "check": "anti-alias suspects",
+        "value": 0,
+        "pass": true,
+        "detail": "none"
+      },
+      {
+        "check": "isolated pixels",
+        "value": "0 (0.0%)",
+        "pass": true,
+        "detail": "limit 2% \u2014 these read as noise, not detail"
+      },
+      {
+        "check": "dominant run length",
+        "value": "n/a",
+        "pass": true,
+        "detail": "no runs > 1px"
+      },
+      {
+        "check": "banded shading",
+        "value": "3 colours",
+        "pass": true,
+        "detail": "too few tones to band"
+      },
+      {
+        "check": "light consistency",
+        "value": "1/1 auto-groups lit correctly (advisory)",
+        "pass": true,
+        "detail": "auto-grouping is a hint only \u2014 it mis-groups ramp ends, so it never fails the audit. Declare the ramps to judge exactly: --material \"c1,c2,c3\""
+      },
+      {
+        "check": "silhouette cleanliness",
+        "value": "0 notches, 0 spikes",
+        "pass": true,
+        "detail": "limit 8 \u2014 1px edge jitter is the machine-made tell"
+      },
+      {
+        "check": "UI border thickness",
+        "value": "{'top': 1, 'bottom': 1, 'left': 132, 'right': 132} (spread 131px)",
+        "pass": false,
+        "detail": "a UI border must keep constant thickness on all four sides"
+      },
+      {
+        "check": "UI interior flatness",
+        "value": "n/a",
+        "pass": true,
+        "detail": "interior too small to judge"
+      }
+    ]
+  }
+}

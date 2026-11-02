@@ -16,9 +16,9 @@ Một file có một người ghi tại một thời điểm; thay đổi ngoài
 |---|---|---|
 | Game Architecture — subagent architecture | `scripts/save/**`, `scripts/inventory/**` chỉ khi phát hiện lỗi; `tests/art_contract_test.gd`, `tools/check.sh`, tài liệu này | Audit save/định dạng dữ liệu; cổng kiểm tra art/resource; giữ schema version 1 |
 | Gameplay — subagent gameplay | `scripts/player/**`, `scripts/combat/**`, `scenes/player/player.tscn`, `scenes/npc/elder_rowan.tscn`, `scripts/dialogue/npc.gd`, `scripts/world/world_object.gd` | Nối animation actor/pickup/đòn chém và hit sparks; giữ damage, AI, inventory và tương tác hiện tại |
-| World Design — root | `scripts/world/village.gd`, `scripts/world/atmosphere.gd`, `scenes/world/**`, `resources/world/**` | Dùng TileMapLayer/atlas thật; môi trường chuyển động theo vật liệu; giữ camera, y-sort, collision và lối đi |
-| UI — nhóm UI do root điều phối | `scripts/ui/**`, `scenes/ui/**` | Nối tài nguyên panel/nút/HP/icon, giữ menu/HUD/thoại/nhật ký và focus bằng bàn phím |
-| Pixel Art — subagent pixel_art | `tools/build_art_v3.py`, `assets/art_v3/**`, `resources/art/**`, tài liệu art riêng | Sprite sheets, SpriteFrames, palette thống nhất, nguồn/kích thước/pivot/FPS/state, manifest và preview |
+| World Design — root; subagent world_design review chỉ đọc | `scripts/world/village.gd`, `scripts/world/atmosphere.gd`, `scenes/world/**`, `resources/world/**` | Dùng TileMapLayer/atlas thật; môi trường chuyển động theo vật liệu; giữ camera, y-sort, collision và lối đi |
+| UI — subagent architecture chuyển vai sau bàn giao nền tảng | `scripts/ui/**`, `scenes/ui/**` | Nối tài nguyên panel/nút/HP/icon, giữ menu/HUD/thoại/nhật ký và focus bằng bàn phím |
+| Pixel Art — subagent pixel_art | `tools/build_stage1_art.py`, `assets/art_stage1/**`, `resources/art/**`, tài liệu art riêng | Sprite sheets, SpriteFrames, palette thống nhất, nguồn/kích thước/pivot/FPS/state, manifest và preview; giữ nguyên bộ nguồn `art_v3` chưa dùng |
 
 Root giữ quyền tích hợp `scripts/core/**`, `project.godot`, README, `docs/PROGRESS.md`, `docs/ARCHITECTURE.md`, các fixture render/QA chung. Root chạy CLI tuần tự sau khi các nhóm bàn giao; renderer thật chỉ chạy sau khi headless đạt.
 

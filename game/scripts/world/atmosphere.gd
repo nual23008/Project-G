@@ -7,13 +7,15 @@ var lights: Array[Vector2] = [Vector2(440, 375), Vector2(600, 375), Vector2(472,
 var motes: Array[AnimatedSprite2D] = []
 
 func _ready() -> void:
-	for point: Vector2 in lights:
+	for i: int in range(lights.size()):
+		var point: Vector2 = lights[i]
 		var glow := AnimatedSprite2D.new()
 		glow.name = "LanternGlow"
 		glow.sprite_frames = GLOW
 		glow.position = point
 		add_child(glow)
 		glow.play(&"idle")
+		glow.frame = i % GLOW.get_frame_count(&"idle")
 	for i: int in range(35):
 		var mote := AnimatedSprite2D.new()
 		mote.name = "Firefly" + str(i)

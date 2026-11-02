@@ -1,5 +1,18 @@
 # Kiến trúc
 
+## Đồ họa mới + quy tắc idle — active sau sửa yêu cầu người dùng
+- Bộ `art_stage1` phía dưới là lịch sử, đã bị thay. Active: `assets/art_refresh/sheets/**` và 33 `resources/art/*.tres` được manifest trỏ vào. `tools/build_art_refresh.py` chạy 4 generator nhóm, merge fragment và từ chối thiếu ID/trùng người ghi/fallback texture cũ. Các source ImageGen mới của house/trees/actors đã được dùng thật; props/items/terrain/UI/VFX còn lại vẽ mới.
+- Mọi loại persistent có idle/ambient loop, kể cả grass/shore/path/UI; water/ground atlas512×64, đường mask atlas1024×64 gồm4phase cách256px. Player canvas96×64 pivot48,60 cho mọi state, lề đủ chứa kiếm; Rowan48×64 pivot24,60; enemy48×56 pivot24,52. Collision/map IDs/save version1 không đổi. Action frame/body/VFX giữ contact index2 cùng tick damage; VFX origin theo chiều cao tay mới.
+- Canvas đệm được dùng trước khi xoay death để không mất silhouette; mọi frame actor có guard biên, death đặt đáy tại pivot. UI/HP địch dùng loop thật, không hardcode frame0. Các hold integer có chủ đích được đếm riêng với số hình khác nhau.
+- `AGENTS.md` bắt buộc idle không tương tác và state mới cùng nhân dạng/vật liệu/palette/canvas/pivot. Art contract test quan sát idle thật trong world, Theme/HUD/HP địch/item khi world pause; metadata `design_id` hỗ trợ kiểm tra hợp đồng nhưng không chứng minh chất lượng hình ảnh. Root còn phải xem sheet/render/motion.
+
+## Tích hợp art bản mở đầu trước đợt thay mới — lịch sử
+- `resources/art/manifest.json` đăng ký 33 loại; runtime dùng `resources/art/**` và `assets/art_stage1/sheets/**`. `tools/build_stage1_art.py` lưu editable character grids rồi render qua studio `pixel_draw.py`. Xem `asset-manifest.md`; generator/assets Phase 1/2 cũ giữ làm nguồn, art_v3 thử nghiệm không dùng trong game.
+- `village.gd` đọc resource/pivot prop từ manifest; AnimatedSprite2D dưới body/Node2D trong Actors y-sort. Collision độc lập animation. Terrain SpriteFrames cung cấp atlas/count/FPS: nước 4 pha cách 128 px trong atlas 512×64; paths atlas phụ 256×64. Đất/bờ tĩnh. Atmosphere dùng glow/firefly riêng và tọa độ round.
+- Player/Enemy action frames và melee dùng clock physics: `CONTACT_TIME=.084`, `CONTACT_FRAME=2`, `SWING_DURATION=.24`. Tick vượt contact phát signal và truy vấn hitbox; body/slash giữ contact frame trước damage. `sprite_effect.gd` quản lý VFX ngắn; chết/nhặt cập nhật state ngay, visual tạm không serialize.
+- UI dùng SpriteFrames panel/button/HP/portrait/item; Theme StyleBoxTexture nine-slice, HP crop. Main vẫn quyết định pause/input. Không đổi save schema version 1.
+- `tests/art_contract_test.gd` kiểm metadata/resource/frame thật và hit physics; `tools/check.sh` chạy trước ba bộ hồi quy. `tests/stage1_motion_preview.gd` cần renderer thật; `tools/package_motion_preview.py` đóng gói QA. Rào file/cổng nghiệm thu: `docs/STAGE_PLAN.md`.
+
 ## Nền tảng kế thừa từ Phase 1
 - `scenes/main/main.tscn` / `scripts/core/main.gd`: điều phối vòng đời menu, chơi, thoại, tạm dừng. Duy nhất nguồn quyết định khóa input và pause cây thế giới. Không autoload khi chưa cần trạng thái xuyên scene.
 - `scripts/core/input_setup.gd`: input mapping tập trung, vật lý WASD và mũi tên; thiết lập trước khi world sinh ra.

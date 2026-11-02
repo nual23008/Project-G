@@ -21,7 +21,8 @@ func _ready() -> void:
 	visual.sprite_frames = PLAYER_EFFECT if team == "player" else ENEMY_EFFECT
 	visual.centered = false
 	visual.offset = Vector2(-36,-36)
-	visual.position.y = -4
+	# Match the new actor's hand height; the ground-space hit query stays stable.
+	visual.position.y = -30 if team == "player" else -18
 	visual.animation = &"play"
 	visual.hide()
 	add_child(visual)
@@ -38,6 +39,11 @@ func begin(aim: Vector2, amount: int) -> bool:
 	visual.frame = 0
 	visual.show()
 	return true
+
+func cancel() -> void:
+	remaining = 0.0
+	if is_instance_valid(visual):
+		visual.hide()
 
 func _physics_process(delta: float) -> void:
 	if remaining <= 0:

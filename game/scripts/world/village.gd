@@ -9,6 +9,7 @@ var content_state: Dictionary = {"collected":[],"defeated":[],"enemies":[],"drop
 var navigation := AStarGrid2D.new()
 signal enemy_defeated(id: String)
 var definition: Dictionary = {}
+var art_manifest: Dictionary = {}
 var obstacle_count: int = 0
 @onready var player: CharacterBody2D = $Actors/Player
 @onready var rowan: StaticBody2D = $Actors/ElderRowan
@@ -22,6 +23,11 @@ func _ready() -> void:
 		push_error("Village data invalid.")
 		return
 	definition = parsed
+	var art: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://resources/art/manifest.json"))
+	if not art is Dictionary:
+		push_error("Art manifest invalid.")
+		return
+	art_manifest = art
 	_create_tiles()
 	for entry: Dictionary in definition.props:
 		_create_prop(str(entry.kind), Vector2(entry.at[0], entry.at[1]), entry)
@@ -107,7 +113,12 @@ func _create_tiles() -> void:
 	tileset.add_source(path_atlas, 1)
 	for y: int in range(4):
 		for x: int in range(16):
-			path_atlas.create_tile(Vector2i(x, y))
+			var tile := Vector2i(x, y)
+			path_atlas.create_tile(tile)
+			path_atlas.set_tile_animation_columns(tile, 4)
+			path_atlas.set_tile_animation_separation(tile, Vector2i(15, 0))
+			path_atlas.set_tile_animation_frames_count(tile, path_frames.get_frame_count(&"edges"))
+			path_atlas.set_tile_animation_speed(tile, path_frames.get_animation_speed(&"edges"))
 	for y: int in range(int(definition.height)):
 		for x: int in range(int(definition.width)):
 			var variant_index: int = posmod(x * 13 + y * 7 + x * y, 8)
@@ -132,7 +143,8 @@ func _create_tiles() -> void:
 			ground.set_cell(Vector2i(x, y), 0, Vector2i(posmod(x+y, 8), 3 if edge or corner else 2))
 
 func _create_prop(kind: String, point: Vector2, data: Dictionary = {}) -> void:
-	var frames: SpriteFrames = load("res://resources/art/" + kind + ".tres") as SpriteFrames
+	var art: Dictionary = art_manifest.get(kind, {})
+	var frames: SpriteFrames = load(str(art.get("resource", ""))) as SpriteFrames
 	if frames == null:
 		push_error("Missing prop animation: " + kind)
 		return
@@ -159,9 +171,8 @@ func _create_prop(kind: String, point: Vector2, data: Dictionary = {}) -> void:
 	var sprite := AnimatedSprite2D.new()
 	sprite.name = "Sprite"
 	sprite.sprite_frames = frames
-	var frame_texture: Texture2D = frames.get_frame_texture(&"idle", 0)
 	sprite.centered = false
-	sprite.position = Vector2(-frame_texture.get_width() / 2.0, -frame_texture.get_height() + 4)
+	sprite.position = -Vector2(art.pivot[0], art.pivot[1])
 	base.add_child(sprite)
 	sprite.play(&"idle")
 	sprite.frame = posmod(int(point.x * 7 + point.y * 13), frames.get_frame_count(&"idle"))
