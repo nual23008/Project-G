@@ -1,5 +1,26 @@
 # Tiến độ
 
+## 2026-11-03 — Bốn chủng tộc, menu game mới; sửa râu Dwarf và hướng kiếm
+
+Đã triển khai [thiết kế chủng tộc](RACES_IMPLEMENTATION.md): **Người / Elf / Dwarf / Orc**. Chọn **Hành trình mới → chọn tộc → Bắt đầu**; xem trước năm động tác và tám góc. Esc/Quay lại không reset hành trình trước khi xác nhận. Giai đoạn này tộc quyết định ngoại hình, cùng chỉ số khởi đầu; chưa thêm bonus/ability tộc.
+
+- Người giữ nhân dạng active. Elf cao/thanh, tai nhọn, tóc bạc/bím; Dwarf thấp/đậm, tóc đồng/râu dày; Orc vai rộng, da xanh/tóc đen/ngà. Rig/head/material riêng, cùng fantasy pixel art và outfit hiện có; không scale/recolour toàn bộ Human. Mỗi tộc đủ **40 clip idle/walk/attack/hurt/death ×8 hướng**, canvas96×64/pivot48,60. Các hold được khai báo trung thực.
+- Ba tộc mới có base/hands/heritage và **15 layer gear** riêng để vừa khớp. Đủ 12 ô hành trang tháo/mặc độc lập; preview túi dùng đúng tộc. Natural traits không chiếm ô trang bị; đầu/cổ/vai/cổ tay/hông/cổ chân cùng rig, đầu/đế chân idle giữ vị trí. Human dùng 17 layer, mỗi tộc mới18 layer; không preload cả bốn bộ trong lúc chơi.
+- **Sửa theo ảnh phản hồi:** râu Dwarf nối liên tục từ tóc mai qua má/ria/cằm, chỉ chót râu thở; up/up_left/up_right bỏ hẳn râu/bím dưới gáy, thay bằng tóc occiput ngắn. Guard đo overlap root với đầu, cấm pixel heritage dưới đầu ở mọi frame rear ngoài death. [Tám góc đã sửa](../tests/output/dwarf-eight-views-fixed.png), [xoay nhân vật/kiếm](../tests/output/dwarf-turning-fixed.gif).
+- **Sửa kiếm cho cả bốn tộc:** góc cầm nghỉ theo hướng và tay, profile mirror khớp, guard vuông góc lưỡi quay quanh grip. Khi chém lên, tay mở cạnh vai để blade không xuyên đầu; contact tip từng tộc/tay được xuất lại. Layer là child của Sprite và dùng show_behind_parent cho phía sau/far hand, không tăng/giảm globalZ làm mất kiếm dưới terrain/panel hoặc phá Y-sort. Showcase menu dùng đúng thứ tự occlusion của runtime.
+- Menu có bốn card idle8 nhỏ, chỉ giữ một showcase40state của tộc đang xem; giải phóng khi vào game. Nối bàn phím/chuột, focus/cancel/confirm, tự phát lại preview nonloop sau hold để xem; resource giữ đúng loop flag. Đã xem layout640×360,854×360,640×400 và hành trang mặc đủ/bất đối xứng. [Menu](../tests/output/races/menu_dwarf.png), [hành trang](../tests/output/races/bag_mixed_dwarf.png).
+- Main sở hữu race_id, gán trước khi world vào tree; travel/death/respawn/load giữ tộc. **Save v4** kiểm race bắt buộc/ID hợp lệ; v1/v2/v3 qua checksum/schema gốc rồi migrate Human trong bộ nhớ. Reserved field ngăn đổi version giả; checksum/atomic/temp/backup còn nguyên. Tests chỉ ghi save_path riêng, không ghi journey.json.
+- Pipeline thêm nhóm thứ8 `build_race_art.py`, nguồn native `equipment_rig.py` / `race_heads.py`, brief/palette/source heads ở `assets/races`. Manifest active **129 loại / 3.079 state / 22.790 lượt frame**, gồm62 resource race mới; tất cả được runtime/menu sử dụng. Không có .pxo hay phiên Pixelorama được tuyên bố; không gọi API trả phí.
+
+Nghiệm thu bản cuối:
+
+- `bash game/tools/check.sh`: **18.369/18.369 assertions Godot + 43.072/43.072 kiểm tra art Python + 5/5 launcher**; import không SCRIPT ERROR/ERROR; hồi quy movement,12ô gear,controls,eight-direction,progression/combat/UI/save/quest/journey đạt. Race suite **378/378**, anatomy human **5.437/5.437** và ba tộc mới **37.635/37.635** kiểm tra; gồm từng gear+base, root râu, cổ/đầu/chân, front/back và mutation cổ. [Log toàn bộ](../tests/output/races-check-final.log), [art](../tests/output/races-art-review.json).
+- Renderer Iris Xe/Compatibility **63 capture**, không lỗi. **1.184/1.184 cel** composite từ actor runtime khớp pixel với showcase (cả lớp kiếm trước/sau thân); **63/63 image checks**, **160/160 clip** qua Forge loopcheck baseline tolerance0. Chỉ bỏ hold liên tiếp khi so hình học, timing thật không đổi; action nonloop bỏ seam check. Style audit **8/8** cho base idle_down của từng tộc mới với palette/ramp khai báo, không tuyên bố audit style cho mọi cel/layer. [Render](../tests/output/races-render-review.json), [review](../tests/output/races-forge-review.json).
+- Cold launch qua `run_game.sh` trong cửa sổ thật, tự thoát sau120frame, exit0, không SCRIPT ERROR/ERROR.
+- Đã xem ảnh đủ hướng, chuỗi frame và preview chuyển động [đứng](../tests/output/races-idle.gif), [đi](../tests/output/races-walk.gif), [chém](../tests/output/races-attack.gif), [hurt](../tests/output/races-hurt.gif), [death](../tests/output/races-death.gif), [xoay](../tests/output/races-turning.gif). CLI render tắt VSync chỉ để capture nền; cấu hình chơi vẫn VSync/maxfps0/camera interpolation trước đó. Chưa đo lại FPS144Hz hoặc playtest tay dài trong đợt này.
+
+Chạy lại game bằng `bash run_game.sh` để nạp script/atlas mới. Các mục bên dưới là lịch sử các milestone trước.
+
 ## 2026-11-03 — Bản EXE Windows 64-bit
 
 Đã xuất **Windows x86_64 release**, Godot **4.7.2.stable.official.ed1daf0bf**, Compatibility. Dữ liệu nằm trong EXE, không cần `.pck` rời hoặc cài Godot/Python/.NET trên máy người chơi.
