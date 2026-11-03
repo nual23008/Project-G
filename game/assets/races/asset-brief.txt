@@ -1,0 +1,24 @@
+subject      : Human, Elf, Dwarf and Orc playable race identities
+role in game : choose before confirming New Game; retained across saves/travel/respawn
+canvas       : 96x64 logical pixels, shared foot pivot 48,60; no body scaling
+palette      : shared amber/indigo/wine/plum cloth and leather; separate 3-tone skin/hair ramps
+light        : top-left, opaque banded shading; no smoothing/dithering/random speckle
+block        : 1px native, visible bodies ~30x42..55px; match existing active human
+must read as : human balanced/chestnut; elf tall/slender/pointed ears/silver braids;
+               dwarf short/stout/copper beard ROOTED IN CHEEKS; orc broad/green/tusks
+states       : 8 directions x idle8/walk6/attack9/hurt5/death9, honest playback holds
+anatomy      : neck/shoulder/hip/wrist/ankle overlap; unique joint dimensions per race;
+               front/profile/back entire body and gear; fixed idle head and soles
+beard fix    : cheek-sideburn-moustache-jaw continuous, rooted in temple hair;
+               only weighted tip bends; rear is short occipital hair only, no beard or braid below the head
+gear         : 12 removable slots, 15 equipped variant sheets adapted to each native rig
+natural hair : independent heritage animation always worn, no equipment slot consumed
+menu         : four idle cards, one selected 40-state composite, motion/angle controls;
+               existing animated panel/button skins, keyboard/mouse, Escape cancel
+process      : RACES_IMPLEMENTATION.md design pinned first; native PIL geometry commands
+               in equipment_rig.py/race_heads.py/build_race_art.py are editable masters;
+               source head PNGs for all directions, full native sheets plus SpriteFrames
+verification : rig roots/connectivity/gear, palette/light audit, geometry loopcheck after
+               honest consecutive holds (timing unmodified), real renderer/gallery/GIFs
+limits       : no .pxo or Pixelorama editing session claimed; no paid generation API;
+               shared starting gameplay values, no racial bonuses or abilities in this phase

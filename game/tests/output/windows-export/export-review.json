@@ -1,0 +1,135 @@
+{
+  "ok": true,
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "architecture": "Windows x86_64 GUI",
+  "snapshot_time_utc": "2026-11-03T16:41:56.534952+00:00",
+  "exe": "builds/windows/DuAmTheGioiLangQuen.exe",
+  "exe_bytes": 120464360,
+  "exe_sha256": "00e5a801dd767749e77c1c365e289781b5640699a01b45c5ef3bd05ac336497d",
+  "embedded_pck_bytes": 11195868,
+  "zip": "builds/DuAmTheGioiLangQuen-Windows-x64.zip",
+  "zip_bytes": 42450838,
+  "zip_sha256": "44783e2b29ae901bc086882374a149f9ab726b6f36f9eb9afa91596676474cd2",
+  "zip_crc_and_exe_sha256_ok": true,
+  "regression_checks": 61425,
+  "launcher_tests": 5,
+  "regression_suites": [
+    [
+      5437,
+      5437
+    ],
+    [
+      37635,
+      37635
+    ],
+    [
+      362,
+      362
+    ],
+    [
+      13,
+      13
+    ],
+    [
+      120,
+      120
+    ],
+    [
+      47,
+      47
+    ],
+    [
+      136,
+      136
+    ],
+    [
+      129,
+      129
+    ],
+    [
+      83,
+      83
+    ],
+    [
+      35,
+      35
+    ],
+    [
+      30,
+      30
+    ],
+    [
+      17258,
+      17258
+    ],
+    [
+      70,
+      70
+    ],
+    [
+      57,
+      57
+    ],
+    [
+      13,
+      13
+    ]
+  ],
+  "embedded_pck_gameplay_save_checks": 362,
+  "pack_audit": {
+    "animation_states": 3079,
+    "art_types": 129,
+    "checks": 26058,
+    "failures": [],
+    "json_files": 17,
+    "ok": true,
+    "platform_execution": "Linux Godot reading Windows EXE embedded PCK; Windows PE execution not tested",
+    "rendered": true
+  },
+  "incremental_asset_update": [
+    "assets/art_refresh/sheets/race_elf_player.png"
+  ],
+  "incremental_art_check_log": "elf-art-final.log",
+  "source_snapshot_files": 499,
+  "source_changed_after_snapshot": [],
+  "native_windows_execution_tested": false,
+  "images_checked": 4,
+  "image_review_ok": true,
+  "dll_imports": [
+    "api-ms-win-core-synch-l1-2-0.dll",
+    "kernel32.dll",
+    "ntdll.dll",
+    "oleaut32.dll",
+    "uiautomationcore.dll",
+    "user32.dll",
+    "ADVAPI32.dll",
+    "AVRT.dll",
+    "bcrypt.dll",
+    "CRYPT32.dll",
+    "dwmapi.dll",
+    "DWrite.dll",
+    "dxgi.dll",
+    "GDI32.dll",
+    "HID.DLL",
+    "IMM32.dll",
+    "IPHLPAPI.DLL",
+    "KERNEL32.dll",
+    "api-ms-win-core-processthreads-l1-1-0.dll",
+    "api-ms-win-core-registry-l1-1-0.dll",
+    "api-ms-win-core-winrt-error-l1-1-1.dll",
+    "api-ms-win-core-winrt-l1-1-0.dll",
+    "api-ms-win-security-base-l1-1-0.dll",
+    "api-ms-win-security-lsalookup-l2-1-0.dll",
+    "msvcrt.dll",
+    "ntdll.dll",
+    "ole32.dll",
+    "OLEAUT32.dll",
+    "SHCORE.dll",
+    "SHELL32.dll",
+    "SHLWAPI.dll",
+    "USER32.dll",
+    "WINMM.dll",
+    "WS2_32.dll",
+    "WSOCK32.dll"
+  ]
+}

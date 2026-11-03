@@ -68,7 +68,10 @@ func _run() -> void:
 	check(main.ui.new_button.has_focus(), "New game gets keyboard focus")
 	# Exercise actual Button input rather than calling start_game for the first boot.
 	await key(KEY_ENTER)
-	check(main.mode == main.Mode.PLAYING and not paused, "Enter on menu starts playable game")
+	check(main.mode == main.Mode.RACE_SELECTION and paused, "Enter on menu opens race selection before starting")
+	main.ui.race_confirm.grab_focus()
+	await key(KEY_ENTER)
+	check(main.mode == main.Mode.PLAYING and not paused, "Enter confirms race and starts playable game")
 	check(main.world.ground.get_used_cells().size() == 3072, "64x48 populated tile map")
 	check(main.world.obstacle_count > 150, "Forest and village obstacles instantiated")
 	check(main.world.player.hp == 100, "Player starts with full HP")
@@ -217,7 +220,9 @@ func _run() -> void:
 	main.close_settings()
 	check(main.mode == main.Mode.MENU, "Settings restores main menu context")
 	await click(main.ui.new_button.get_global_rect().get_center())
-	check(main.mode == main.Mode.PLAYING, "Mouse click on New Game starts gameplay")
+	check(main.mode == main.Mode.RACE_SELECTION, "Mouse click on New Game opens race selection")
+	main.ui.race_confirm.pressed.emit()
+	check(main.mode == main.Mode.PLAYING, "Confirming the race starts gameplay")
 	# Validate all dialogue links and starts to avoid data-only dead ends.
 	for id: String in main.dialogue.database:
 		var entry: Dictionary = main.dialogue.database[id]

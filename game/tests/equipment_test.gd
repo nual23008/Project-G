@@ -179,16 +179,17 @@ func run() -> void:
 	var snapshot: Dictionary = main.snapshot()
 	var saves: RefCounted = SAVE.new()
 	saves.path = "user://equipment_model_only.json"
-	check(saves.valid_snapshot(snapshot) and saves.save_game(snapshot),"V3 saves twelve-slot equipment with the live world")
+	check(saves.valid_snapshot(snapshot) and saves.save_game(snapshot),"V4 saves twelve-slot equipment with the live world")
 	var restored: Dictionary = saves.load_game()
 	check(same_data(restored.equipment,snapshot.equipment) and same_data(restored.inventory,snapshot.inventory),"Save/load round trip preserves bag and equipped ownership")
 	var raw: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(saves.path))
-	check(raw.version == 3,"Equipment writes an explicit v3 envelope")
+	check(raw.version == 4,"Equipment writes an explicit v4 envelope")
 	bad = snapshot.duplicate(true)
 	bad.equipment.shoe_left = "potion"
 	check(not saves.valid_snapshot(bad),"Checksummed save cannot put a potion into a shoe slot")
 	var legacy: Dictionary = snapshot.duplicate(true)
 	legacy.erase("equipment")
+	legacy.erase("race")
 	for i: int in range(legacy.inventory.size()):
 		if not legacy.inventory[i].is_empty() and not str(legacy.inventory[i].id) in SAVE.LEGACY_ITEMS: legacy.inventory[i] = {}
 	legacy.inventory[0] = {"id":"rust_sword","count":1}

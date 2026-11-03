@@ -30,6 +30,12 @@ func run() -> void:
 		if equipment_catalog[item].has("allowed_slots"):
 			if not required_ids.has(item): required_ids.append(item)
 			for slot: String in equipment_catalog[item].allowed_slots: required_ids.append("gear_"+item+"_"+slot)
+	for race: String in ["human","elf","dwarf","orc"]:
+		required_ids.append_array(["race_"+race+"_card","race_"+race+"_showcase"])
+		if race == "human": continue
+		required_ids.append_array(["race_"+race+"_player","race_"+race+"_player_hands","race_"+race+"_heritage"])
+		for item: String in equipment_catalog:
+			for slot: String in equipment_catalog[item].get("allowed_slots",[]): required_ids.append("race_"+race+"_gear_"+item+"_"+slot)
 	for id: String in required_ids:
 		check(registry.has(id), "Visible type has a registered art resource: " + id)
 	for id: String in registry:

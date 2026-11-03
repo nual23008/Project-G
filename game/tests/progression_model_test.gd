@@ -231,6 +231,7 @@ func test_save_migration_and_world_state() -> void:
 	# bag representation only for this legacy-field preservation comparison.
 	check(migrated_old_fields.equipment.weapon_right == "rust_sword", "Legacy sword transfers to the right hand exactly once")
 	migrated_old_fields.erase("equipment")
+	migrated_old_fields.erase("race")
 	migrated_old_fields.inventory[0] = {"id":"rust_sword","count":1}
 	migrated_old_fields.areas.whispering_forest.erase("spawn_cycles")
 	if not same_json_data(legacy, migrated_old_fields):
@@ -256,7 +257,7 @@ func test_save_migration_and_world_state() -> void:
 	loaded.areas.whispering_forest.drops.append({"id": "scout_a_c2_xp", "kind": "experience", "amount": 60, "source_enemy": "scout_a", "at": [478, 482]})
 	check(service.valid_snapshot(loaded) and service.save_game(loaded), "V2 accepts derived HP, fractional current vitals, cycle IDs and an uncollected XP orb")
 	var envelope: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(TEST_PATH))
-	check(envelope.version == 3 and FileAccess.get_file_as_string(TEST_PATH + ".bak") == original_raw, "First explicit save writes v3 while preserving a valid v1 backup")
+	check(envelope.version == 4 and FileAccess.get_file_as_string(TEST_PATH + ".bak") == original_raw, "First explicit save writes v4 while preserving a valid v1 backup")
 	var restored: Dictionary = service.load_game()
 	if not same_json_data(loaded, restored):
 		report_difference(loaded, restored, "roundtrip")
@@ -326,12 +327,13 @@ func test_save_migration_and_world_state() -> void:
 	write_envelope(TEST_PATH + ".tmp", 1, invalid)
 	check(service.read_valid(TEST_PATH + ".tmp").is_empty(), "V1 rejects v2 spawn cycles instead of resetting them during migration")
 	var downgraded: Dictionary = loaded.duplicate(true)
+	downgraded.erase("race")
 	downgraded.erase("equipment") # Keep this a genuine v2-to-v1 downgrade fixture.
 	downgraded.hp = 73
 	downgraded.areas.whispering_forest.drops.remove_at(1)
 	downgraded.areas.whispering_forest.erase("spawn_cycles")
 	write_envelope(TEST_PATH, 1, downgraded)
-	write_envelope(TEST_PATH + ".bak", 3, loaded)
+	write_envelope(TEST_PATH + ".bak", 4, loaded)
 	var downgraded_raw: String = FileAccess.get_file_as_string(TEST_PATH)
 	check(service.read_valid(TEST_PATH).is_empty(), "A checksummed v2 profile disguised as v1 is rejected even with legacy-compatible HP and drops")
 	check(same_json_data(loaded, service.load_game()) and service.recovered_backup, "Version downgrade falls back to the valid v2 backup without losing XP, points or world state")

@@ -1,5 +1,18 @@
 # Tiến độ
 
+## 2026-11-03 — Bản EXE Windows 64-bit
+
+Đã xuất **Windows x86_64 release**, Godot **4.7.2.stable.official.ed1daf0bf**, Compatibility. Dữ liệu nằm trong EXE, không cần `.pck` rời hoặc cài Godot/Python/.NET trên máy người chơi.
+
+- [File EXE](../builds/windows/DuAmTheGioiLangQuen.exe): **120.464.360 byte**. [Gói ZIP](../builds/DuAmTheGioiLangQuen-Windows-x64.zip): **42.450.838 byte**, kèm hướng dẫn tiếng Việt, giấy phép engine/font và SHA-256. Giải nén rồi mở `DuAmTheGioiLangQuen.exe` trên Windows 64-bit.
+- Thêm `export_presets.cfg`: Windows Desktop, nhúng PCK, bytecode release, không console wrapper; include JSON/font/license, exclude tests/tools/docs/builds và nguồn art. Export templates tải từ release chính thức, SHA-512 archive khớp `SHA512-SUMS.txt`. Cache Windows template tại `builds/.templates/4.7.2.stable/`; preset nguồn vẫn dùng template tiêu chuẩn, không chứa đường dẫn tuyệt đối của máy này.
+- Chụp nguồn cố định để tránh trộn file đang cập nhật song song. Lượt cuối khớp **499 file runtime** trên đĩa; đã nhận cả bản sửa sprite Elf sau snapshot đầu và kiểm lại art. Mốc nguồn cuối **2026-11-03 23:41:56 UTC+7**. Đợt export chỉ thêm cấu hình/giấy phép/bản build/tài liệu, không sửa gameplay, save hoặc vẽ lại asset.
+- `bash game/tools/check.sh` trên bản sao nguồn: **18.353/18.353 assertions Godot + 43.072/43.072 kiểm tra art Python + 5/5 launcher**; import sạch. Sau cập nhật riêng sprite Elf, chạy lại `races_art_test.py`: **37.635/37.635** đạt. Gameplay/save từ chính PCK nhúng trong EXE: **362/362** đạt, dữ liệu lưu kiểm thử được cách ly.
+- Kiểm PE32+/x86_64/GUI và footer PCK; kiểm toàn bộ **17 JSON, 129 loại art, 3.079 animation state**, tải texture/frame thật: **26.058/26.058** đạt. Render menu/chọn tộc/Elf/Orc từ EXE bằng engine Linux/Iris Xe; đã xem ảnh, **4/4 image checks** đạt. ZIP CRC và SHA-256 file EXE trong ZIP khớp bản ngoài.
+- SHA-256 EXE: `00e5a801dd767749e77c1c365e289781b5640699a01b45c5ef3bd05ac336497d`. [Báo cáo đóng gói](../tests/output/windows-export/export-review.json), [kiểm resource](../tests/output/windows-export/pack-audit.json), [ảnh Elf](../tests/output/windows-export/game-elf.png), [ảnh chọn tộc](../tests/output/windows-export/race-selection.png). Log và hash snapshot ở `tests/output/windows-export/`.
+
+**Giới hạn kiểm chứng:** môi trường hiện tại không có Windows/Wine. Đã kiểm cấu trúc file Windows và chạy/render dữ liệu đóng gói bằng Godot Linux cùng phiên bản; **chưa chạy PE trực tiếp trên Windows**. Không tuyên bố đã nghiệm thu Windows native. Save Windows dùng `user://journey.json`, tự nằm trong `%APPDATA%\Godot\app_userdata\Dư Âm Thế Giới Lãng Quên\`; không đụng primary save Linux của người chơi.
+
 ## 2026-11-03 — Tối ưu nhịp di chuyển và sửa toàn thân quay lưng
 
 Người dùng xác nhận giật cả lúc đi bình thường. Đã đo trước/sau bằng renderer thật trên Iris Xe/màn143,89Hz, sửa camera/presentation và bộ hình front/profile/back. [Phân tích, lệnh tái tạo và giới hạn phép đo](MOVEMENT_AND_REAR_VIEW.md).

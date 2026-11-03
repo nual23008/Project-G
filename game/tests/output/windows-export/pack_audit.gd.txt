@@ -1,0 +1,68 @@
+extends SceneTree
+
+var checks: int = 0
+var failures: Array[String] = []
+const OUT := "/home/luan/Desktop/project G/game/tests/output/windows-export"
+
+func _initialize() -> void:
+	call_deferred("run")
+
+func check(ok: bool, label: String) -> void:
+	checks += 1
+	if not ok:
+		failures.append(label)
+		push_error(label)
+
+func settle() -> void:
+	for i: int in range(6):
+		await process_frame
+
+func capture(name: String) -> void:
+	await settle()
+	await RenderingServer.frame_post_draw
+	check(root.get_texture().get_image().save_png(OUT+"/"+name+".png") == OK,"Capture "+name)
+
+func run() -> void:
+	var expected: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("/tmp/project-g-windows-pack-qa/expected_json.json"))
+	for path: String in expected:
+		var full: String = "res://"+path
+		check(FileAccess.file_exists(full),"Packed JSON exists: "+path)
+		check(FileAccess.get_sha256(full) == expected[path],"Packed JSON SHA256: "+path)
+		check(JSON.parse_string(FileAccess.get_file_as_string(full)) != null,"Packed JSON parses: "+path)
+	var manifest: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://resources/art/manifest.json"))
+	var states: int = 0
+	for id: String in manifest:
+		var frames: SpriteFrames = load(str(manifest[id].resource))
+		check(frames != null,"Dynamic SpriteFrames loads: "+id)
+		if frames == null: continue
+		for animation: StringName in frames.get_animation_names():
+			states += 1
+			check(frames.get_frame_count(animation) > 0,"Packed animation has frames: "+id+"/"+animation)
+			for i: int in range(frames.get_frame_count(animation)):
+				check(frames.get_frame_texture(animation,i) != null,"Packed texture loads: "+id+"/"+animation+"/"+str(i))
+	check(ResourceLoader.exists("res://assets/fonts/NotoSans-Regular.ttf"),"Vietnamese font included")
+	for path: String in ["resources/licenses/LICENSE-Godot.txt","resources/licenses/COPYRIGHT-Godot.txt","assets/fonts/LICENSE-Noto.txt"]:
+		check(FileAccess.file_exists("res://"+path),"License included: "+path)
+	check(not ResourceLoader.exists("res://tests/races_test.gd"),"QA tests excluded from release")
+	var rendered: bool = DisplayServer.get_name() != "headless"
+	if rendered:
+		var main: Node = load("res://scenes/main/main.tscn").instantiate()
+		main.save_path = "user://windows_export_render_only.json"
+		root.add_child(main)
+		await capture("menu")
+		main.open_race_selection()
+		main.ui.select_race("elf")
+		await capture("race-selection")
+		main.confirm_new_game("elf")
+		await capture("game-elf")
+		main.start_game("orc")
+		await capture("game-orc")
+		paused = false
+		main.queue_free()
+		await process_frame
+	var result: Dictionary = {"ok":failures.is_empty(),"checks":checks,"failures":failures,"json_files":expected.size(),"art_types":manifest.size(),"animation_states":states,"rendered":rendered,"platform_execution":"Linux Godot reading Windows EXE embedded PCK; Windows PE execution not tested"}
+	var file := FileAccess.open(OUT+"/pack-audit.json",FileAccess.WRITE)
+	file.store_string(JSON.stringify(result,"  "))
+	file.close()
+	print("WINDOWS_PACK_AUDIT: ",JSON.stringify(result))
+	quit(0 if failures.is_empty() else 1)

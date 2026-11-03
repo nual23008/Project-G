@@ -71,7 +71,7 @@ def annotate_drawings(registry):
         sheet=Image.open(ROOT/entry['texture'].removeprefix('res://')).convert('RGBA')
         w,h=entry['frame_size'];cols=entry['columns']
         for state,meta in entry['states'].items():
-            if entry['frame_size']==[96,64]:
+            if entry['frame_size']==[96,64] and '_' in state:
                 direction=state.split('_',1)[1]
                 meta['direction']=direction
                 meta['body_view']='back' if direction.startswith('up') else 'profile' if direction in ['left','right'] else 'front'

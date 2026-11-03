@@ -1,0 +1,10 @@
+{
+  "animation_states": 3079,
+  "art_types": 129,
+  "checks": 26058,
+  "failures": [],
+  "json_files": 17,
+  "ok": true,
+  "platform_execution": "Linux Godot reading Windows EXE embedded PCK; Windows PE execution not tested",
+  "rendered": true
+}

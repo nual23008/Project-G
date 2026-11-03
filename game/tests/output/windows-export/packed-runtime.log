@@ -1,0 +1,365 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: New game pauses the world and opens race selection
+PASS: Four choices and initial keyboard focus
+PASS: human: thumbnail animates without interaction in the paused menu
+PASS: elf: thumbnail animates without interaction in the paused menu
+PASS: dwarf: thumbnail animates without interaction in the paused menu
+PASS: orc: thumbnail animates without interaction in the paused menu
+PASS: Escape cancels selection and restores menu focus
+PASS: Choosing then cancelling preserves race, bag, HP, quest and world state
+PASS: Confirmation outside the selection screen is ignored
+PASS: human: real card selects its own identity
+PASS: human: preview 0 / 0
+PASS: human: preview 0 / 1
+PASS: human: preview 0 / 2
+PASS: human: preview 0 / 3
+PASS: human: preview 0 / 4
+PASS: human: preview 0 / 5
+PASS: human: preview 0 / 6
+PASS: human: preview 0 / 7
+PASS: human: preview 1 / 0
+PASS: human: preview 1 / 1
+PASS: human: preview 1 / 2
+PASS: human: preview 1 / 3
+PASS: human: preview 1 / 4
+PASS: human: preview 1 / 5
+PASS: human: preview 1 / 6
+PASS: human: preview 1 / 7
+PASS: human: preview 2 / 0
+PASS: human: preview 2 / 1
+PASS: human: preview 2 / 2
+PASS: human: preview 2 / 3
+PASS: human: preview 2 / 4
+PASS: human: preview 2 / 5
+PASS: human: preview 2 / 6
+PASS: human: preview 2 / 7
+PASS: human: preview 3 / 0
+PASS: human: preview 3 / 1
+PASS: human: preview 3 / 2
+PASS: human: preview 3 / 3
+PASS: human: preview 3 / 4
+PASS: human: preview 3 / 5
+PASS: human: preview 3 / 6
+PASS: human: preview 3 / 7
+PASS: human: preview 4 / 0
+PASS: human: preview 4 / 1
+PASS: human: preview 4 / 2
+PASS: human: preview 4 / 3
+PASS: human: preview 4 / 4
+PASS: human: preview 4 / 5
+PASS: human: preview 4 / 6
+PASS: human: preview 4 / 7
+PASS: human: keyboard confirmation creates the selected playable race
+PASS: human: full menu showcase released while playing
+PASS: human: runtime body uses its own registered atlas
+PASS: human: world and bag use the same anatomy
+PASS: human: shared starting gameplay values
+PASS: human: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up
+PASS: human: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up_left
+PASS: human: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up_right
+PASS: human: blade occlusion is local to the body, preserving terrain/UI and Y-sort / left
+PASS: human: blade occlusion is local to the body, preserving terrain/UI and Y-sort / right
+PASS: human: blade occlusion is local to the body, preserving terrain/UI and Y-sort / down
+PASS: human: real input moves north with the full rear animation
+PASS: human: starter blade can attack
+PASS: human: VFX contact comes from this race's weapon tip
+PASS: human: remove hat
+PASS: human: re-equip hat
+PASS: human: remove shirt
+PASS: human: re-equip shirt
+PASS: human: remove pants
+PASS: human: re-equip pants
+PASS: human: remove shoe_left
+PASS: human: re-equip shoe_left
+PASS: human: remove shoe_right
+PASS: human: re-equip shoe_right
+PASS: human: remove necklace
+PASS: human: re-equip necklace
+PASS: human: remove bracelet_left
+PASS: human: re-equip bracelet_left
+PASS: human: remove bracelet_right
+PASS: human: re-equip bracelet_right
+PASS: human: remove glove_left
+PASS: human: re-equip glove_left
+PASS: human: remove glove_right
+PASS: human: re-equip glove_right
+PASS: human: remove weapon_right
+PASS: human: re-equip weapon_right
+PASS: human: natural traits remain independent from equipment
+PASS: human: race saves through the real game flow
+PASS: human: explicit v4 identity
+PASS: human: load restores body, gear and bag preview
+PASS: human: loading is read-only
+PASS: human: area travel keeps race
+PASS: human: death animation completes
+PASS: human: respawn keeps race
+PASS: elf: real card selects its own identity
+PASS: elf: preview 0 / 0
+PASS: elf: preview 0 / 1
+PASS: elf: preview 0 / 2
+PASS: elf: preview 0 / 3
+PASS: elf: preview 0 / 4
+PASS: elf: preview 0 / 5
+PASS: elf: preview 0 / 6
+PASS: elf: preview 0 / 7
+PASS: elf: preview 1 / 0
+PASS: elf: preview 1 / 1
+PASS: elf: preview 1 / 2
+PASS: elf: preview 1 / 3
+PASS: elf: preview 1 / 4
+PASS: elf: preview 1 / 5
+PASS: elf: preview 1 / 6
+PASS: elf: preview 1 / 7
+PASS: elf: preview 2 / 0
+PASS: elf: preview 2 / 1
+PASS: elf: preview 2 / 2
+PASS: elf: preview 2 / 3
+PASS: elf: preview 2 / 4
+PASS: elf: preview 2 / 5
+PASS: elf: preview 2 / 6
+PASS: elf: preview 2 / 7
+PASS: elf: preview 3 / 0
+PASS: elf: preview 3 / 1
+PASS: elf: preview 3 / 2
+PASS: elf: preview 3 / 3
+PASS: elf: preview 3 / 4
+PASS: elf: preview 3 / 5
+PASS: elf: preview 3 / 6
+PASS: elf: preview 3 / 7
+PASS: elf: preview 4 / 0
+PASS: elf: preview 4 / 1
+PASS: elf: preview 4 / 2
+PASS: elf: preview 4 / 3
+PASS: elf: preview 4 / 4
+PASS: elf: preview 4 / 5
+PASS: elf: preview 4 / 6
+PASS: elf: preview 4 / 7
+PASS: elf: keyboard confirmation creates the selected playable race
+PASS: elf: full menu showcase released while playing
+PASS: elf: runtime body uses its own registered atlas
+PASS: elf: world and bag use the same anatomy
+PASS: elf: shared starting gameplay values
+PASS: elf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up
+PASS: elf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up_left
+PASS: elf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up_right
+PASS: elf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / left
+PASS: elf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / right
+PASS: elf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / down
+PASS: elf: real input moves north with the full rear animation
+PASS: elf: starter blade can attack
+PASS: elf: VFX contact comes from this race's weapon tip
+PASS: elf: remove hat
+PASS: elf: re-equip hat
+PASS: elf: remove shirt
+PASS: elf: re-equip shirt
+PASS: elf: remove pants
+PASS: elf: re-equip pants
+PASS: elf: remove shoe_left
+PASS: elf: re-equip shoe_left
+PASS: elf: remove shoe_right
+PASS: elf: re-equip shoe_right
+PASS: elf: remove necklace
+PASS: elf: re-equip necklace
+PASS: elf: remove bracelet_left
+PASS: elf: re-equip bracelet_left
+PASS: elf: remove bracelet_right
+PASS: elf: re-equip bracelet_right
+PASS: elf: remove glove_left
+PASS: elf: re-equip glove_left
+PASS: elf: remove glove_right
+PASS: elf: re-equip glove_right
+PASS: elf: remove weapon_right
+PASS: elf: re-equip weapon_right
+PASS: elf: natural traits remain independent from equipment
+PASS: elf: race saves through the real game flow
+PASS: elf: explicit v4 identity
+PASS: elf: load restores body, gear and bag preview
+PASS: elf: loading is read-only
+PASS: elf: area travel keeps race
+PASS: elf: death animation completes
+PASS: elf: respawn keeps race
+PASS: dwarf: real card selects its own identity
+PASS: dwarf: preview 0 / 0
+PASS: dwarf: preview 0 / 1
+PASS: dwarf: preview 0 / 2
+PASS: dwarf: preview 0 / 3
+PASS: dwarf: preview 0 / 4
+PASS: dwarf: preview 0 / 5
+PASS: dwarf: preview 0 / 6
+PASS: dwarf: preview 0 / 7
+PASS: dwarf: preview 1 / 0
+PASS: dwarf: preview 1 / 1
+PASS: dwarf: preview 1 / 2
+PASS: dwarf: preview 1 / 3
+PASS: dwarf: preview 1 / 4
+PASS: dwarf: preview 1 / 5
+PASS: dwarf: preview 1 / 6
+PASS: dwarf: preview 1 / 7
+PASS: dwarf: preview 2 / 0
+PASS: dwarf: preview 2 / 1
+PASS: dwarf: preview 2 / 2
+PASS: dwarf: preview 2 / 3
+PASS: dwarf: preview 2 / 4
+PASS: dwarf: preview 2 / 5
+PASS: dwarf: preview 2 / 6
+PASS: dwarf: preview 2 / 7
+PASS: dwarf: preview 3 / 0
+PASS: dwarf: preview 3 / 1
+PASS: dwarf: preview 3 / 2
+PASS: dwarf: preview 3 / 3
+PASS: dwarf: preview 3 / 4
+PASS: dwarf: preview 3 / 5
+PASS: dwarf: preview 3 / 6
+PASS: dwarf: preview 3 / 7
+PASS: dwarf: preview 4 / 0
+PASS: dwarf: preview 4 / 1
+PASS: dwarf: preview 4 / 2
+PASS: dwarf: preview 4 / 3
+PASS: dwarf: preview 4 / 4
+PASS: dwarf: preview 4 / 5
+PASS: dwarf: preview 4 / 6
+PASS: dwarf: preview 4 / 7
+PASS: dwarf: keyboard confirmation creates the selected playable race
+PASS: dwarf: full menu showcase released while playing
+PASS: dwarf: runtime body uses its own registered atlas
+PASS: dwarf: world and bag use the same anatomy
+PASS: dwarf: shared starting gameplay values
+PASS: dwarf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up
+PASS: dwarf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up_left
+PASS: dwarf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up_right
+PASS: dwarf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / left
+PASS: dwarf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / right
+PASS: dwarf: blade occlusion is local to the body, preserving terrain/UI and Y-sort / down
+PASS: dwarf: real input moves north with the full rear animation
+PASS: dwarf: starter blade can attack
+PASS: dwarf: VFX contact comes from this race's weapon tip
+PASS: dwarf: remove hat
+PASS: dwarf: re-equip hat
+PASS: dwarf: remove shirt
+PASS: dwarf: re-equip shirt
+PASS: dwarf: remove pants
+PASS: dwarf: re-equip pants
+PASS: dwarf: remove shoe_left
+PASS: dwarf: re-equip shoe_left
+PASS: dwarf: remove shoe_right
+PASS: dwarf: re-equip shoe_right
+PASS: dwarf: remove necklace
+PASS: dwarf: re-equip necklace
+PASS: dwarf: remove bracelet_left
+PASS: dwarf: re-equip bracelet_left
+PASS: dwarf: remove bracelet_right
+PASS: dwarf: re-equip bracelet_right
+PASS: dwarf: remove glove_left
+PASS: dwarf: re-equip glove_left
+PASS: dwarf: remove glove_right
+PASS: dwarf: re-equip glove_right
+PASS: dwarf: remove weapon_right
+PASS: dwarf: re-equip weapon_right
+PASS: dwarf: natural traits remain independent from equipment
+PASS: dwarf: race saves through the real game flow
+PASS: dwarf: explicit v4 identity
+PASS: dwarf: load restores body, gear and bag preview
+PASS: dwarf: loading is read-only
+PASS: dwarf: area travel keeps race
+PASS: dwarf: death animation completes
+PASS: dwarf: respawn keeps race
+PASS: orc: real card selects its own identity
+PASS: orc: preview 0 / 0
+PASS: orc: preview 0 / 1
+PASS: orc: preview 0 / 2
+PASS: orc: preview 0 / 3
+PASS: orc: preview 0 / 4
+PASS: orc: preview 0 / 5
+PASS: orc: preview 0 / 6
+PASS: orc: preview 0 / 7
+PASS: orc: preview 1 / 0
+PASS: orc: preview 1 / 1
+PASS: orc: preview 1 / 2
+PASS: orc: preview 1 / 3
+PASS: orc: preview 1 / 4
+PASS: orc: preview 1 / 5
+PASS: orc: preview 1 / 6
+PASS: orc: preview 1 / 7
+PASS: orc: preview 2 / 0
+PASS: orc: preview 2 / 1
+PASS: orc: preview 2 / 2
+PASS: orc: preview 2 / 3
+PASS: orc: preview 2 / 4
+PASS: orc: preview 2 / 5
+PASS: orc: preview 2 / 6
+PASS: orc: preview 2 / 7
+PASS: orc: preview 3 / 0
+PASS: orc: preview 3 / 1
+PASS: orc: preview 3 / 2
+PASS: orc: preview 3 / 3
+PASS: orc: preview 3 / 4
+PASS: orc: preview 3 / 5
+PASS: orc: preview 3 / 6
+PASS: orc: preview 3 / 7
+PASS: orc: preview 4 / 0
+PASS: orc: preview 4 / 1
+PASS: orc: preview 4 / 2
+PASS: orc: preview 4 / 3
+PASS: orc: preview 4 / 4
+PASS: orc: preview 4 / 5
+PASS: orc: preview 4 / 6
+PASS: orc: preview 4 / 7
+PASS: orc: keyboard confirmation creates the selected playable race
+PASS: orc: full menu showcase released while playing
+PASS: orc: runtime body uses its own registered atlas
+PASS: orc: world and bag use the same anatomy
+PASS: orc: shared starting gameplay values
+PASS: orc: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up
+PASS: orc: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up_left
+PASS: orc: blade occlusion is local to the body, preserving terrain/UI and Y-sort / up_right
+PASS: orc: blade occlusion is local to the body, preserving terrain/UI and Y-sort / left
+PASS: orc: blade occlusion is local to the body, preserving terrain/UI and Y-sort / right
+PASS: orc: blade occlusion is local to the body, preserving terrain/UI and Y-sort / down
+PASS: orc: real input moves north with the full rear animation
+PASS: orc: starter blade can attack
+PASS: orc: VFX contact comes from this race's weapon tip
+PASS: orc: remove hat
+PASS: orc: re-equip hat
+PASS: orc: remove shirt
+PASS: orc: re-equip shirt
+PASS: orc: remove pants
+PASS: orc: re-equip pants
+PASS: orc: remove shoe_left
+PASS: orc: re-equip shoe_left
+PASS: orc: remove shoe_right
+PASS: orc: re-equip shoe_right
+PASS: orc: remove necklace
+PASS: orc: re-equip necklace
+PASS: orc: remove bracelet_left
+PASS: orc: re-equip bracelet_left
+PASS: orc: remove bracelet_right
+PASS: orc: re-equip bracelet_right
+PASS: orc: remove glove_left
+PASS: orc: re-equip glove_left
+PASS: orc: remove glove_right
+PASS: orc: re-equip glove_right
+PASS: orc: remove weapon_right
+PASS: orc: re-equip weapon_right
+PASS: orc: natural traits remain independent from equipment
+PASS: orc: race saves through the real game flow
+PASS: orc: explicit v4 identity
+PASS: orc: load restores body, gear and bag preview
+PASS: orc: loading is read-only
+PASS: orc: area travel keeps race
+PASS: orc: death animation completes
+PASS: orc: respawn keeps race
+PASS: V3 migration defaults to human without writing or rotating its original bytes
+PASS: Race field is reserved against disguised v1 envelopes
+PASS: Race field is reserved against disguised v2 envelopes
+PASS: Race field is reserved against disguised v3 envelopes
+PASS: Invalid race is rejected: dwraf
+PASS: Invalid race is rejected: unknown
+PASS: Invalid race is rejected: 
+PASS: Invalid race is rejected: 1
+PASS: Invalid race is rejected: <null>
+PASS: Invalid race is rejected: {  }
+PASS: Invalid race is rejected: true
+PASS: V4 may not silently default a missing race
+PASS: Invalid race triggers verified backup recovery
+RACES_RESULT: 362/362 checks passed

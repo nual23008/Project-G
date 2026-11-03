@@ -1,6 +1,7 @@
 extends RefCounted
 ## Single-slot versioned save; checksum, schema validation, temp+atomic rename and backup.
-const VERSION: int = 3
+const VERSION: int = 4
+const RACES := preload("res://scripts/character/races.gd")
 const INVENTORY := preload("res://scripts/inventory/inventory.gd")
 const LEGACY_ITEMS: Array[String] = ["rust_sword","potion","herb","ore","echo_shard"]
 const PROGRESSION := preload("res://scripts/progression/progression.gd")
@@ -38,7 +39,9 @@ func read_valid(file_path: String) -> Dictionary:
 	if not _valid_snapshot_version(parser.data, version):
 		return {}
 	var normalized: Dictionary = _migrate_v1(parser.data) if version == 1 else _normalize_v2(parser.data)
-	return _migrate_equipment(normalized) if version < 3 else normalized
+	if version < 3: normalized = _migrate_equipment(normalized)
+	if version < 4: normalized.race = "human"
+	return normalized
 
 func load_game() -> Dictionary:
 	recovered_backup = false
@@ -60,6 +63,7 @@ func save_game(snapshot: Dictionary) -> bool:
 	var normalized: Dictionary = _migrate_v1(snapshot) if not snapshot.has("progression") and not snapshot.has("vitals") else _normalize_v2(snapshot)
 	if not normalized.has("equipment"):
 		normalized = _migrate_equipment(normalized)
+	if not normalized.has("race"): normalized.race = "human"
 	var payload: String = JSON.stringify(normalized)
 	var encoded: String = JSON.stringify({"version":VERSION,"payload":payload,"checksum":payload.sha256_text()})
 	if not _write(path+".tmp",encoded) or read_valid(path+".tmp").is_empty():
@@ -114,7 +118,7 @@ func valid_snapshot(data: Variant) -> bool:
 		return false
 	# Public compatibility for old callers passing a payload rather than an
 	# envelope. A partially-upgraded payload is invalid, never silently defaulted.
-	var version: int = 3 if data.has("equipment") else (2 if data.has("progression") or data.has("vitals") else 1)
+	var version: int = 4 if data.has("race") else (3 if data.has("equipment") else (2 if data.has("progression") or data.has("vitals") else 1))
 	return _valid_snapshot_version(data, version)
 
 func _migrate_equipment(data: Dictionary) -> Dictionary:
@@ -163,9 +167,11 @@ func _valid_snapshot_version(data: Variant, version: int) -> bool:
 		# These fields were introduced in v2. A flipped envelope version must
 		# trigger backup recovery, never reset an existing profile through migration.
 		return false
+	if version < 4 and data.has("race"): return false
+	if version >= 4 and not RACES.valid(data.get("race")): return false
 	if version < 3 and data.has("equipment"):
 		return false
-	if version == 3 and not INVENTORY.valid_equipment(data.get("equipment"),items):
+	if version >= 3 and not INVENTORY.valid_equipment(data.get("equipment"),items):
 		return false
 	if not data is Dictionary or not data.get("zone") in ["dawn_village","whispering_forest"] or not _point(data.get("position")) or not _integer(data.get("hp"),1,maximum_health):
 		return false

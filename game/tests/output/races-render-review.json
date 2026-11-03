@@ -1,0 +1,447 @@
+{
+	"captures": [
+		{
+			"name": "menu_human",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "menu_elf",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "menu_dwarf",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "menu_orc",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "menu_854x360",
+			"size": [
+				854,
+				360
+			]
+		},
+		{
+			"name": "menu_640x400",
+			"size": [
+				640,
+				400
+			]
+		},
+		{
+			"name": "bag_human",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "bag_mixed_human",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "world_human",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "bag_elf",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "bag_mixed_elf",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "world_elf",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "bag_dwarf",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "bag_mixed_dwarf",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "world_dwarf",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "bag_orc",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "bag_mixed_orc",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "world_orc",
+			"size": [
+				640,
+				360
+			]
+		},
+		{
+			"name": "gallery_idle_00",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_idle_01",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_idle_02",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_idle_03",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_idle_04",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_idle_05",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_idle_06",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_idle_07",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_walk_00",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_walk_01",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_walk_02",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_walk_03",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_walk_04",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_walk_05",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_attack_00",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_attack_01",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_attack_02",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_attack_03",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_attack_04",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_attack_05",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_attack_06",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_attack_07",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_attack_08",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_hurt_00",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_hurt_01",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_hurt_02",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_hurt_03",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_hurt_04",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_death_00",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_death_01",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_death_02",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_death_03",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_death_04",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_death_05",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_death_06",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_death_07",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_death_08",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_base_idle_00",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_base_idle_01",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_base_idle_02",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_base_idle_03",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_base_idle_04",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_base_idle_05",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_base_idle_06",
+			"size": [
+				1536,
+				576
+			]
+		},
+		{
+			"name": "gallery_base_idle_07",
+			"size": [
+				1536,
+				576
+			]
+		}
+	],
+	"failures": 0,
+	"renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)"
+}

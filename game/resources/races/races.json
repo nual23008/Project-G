@@ -1,0 +1,6 @@
+{
+  "human": {"name":"Người","description":"Dáng cân đối, tóc hạt dẻ và nét mặt ấm. Một lữ khách giữa những miền đất bị lãng quên."},
+  "elf": {"name":"Elf","description":"Dáng thanh cao, tai nhọn và tóc bạc tết dài. Mang vẻ trầm tĩnh của những cánh rừng cổ."},
+  "dwarf": {"name":"Dwarf","description":"Người lùn chắc khoẻ, tóc đồng và râu dày. Dáng đứng vững như đá núi."},
+  "orc": {"name":"Orc","description":"Vai rộng, da xanh, tóc đen và đôi ngà. Một chiến binh có dáng vẻ mạnh mẽ."}
+}

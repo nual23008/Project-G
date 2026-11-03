@@ -1,5 +1,7 @@
 # Dư Âm Thế Giới Lãng Quên
 
+**Bản Windows 64-bit:** [tải gói ZIP](game/builds/DuAmTheGioiLangQuen-Windows-x64.zip), giải nén và mở `DuAmTheGioiLangQuen.exe`. Dữ liệu đã nhúng, không cần cài Godot/Python. [Kết quả và giới hạn kiểm chứng](game/tests/output/windows-export/export-review.json).
+
 Godot 4 · RPG pixel art góc nhìn từ trên xuống · tiếng Việt.
 
 Mở `game/project.godot` bằng Godot 4.7.2 rồi nhấn **F6** ở scene Main hoặc **F5**.

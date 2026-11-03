@@ -11,11 +11,11 @@
   },
   "left": {
     "weapon_left": [
-      -27,
+      -31,
       -25
     ],
     "weapon_right": [
-      -31,
+      -27,
       -25
     ]
   },
@@ -31,11 +31,11 @@
   },
   "up": {
     "weapon_left": [
-      -4,
+      -13,
       -49
     ],
     "weapon_right": [
-      4,
+      13,
       -49
     ]
   },
@@ -61,21 +61,21 @@
   },
   "up_right": {
     "weapon_left": [
-      18,
+      13,
       -43
     ],
     "weapon_right": [
-      24,
+      28,
       -42
     ]
   },
   "up_left": {
     "weapon_left": [
-      -24,
+      -28,
       -42
     ],
     "weapon_right": [
-      -18,
+      -13,
       -43
     ]
   }

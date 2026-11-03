@@ -7,6 +7,9 @@ mkdir -p tests/output
 if rg -n 'SCRIPT ERROR|^ERROR:' tests/output/import.log; then exit 1; fi
 python3 tests/launcher_pointer_test.py
 python3 tests/equipment_art_test.py
+python3 tests/races_art_test.py
+"$GODOT_BIN" --headless --path . --fixed-fps 60 --script res://tests/races_test.gd --log-file "$PWD/tests/output/races.log"
+if rg -n 'SCRIPT ERROR|^ERROR:|^FAIL:' tests/output/races.log; then exit 1; fi
 "$GODOT_BIN" --headless --path . --fixed-fps 60 --script res://tests/movement_presentation_test.gd --log-file "$PWD/tests/output/movement-presentation.log"
 if rg -n 'SCRIPT ERROR|^ERROR:|^FAIL:' tests/output/movement-presentation.log; then exit 1; fi
 "$GODOT_BIN" --headless --path . --fixed-fps 60 --script res://tests/equipment_test.gd --log-file "$PWD/tests/output/equipment.log"

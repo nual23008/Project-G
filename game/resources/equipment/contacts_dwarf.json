@@ -1,0 +1,82 @@
+{
+  "down": {
+    "weapon_left": [
+      4,
+      -3
+    ],
+    "weapon_right": [
+      -4,
+      -3
+    ]
+  },
+  "left": {
+    "weapon_left": [
+      -31,
+      -25
+    ],
+    "weapon_right": [
+      -27,
+      -25
+    ]
+  },
+  "right": {
+    "weapon_left": [
+      31,
+      -25
+    ],
+    "weapon_right": [
+      27,
+      -25
+    ]
+  },
+  "up": {
+    "weapon_left": [
+      -13,
+      -49
+    ],
+    "weapon_right": [
+      13,
+      -49
+    ]
+  },
+  "down_right": {
+    "weapon_left": [
+      24,
+      -8
+    ],
+    "weapon_right": [
+      18,
+      -7
+    ]
+  },
+  "down_left": {
+    "weapon_left": [
+      -18,
+      -7
+    ],
+    "weapon_right": [
+      -24,
+      -8
+    ]
+  },
+  "up_right": {
+    "weapon_left": [
+      13,
+      -43
+    ],
+    "weapon_right": [
+      28,
+      -42
+    ]
+  },
+  "up_left": {
+    "weapon_left": [
+      -28,
+      -42
+    ],
+    "weapon_right": [
+      -13,
+      -43
+    ]
+  }
+}

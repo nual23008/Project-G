@@ -3,6 +3,7 @@ const FOOTSTEP_ART: SpriteFrames = preload("res://resources/art/footstep_dust.tr
 const FOOTSTEP_EFFECT := preload("res://scripts/combat/sprite_effect.gd")
 var stride_distance: float = 0.0
 var step_left: bool = false
+var race_id: String = "human"
 var equipment_visual: Node2D
 var weapon_contacts: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://resources/equipment/contacts.json"))
 
@@ -62,7 +63,8 @@ var death_announced: bool = false
 func _ready() -> void:
 	equipment_visual = preload("res://scripts/player/equipment_visual.gd").new()
 	add_child(equipment_visual)
-	equipment_visual.setup(sprite)
+	equipment_visual.setup(sprite,race_id)
+	weapon_contacts = preload("res://scripts/character/races.gd").contacts(race_id)
 	var initial: Dictionary = preload("res://scripts/inventory/inventory.gd").STARTER.duplicate(true)
 	initial.weapon_right = "rust_sword"
 	equipment_visual.apply_equipment(initial)

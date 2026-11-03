@@ -8,6 +8,7 @@ of fragments of sleeves, weapons or legs.
 import math
 from PIL import Image, ImageDraw
 from art_refresh_common import canvas
+from race_heads import heritage
 
 INK = '#332938'
 SKIN = '#dca477'
@@ -54,29 +55,41 @@ def limb(draw,points,widths,colour,lit=None):
         for a,b in zip(points,points[1:]):draw.line((a[0]-1,a[1],b[0]-1,b[1]),fill=lit)
 
 
-def pose(direction,state,index):
-    dx,dy=DXY[direction];lx=dy if dy else .40;ly=-dx*.42
+RACES = {
+    'human': dict(head=8,neck=25,hip=45,shoulder=7,hand=10,hand_y=40,feet=4,knee=50,torso=4,hips=3,arm=5,forearm=4,leg=5,shin=4,skin=SKIN,shade=SKIN_SHADE,light=SKIN_LIGHT),
+    'elf': dict(head=5,neck=22,hip=44,shoulder=6,hand=9,hand_y=39,feet=3,knee=49,torso=3,linen_shade='#796958',hips=3,arm=4,forearm=3,leg=4,shin=3,skin='#e7bd92',shade='#b48776',light='#f6dbb0'),
+    'dwarf': dict(head=16,neck=33,hip=48,shoulder=8,hand=12,hand_y=45,feet=5,knee=53,torso=6,hips=4,arm=6,forearm=5,leg=5,shin=4,skin='#c68d63',shade='#935747',light='#e4b87c'),
+    'orc': dict(head=6,neck=24,hip=45,shoulder=10,hand=13,hand_y=40,feet=5,knee=50,torso=6,hips=4,arm=7,forearm=6,leg=6,shin=5,skin='#74945b',shade='#425c45',light='#a2b87a'),
+}
+
+
+def pose(direction,state,index,race='human'):
+    r=RACES[race]
+    dx,dy=DXY[direction];lx=dy if dy else dx*.40;ly=-dx*.42
     breath=int(index in [3,4,5]) if state=='idle' else 0
     bounce=[0,1,0,0,1,0][index] if state=='walk' else 0
     if state=='attack':bounce=[0,-1,0,1,1,0,-1,0,0][index]
     recoil=[-1,-2,-1,0,0][index] if state=='hurt' else 0
     cx=48+(1 if dx>0 else -1 if dx<0 else 0)*recoil
     cy=bounce+(1 if dy>0 else -1 if dy<0 else 0)*recoil
-    joints={'head':(cx,8+cy),'neck':(cx,25+cy),'hip':(cx,45+cy),'breath':breath}
+    joints={'head':(cx,r['head']+cy),'neck':(cx,r['neck']+cy),'hip':(cx,r['hip']+cy),'breath':breath}
     for side,sign in [('left',1),('right',-1)]:
         stride=[4,2,-2,-4,-2,2][index]*sign if state=='walk' else 0
-        shoulder=point(cx+sign*7*lx,30+cy+sign*ly*2)
-        hand=point(cx+sign*10*lx-dx*stride*.6,40+cy+sign*ly*2-dy*stride*.45)
-        elbow=point((shoulder[0]+hand[0])/2+sign*(1+breath),35+cy)
+        shoulder=point(cx+sign*r['shoulder']*lx,r['neck']+5+cy+sign*ly*2)
+        hand=point(cx+sign*r['hand']*lx-dx*stride*.6,r['hand_y']+cy+sign*ly*2-dy*stride*.45)
+        elbow=point((shoulder[0]+hand[0])/2+sign*(1+breath),(r['neck']+5+r['hand_y'])/2+cy)
         brace=[0,1,2,2,1,1,0,0,0][index] if state=='attack' else 0
-        foot=point(48+sign*(4+brace)*lx+dx*stride+round(dx*recoil*.5),min(58,58+sign*ly*2-dy*stride*.35))
+        foot=point(48+sign*(r['feet']+brace)*lx+dx*stride+round(dx*recoil*.5),min(58,58+sign*ly*2-dy*stride*.35))
         # The sole stays planted during idle; the ankle and knee absorb breath.
         ankle=(foot[0]+sign*breath,foot[1]-4+max(-1,min(1,cy)))
-        knee=point(cx+sign*4*lx+dx*stride*.4+sign*breath,50+cy-dy*stride*.2)
+        knee=point(cx+sign*r['feet']*lx+dx*stride*.4+sign*breath,r['knee']+cy-dy*stride*.2)
         if state=='attack':
             reach=[0,5,11,9,6,3,1,0,0][index]
-            if index==1:hand=point(cx+sign*6*lx-dx*5,27+cy-dy*3)
-            elif index in [2,3,4,5,6]:hand=point(cx+sign*4*lx+dx*reach,35+cy+dy*reach*.55+sign*ly)
+            if index==1:hand=point(cx+sign*6*lx-dx*5,r['neck']+2+cy-dy*3)
+            elif index in [2,3,4,5,6]:
+                # Raised rear swings clear the shoulder beside the head.
+                spread=4+9*max(0,-dy)
+                hand=point(cx+sign*spread*lx+dx*reach,min(35,r['neck']+10)+cy+dy*reach*.55+sign*ly)
             elbow=point((shoulder[0]+hand[0])/2+sign*2, (shoulder[1]+hand[1])/2+2)
         joints[side]={'shoulder':shoulder,'elbow':elbow,'hand':hand,
                       'knee':knee,'ankle':ankle,'foot':foot}
@@ -127,25 +140,26 @@ def head_image(reference,hx,ht,direction):
     return image
 
 
-def draw_layers(direction,state,index,head,contacts):
-    p=pose(direction,state,index);cx,hy=p['head'];ny=p['neck'][1];hip=p['hip'];breath=p['breath']
+def draw_layers(direction,state,index,head,contacts,race='human'):
+    r=RACES[race];skin,shade,light=r['skin'],r['shade'],r['light']
+    p=pose(direction,state,index,race);cx,hy=p['head'];ny=p['neck'][1];hip=p['hip'];breath=p['breath']
     dx,dy=DXY[direction];back=dy<0;profile=dy==0
-    torso_half=round(4+2*abs(dy));coat_half=torso_half+1
+    torso_half=round(r['torso']+2*abs(dy));coat_half=torso_half+1
     front_edge=cx+round(dx*(torso_half-1))
     images={name:canvas(96,64) for name in ['base']+PARTS}
     b=ImageDraw.Draw(images['base']);shirt=ImageDraw.Draw(images['shirt']);pants=ImageDraw.Draw(images['pants'])
     # Base anatomy: continuous neck -> torso -> covered pelvis -> both legs.
-    b.rectangle((cx-3,hy+14,cx+3,ny+7),fill=SKIN_SHADE)
-    b.rectangle((cx-2,hy+14,cx+2,ny+6),fill=SKIN)
+    b.rectangle((cx-3,hy+14,cx+3,ny+7),fill=shade)
+    b.rectangle((cx-2,hy+14,cx+2,ny+6),fill=skin)
     for side,sign in [('left',1),('right',-1)]:
-        j=p[side];root=(hip[0]+sign*3,hip[1]-1)
-        limb(b,[root,j['knee'],j['ankle']],[5,4],SKIN,SKIN_LIGHT)
+        j=p[side];root=(hip[0]+sign*r['hips'],hip[1]-1)
+        limb(b,[root,j['knee'],j['ankle']],[r['leg'],r['shin']],skin,light)
         fx,fy=j['foot'];ax,ay=j['ankle']
-        b.polygon([(ax-2,ay-1),(ax+2,ay-1),(fx+3,fy),(fx+3,fy+1),(fx-3,fy+1),(fx-3,fy-1)],fill=SKIN)
-        b.ellipse((fx-2 if back else fx-3,fy-1,fx+2 if back else fx+3,fy+1),fill=SKIN_SHADE)
-        b.line((fx-2,fy,fx+2,fy),fill=SKIN_LIGHT)
+        b.polygon([(ax-2,ay-1),(ax+2,ay-1),(fx+3,fy),(fx+3,fy+1),(fx-3,fy+1),(fx-3,fy-1)],fill=skin)
+        b.ellipse((fx-2 if back else fx-3,fy-1,fx+2 if back else fx+3,fy+1),fill=shade)
+        b.line((fx-2,fy,fx+2,fy),fill=light)
         # Pants overlap the covered hips and both boot shafts by >=2 pixels.
-        limb(pants,[root,j['knee'],j['ankle']],[6,5],'#8a7c70','#bca98c')
+        limb(pants,[root,j['knee'],j['ankle']],[r['leg']+1,r['shin']+1],'#8a7c70','#bca98c')
         pants.line((j['knee'][0]-2,j['knee'][1],j['knee'][0]+1,j['knee'][1]+1),fill='#615553')
         boot=ImageDraw.Draw(images['shoe_'+side]);toe=2 if DXY[direction][0]>=0 else -2
         if back:
@@ -159,11 +173,11 @@ def draw_layers(direction,state,index,head,contacts):
     w=torso_half+breath;top=ny+2;bottom=hip[1]+1
     b.polygon([(cx-torso_half+1,top),(cx-torso_half-1,top+4),(cx-w,bottom),(cx+w,bottom),(cx+torso_half+1,top+4),(cx+torso_half-1,top)],fill='#bca98c',outline=INK)
     b.line((cx-torso_half+2,top+3,cx-torso_half+2,bottom-3),fill='#e4d3ac')
-    b.line((cx+torso_half-2,top+4,cx+torso_half-2,bottom-3),fill='#88736a')
+    b.line((cx+torso_half-2,top+4,cx+torso_half-2,bottom-3),fill=r.get('linen_shade','#88736a'))
     if back:
         # High back neckline and center seam; no chest V on the rear view.
-        b.line((cx-3,top+1,cx+3,top+1),fill='#88736a')
-        b.line((cx-round(dx*2),top+4,cx-round(dx*2),bottom-3),fill='#88736a')
+        b.line((cx-3,top+1,cx+3,top+1),fill=r.get('linen_shade','#88736a'))
+        b.line((cx-round(dx*2),top+4,cx-round(dx*2),bottom-3),fill=r.get('linen_shade','#88736a'))
     else:
         b.line((max(cx-torso_half+1,front_edge-3),top+1,front_edge,top+4,min(cx+torso_half-1,front_edge+3),top+1),fill='#f0dfb8')
     b.polygon([(cx-6,hip[1]-2),(cx+6,hip[1]-2),(cx+6,hip[1]+4),(cx+1,hip[1]+4),(cx,hip[1]+1),(cx-1,hip[1]+4),(cx-6,hip[1]+4)],fill='#796958',outline=INK)
@@ -176,15 +190,15 @@ def draw_layers(direction,state,index,head,contacts):
     # Sleeves are authored from the very same shoulder/elbow joints as the skin.
     for side,sign in [('left',1),('right',-1)]:
         j=p[side];s,e,h=j['shoulder'],j['elbow'],j['hand']
-        limb(b,[s,e,h],[5,4],SKIN,SKIN_LIGHT)
+        limb(b,[s,e,h],[r['arm'],r['forearm']],skin,light)
         cuff=point(e[0]+(h[0]-e[0])*.35,e[1]+(h[1]-e[1])*.35)
-        limb(shirt,[s,e,cuff],[7,5],'#363c61','#646184')
+        limb(shirt,[s,e,cuff],[r['arm']+2,r['forearm']+1],'#363c61','#646184')
         hand=ImageDraw.Draw(images['bare_hands']);x,y=h
-        hand.ellipse((x-2,y-2,x+2,y+2),fill=SKIN_SHADE)
-        hand.ellipse((x-2,y-2,x+1,y+1),fill=SKIN)
-        hand.line((x-1,y-1,x+1,y-1),fill=SKIN_SHADE if back else SKIN_LIGHT)
-        hand.line((x+sign*2,y,x+sign*3,y+breath),fill=SKIN)
-        b.ellipse((x-2,y-2,x+2,y+2),fill=SKIN)
+        hand.ellipse((x-2,y-2,x+2,y+2),fill=shade)
+        hand.ellipse((x-2,y-2,x+1,y+1),fill=skin)
+        hand.line((x-1,y-1,x+1,y-1),fill=shade if back else light)
+        hand.line((x+sign*2,y,x+sign*3,y+breath),fill=skin)
+        b.ellipse((x-2,y-2,x+2,y+2),fill=skin)
         glove=ImageDraw.Draw(images['glove_'+side])
         glove.ellipse((x-3,y-3,x+3,y+2),fill='#614234',outline=INK)
         glove.line((x-2,y-2,x+1,y-2),fill='#b57950',width=2)
@@ -202,21 +216,30 @@ def draw_layers(direction,state,index,head,contacts):
         else:
             bracelet.line((*a,*z),fill=INK,width=3);bracelet.line((*a,*z),fill='#dfaf69',width=2)
         # Each rigid blade rotates about its actual grip, never random pixels.
-        rest=math.atan2(.94,sign*.34)
+        # Blade points down/out from its anatomical hand. Mirroring only
+        # the head used to put the rear blade across the legs when turning.
+        lateral=sign*dy*(.74 if race=='dwarf' else .5)-dx*.25
+        rest=math.atan2(.67 if race=='dwarf' else .94,lateral)
         if state=='death':
             angle=rest+(-math.pi/2-rest)*min(1,index/5)
         elif state=='attack':
             angle=math.atan2(DXY[direction][1],DXY[direction][0])+[0,-1.7,0,.45,.8,.6,.35,.15,0][index]
             if index in [0,8]:angle=rest
             elif index in [6,7]:angle+=((rest-angle+math.pi)%math.tau-math.pi)*(.45 if index==6 else .8)
-        else:angle=rest+(.045*breath if state=='idle' else .025*math.sin(index))
+        else:angle=rest+(.09*breath if state=='idle' else .025*math.sin(index))
         # Foreshorten towards the floor rather than clip the blade at the pivot.
         length=min(18,(57-y)/math.sin(angle)) if math.sin(angle)>0 else 18
         tip=point(x+math.cos(angle)*length,y+math.sin(angle)*length)
         if state=='attack' and index==2:contacts.setdefault(direction,{})['weapon_'+side]=[tip[0]-48,tip[1]-60]
         weapon=ImageDraw.Draw(images['weapon_'+side]);weapon.line((x,y,*tip),fill=INK,width=4)
         weapon.line((x,y,*tip),fill='#7d8390',width=3);weapon.line((x,y-1,tip[0],tip[1]-1),fill='#f2e8c6')
-        weapon.line((x-2,y-2,x+2,y+2),fill='#dfaf69',width=2)
+        # Guard is perpendicular to the blade; the grip and pommel rotate
+        # about the same wrist instead of retaining a fixed screen diagonal.
+        gx,gy=x+math.cos(angle)*2,y+math.sin(angle)*2
+        a=point(gx-math.sin(angle)*3,gy+math.cos(angle)*3)
+        z=point(gx+math.sin(angle)*3,gy-math.cos(angle)*3)
+        weapon.line((*a,*z),fill=INK,width=3)
+        weapon.line((*a,*z),fill='#dfaf69',width=2)
         weapon.line((x,y,x-round(math.cos(angle)*3),y-round(math.sin(angle)*3)),fill='#614234',width=2)
     # Detailed coat/scarf/satchel are native cels, not cut from the old hero.
     shirt.polygon([(cx-coat_half+1,top),(cx-coat_half-1,top+4),(cx-coat_half-breath,bottom+1),(cx+coat_half+breath,bottom+1),(cx+coat_half+1,top+4),(cx+coat_half-1,top)],fill='#363c61',outline=INK)
@@ -248,7 +271,12 @@ def draw_layers(direction,state,index,head,contacts):
     if state=='death' and index>=6:
         # The thick sleeve/hem settles inward against the body on the ground.
         settled=canvas(96,64);settled.alpha_composite(images['shirt'],(1,0));images['shirt']=settled
-    images['base'].alpha_composite(head,(cx-15,hy))
+    if race != 'human':
+        # The neck is one continuous skin bridge, including side views where
+        # the near shoulder's outline would otherwise draw a dark ring over it.
+        b.rectangle((cx-3,hy+14,cx+3,top-1),fill=shade)
+        b.rectangle((cx-2,hy+14,cx+2,top-1),fill=skin)
+    images['base'].alpha_composite(head,(cx-head.width//2,hy))
     # The hat's feather flexes at its stem; the brim/head origin remains fixed.
     hat=ImageDraw.Draw(images['hat'])
     hat.polygon([(cx-9,hy+5),(cx-6,hy+1),(cx+5,hy+1),(cx+9,hy+6)],fill='#793d48',outline=INK)
@@ -266,6 +294,7 @@ def draw_layers(direction,state,index,head,contacts):
     else:
         necklace.line((front_edge-4,top,front_edge-2,top+4,front_edge+swing,top+6,front_edge+3,top+3,front_edge+4,top),fill='#ac7949')
         necklace.polygon([(front_edge+swing,top+4),(front_edge+2+swing,top+6),(front_edge+swing,top+8),(front_edge-2+swing,top+6)],fill='#f0bc73',outline='#705142')
+    if race != 'human': images['heritage']=heritage(race,direction,p)
     ANCHORS[state+'_'+direction+'_'+str(index)]=p
     return images
 

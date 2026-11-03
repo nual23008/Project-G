@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+pci id for fd 12: 10de:25a9, driver (null)
+pci id for fd 13: 10de:25a9, driver (null)
+pci id for fd 14: 10de:25a9, driver (null)
+glx: failed to create dri3 screen
+failed to load driver: nvidia-drm
+OpenGL API 4.6 (Core Profile) Mesa 26.0.8-1ubuntu0.3 - Compatibility - Using Device: Intel - Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)
+
+WINDOWS_PACK_AUDIT: {"animation_states":3079,"art_types":129,"checks":26058,"failures":[],"json_files":17,"ok":true,"platform_execution":"Linux Godot reading Windows EXE embedded PCK; Windows PE execution not tested","rendered":true}

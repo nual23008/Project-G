@@ -7,10 +7,11 @@ const FOREST_SCENE := preload("res://scenes/world/whispering_forest.tscn")
 const INVENTORY := preload("res://scripts/inventory/inventory.gd")
 const QUESTS := preload("res://scripts/quests/quest_manager.gd")
 const SAVES := preload("res://scripts/save/save_service.gd")
+const RACES := preload("res://scripts/character/races.gd")
 const PROGRESSION := preload("res://scripts/progression/progression.gd")
 const EFFECT := preload("res://scripts/combat/sprite_effect.gd")
 const LEVEL_UP: SpriteFrames = preload("res://resources/art/level_up.tres")
-enum Mode { MENU, PLAYING, DIALOGUE, PAUSED, SETTINGS, INVENTORY_OPEN, JOURNAL, DEAD, CHARACTER, HUB_SYSTEM }
+enum Mode { MENU, PLAYING, DIALOGUE, PAUSED, SETTINGS, INVENTORY_OPEN, JOURNAL, DEAD, CHARACTER, HUB_SYSTEM, RACE_SELECTION }
 const ZOOM_LEVELS: Array[float] = [0.75, 1.0, 1.25, 1.5, 2.0]
 var view_zoom: float = 1.0
 var mode: Mode = Mode.MENU
@@ -24,6 +25,7 @@ var quests: RefCounted
 var saves: RefCounted
 var progression: RefCounted
 var save_path: String = "user://journey.json"
+var race_id: String = "human"
 var zone: String = "dawn_village"
 var areas: Dictionary = {}
 @onready var ui: Control = $CanvasLayer/GameUI
@@ -46,7 +48,9 @@ func _ready() -> void:
 	dialogue = DIALOGUE_SESSION.new()
 	dialogue.line_changed.connect(ui.show_line)
 	dialogue.finished.connect(_dialogue_finished)
-	ui.new_game_requested.connect(start_game)
+	ui.new_game_requested.connect(open_race_selection)
+	ui.race_confirmed.connect(confirm_new_game)
+	ui.race_cancelled.connect(cancel_race_selection)
 	ui.resume_requested.connect(resume_game)
 	ui.settings_requested.connect(open_settings)
 	ui.settings_back_requested.connect(close_settings)
@@ -84,6 +88,7 @@ func _replace_world(playing: bool, next_zone: String = "dawn_village") -> void:
 	world = (FOREST_SCENE if zone == "whispering_forest" else WORLD_SCENE).instantiate()
 	world.content_state = areas.get(zone,{"collected":[],"defeated":[],"enemies":[],"drops":[]}).duplicate(true)
 	world.process_mode = Node.PROCESS_MODE_PAUSABLE
+	world.get_node("Actors/Player").race_id = race_id
 	add_child(world)
 	move_child(world, 0)
 	world.player.visible = playing
@@ -107,7 +112,20 @@ func _replace_world(playing: bool, next_zone: String = "dawn_village") -> void:
 	_refresh_inventory()
 	_apply_zoom()
 
-func start_game() -> void:
+func open_race_selection() -> void:
+	if mode != Mode.MENU: return
+	ui.select_race("human")
+	_set_mode(Mode.RACE_SELECTION)
+
+func cancel_race_selection() -> void:
+	if mode == Mode.RACE_SELECTION: _set_mode(Mode.MENU)
+
+func confirm_new_game(id: String) -> void:
+	if mode == Mode.RACE_SELECTION and RACES.valid(id): start_game(id)
+
+func start_game(id: String = "human") -> void:
+	if not RACES.valid(id): return
+	race_id = id
 	dialogue.cancel()
 	met_rowan = false
 	areas.clear()
@@ -137,11 +155,12 @@ func _set_mode(next_mode: Mode) -> void:
 	get_tree().paused = mode != Mode.PLAYING
 	world.player.input_enabled = mode == Mode.PLAYING
 	world.player.stop()
-	if mode != Mode.MENU:
+	if mode not in [Mode.MENU,Mode.RACE_SELECTION]:
 		world.snap_camera_to_player()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	var screens: Dictionary = {Mode.MENU:"menu", Mode.PLAYING:"play", Mode.DIALOGUE:"dialogue", Mode.PAUSED:"pause", Mode.SETTINGS:"settings",Mode.INVENTORY_OPEN:"inventory",Mode.JOURNAL:"journal",Mode.DEAD:"death",Mode.CHARACTER:"character"}
 	screens[Mode.HUB_SYSTEM] = "system"
+	screens[Mode.RACE_SELECTION] = "race"
 	ui.show_screen(screens[mode])
 
 func pause_game() -> void:
@@ -232,6 +251,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			Mode.PAUSED: resume_game()
 			Mode.DIALOGUE: close_dialogue()
 			Mode.SETTINGS: close_settings()
+			Mode.RACE_SELECTION: cancel_race_selection()
 			Mode.INVENTORY_OPEN, Mode.JOURNAL, Mode.CHARACTER, Mode.HUB_SYSTEM: close_overlay()
 		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("interact"):
@@ -336,7 +356,7 @@ func _gain_experience(amount: int) -> void:
 		ui.notify("+"+str(credited)+" kinh nghiệm")
 
 func _refresh_inventory() -> void:
-	ui.update_inventory(inventory)
+	ui.update_inventory(inventory,race_id)
 	if is_instance_valid(world):
 		world.player.weapon_damage = inventory.weapon_damage() + int(progression.derived_stats().damage_bonus) if inventory.weapon_damage()>0 else 0
 		world.player.set_equipment(inventory.equipment)
@@ -440,7 +460,7 @@ func respawn() -> void:
 
 func snapshot() -> Dictionary:
 	areas[zone] = world.snapshot()
-	return {"zone":zone,"position":[world.player.position.x,world.player.position.y],"hp":world.player.hp,"inventory":inventory.slots.duplicate(true),"equipment":inventory.equipment.duplicate(true),"quest":quests.snapshot(),"flags":{"met_rowan":met_rowan},"areas":areas.duplicate(true),"progression":progression.snapshot(),"vitals":{"energy":world.player.energy,"stamina":world.player.stamina}}
+	return {"race":race_id,"zone":zone,"position":[world.player.position.x,world.player.position.y],"hp":world.player.hp,"inventory":inventory.slots.duplicate(true),"equipment":inventory.equipment.duplicate(true),"quest":quests.snapshot(),"flags":{"met_rowan":met_rowan},"areas":areas.duplicate(true),"progression":progression.snapshot(),"vitals":{"energy":world.player.energy,"stamina":world.player.stamina}}
 
 func save_game() -> bool:
 	if mode not in [Mode.PLAYING,Mode.PAUSED,Mode.HUB_SYSTEM] or world.player.hp<=0:
@@ -463,6 +483,7 @@ func load_game() -> bool:
 	dialogue.cancel()
 	if not progression.restore(data.progression):
 		return false
+	race_id = str(data.race)
 	areas = data.areas.duplicate(true)
 	met_rowan = bool(data.flags.met_rowan)
 	inventory.restore(data.inventory)

@@ -1,5 +1,7 @@
 extends Control
 ## Presentation only. Main owns game state; dialogue logic lives in DialogueSession.
+signal race_confirmed(id: String)
+signal race_cancelled
 signal new_game_requested
 signal resume_requested
 signal settings_requested
@@ -24,6 +26,7 @@ signal zoom_requested(step: int)
 signal equip_requested(index: int, slot: String)
 signal unequip_requested(slot: String)
 
+const RACES := preload("res://scripts/character/races.gd")
 const GOLD := Color("d6bd82")
 const CREAM := Color("ece5cc")
 const MUTED := Color("c1b29f")
@@ -125,6 +128,23 @@ var selected_equipment: String = "weapon_right"
 var unequip_button: Button
 var equipment_preview: Node2D
 var equipment_damage: Label
+var race_panel: Control
+var race_buttons: Dictionary = {}
+var race_thumbnails: Dictionary = {}
+var race_preview: AnimatedSprite2D
+var race_title: Label
+var race_description: Label
+var race_confirm: Button
+var race_state_button: Button
+var race_direction_button: Button
+var selected_race: String = "human"
+var race_state_index: int = 0
+var race_direction_index: int = 0
+var race_replay_clock: float = 0.0
+const RACE_STATES: Array[String] = ["idle","walk","attack","hurt","death"]
+const RACE_STATE_NAMES: Array[String] = ["Đứng","Đi","Chém","Trúng đòn","Gục ngã"]
+const RACE_DIRECTIONS: Array[String] = ["down","down_left","left","up_left","up","up_right","right","down_right"]
+const RACE_DIRECTION_NAMES: Array[String] = ["Nam","Tây nam","Tây","Tây bắc","Bắc","Đông bắc","Đông","Đông nam"]
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -134,6 +154,7 @@ func _ready() -> void:
 	for id: String in catalog:
 		_item_art(id)
 	_build_menu()
+	_build_race_selection()
 	_build_hud()
 	_build_pause()
 	_build_settings()
@@ -154,7 +175,7 @@ func _build_hub_navigation() -> void:
 
 func _layout_expanded() -> void:
 	var extra: Vector2 = (size-Vector2(640,360)).max(Vector2.ZERO)
-	for overlay: Control in [menu,pause_panel,settings_panel,inventory_panel,journal_panel,character_panel,death_panel,hub_navigation]:
+	for overlay: Control in [menu,race_panel,pause_panel,settings_panel,inventory_panel,journal_panel,character_panel,death_panel,hub_navigation]:
 		if not is_instance_valid(overlay): continue
 		overlay.set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
 		overlay.position = extra/2.0
@@ -313,6 +334,69 @@ func _build_menu() -> void:
 	_label(menu, "Làng Bình Minh • Rừng Thì Thầm", Rect2(36, 333, 290, 16), 9, MUTED)
 	var caption := _label(menu, "LÀNG BÌNH MINH\nMột buổi sớm sau Đêm Lặng", Rect2(365, 302, 245, 43), 11)
 	caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+
+func _build_race_selection() -> void:
+	race_panel = _root()
+	_shade(race_panel,0.78)
+	var panel := _panel(race_panel,Rect2(10,12,620,336))
+	_label(panel,"CHỌN CHỦNG TỘC",Rect2(18,9,584,24),16,GOLD)
+	_label(panel,"Chọn diện mạo cho hành trình của bạn. Có thể xem các động tác và tám góc nhìn.",Rect2(18,37,584,17),10,MUTED)
+	for i: int in range(RACES.IDS.size()):
+		var id: String = RACES.IDS[i]
+		var button := _button(panel,"",Rect2(18+(i%2)*137,62+(i/2)*104,129,96),func() -> void: select_race(id))
+		button.toggle_mode = true
+		button.tooltip_text = str(RACES.catalog()[id].description)
+		race_buttons[id] = button
+		var title := _label(button,str(RACES.catalog()[id].name),Rect2(6,4,117,18),12,GOLD)
+		title.name = "RaceName"
+		title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		var sprite := AnimatedSprite2D.new()
+		sprite.sprite_frames = RACES.preview(id,true)
+		sprite.centered = false
+		sprite.offset = Vector2(-48,-60)
+		sprite.position = Vector2(64,85)
+		sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		button.add_child(sprite)
+		sprite.play(&"idle")
+		race_thumbnails[id] = sprite
+	race_title = _label(panel,"",Rect2(304,56,290,26),18,GOLD)
+	race_description = _label(panel,"",Rect2(304,86,290,44),10,CREAM)
+	race_description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	race_preview = AnimatedSprite2D.new()
+	race_preview.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	race_preview.centered = false
+	race_preview.offset = Vector2(-48,-60)
+	race_preview.position = Vector2(450,240)
+	race_preview.scale = Vector2(2,2)
+	panel.add_child(race_preview)
+	race_state_button = _button(panel,"",Rect2(304,244,140,24),func() -> void: set_race_pose((race_state_index+1)%5,race_direction_index))
+	race_direction_button = _button(panel,"",Rect2(454,244,140,24),func() -> void: set_race_pose(race_state_index,(race_direction_index+1)%8))
+	_label(panel,"Các tộc dùng chung chỉ số khởi đầu.
+E mở hành trang để thay từng món trang bị.",Rect2(304,273,290,25),9,MUTED)
+	_button(panel,"← Quay lại",Rect2(18,303,266,25),race_cancelled.emit)
+	race_confirm = _button(panel,"Bắt đầu hành trình →",Rect2(304,303,290,25),func() -> void: race_confirmed.emit(selected_race))
+	select_race("human")
+
+func select_race(id: String) -> void:
+	if not RACES.valid(id): return
+	selected_race = id
+	for key: String in race_buttons:
+		race_buttons[key].set_pressed_no_signal(key == id)
+		race_buttons[key].get_node("RaceName").text = ("✓ " if key == id else "")+str(RACES.catalog()[key].name)
+	race_title.text = str(RACES.catalog()[id].name)
+	race_description.text = str(RACES.catalog()[id].description)
+	# Only the selected full composite is held; four small cards stay resident.
+	race_preview.sprite_frames = RACES.preview(id)
+	set_race_pose(0,0)
+
+func set_race_pose(state_index: int, direction_index: int) -> void:
+	race_state_index = clampi(state_index,0,4)
+	race_direction_index = clampi(direction_index,0,7)
+	race_state_button.text = "Động tác: "+RACE_STATE_NAMES[race_state_index]+" ›"
+	race_direction_button.text = "Góc: "+RACE_DIRECTION_NAMES[race_direction_index]+" ›"
+	race_replay_clock = 0.0
+	race_preview.play(RACE_STATES[race_state_index]+"_"+RACE_DIRECTIONS[race_direction_index])
+	race_preview.set_frame_and_progress(0,0.0)
 
 func _build_hud() -> void:
 	hud = _root()
@@ -492,6 +576,9 @@ func _build_dialogue() -> void:
 func show_screen(screen: String) -> void:
 	current_screen = screen
 	menu.visible = screen == "menu"
+	race_panel.visible = screen == "race"
+	if screen == "race" and race_preview.sprite_frames == null: select_race(selected_race)
+	if screen != "race": race_preview.sprite_frames = null
 	pause_panel.visible = screen in ["pause","system"]
 	settings_panel.visible = screen == "settings"
 	hud.visible = screen in ["play", "dialogue"]
@@ -511,6 +598,7 @@ func show_screen(screen: String) -> void:
 		typing = false
 	match screen:
 		"menu": new_button.grab_focus()
+		"race": race_buttons[selected_race].grab_focus()
 		"pause", "system": resume_button.grab_focus()
 		"settings":
 			sync_fullscreen()
@@ -592,6 +680,9 @@ func notify(text: String) -> void:
 
 func _process(delta: float) -> void:
 	_animate_art(delta)
+	if current_screen == "race" and not race_preview.is_playing():
+		race_replay_clock += delta
+		if race_replay_clock >= 0.7: set_race_pose(race_state_index,race_direction_index)
 	notification_bg.visible = current_screen == "play" and notify_clock > 0.0 and not notification.text.is_empty()
 	if typing:
 		letter_clock += delta * 38.0
@@ -627,8 +718,6 @@ func _build_rpg_panels() -> void:
 	panel.add_child(preview_base)
 	preview_base.play(&"idle_down")
 	equipment_preview = preload("res://scripts/player/equipment_visual.gd").new()
-	equipment_preview.position = preview_base.position
-	equipment_preview.scale = preview_base.scale
 	panel.add_child(equipment_preview)
 	equipment_preview.setup(preview_base)
 	equipment_damage = _label(panel,"",Rect2(210,193,190,20),10,GOLD)
@@ -679,7 +768,7 @@ func set_health(current: int, maximum: int) -> void:
 	health_crop.region = Rect2(0, 0, maxf(1.0, width), 5)
 	hp_bar.modulate = Color.WHITE if current > maximum / 3 else Color("e6a28e")
 
-func update_inventory(model: RefCounted) -> void:
+func update_inventory(model: RefCounted, race_id: String = "human") -> void:
 	inventory_model = model
 	for slot: String in equipment_buttons:
 		var button: Button = equipment_buttons[slot]
@@ -688,6 +777,7 @@ func update_inventory(model: RefCounted) -> void:
 		button.size = Vector2(92,31)
 		button.tooltip_text = button.text+": "+("Trống" if id.is_empty() else str(model.database[id].name))
 		button.set_pressed_no_signal(slot == selected_equipment)
+	equipment_preview.set_race(race_id)
 	equipment_preview.apply_equipment(model.equipment)
 	equipment_damage.text = "Vũ khí: "+str(model.weapon_damage())+" sát thương"
 	for i: int in range(16):
