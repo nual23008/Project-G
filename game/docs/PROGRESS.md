@@ -1,5 +1,12 @@
 # Tiến độ
 
+## 2026-11-04 — Đưa bản Windows lên GitHub
+
+- `git push origin main` xác nhận mã nguồn đã đồng bộ ở `79aaf51` (Update for window). Đối chiếu 499 file runtime: khớp snapshot của bản EXE đã nghiệm thu bên dưới.
+- Đã công bố [Windows pre-release `windows-2026-11-03`](https://github.com/nual23008/Project-G/releases/tag/windows-2026-11-03), gắn với commit nguồn `79aaf51`. Có EXE **120.464.360 byte**, ZIP **42.450.838 byte** kèm hướng dẫn/giấy phép và `SHA256SUMS.txt`. GitHub xác nhận cả ba asset ở trạng thái uploaded; kích thước và SHA-256 phía server khớp file trên máy.
+- README đổi liên kết tải ZIP từ đường dẫn `game/builds/` bị Git ignore sang URL tải thực tế trên Releases. Binary tiếp tục nằm ngoài lịch sử Git; không bỏ ignore hoặc ép commit file EXE vượt giới hạn. Không đổi runtime, art hoặc save trong đợt phát hành này.
+- Giữ nhãn pre-release vì chưa chạy PE trực tiếp trên Windows/Wine; không bổ sung tuyên bố kiểm chứng Windows native. Không chạy lại engine cho thay đổi chỉ ở tài liệu/liên kết tải; đã kiểm `git diff --check` và metadata của release đã công bố.
+
 ## 2026-11-03 — Bốn chủng tộc, menu game mới; sửa râu Dwarf và hướng kiếm
 
 Đã triển khai [thiết kế chủng tộc](RACES_IMPLEMENTATION.md): **Người / Elf / Dwarf / Orc**. Chọn **Hành trình mới → chọn tộc → Bắt đầu**; xem trước năm động tác và tám góc. Esc/Quay lại không reset hành trình trước khi xác nhận. Giai đoạn này tộc quyết định ngoại hình, cùng chỉ số khởi đầu; chưa thêm bonus/ability tộc.
