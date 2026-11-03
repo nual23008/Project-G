@@ -18,6 +18,11 @@ signal item_use_requested(index: int)
 signal respawn_requested
 signal allocate_stat_requested(stat: String, amount: int)
 signal character_requested
+signal hub_requested
+signal hub_tab_requested(index: int)
+signal zoom_requested(step: int)
+signal equip_requested(index: int, slot: String)
+signal unequip_requested(slot: String)
 
 const GOLD := Color("d6bd82")
 const CREAM := Color("ece5cc")
@@ -31,7 +36,7 @@ const STAMINA_ART: SpriteFrames = preload("res://resources/art/ui_stamina.tres")
 const STATS_PANEL_ART: SpriteFrames = preload("res://resources/art/ui_stats_panel.tres")
 const STAT_ROWS: Array[Dictionary] = [
 	{"key": "health", "name": "Máu", "description": "+20 máu tối đa mỗi điểm."},
-	{"key": "energy", "name": "Năng lượng", "description": "+10 tối đa/điểm. R tốn 20; đòn ×1.8."},
+	{"key": "energy", "name": "Năng lượng", "description": "+10/điểm. Chuột phải: 20 NL, đòn ×1.8."},
 	{"key": "stamina", "name": "Thể lực", "description": "+10 tối đa/điểm. Chạy 18/s; hồi 20/s."},
 	{"key": "speed", "name": "Tốc độ", "description": "Đi / chạy; tăng giảm dần đến 180 / 280."},
 	{"key": "luck", "name": "May mắn", "description": "Tăng chí mạng và XP, mỗi tỷ lệ dưới 50%."},
@@ -40,7 +45,7 @@ const STAT_ROWS: Array[Dictionary] = [
 ]
 const ROWAN_ART: SpriteFrames = preload("res://resources/art/rowan.tres")
 const CRYSTAL_ART: SpriteFrames = preload("res://resources/art/crystal.tres")
-const ITEM_ART: Dictionary = {
+var ITEM_ART: Dictionary = {
 	"rust_sword": preload("res://resources/art/rust_sword.tres"),
 	"potion": preload("res://resources/art/potion.tres"),
 	"herb": preload("res://resources/art/herb.tres"),
@@ -112,11 +117,22 @@ var batch_buttons: Array[Button] = []
 var stat_widgets: Dictionary = {}
 var progression_model: RefCounted
 var progression_bars: Array[Dictionary] = []
+var hub_navigation: Control
+var hub_tabs: Array[Button] = []
+var zoom_label: Label
+var equipment_buttons: Dictionary = {}
+var selected_equipment: String = "weapon_right"
+var unequip_button: Button
+var equipment_preview: Node2D
+var equipment_damage: Label
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_create_theme()
+	var catalog: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://resources/items/items.json"))
+	for id: String in catalog:
+		if not ITEM_ART.has(id): ITEM_ART[id] = load("res://resources/art/"+id+".tres")
 	_build_menu()
 	_build_hud()
 	_build_pause()
@@ -124,7 +140,30 @@ func _ready() -> void:
 	_build_dialogue()
 	_build_rpg_panels()
 	_build_character_panel()
+	_build_hub_navigation()
+	resized.connect(_layout_expanded)
+	_layout_expanded()
 	show_screen("menu")
+
+func _build_hub_navigation() -> void:
+	hub_navigation = _root()
+	for i: int in range(4):
+		var button := _button(hub_navigation,["Túi đồ","Nâng điểm","Nhiệm vụ","Hệ thống"][i],Rect2(18+i*151,4,145,27),func() -> void: hub_tab_requested.emit(i))
+		button.toggle_mode = true
+		hub_tabs.append(button)
+
+func _layout_expanded() -> void:
+	var extra: Vector2 = (size-Vector2(640,360)).max(Vector2.ZERO)
+	for overlay: Control in [menu,pause_panel,settings_panel,inventory_panel,journal_panel,character_panel,death_panel,hub_navigation]:
+		if not is_instance_valid(overlay): continue
+		overlay.set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
+		overlay.position = extra/2.0
+		overlay.size = Vector2(640,360)
+		for child: Node in overlay.get_children():
+			if child.has_meta(&"screen_shade"):
+				child.set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
+				child.position = -extra/2.0
+				child.size = size
 
 func _create_theme() -> void:
 	theme = Theme.new()
@@ -195,6 +234,9 @@ func _animate_art(delta: float) -> void:
 	if dialogue_panel.visible and portrait_art != null:
 		portrait.texture = _art_frame(portrait_art, portrait_state)
 	if inventory_panel.visible and inventory_model != null:
+		for slot: String in equipment_buttons:
+			var id: String = str(inventory_model.equipment[slot])
+			if not id.is_empty(): equipment_buttons[slot].icon = _art_frame(ITEM_ART[id],&"idle")
 		for i: int in range(inventory_buttons.size()):
 			var slot: Dictionary = inventory_model.slots[i]
 			if not slot.is_empty():
@@ -241,6 +283,7 @@ func _button(parent: Node, text: String, rect: Rect2, callback: Callable) -> But
 
 func _shade(parent: Node, alpha: float) -> void:
 	var node := ColorRect.new()
+	node.set_meta(&"screen_shade",true)
 	node.color = Color(0.015, 0.045, 0.07, alpha)
 	node.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	parent.add_child(node)
@@ -293,14 +336,18 @@ func _build_hud() -> void:
 	experience.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	xp_label = _label(experience, "XP —", Rect2(8, 3, 166, 18), 8, GOLD)
 	xp_bar = _progression_bar(experience, Vector2(8, 26), EXPERIENCE_ART)
-	character_button = _button(hud, "Nhân vật  [C]", Rect2(285, 58, 109, 25), character_requested.emit)
+	character_button = _button(hud, "Hành trang  [E]", Rect2(285, 58, 109, 25), hub_requested.emit)
 	character_button.add_theme_font_size_override("font_size", 10)
-	character_button.tooltip_text = "Xem chỉ số và phân bổ điểm tăng cấp"
+	character_button.tooltip_text = "Túi đồ · Nâng điểm · Nhiệm vụ · Lưu / tải / cài đặt"
 	var location_bg := _panel(hud, Rect2(402, 12, 226, 39))
 	location_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var location := _label(location_bg, "LÀNG BÌNH MINH\nBình yên trong những khoảng quên", Rect2(6, 2, 214, 35), 10, CREAM)
 	location.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	location_label = location
+	location_bg.anchor_left = 1.0
+	location_bg.anchor_right = 1.0
+	location_bg.offset_left = -238
+	location_bg.offset_right = -12
 	var objective_bg := _panel(hud, Rect2(12, 98, 269, 43))
 	objective_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	objective = _label(objective_bg, "BƯỚC CHÂN ĐẦU TIÊN\nTìm Rowan bên đài tinh thể, phía bắc.", Rect2(9, 3, 254, 37), 10, GOLD)
@@ -313,15 +360,37 @@ func _build_hud() -> void:
 	prompt.add_theme_constant_override("shadow_offset_y", 1)
 	var footer_bg := _panel(hud, Rect2(0, 334, 640, 26))
 	footer_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	footer_bg.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+	footer_bg.offset_top = -26
 	control_tips = _label(hud, "WASD  Đi lại     SHIFT  Chạy     E  Tương tác     ESC  Tạm dừng", Rect2(0, 338, 640, 19), 9, CREAM)
 	control_tips.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	control_tips.add_theme_color_override("font_shadow_color", Color("102731"))
 	control_tips.add_theme_constant_override("shadow_offset_y", 1)
+	control_tips.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+	control_tips.offset_top = -22
+	control_tips.offset_bottom = -3
+	prompt.anchor_left = 0.5
+	prompt.anchor_right = 0.5
+	prompt.anchor_top = 1.0
+	prompt.anchor_bottom = 1.0
+	prompt.offset_left = -165
+	prompt.offset_right = 165
+	prompt.offset_top = -73
+	prompt.offset_bottom = -45
 	notification_bg = _panel(hud, Rect2(91, 304, 458, 27))
 	notification_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	notification_bg.hide()
 	notification = _label(hud, "", Rect2(95, 306, 450, 23), 10, CREAM)
 	notification.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	for node: Control in [notification,notification_bg]:
+		node.anchor_left = 0.5
+		node.anchor_right = 0.5
+		node.anchor_top = 1.0
+		node.anchor_bottom = 1.0
+		node.offset_left = -229 if node == notification_bg else -225
+		node.offset_right = 229 if node == notification_bg else 225
+		node.offset_top = -56 if node == notification_bg else -54
+		node.offset_bottom = -29 if node == notification_bg else -31
 
 func _build_pause() -> void:
 	pause_panel = _root()
@@ -330,7 +399,7 @@ func _build_pause() -> void:
 	_label(panel, "NGỌN LỬA TẠM NGHỈ", Rect2(18, 16, 208, 24), 13, GOLD)
 	_label(panel, "Hành trình vẫn chờ bạn.", Rect2(18, 43, 200, 20), 10, MUTED)
 	resume_button = _button(panel, "Tiếp tục", Rect2(18, 70, 198, 27), resume_requested.emit)
-	_button(panel, "Lưu hành trình  [F5]", Rect2(18, 103, 198, 27), save_requested.emit)
+	_button(panel, "Lưu hành trình", Rect2(18, 103, 198, 27), save_requested.emit)
 	_button(panel, "Tải bản lưu", Rect2(18, 136, 198, 27), load_requested.emit)
 	_button(panel, "Cài đặt", Rect2(18, 169, 198, 27), settings_requested.emit)
 	_button(panel, "Về màn hình chính", Rect2(18, 202, 198, 27), menu_requested.emit)
@@ -342,7 +411,7 @@ func _build_settings() -> void:
 	_shade(settings_panel, 0.72)
 	var panel := _panel(settings_panel, Rect2(170, 58, 300, 246))
 	_label(panel, "CÀI ĐẶT HÌNH ẢNH", Rect2(18, 13, 260, 25), 14, GOLD)
-	_label(panel, "640 × 360 · pixel nguyên · giữ trong phiên", Rect2(18, 43, 268, 20), 10, MUTED)
+	_label(panel, "Phủ màn hình · pixel nearest · zoom cảnh", Rect2(18, 43, 268, 20), 10, MUTED)
 	fullscreen_check = CheckBox.new()
 	fullscreen_check.text = "Toàn màn hình  [F11]"
 	fullscreen_check.position = Vector2(18, 77)
@@ -356,7 +425,11 @@ func _build_settings() -> void:
 	effects_check.button_pressed = true
 	effects_check.toggled.connect(effects_changed.emit)
 	panel.add_child(effects_check)
-	_label(panel, "Kéo mép cửa sổ để đổi kích thước.\nTỷ lệ nguyên giữ hình ảnh sắc nét.", Rect2(18, 153, 264, 38), 10, MUTED)
+	zoom_label = _label(panel,"Zoom 100%",Rect2(18,153,100,23),10,CREAM)
+	_button(panel,"−",Rect2(125,150,38,26),func() -> void: zoom_requested.emit(-1))
+	_button(panel,"+",Rect2(168,150,38,26),func() -> void: zoom_requested.emit(1))
+	_button(panel,"100%",Rect2(211,150,68,26),func() -> void: zoom_requested.emit(0))
+	_label(panel,"Con lăn chuột phóng to / thu nhỏ khi chơi.",Rect2(18,180,264,19),9,MUTED)
 	back_button = _button(panel, "Quay lại", Rect2(18, 202, 264, 28), settings_back_requested.emit)
 
 func _set_fullscreen(enabled: bool) -> void:
@@ -365,8 +438,19 @@ func _set_fullscreen(enabled: bool) -> void:
 func sync_fullscreen() -> void:
 	fullscreen_check.set_pressed_no_signal(DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN)
 
+func set_zoom(value: float) -> void:
+	zoom_label.text = "Zoom %d%%" % roundi(value*100)
+
 func _build_dialogue() -> void:
 	dialogue_panel = _panel(self, Rect2(24, 205, 592, 137))
+	dialogue_panel.anchor_left = 0.5
+	dialogue_panel.anchor_right = 0.5
+	dialogue_panel.anchor_top = 1.0
+	dialogue_panel.anchor_bottom = 1.0
+	dialogue_panel.offset_left = -296
+	dialogue_panel.offset_right = 296
+	dialogue_panel.offset_top = -155
+	dialogue_panel.offset_bottom = -18
 	speaker_label = _label(dialogue_panel, "", Rect2(16, 9, 480, 19), 12, GOLD)
 	role_label = _label(dialogue_panel, "", Rect2(16, 28, 480, 16), 9, MUTED)
 	portrait = TextureRect.new()
@@ -398,7 +482,7 @@ func _build_dialogue() -> void:
 func show_screen(screen: String) -> void:
 	current_screen = screen
 	menu.visible = screen == "menu"
-	pause_panel.visible = screen == "pause"
+	pause_panel.visible = screen in ["pause","system"]
 	settings_panel.visible = screen == "settings"
 	hud.visible = screen in ["play", "dialogue"]
 	dialogue_panel.visible = screen == "dialogue"
@@ -406,15 +490,18 @@ func show_screen(screen: String) -> void:
 	journal_panel.visible = screen == "journal"
 	death_panel.visible = screen == "death"
 	character_panel.visible = screen == "character"
+	hub_navigation.visible = screen in ["inventory","character","journal","system"]
+	for i: int in range(hub_tabs.size()):
+		hub_tabs[i].set_pressed_no_signal(["inventory","character","journal","system"][i] == screen)
 	character_button.disabled = screen != "play"
 	prompt.visible = screen == "play"
 	notification.visible = screen == "play"
-	control_tips.text = "E / ENTER  Hiện chữ / tiếp     TAB / ENTER  Chọn     ESC  Đóng" if screen == "dialogue" else "WASD Đi · Shift Chạy · J Đánh · R Cường hóa · E Tương tác · H Thuốc · I Túi · Q Nhật ký · C Nhân vật · F5 Lưu · Esc Dừng"
+	control_tips.text = "E / ENTER  Tiếp tục · TAB / ENTER  Chọn · ESC  Đóng" if screen == "dialogue" else "WASD Đi · Shift Chạy · Chuột trái Chém · Chuột phải Tương tác / Cường hóa · E Túi · Lăn Zoom"
 	if screen != "dialogue":
 		typing = false
 	match screen:
 		"menu": new_button.grab_focus()
-		"pause": resume_button.grab_focus()
+		"pause", "system": resume_button.grab_focus()
 		"settings":
 			sync_fullscreen()
 			fullscreen_check.grab_focus()
@@ -444,7 +531,7 @@ func show_line(speaker: String, role: String, text: String, choices: Array, face
 		choice_box.remove_child(child)
 		child.queue_free()
 	var expanded: bool = text.count("\n") >= 2
-	dialogue_panel.position.y = 143 if not choices.is_empty() else (151 if expanded else 205)
+	dialogue_panel.offset_top = -217 if not choices.is_empty() else (-209 if expanded else -155)
 	dialogue_panel.size.y = 199 if not choices.is_empty() else (191 if expanded else 137)
 	dialogue_text.size.y = 112 if expanded and choices.is_empty() else 64
 	next_button.position.y = 163 if expanded else 109
@@ -484,7 +571,7 @@ func _reveal_actions() -> void:
 			(choice_box.get_child(0) as Button).grab_focus()
 
 func set_prompt(target: Node2D) -> void:
-	prompt.text = "[E]  " + str(target.get("display_name")) if is_instance_valid(target) else ""
+	prompt.text = "[Chuột phải / F]  " + str(target.get("display_name")) if is_instance_valid(target) else ""
 
 func set_met_rowan(met: bool) -> void:
 	objective.text = "BÌNH MINH CÒN Ở ĐÂY\nĐã gặp Rowan · Khám phá làng và bờ hồ." if met else "BƯỚC CHÂN ĐẦU TIÊN\nTìm Rowan bên đài tinh thể, phía bắc."
@@ -508,23 +595,51 @@ func _process(delta: float) -> void:
 func _build_rpg_panels() -> void:
 	inventory_panel = _root()
 	_shade(inventory_panel,0.7)
-	var panel := _panel(inventory_panel,Rect2(54,35,532,292))
-	_label(panel,"TÚI HÀNH TRANG  [I]",Rect2(18,12,450,24),16,GOLD)
-	_label(panel,"16 ô • Chọn bằng chuột hoặc Tab / Enter",Rect2(18,43,490,20),10,MUTED)
+	var panel := _panel(inventory_panel,Rect2(10,35,620,313))
+	_label(panel,"HÀNH TRANG & TRANG BỊ",Rect2(14,7,420,23),14,GOLD)
+	_button(panel,"Đóng",Rect2(540,7,66,24),overlay_close_requested.emit)
+	var inv := preload("res://scripts/inventory/inventory.gd")
+	var equipment_order: Array[String] = ["hat","necklace","shirt","pants","shoe_left","shoe_right","bracelet_left","bracelet_right","glove_left","glove_right","weapon_left","weapon_right"]
+	for i: int in range(inv.EQUIPMENT_SLOTS.size()):
+		var slot: String = equipment_order[i]
+		var button := _button(panel,inv.SLOT_NAMES[inv.EQUIPMENT_SLOTS.find(slot)],Rect2(12+(i%2)*96,42+(i/2)*36,92,31),func() -> void: select_equipment(slot))
+		button.add_theme_font_size_override("font_size",8)
+		button.add_theme_constant_override("icon_max_width",16)
+		button.size = Vector2(92,31)
+		button.toggle_mode = true
+		equipment_buttons[slot] = button
+	var preview_base := AnimatedSprite2D.new()
+	preview_base.sprite_frames = preload("res://resources/art/player.tres")
+	preview_base.centered = false
+	preview_base.offset = Vector2(-48,-60)
+	preview_base.position = Vector2(302,190)
+	preview_base.scale = Vector2(2,2)
+	panel.add_child(preview_base)
+	preview_base.play(&"idle_down")
+	equipment_preview = preload("res://scripts/player/equipment_visual.gd").new()
+	equipment_preview.position = preview_base.position
+	equipment_preview.scale = preview_base.scale
+	panel.add_child(equipment_preview)
+	equipment_preview.setup(preview_base)
+	equipment_damage = _label(panel,"",Rect2(210,193,190,20),10,GOLD)
+	_label(panel,"TÚI ĐỒ · 16 Ô",Rect2(426,32,180,18),10,GOLD)
 	for i: int in range(16):
-		var button := _button(panel,"",Rect2(18+(i%4)*51,76+(i/4)*42,46,37),func() -> void: select_slot(i))
+		var button := _button(panel,"",Rect2(426+(i%4)*44,55+(i/4)*38,40,34),func() -> void: select_slot(i))
 		button.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		button.expand_icon = true
 		button.add_theme_font_size_override("font_size",9)
 		inventory_buttons.append(button)
-	inventory_detail = _label(panel,"",Rect2(237,76,274,126),12,CREAM)
+	inventory_detail = _label(panel,"",Rect2(210,218,394,45),10,CREAM)
 	inventory_detail.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	use_button = _button(panel,"Dùng vật phẩm",Rect2(237,212,274,27),func() -> void: item_use_requested.emit(selected_slot))
-	_button(panel,"Đóng",Rect2(18,251,493,27),overlay_close_requested.emit)
+	use_button = _button(panel,"Dùng / Trang bị",Rect2(210,271,190,26),_activate_inventory_item)
+	unequip_button = _button(panel,"Tháo ô đã chọn",Rect2(410,271,194,26),func() -> void: unequip_requested.emit(selected_equipment))
+	use_button.tooltip_text = "Đổi đồ ngắt đòn đang vung; giữ hồi chiêu và năng lượng đã dùng."
+	unequip_button.tooltip_text = use_button.tooltip_text
+	_label(panel,"Chọn đồ trong túi → chọn ô phù hợp → Trang bị. Mỗi tay/chân dùng một món riêng.",Rect2(12,299,592,14),8,MUTED)
 	journal_panel = _root()
 	_shade(journal_panel,0.7)
 	panel = _panel(journal_panel,Rect2(52,28,536,304))
-	_label(panel,"NHẬT KÝ  [Q]",Rect2(18,10,480,25),16,GOLD)
+	_label(panel,"NHIỆM VỤ",Rect2(18,10,480,25),16,GOLD)
 	journal_text = RichTextLabel.new()
 	journal_text.position = Vector2(18,47)
 	journal_text.size = Vector2(500,207)
@@ -556,6 +671,15 @@ func set_health(current: int, maximum: int) -> void:
 
 func update_inventory(model: RefCounted) -> void:
 	inventory_model = model
+	for slot: String in equipment_buttons:
+		var button: Button = equipment_buttons[slot]
+		var id: String = str(model.equipment[slot])
+		button.icon = null if id.is_empty() else _art_frame(ITEM_ART[id],&"idle")
+		button.size = Vector2(92,31)
+		button.tooltip_text = button.text+": "+("Trống" if id.is_empty() else str(model.database[id].name))
+		button.set_pressed_no_signal(slot == selected_equipment)
+	equipment_preview.apply_equipment(model.equipment)
+	equipment_damage.text = "Vũ khí: "+str(model.weapon_damage())+" sát thương"
 	for i: int in range(16):
 		var slot: Dictionary = model.slots[i]
 		var button: Button = inventory_buttons[i]
@@ -576,9 +700,28 @@ func select_slot(index: int) -> void:
 		return
 	var slot: Dictionary = inventory_model.slots[index]
 	use_button.disabled = true
-	inventory_detail.text = "Ô trống" if slot.is_empty() else str(inventory_model.database[slot.id].name)+" ×"+str(slot.count)+"\n\n"+str(inventory_model.database[slot.id].description)
+	inventory_detail.text = "Ô trống" if slot.is_empty() else str(inventory_model.database[slot.id].name)+" ×"+str(slot.count)+"\n"+str(inventory_model.database[slot.id].description)
 	if not slot.is_empty():
-		use_button.disabled = inventory_model.database[slot.id].type != "consumable"
+		var item: Dictionary = inventory_model.database[slot.id]
+		use_button.disabled = item.type != "consumable" and not inventory_model.allowed(str(slot.id),selected_equipment)
+		use_button.text = "Dùng vật phẩm" if item.type == "consumable" else "Trang bị vào ô đã chọn"
+	unequip_button.disabled = str(inventory_model.equipment[selected_equipment]).is_empty()
+
+func select_equipment(slot: String) -> void:
+	selected_equipment = slot
+	for key: String in equipment_buttons: equipment_buttons[key].set_pressed_no_signal(key == slot)
+	select_slot(selected_slot)
+	var id: String = str(inventory_model.equipment[slot])
+	if not id.is_empty(): inventory_detail.text = equipment_buttons[slot].text+" đang mặc: "+str(inventory_model.database[id].name)+"\nChọn Tháo để chuyển món này về túi."
+
+func _activate_inventory_item() -> void:
+	if inventory_model == null or inventory_model.slots[selected_slot].is_empty(): return
+	var id: String = str(inventory_model.slots[selected_slot].id)
+	if inventory_model.database[id].type == "consumable": item_use_requested.emit(selected_slot)
+	else: equip_requested.emit(selected_slot,selected_equipment)
+
+func show_inventory_error(message: String) -> void:
+	inventory_detail.text = message
 
 func update_quest(model: RefCounted) -> void:
 	objective.text = "DƯ ÂM ĐẦU TIÊN\n"+model.objective_text()
@@ -626,14 +769,14 @@ func set_resources(energy: float, max_energy: float, stamina: float, max_stamina
 	stamina_label.text = _group_int(int(floorf(maxf(0.0, stamina)))) + " / " + _group_int(int(max_stamina))
 	_fill_progression_bar(energy_bar, energy / maxf(1.0, max_energy))
 	_fill_progression_bar(stamina_bar, stamina / maxf(1.0, max_stamina))
-	energy_label.tooltip_text = "Năng lượng hiện tại / tối đa · R dùng 20"
+	energy_label.tooltip_text = "Năng lượng hiện tại / tối đa · Chuột phải dùng 20 khi không tương tác"
 	stamina_label.tooltip_text = "Thể lực hiện tại / tối đa · Chạy dùng 18 mỗi giây"
 
 func _build_character_panel() -> void:
 	character_panel = _root()
 	character_panel.name = "CharacterScreen"
 	_shade(character_panel, 0.78)
-	var panel := _panel(character_panel, Rect2(14, 12, 612, 336))
+	var panel := _panel(character_panel, Rect2(14, 36, 612, 312))
 	panel.name = "StatsPanel"
 	panel.add_theme_stylebox_override("panel", _art_style(STATS_PANEL_ART, &"idle"))
 	character_title = _label(panel, "NHÂN VẬT", Rect2(16, 8, 338, 25), 16, GOLD)
@@ -652,7 +795,7 @@ func _build_character_panel() -> void:
 	for i: int in range(STAT_ROWS.size()):
 		var spec: Dictionary = STAT_ROWS[i]
 		var key: String = str(spec.key)
-		var y: float = 88 + i * 28
+		var y: float = 80 + i * 24
 		var name_label := _label(panel, str(spec.name), Rect2(16, y, 90, 27), 11, CREAM)
 		name_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		var assigned := _label(panel, "—", Rect2(108, y, 62, 27), 10, GOLD)
@@ -668,9 +811,9 @@ func _build_character_panel() -> void:
 		button.add_theme_font_size_override("font_size", 10)
 		button.disabled = true
 		stat_widgets[key] = {"allocated": assigned, "value": value, "button": button}
-	_label(panel, "Điểm có tác dụng ngay · Tab / mũi tên chọn · Enter phân bổ · C / Esc đóng", Rect2(16, 285, 578, 17), 9, MUTED)
-	allocated_summary = _label(panel, "", Rect2(16, 310, 420, 19), 9, CREAM)
-	character_close = _button(panel, "Đóng  [C / Esc]", Rect2(452, 305, 142, 25), overlay_close_requested.emit)
+	_label(panel, "Điểm có tác dụng ngay · Tab / Enter chọn · E / Esc đóng hành trang", Rect2(16, 253, 578, 17), 9, MUTED)
+	allocated_summary = _label(panel, "", Rect2(16, 284, 420, 19), 9, CREAM)
+	character_close = _button(panel, "Đóng  [E / Esc]", Rect2(452, 279, 142, 25), overlay_close_requested.emit)
 	character_close.name = "CharacterClose"
 	# Tab order is predictable even when all allocation buttons are disabled.
 	for i: int in range(batch_buttons.size()):

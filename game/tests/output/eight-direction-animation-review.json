@@ -1,0 +1,482 @@
+{
+  "ok": true,
+  "renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+  "engine_samples": 428,
+  "art_states": {
+    "idle_down": {
+      "playback_frames": 8,
+      "distinct_drawings": 6,
+      "reused_drawings": 2,
+      "fps": 5,
+      "loop": true,
+      "last_to_first_change": 445,
+      "seam_vs_median_step": 1.399
+    },
+    "walk_down": {
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "reused_drawings": 0,
+      "fps": 9,
+      "loop": true,
+      "last_to_first_change": 1131,
+      "seam_vs_median_step": 0.976
+    },
+    "attack_down": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "last_to_first_change": 1712,
+      "seam_vs_median_step": 1.111
+    },
+    "hurt_down": {
+      "playback_frames": 5,
+      "distinct_drawings": 4,
+      "reused_drawings": 1,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "last_to_first_change": 1000,
+      "seam_vs_median_step": 0.993
+    },
+    "death_down": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 10.0,
+      "loop": false,
+      "last_to_first_change": 1328,
+      "seam_vs_median_step": 1.249
+    },
+    "idle_left": {
+      "playback_frames": 8,
+      "distinct_drawings": 6,
+      "reused_drawings": 2,
+      "fps": 5,
+      "loop": true,
+      "last_to_first_change": 374,
+      "seam_vs_median_step": 1.478
+    },
+    "walk_left": {
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "reused_drawings": 0,
+      "fps": 9,
+      "loop": true,
+      "last_to_first_change": 1136,
+      "seam_vs_median_step": 1.005
+    },
+    "attack_left": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "last_to_first_change": 1536,
+      "seam_vs_median_step": 0.972
+    },
+    "hurt_left": {
+      "playback_frames": 5,
+      "distinct_drawings": 4,
+      "reused_drawings": 1,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "last_to_first_change": 859,
+      "seam_vs_median_step": 0.988
+    },
+    "death_left": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 10.0,
+      "loop": false,
+      "last_to_first_change": 1213,
+      "seam_vs_median_step": 1.333
+    },
+    "idle_right": {
+      "playback_frames": 8,
+      "distinct_drawings": 6,
+      "reused_drawings": 2,
+      "fps": 5,
+      "loop": true,
+      "last_to_first_change": 384,
+      "seam_vs_median_step": 1.778
+    },
+    "walk_right": {
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "reused_drawings": 0,
+      "fps": 9,
+      "loop": true,
+      "last_to_first_change": 1093,
+      "seam_vs_median_step": 0.97
+    },
+    "attack_right": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "last_to_first_change": 1414,
+      "seam_vs_median_step": 0.948
+    },
+    "hurt_right": {
+      "playback_frames": 5,
+      "distinct_drawings": 4,
+      "reused_drawings": 1,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "last_to_first_change": 904,
+      "seam_vs_median_step": 0.992
+    },
+    "death_right": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 10.0,
+      "loop": false,
+      "last_to_first_change": 1392,
+      "seam_vs_median_step": 1.367
+    },
+    "idle_up": {
+      "playback_frames": 8,
+      "distinct_drawings": 6,
+      "reused_drawings": 2,
+      "fps": 5,
+      "loop": true,
+      "last_to_first_change": 369,
+      "seam_vs_median_step": 1.29
+    },
+    "walk_up": {
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "reused_drawings": 0,
+      "fps": 9,
+      "loop": true,
+      "last_to_first_change": 1123,
+      "seam_vs_median_step": 1.047
+    },
+    "attack_up": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "last_to_first_change": 1625,
+      "seam_vs_median_step": 1.104
+    },
+    "hurt_up": {
+      "playback_frames": 5,
+      "distinct_drawings": 4,
+      "reused_drawings": 1,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "last_to_first_change": 871,
+      "seam_vs_median_step": 0.991
+    },
+    "death_up": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 10.0,
+      "loop": false,
+      "last_to_first_change": 1217,
+      "seam_vs_median_step": 1.323
+    },
+    "idle_down_right": {
+      "playback_frames": 8,
+      "distinct_drawings": 6,
+      "reused_drawings": 2,
+      "fps": 5,
+      "loop": true,
+      "last_to_first_change": 429,
+      "seam_vs_median_step": 1.449
+    },
+    "walk_down_right": {
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "reused_drawings": 0,
+      "fps": 9,
+      "loop": true,
+      "last_to_first_change": 1103,
+      "seam_vs_median_step": 0.97
+    },
+    "attack_down_right": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "last_to_first_change": 1373,
+      "seam_vs_median_step": 0.907
+    },
+    "hurt_down_right": {
+      "playback_frames": 5,
+      "distinct_drawings": 4,
+      "reused_drawings": 1,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "last_to_first_change": 980,
+      "seam_vs_median_step": 0.992
+    },
+    "death_down_right": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 10.0,
+      "loop": false,
+      "last_to_first_change": 1321,
+      "seam_vs_median_step": 1.274
+    },
+    "idle_down_left": {
+      "playback_frames": 8,
+      "distinct_drawings": 6,
+      "reused_drawings": 2,
+      "fps": 5,
+      "loop": true,
+      "last_to_first_change": 479,
+      "seam_vs_median_step": 1.761
+    },
+    "walk_down_left": {
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "reused_drawings": 0,
+      "fps": 9,
+      "loop": true,
+      "last_to_first_change": 1188,
+      "seam_vs_median_step": 0.938
+    },
+    "attack_down_left": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "last_to_first_change": 1425,
+      "seam_vs_median_step": 0.927
+    },
+    "hurt_down_left": {
+      "playback_frames": 5,
+      "distinct_drawings": 4,
+      "reused_drawings": 1,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "last_to_first_change": 1042,
+      "seam_vs_median_step": 0.988
+    },
+    "death_down_left": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 10.0,
+      "loop": false,
+      "last_to_first_change": 1355,
+      "seam_vs_median_step": 1.248
+    },
+    "idle_up_right": {
+      "playback_frames": 8,
+      "distinct_drawings": 6,
+      "reused_drawings": 2,
+      "fps": 5,
+      "loop": true,
+      "last_to_first_change": 415,
+      "seam_vs_median_step": 1.56
+    },
+    "walk_up_right": {
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "reused_drawings": 0,
+      "fps": 9,
+      "loop": true,
+      "last_to_first_change": 1199,
+      "seam_vs_median_step": 0.957
+    },
+    "attack_up_right": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "last_to_first_change": 1658,
+      "seam_vs_median_step": 1.043
+    },
+    "hurt_up_right": {
+      "playback_frames": 5,
+      "distinct_drawings": 4,
+      "reused_drawings": 1,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "last_to_first_change": 1003,
+      "seam_vs_median_step": 0.99
+    },
+    "death_up_right": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 10.0,
+      "loop": false,
+      "last_to_first_change": 1399,
+      "seam_vs_median_step": 1.229
+    },
+    "idle_up_left": {
+      "playback_frames": 8,
+      "distinct_drawings": 6,
+      "reused_drawings": 2,
+      "fps": 5,
+      "loop": true,
+      "last_to_first_change": 483,
+      "seam_vs_median_step": 1.594
+    },
+    "walk_up_left": {
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "reused_drawings": 0,
+      "fps": 9,
+      "loop": true,
+      "last_to_first_change": 1189,
+      "seam_vs_median_step": 0.999
+    },
+    "attack_up_left": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 33.33333333333333,
+      "loop": false,
+      "last_to_first_change": 1499,
+      "seam_vs_median_step": 0.975
+    },
+    "hurt_up_left": {
+      "playback_frames": 5,
+      "distinct_drawings": 4,
+      "reused_drawings": 1,
+      "fps": 22.727272727272727,
+      "loop": false,
+      "last_to_first_change": 1109,
+      "seam_vs_median_step": 0.991
+    },
+    "death_up_left": {
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "reused_drawings": 0,
+      "fps": 10.0,
+      "loop": false,
+      "last_to_first_change": 1398,
+      "seam_vs_median_step": 1.184
+    }
+  },
+  "observed_engine_directions": {
+    "up_left": {
+      "walk_samples": 24,
+      "walk_frames_observed": 6,
+      "idle_samples": 8,
+      "idle_frames_observed": 8,
+      "walk_start": [
+        510.302917480469,
+        486.302917480469
+      ],
+      "walk_end": [
+        471.27001953125,
+        447.27001953125
+      ]
+    },
+    "up": {
+      "walk_samples": 24,
+      "walk_frames_observed": 6,
+      "idle_samples": 8,
+      "idle_frames_observed": 8,
+      "walk_start": [
+        512.0,
+        485.599975585938
+      ],
+      "walk_end": [
+        512.0,
+        430.3994140625
+      ]
+    },
+    "up_right": {
+      "walk_samples": 24,
+      "walk_frames_observed": 6,
+      "idle_samples": 8,
+      "idle_frames_observed": 8,
+      "walk_start": [
+        513.697021484375,
+        486.302917480469
+      ],
+      "walk_end": [
+        552.728515625,
+        447.27001953125
+      ]
+    },
+    "right": {
+      "walk_samples": 24,
+      "walk_frames_observed": 6,
+      "idle_samples": 8,
+      "idle_frames_observed": 8,
+      "walk_start": [
+        514.400024414062,
+        488.0
+      ],
+      "walk_end": [
+        569.6005859375,
+        488.0
+      ]
+    },
+    "down_right": {
+      "walk_samples": 24,
+      "walk_frames_observed": 6,
+      "idle_samples": 8,
+      "idle_frames_observed": 8,
+      "walk_start": [
+        513.697021484375,
+        489.697082519531
+      ],
+      "walk_end": [
+        552.728515625,
+        528.729370117188
+      ]
+    },
+    "down": {
+      "walk_samples": 24,
+      "walk_frames_observed": 6,
+      "idle_samples": 8,
+      "idle_frames_observed": 8,
+      "walk_start": [
+        512.0,
+        490.400024414062
+      ],
+      "walk_end": [
+        512.0,
+        545.6005859375
+      ]
+    },
+    "down_left": {
+      "walk_samples": 24,
+      "walk_frames_observed": 6,
+      "idle_samples": 8,
+      "idle_frames_observed": 8,
+      "walk_start": [
+        510.302917480469,
+        489.697082519531
+      ],
+      "walk_end": [
+        471.27001953125,
+        528.729370117188
+      ]
+    },
+    "left": {
+      "walk_samples": 24,
+      "walk_frames_observed": 6,
+      "idle_samples": 8,
+      "idle_frames_observed": 8,
+      "walk_start": [
+        509.599975585938,
+        488.0
+      ],
+      "walk_end": [
+        454.3994140625,
+        488.0
+      ]
+    }
+  },
+  "note": "Real world renderer driven by movement input; idle runs without input. Contact damage asserted separately by player_eight_direction_test.gd. GIF timing quantized to 10ms with preserved average."
+}

@@ -17,6 +17,7 @@ PREVIEW = BASE / 'previews'
 SOURCE_DIR = ROOT / 'assets/art_v3/sources'
 PLAYER_SIZE = (96, 64)
 PLAYER_PIVOT = (48, 60)
+DIAGONALS = ('down_right', 'down_left', 'up_right', 'up_left')
 
 
 def hard_alpha(im):
@@ -25,7 +26,7 @@ def hard_alpha(im):
     return im
 
 
-def components(im):
+def components(im, min_pixels=None, diagonal=False):
     """Drop only detached source specks at a grid boundary, never actor details."""
     alpha = im.getchannel('A')
     px = alpha.load()
@@ -39,7 +40,8 @@ def components(im):
             while queue:
                 point = queue.pop()
                 group.append(point)
-                for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+                neighbors = ((-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (1, -1), (-1, 1), (1, 1)) if diagonal else ((-1, 0), (1, 0), (0, -1), (0, 1))
+                for dx, dy in neighbors:
                     q = point[0] + dx, point[1] + dy
                     if 0 <= q[0] < im.width and 0 <= q[1] < im.height and q not in seen and px[q[0], q[1]]:
                         seen.add(q)
@@ -47,7 +49,7 @@ def components(im):
             groups.append(group)
     largest = max((len(g) for g in groups), default=0)
     for group in groups:
-        if len(group) < max(12, largest // 400):
+        if len(group) < (min_pixels if min_pixels is not None else max(12, largest // 400)):
             for point in group:
                 im.putpixel(point, (0, 0, 0, 0))
     return im
@@ -100,7 +102,9 @@ def extract_connected_sheet(path, columns, rows):
         im = canvas(x1 - x0, y1 - y0)
         for x, y in group:
             im.putpixel((x - x0, y - y0), sheet.getpixel((x, y)))
-        row = min(rows - 1, int((y1 - 1) / (sheet.height / rows)))
+        # Blade/toe tips can straddle a nominal row boundary. The actor's
+        # centre stays inside its row; the bottom edge is not a row identifier.
+        row = min(rows - 1, int((y0 + y1) / 2 / (sheet.height / rows)))
         result[row].append((x0, im))
     if any(len(row) != columns for row in result):
         raise ValueError('Actor source rows do not match the declared direction grid')
@@ -117,10 +121,14 @@ def body_height(im):
     return max(p[1] for p in points) - min(p[1] for p in points) + 1 if points else im.height
 
 
-def fit_at_feet(images, size, pivot, scale):
+def fit_at_feet(images, size, pivot, scale, clean_pixels=False):
     fitted = []
     for im in images:
         resized = im.resize((max(1, round(im.width * scale)), max(1, round(im.height * scale))), Image.Resampling.NEAREST)
+        if clean_pixels:
+            # Nearest sampling can detach tiny source specks. They must not
+            # masquerade as boot soles and lift the actual character above ground.
+            resized = components(resized, min_pixels=5, diagonal=True)
         # Lower boot mass is the anchor; a moving scarf must not shift the torso.
         points = brown_features(resized)
         boot_y = max((p[1] for p in points), default=resized.height - 1)
@@ -162,7 +170,7 @@ def hero_idle(base, direction):
     frames = []
     # Only coat tails and the scarf end move. Head, torso and boots keep anchors.
     center = base.width // 2
-    side = (center + 4, 20, center + 22, 35) if direction in ('down', 'left', 'up') else (center - 22, 20, center - 4, 35)
+    side = (center - 22, 20, center - 4, 35) if direction.endswith('right') else (center + 4, 20, center + 22, 35)
     for i in range(8):
         sway = round(math.sin(i * math.tau / 8))
         cloth = round(math.sin(i * math.tau / 8 + .8))
@@ -278,7 +286,7 @@ def assert_frame_guards(name, states, pivot):
     return records
 
 
-def previews(name, states, size):
+def previews(name, states, size, generate_gifs=True):
     labels = list(states)
     width = max(len(states[n][0]) for n in labels) * size[0]
     sheet = Image.new('RGBA', (width, len(labels) * (size[1] + 18)), '#282431')
@@ -288,8 +296,10 @@ def previews(name, states, size):
         for i, im in enumerate(states[state][0]):
             sheet.alpha_composite(im, (i * size[0], row * (size[1] + 18) + 17))
     sheet.resize((sheet.width * 2, sheet.height * 2), Image.Resampling.NEAREST).save(PREVIEW / (name + '_states.png'))
+    if not generate_gifs:
+        return
     for state, (frames, fps, loop) in states.items():
-        if not (state.endswith('_down') or name == 'enemy' or name == 'rowan'):
+        if not (state.endswith('_down') or any(state.endswith('_' + d) for d in DIAGONALS) or name == 'enemy' or name == 'rowan'):
             continue
         ims = []
         for frame in frames:
@@ -297,6 +307,33 @@ def previews(name, states, size):
             bg.alpha_composite(frame)
             ims.append(bg.convert('RGB').resize((size[0] * 5, size[1] * 5), Image.Resampling.NEAREST))
         ims[0].save(PREVIEW / f'{name}_{state}.gif', save_all=True, append_images=ims[1:], duration=round(1000 / fps), loop=0 if loop else 1, disposal=2)
+
+
+def identity_preview(states):
+    directions = ('down', 'left', 'right', 'up') + DIAGONALS
+    sheet = Image.new('RGBA', (8 * 194, 5 * 150), '#282431')
+    draw = ImageDraw.Draw(sheet)
+    for column, direction in enumerate(directions):
+        for row, state in enumerate(('idle', 'walk', 'attack', 'hurt', 'death')):
+            name = state + '_' + direction
+            frame = states[name][0][2 if state == 'attack' else 0]
+            sheet.alpha_composite(frame.resize((192, 128), Image.Resampling.NEAREST), (column * 194, row * 150 + 20))
+            draw.text((column * 194 + 2, row * 150 + 3), name, fill='#e8d2a2')
+    sheet.save(PREVIEW / 'player_8way_identity.png')
+
+
+def ground_actor(states):
+    """Baked soft contact shadows preserve every state's frame and foot pivot."""
+    for name, (frames,fps,loop) in list(states.items()):
+        grounded=[]
+        for frame in frames:
+            result=canvas(*PLAYER_SIZE)
+            draw=ImageDraw.Draw(result)
+            draw.ellipse((37,56,59,59),fill=(27,23,34,65))
+            draw.ellipse((41,57,55,59),fill=(27,23,34,55))
+            result.alpha_composite(frame)
+            grounded.append(result)
+        states[name]=(grounded,fps,loop)
 
 
 def main():
@@ -339,11 +376,29 @@ def main():
         states['attack_' + direction] = (attacks[row] + [base.copy()], 9 / .27, False)
         states['hurt_' + direction] = (hurt_frames(base, PLAYER_SIZE, PLAYER_PIVOT), 5 / .22, False)
         states['death_' + direction] = (collapse_frames(base, PLAYER_SIZE, PLAYER_PIVOT), 9 / .9, False)
-    register(registry, 'player', states, PLAYER_PIVOT, 'New original ImageGen indigo-coat identity: assets/art_v3/sources/hero_walk.png + assets/art_refresh/sources/hero_attack.png; hardened alpha, common body scale per sheet, full connected blade extraction, boot anchors, local scarf/coat/recoil/collapse motion', contact_frame=2, contact_time=.084, duration=.27)
+    diagonal_walks = extract_sheet(BASE / 'sources/hero_walk_diagonal.png', 6, 4)
+    diagonal_scale = min(walk_body_height / statistics.median(body_height(im) for row in diagonal_walks for im in row),
+                         56 / max(im.height for row in diagonal_walks for im in row),
+                         42 / max(im.width for row in diagonal_walks for im in row))
+    diagonal_walks = [fit_at_feet(row, PLAYER_SIZE, PLAYER_PIVOT, diagonal_scale, clean_pixels=True) for row in diagonal_walks]
+    diagonal_attacks = extract_connected_sheet(BASE / 'sources/hero_attack_diagonal.png', 8, 4)
+    diagonal_attack_scale = walk_body_height / statistics.median(body_height(im) for row in diagonal_attacks for im in row)
+    diagonal_attacks = [fit_at_feet(row, PLAYER_SIZE, PLAYER_PIVOT, diagonal_attack_scale, clean_pixels=True) for row in diagonal_attacks]
+    for row, direction in enumerate(DIAGONALS):
+        base = diagonal_walks[row][0]
+        states['idle_' + direction] = (hero_idle(base, direction), 5, True)
+        states['walk_' + direction] = (diagonal_walks[row], 9, True)
+        states['attack_' + direction] = (diagonal_attacks[row] + [base.copy()], 9 / .27, False)
+        states['hurt_' + direction] = (hurt_frames(base, PLAYER_SIZE, PLAYER_PIVOT), 5 / .22, False)
+        states['death_' + direction] = (collapse_frames(base, PLAYER_SIZE, PLAYER_PIVOT), 9 / .9, False)
+    ground_actor(states)
+    register(registry, 'player', states, PLAYER_PIVOT, 'Original matching indigo-coat identity: assets/art_v3/sources/hero_walk.png + assets/art_refresh/sources/hero_attack.png; diagonal extension hero_walk_diagonal.png + hero_attack_diagonal.png via built-in ImageGen (hero_diagonal_generation.json). Hardened alpha, common body scale per sheet, full connected blade extraction, boot anchors, local scarf/coat/recoil/collapse motion; 2026-11-03 common soft foot-contact shadow, all eight directions/states', contact_frame=2, contact_time=.084, duration=.27, directions=list(('down', 'left', 'right', 'up') + DIAGONALS))
     bounds['player'] = assert_frame_guards('player', states, PLAYER_PIVOT)
     previews('player', states, PLAYER_SIZE)
+    previews('player_8way', {name: clip for name, clip in states.items() if name.startswith('walk_')}, PLAYER_SIZE, generate_gifs=False)
+    identity_preview(states)
     fragment('actors', registry)
-    (PREVIEW / 'actors_build.json').write_text(json.dumps({'ids': list(registry), 'walk_common_scale': scale, 'attack_common_scale': attack_scale, 'alpha_threshold': 210, 'renderer': 'Pillow packing only; Godot rendering is run by integration owner'}, indent=2) + '\n')
+    (PREVIEW / 'actors_build.json').write_text(json.dumps({'ids': list(registry), 'walk_common_scale': scale, 'attack_common_scale': attack_scale, 'diagonal_walk_common_scale': diagonal_scale, 'diagonal_attack_common_scale': diagonal_attack_scale, 'directions': list(('down', 'left', 'right', 'up') + DIAGONALS), 'alpha_threshold': 210, 'renderer': 'Pillow packing only; Godot rendering is run by integration owner'}, indent=2) + '\n')
     (PREVIEW / 'actors_bounds.json').write_text(json.dumps({'ok': True, 'frames_checked': sum(len(frames) for actor in bounds.values() for frames in actor.values()), 'guard': 'No opaque outer border; all opaque bottoms <= ground pivot; every collapse bottom equals pivot; no frame resized during collapse', 'bounds': bounds}, indent=2) + '\n')
     print('Built player, Rowan and guardian from new identities:', sum(sum(s['count'] for s in e['states'].values()) for e in registry.values()), 'frames')
 

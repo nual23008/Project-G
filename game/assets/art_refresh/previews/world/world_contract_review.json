@@ -4,10 +4,10 @@
       "frames": 4,
       "distinct": 4,
       "changed_pixels_each_transition": [
-        8,
-        8,
-        8,
-        8
+        20,
+        20,
+        20,
+        20
       ],
       "fps": 2,
       "gif_frame_ms": [
@@ -18,7 +18,7 @@
       ],
       "loop": true,
       "loopcheck_exit_code": 0,
-      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 8/256 px (3.1%), median step 8 px\n  ok    last->first change 8/256 px (3.1%)\nloopcheck: 4 frames, PASS"
+      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 20/256 px (7.8%), median step 20 px\n  ok    last->first change 20/256 px (7.8%)\nloopcheck: 4 frames, PASS"
     },
     "stone_path/idle": {
       "frames": 4,
@@ -44,10 +44,10 @@
       "frames": 4,
       "distinct": 4,
       "changed_pixels_each_transition": [
-        1,
-        1,
-        1,
-        1
+        4,
+        5,
+        5,
+        4
       ],
       "fps": 0.8,
       "gif_frame_ms": [
@@ -58,16 +58,16 @@
       ],
       "loop": true,
       "loopcheck_exit_code": 0,
-      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 1/256 px (0.4%), median step 1 px\n  ok    last->first change 1/256 px (0.4%)\nloopcheck: 4 frames, PASS"
+      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 5/256 px (2.0%), median step 5 px\n  ok    last->first change 4/256 px (1.6%)\nloopcheck: 4 frames, PASS"
     },
     "water/idle": {
       "frames": 4,
       "distinct": 4,
       "changed_pixels_each_transition": [
-        25,
-        22,
-        22,
-        24
+        33,
+        30,
+        29,
+        39
       ],
       "fps": 5,
       "gif_frame_ms": [
@@ -78,7 +78,7 @@
       ],
       "loop": true,
       "loopcheck_exit_code": 0,
-      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 25/256 px (9.8%), median step 22 px\n  ok    last->first change 24/256 px (9.4%)\nloopcheck: 4 frames, PASS"
+      "loopcheck_output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 33/256 px (12.9%), median step 30 px\n  ok    last->first change 39/256 px (15.2%)\nloopcheck: 4 frames, PASS"
     },
     "shore/idle": {
       "frames": 4,

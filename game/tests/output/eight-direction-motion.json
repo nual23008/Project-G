@@ -1,0 +1,5575 @@
+{
+	"attack_sample_ms": 16.6666666666667,
+	"death_sample_ms": 50,
+	"failures": 0,
+	"hurt_sample_ms": 33.3333333333333,
+	"idle_sample_ms": 200,
+	"renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+	"samples": [
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/walk_down_00.png",
+			"position": [
+				512.0,
+				490.400024414062
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/walk_down_01.png",
+			"position": [
+				512.0,
+				492.800048828125
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/walk_down_02.png",
+			"position": [
+				512.0,
+				495.200073242188
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 1,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/walk_down_03.png",
+			"position": [
+				512.0,
+				497.60009765625
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 1,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/walk_down_04.png",
+			"position": [
+				512.0,
+				500.000122070312
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 1,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/walk_down_05.png",
+			"position": [
+				512.0,
+				502.400146484375
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 2,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/walk_down_06.png",
+			"position": [
+				512.0,
+				504.800170898438
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 2,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/walk_down_07.png",
+			"position": [
+				512.0,
+				507.2001953125
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 2,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/walk_down_08.png",
+			"position": [
+				512.0,
+				509.600219726562
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 2,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/walk_down_09.png",
+			"position": [
+				512.0,
+				512.000244140625
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 3,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/walk_down_10.png",
+			"position": [
+				512.0,
+				514.400268554688
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 3,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/walk_down_11.png",
+			"position": [
+				512.0,
+				516.80029296875
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 3,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/walk_down_12.png",
+			"position": [
+				512.0,
+				519.200317382812
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 4,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/walk_down_13.png",
+			"position": [
+				512.0,
+				521.600341796875
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 4,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/walk_down_14.png",
+			"position": [
+				512.0,
+				524.000366210938
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 4,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/walk_down_15.png",
+			"position": [
+				512.0,
+				526.400390625
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 5,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/walk_down_16.png",
+			"position": [
+				512.0,
+				528.800415039062
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 5,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/walk_down_17.png",
+			"position": [
+				512.0,
+				531.200439453125
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 5,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 18,
+			"path": "res://tests/output/eight_direction_motion/walk_down_18.png",
+			"position": [
+				512.0,
+				533.600463867188
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 5,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 19,
+			"path": "res://tests/output/eight_direction_motion/walk_down_19.png",
+			"position": [
+				512.0,
+				536.00048828125
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 20,
+			"path": "res://tests/output/eight_direction_motion/walk_down_20.png",
+			"position": [
+				512.0,
+				538.400512695312
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 21,
+			"path": "res://tests/output/eight_direction_motion/walk_down_21.png",
+			"position": [
+				512.0,
+				540.800537109375
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 22,
+			"path": "res://tests/output/eight_direction_motion/walk_down_22.png",
+			"position": [
+				512.0,
+				543.200561523438
+			]
+		},
+		{
+			"animation": "walk_down",
+			"clip": "walk_down",
+			"frame": 1,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 23,
+			"path": "res://tests/output/eight_direction_motion/walk_down_23.png",
+			"position": [
+				512.0,
+				545.6005859375
+			]
+		},
+		{
+			"animation": "idle_down",
+			"clip": "idle_down",
+			"frame": 1,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/idle_down_00.png",
+			"position": [
+				512.0,
+				545.6005859375
+			]
+		},
+		{
+			"animation": "idle_down",
+			"clip": "idle_down",
+			"frame": 2,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/idle_down_01.png",
+			"position": [
+				512.0,
+				545.6005859375
+			]
+		},
+		{
+			"animation": "idle_down",
+			"clip": "idle_down",
+			"frame": 3,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/idle_down_02.png",
+			"position": [
+				512.0,
+				545.6005859375
+			]
+		},
+		{
+			"animation": "idle_down",
+			"clip": "idle_down",
+			"frame": 4,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/idle_down_03.png",
+			"position": [
+				512.0,
+				545.6005859375
+			]
+		},
+		{
+			"animation": "idle_down",
+			"clip": "idle_down",
+			"frame": 5,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/idle_down_04.png",
+			"position": [
+				512.0,
+				545.6005859375
+			]
+		},
+		{
+			"animation": "idle_down",
+			"clip": "idle_down",
+			"frame": 6,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/idle_down_05.png",
+			"position": [
+				512.0,
+				545.6005859375
+			]
+		},
+		{
+			"animation": "idle_down",
+			"clip": "idle_down",
+			"frame": 7,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/idle_down_06.png",
+			"position": [
+				512.0,
+				545.6005859375
+			]
+		},
+		{
+			"animation": "idle_down",
+			"clip": "idle_down",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/idle_down_07.png",
+			"position": [
+				512.0,
+				545.6005859375
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_00.png",
+			"position": [
+				510.302917480469,
+				489.697082519531
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_01.png",
+			"position": [
+				508.605834960938,
+				491.394165039062
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_02.png",
+			"position": [
+				506.908752441406,
+				493.091247558594
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 1,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_03.png",
+			"position": [
+				505.211669921875,
+				494.788330078125
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 1,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_04.png",
+			"position": [
+				503.514587402344,
+				496.485412597656
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 1,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_05.png",
+			"position": [
+				501.817504882812,
+				498.182495117188
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 2,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_06.png",
+			"position": [
+				500.120422363281,
+				499.879577636719
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 2,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_07.png",
+			"position": [
+				498.42333984375,
+				501.57666015625
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 2,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_08.png",
+			"position": [
+				496.726257324219,
+				503.273742675781
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 2,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_09.png",
+			"position": [
+				495.029174804688,
+				504.970825195312
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 3,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_10.png",
+			"position": [
+				493.332092285156,
+				506.667907714844
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 3,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_11.png",
+			"position": [
+				491.635009765625,
+				508.364990234375
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 3,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_12.png",
+			"position": [
+				489.937927246094,
+				510.062072753906
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 4,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_13.png",
+			"position": [
+				488.240844726562,
+				511.759155273438
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 4,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_14.png",
+			"position": [
+				486.543762207031,
+				513.456176757812
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 4,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_15.png",
+			"position": [
+				484.8466796875,
+				515.153198242188
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 5,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_16.png",
+			"position": [
+				483.149597167969,
+				516.850219726562
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 5,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_17.png",
+			"position": [
+				481.452514648438,
+				518.547241210938
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 5,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 18,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_18.png",
+			"position": [
+				479.755432128906,
+				520.244262695312
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 5,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 19,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_19.png",
+			"position": [
+				478.058349609375,
+				521.941284179688
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 20,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_20.png",
+			"position": [
+				476.361267089844,
+				523.638305664062
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 21,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_21.png",
+			"position": [
+				474.664184570312,
+				525.335327148438
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 22,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_22.png",
+			"position": [
+				472.967102050781,
+				527.032348632812
+			]
+		},
+		{
+			"animation": "walk_down_left",
+			"clip": "walk_down_left",
+			"frame": 1,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 23,
+			"path": "res://tests/output/eight_direction_motion/walk_down_left_23.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_left",
+			"clip": "idle_down_left",
+			"frame": 1,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/idle_down_left_00.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_left",
+			"clip": "idle_down_left",
+			"frame": 2,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/idle_down_left_01.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_left",
+			"clip": "idle_down_left",
+			"frame": 3,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/idle_down_left_02.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_left",
+			"clip": "idle_down_left",
+			"frame": 4,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/idle_down_left_03.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_left",
+			"clip": "idle_down_left",
+			"frame": 5,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/idle_down_left_04.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_left",
+			"clip": "idle_down_left",
+			"frame": 6,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/idle_down_left_05.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_left",
+			"clip": "idle_down_left",
+			"frame": 7,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/idle_down_left_06.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_left",
+			"clip": "idle_down_left",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/idle_down_left_07.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": true,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_00.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 1,
+			"fx_frame": 1,
+			"fx_visible": true,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_01.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 1,
+			"fx_frame": 1,
+			"fx_visible": true,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_02.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_03.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_04.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_05.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 3,
+			"fx_frame": 3,
+			"fx_visible": true,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_06.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 4,
+			"fx_frame": 4,
+			"fx_visible": true,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_07.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 4,
+			"fx_frame": 4,
+			"fx_visible": true,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_08.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 5,
+			"fx_frame": 5,
+			"fx_visible": true,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_09.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 6,
+			"fx_frame": 6,
+			"fx_visible": true,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_10.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 6,
+			"fx_frame": 6,
+			"fx_visible": true,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_11.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": true,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_12.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": true,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_13.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_14.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_left",
+			"clip": "attack_down_left",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_15.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_left",
+			"clip": "attack_down_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_16.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_left",
+			"clip": "attack_down_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/attack_down_left_17.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_left",
+			"clip": "hurt_down_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_left_00.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_left",
+			"clip": "hurt_down_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_left_01.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_left",
+			"clip": "hurt_down_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_left_02.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_left",
+			"clip": "hurt_down_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_left_03.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_left",
+			"clip": "hurt_down_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_left_04.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_left",
+			"clip": "hurt_down_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_left_05.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_left",
+			"clip": "hurt_down_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_left_06.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_00.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_01.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_02.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_03.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_04.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_05.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_06.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_07.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_08.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_09.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_10.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_11.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_12.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_13.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_14.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_15.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_16.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_left",
+			"clip": "death_down_left",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/death_down_left_17.png",
+			"position": [
+				471.27001953125,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/walk_left_00.png",
+			"position": [
+				509.599975585938,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/walk_left_01.png",
+			"position": [
+				507.199951171875,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/walk_left_02.png",
+			"position": [
+				504.799926757812,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/walk_left_03.png",
+			"position": [
+				502.39990234375,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/walk_left_04.png",
+			"position": [
+				499.999877929688,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/walk_left_05.png",
+			"position": [
+				497.599853515625,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/walk_left_06.png",
+			"position": [
+				495.199829101562,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/walk_left_07.png",
+			"position": [
+				492.7998046875,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/walk_left_08.png",
+			"position": [
+				490.399780273438,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/walk_left_09.png",
+			"position": [
+				487.999755859375,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/walk_left_10.png",
+			"position": [
+				485.599731445312,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/walk_left_11.png",
+			"position": [
+				483.19970703125,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/walk_left_12.png",
+			"position": [
+				480.799682617188,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/walk_left_13.png",
+			"position": [
+				478.399658203125,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/walk_left_14.png",
+			"position": [
+				475.999633789062,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/walk_left_15.png",
+			"position": [
+				473.599609375,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/walk_left_16.png",
+			"position": [
+				471.199584960938,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/walk_left_17.png",
+			"position": [
+				468.799560546875,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 18,
+			"path": "res://tests/output/eight_direction_motion/walk_left_18.png",
+			"position": [
+				466.399536132812,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 19,
+			"path": "res://tests/output/eight_direction_motion/walk_left_19.png",
+			"position": [
+				463.99951171875,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 20,
+			"path": "res://tests/output/eight_direction_motion/walk_left_20.png",
+			"position": [
+				461.599487304688,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 21,
+			"path": "res://tests/output/eight_direction_motion/walk_left_21.png",
+			"position": [
+				459.199462890625,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 22,
+			"path": "res://tests/output/eight_direction_motion/walk_left_22.png",
+			"position": [
+				456.799438476562,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_left",
+			"clip": "walk_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 23,
+			"path": "res://tests/output/eight_direction_motion/walk_left_23.png",
+			"position": [
+				454.3994140625,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_left",
+			"clip": "idle_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/idle_left_00.png",
+			"position": [
+				454.3994140625,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_left",
+			"clip": "idle_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/idle_left_01.png",
+			"position": [
+				454.3994140625,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_left",
+			"clip": "idle_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/idle_left_02.png",
+			"position": [
+				454.3994140625,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_left",
+			"clip": "idle_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/idle_left_03.png",
+			"position": [
+				454.3994140625,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_left",
+			"clip": "idle_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/idle_left_04.png",
+			"position": [
+				454.3994140625,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_left",
+			"clip": "idle_left",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/idle_left_05.png",
+			"position": [
+				454.3994140625,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_left",
+			"clip": "idle_left",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/idle_left_06.png",
+			"position": [
+				454.3994140625,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_left",
+			"clip": "idle_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/idle_left_07.png",
+			"position": [
+				454.3994140625,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_00.png",
+			"position": [
+				510.302917480469,
+				486.302917480469
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_01.png",
+			"position": [
+				508.605834960938,
+				484.605834960938
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_02.png",
+			"position": [
+				506.908752441406,
+				482.908752441406
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_03.png",
+			"position": [
+				505.211669921875,
+				481.211669921875
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_04.png",
+			"position": [
+				503.514587402344,
+				479.514587402344
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_05.png",
+			"position": [
+				501.817504882812,
+				477.817504882812
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_06.png",
+			"position": [
+				500.120422363281,
+				476.120422363281
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_07.png",
+			"position": [
+				498.42333984375,
+				474.42333984375
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_08.png",
+			"position": [
+				496.726257324219,
+				472.726257324219
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_09.png",
+			"position": [
+				495.029174804688,
+				471.029174804688
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_10.png",
+			"position": [
+				493.332092285156,
+				469.332092285156
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_11.png",
+			"position": [
+				491.635009765625,
+				467.635009765625
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_12.png",
+			"position": [
+				489.937927246094,
+				465.937927246094
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_13.png",
+			"position": [
+				488.240844726562,
+				464.240844726562
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_14.png",
+			"position": [
+				486.543762207031,
+				462.543762207031
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_15.png",
+			"position": [
+				484.8466796875,
+				460.8466796875
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_16.png",
+			"position": [
+				483.149597167969,
+				459.149597167969
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_17.png",
+			"position": [
+				481.452514648438,
+				457.452514648438
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 18,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_18.png",
+			"position": [
+				479.755432128906,
+				455.755432128906
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 19,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_19.png",
+			"position": [
+				478.058349609375,
+				454.058349609375
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 20,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_20.png",
+			"position": [
+				476.361267089844,
+				452.361267089844
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 21,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_21.png",
+			"position": [
+				474.664184570312,
+				450.664184570312
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 22,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_22.png",
+			"position": [
+				472.967102050781,
+				448.967102050781
+			]
+		},
+		{
+			"animation": "walk_up_left",
+			"clip": "walk_up_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 23,
+			"path": "res://tests/output/eight_direction_motion/walk_up_left_23.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_left",
+			"clip": "idle_up_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/idle_up_left_00.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_left",
+			"clip": "idle_up_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/idle_up_left_01.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_left",
+			"clip": "idle_up_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/idle_up_left_02.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_left",
+			"clip": "idle_up_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/idle_up_left_03.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_left",
+			"clip": "idle_up_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/idle_up_left_04.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_left",
+			"clip": "idle_up_left",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/idle_up_left_05.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_left",
+			"clip": "idle_up_left",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/idle_up_left_06.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_left",
+			"clip": "idle_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/idle_up_left_07.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": true,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_00.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 1,
+			"fx_frame": 1,
+			"fx_visible": true,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_01.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 1,
+			"fx_frame": 1,
+			"fx_visible": true,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_02.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_03.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_04.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_05.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 3,
+			"fx_frame": 3,
+			"fx_visible": true,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_06.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 4,
+			"fx_frame": 4,
+			"fx_visible": true,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_07.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 4,
+			"fx_frame": 4,
+			"fx_visible": true,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_08.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 5,
+			"fx_frame": 5,
+			"fx_visible": true,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_09.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 6,
+			"fx_frame": 6,
+			"fx_visible": true,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_10.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 6,
+			"fx_frame": 6,
+			"fx_visible": true,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_11.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": true,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_12.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": true,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_13.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_14.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_left",
+			"clip": "attack_up_left",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_15.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_left",
+			"clip": "attack_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_16.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_left",
+			"clip": "attack_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/attack_up_left_17.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_left",
+			"clip": "hurt_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_left_00.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_left",
+			"clip": "hurt_up_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_left_01.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_left",
+			"clip": "hurt_up_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_left_02.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_left",
+			"clip": "hurt_up_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_left_03.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_left",
+			"clip": "hurt_up_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_left_04.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_left",
+			"clip": "hurt_up_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_left_05.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_left",
+			"clip": "hurt_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_left_06.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_00.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_01.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_02.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_03.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_04.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_05.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_06.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_07.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_08.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_09.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_10.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_11.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_12.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_13.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_14.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_15.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_16.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_left",
+			"clip": "death_up_left",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/death_up_left_17.png",
+			"position": [
+				471.27001953125,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/walk_up_00.png",
+			"position": [
+				512.0,
+				485.599975585938
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/walk_up_01.png",
+			"position": [
+				512.0,
+				483.199951171875
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/walk_up_02.png",
+			"position": [
+				512.0,
+				480.799926757812
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/walk_up_03.png",
+			"position": [
+				512.0,
+				478.39990234375
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/walk_up_04.png",
+			"position": [
+				512.0,
+				475.999877929688
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/walk_up_05.png",
+			"position": [
+				512.0,
+				473.599853515625
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/walk_up_06.png",
+			"position": [
+				512.0,
+				471.199829101562
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/walk_up_07.png",
+			"position": [
+				512.0,
+				468.7998046875
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/walk_up_08.png",
+			"position": [
+				512.0,
+				466.399780273438
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/walk_up_09.png",
+			"position": [
+				512.0,
+				463.999755859375
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/walk_up_10.png",
+			"position": [
+				512.0,
+				461.599731445312
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/walk_up_11.png",
+			"position": [
+				512.0,
+				459.19970703125
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/walk_up_12.png",
+			"position": [
+				512.0,
+				456.799682617188
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/walk_up_13.png",
+			"position": [
+				512.0,
+				454.399658203125
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/walk_up_14.png",
+			"position": [
+				512.0,
+				451.999633789062
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/walk_up_15.png",
+			"position": [
+				512.0,
+				449.599609375
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/walk_up_16.png",
+			"position": [
+				512.0,
+				447.199584960938
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/walk_up_17.png",
+			"position": [
+				512.0,
+				444.799560546875
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 18,
+			"path": "res://tests/output/eight_direction_motion/walk_up_18.png",
+			"position": [
+				512.0,
+				442.399536132812
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 19,
+			"path": "res://tests/output/eight_direction_motion/walk_up_19.png",
+			"position": [
+				512.0,
+				439.99951171875
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 20,
+			"path": "res://tests/output/eight_direction_motion/walk_up_20.png",
+			"position": [
+				512.0,
+				437.599487304688
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 21,
+			"path": "res://tests/output/eight_direction_motion/walk_up_21.png",
+			"position": [
+				512.0,
+				435.199462890625
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 22,
+			"path": "res://tests/output/eight_direction_motion/walk_up_22.png",
+			"position": [
+				512.0,
+				432.799438476562
+			]
+		},
+		{
+			"animation": "walk_up",
+			"clip": "walk_up",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 23,
+			"path": "res://tests/output/eight_direction_motion/walk_up_23.png",
+			"position": [
+				512.0,
+				430.3994140625
+			]
+		},
+		{
+			"animation": "idle_up",
+			"clip": "idle_up",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/idle_up_00.png",
+			"position": [
+				512.0,
+				430.3994140625
+			]
+		},
+		{
+			"animation": "idle_up",
+			"clip": "idle_up",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/idle_up_01.png",
+			"position": [
+				512.0,
+				430.3994140625
+			]
+		},
+		{
+			"animation": "idle_up",
+			"clip": "idle_up",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/idle_up_02.png",
+			"position": [
+				512.0,
+				430.3994140625
+			]
+		},
+		{
+			"animation": "idle_up",
+			"clip": "idle_up",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/idle_up_03.png",
+			"position": [
+				512.0,
+				430.3994140625
+			]
+		},
+		{
+			"animation": "idle_up",
+			"clip": "idle_up",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/idle_up_04.png",
+			"position": [
+				512.0,
+				430.3994140625
+			]
+		},
+		{
+			"animation": "idle_up",
+			"clip": "idle_up",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/idle_up_05.png",
+			"position": [
+				512.0,
+				430.3994140625
+			]
+		},
+		{
+			"animation": "idle_up",
+			"clip": "idle_up",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/idle_up_06.png",
+			"position": [
+				512.0,
+				430.3994140625
+			]
+		},
+		{
+			"animation": "idle_up",
+			"clip": "idle_up",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/idle_up_07.png",
+			"position": [
+				512.0,
+				430.3994140625
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_00.png",
+			"position": [
+				513.697021484375,
+				486.302917480469
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_01.png",
+			"position": [
+				515.39404296875,
+				484.605834960938
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_02.png",
+			"position": [
+				517.091064453125,
+				482.908752441406
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_03.png",
+			"position": [
+				518.7880859375,
+				481.211669921875
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_04.png",
+			"position": [
+				520.485107421875,
+				479.514587402344
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_05.png",
+			"position": [
+				522.18212890625,
+				477.817504882812
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_06.png",
+			"position": [
+				523.879150390625,
+				476.120422363281
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_07.png",
+			"position": [
+				525.576171875,
+				474.42333984375
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_08.png",
+			"position": [
+				527.273193359375,
+				472.726257324219
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_09.png",
+			"position": [
+				528.97021484375,
+				471.029174804688
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_10.png",
+			"position": [
+				530.667236328125,
+				469.332092285156
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_11.png",
+			"position": [
+				532.3642578125,
+				467.635009765625
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_12.png",
+			"position": [
+				534.061279296875,
+				465.937927246094
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_13.png",
+			"position": [
+				535.75830078125,
+				464.240844726562
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_14.png",
+			"position": [
+				537.455322265625,
+				462.543762207031
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_15.png",
+			"position": [
+				539.15234375,
+				460.8466796875
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_16.png",
+			"position": [
+				540.849365234375,
+				459.149597167969
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_17.png",
+			"position": [
+				542.54638671875,
+				457.452514648438
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 18,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_18.png",
+			"position": [
+				544.243408203125,
+				455.755432128906
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 19,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_19.png",
+			"position": [
+				545.9404296875,
+				454.058349609375
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 20,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_20.png",
+			"position": [
+				547.637451171875,
+				452.361267089844
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 21,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_21.png",
+			"position": [
+				549.33447265625,
+				450.664184570312
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 22,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_22.png",
+			"position": [
+				551.031494140625,
+				448.967102050781
+			]
+		},
+		{
+			"animation": "walk_up_right",
+			"clip": "walk_up_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 23,
+			"path": "res://tests/output/eight_direction_motion/walk_up_right_23.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_right",
+			"clip": "idle_up_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/idle_up_right_00.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_right",
+			"clip": "idle_up_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/idle_up_right_01.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_right",
+			"clip": "idle_up_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/idle_up_right_02.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_right",
+			"clip": "idle_up_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/idle_up_right_03.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_right",
+			"clip": "idle_up_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/idle_up_right_04.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_right",
+			"clip": "idle_up_right",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/idle_up_right_05.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_right",
+			"clip": "idle_up_right",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/idle_up_right_06.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_right",
+			"clip": "idle_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/idle_up_right_07.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": true,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_00.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 1,
+			"fx_frame": 1,
+			"fx_visible": true,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_01.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 1,
+			"fx_frame": 1,
+			"fx_visible": true,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_02.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_03.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_04.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_05.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 3,
+			"fx_frame": 3,
+			"fx_visible": true,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_06.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 4,
+			"fx_frame": 4,
+			"fx_visible": true,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_07.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 4,
+			"fx_frame": 4,
+			"fx_visible": true,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_08.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 5,
+			"fx_frame": 5,
+			"fx_visible": true,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_09.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 6,
+			"fx_frame": 6,
+			"fx_visible": true,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_10.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 6,
+			"fx_frame": 6,
+			"fx_visible": true,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_11.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": true,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_12.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": true,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_13.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_14.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "attack_up_right",
+			"clip": "attack_up_right",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_15.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_right",
+			"clip": "attack_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_16.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_right",
+			"clip": "attack_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/attack_up_right_17.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_right",
+			"clip": "hurt_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_right_00.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_right",
+			"clip": "hurt_up_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_right_01.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_right",
+			"clip": "hurt_up_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_right_02.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_right",
+			"clip": "hurt_up_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_right_03.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_right",
+			"clip": "hurt_up_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_right_04.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "hurt_up_right",
+			"clip": "hurt_up_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_right_05.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "idle_up_right",
+			"clip": "hurt_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/hurt_up_right_06.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_00.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_01.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_02.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_03.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_04.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_05.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_06.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_07.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_08.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_09.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_10.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_11.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_12.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_13.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_14.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_15.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_16.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "death_up_right",
+			"clip": "death_up_right",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/death_up_right_17.png",
+			"position": [
+				552.728515625,
+				447.27001953125
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/walk_right_00.png",
+			"position": [
+				514.400024414062,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/walk_right_01.png",
+			"position": [
+				516.800048828125,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/walk_right_02.png",
+			"position": [
+				519.200073242188,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/walk_right_03.png",
+			"position": [
+				521.60009765625,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/walk_right_04.png",
+			"position": [
+				524.000122070312,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/walk_right_05.png",
+			"position": [
+				526.400146484375,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/walk_right_06.png",
+			"position": [
+				528.800170898438,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/walk_right_07.png",
+			"position": [
+				531.2001953125,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/walk_right_08.png",
+			"position": [
+				533.600219726562,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/walk_right_09.png",
+			"position": [
+				536.000244140625,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/walk_right_10.png",
+			"position": [
+				538.400268554688,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/walk_right_11.png",
+			"position": [
+				540.80029296875,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/walk_right_12.png",
+			"position": [
+				543.200317382812,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/walk_right_13.png",
+			"position": [
+				545.600341796875,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/walk_right_14.png",
+			"position": [
+				548.000366210938,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/walk_right_15.png",
+			"position": [
+				550.400390625,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/walk_right_16.png",
+			"position": [
+				552.800415039062,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/walk_right_17.png",
+			"position": [
+				555.200439453125,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 18,
+			"path": "res://tests/output/eight_direction_motion/walk_right_18.png",
+			"position": [
+				557.600463867188,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 19,
+			"path": "res://tests/output/eight_direction_motion/walk_right_19.png",
+			"position": [
+				560.00048828125,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 20,
+			"path": "res://tests/output/eight_direction_motion/walk_right_20.png",
+			"position": [
+				562.400512695312,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 21,
+			"path": "res://tests/output/eight_direction_motion/walk_right_21.png",
+			"position": [
+				564.800537109375,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 22,
+			"path": "res://tests/output/eight_direction_motion/walk_right_22.png",
+			"position": [
+				567.200561523438,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_right",
+			"clip": "walk_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 23,
+			"path": "res://tests/output/eight_direction_motion/walk_right_23.png",
+			"position": [
+				569.6005859375,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_right",
+			"clip": "idle_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/idle_right_00.png",
+			"position": [
+				569.6005859375,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_right",
+			"clip": "idle_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/idle_right_01.png",
+			"position": [
+				569.6005859375,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_right",
+			"clip": "idle_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/idle_right_02.png",
+			"position": [
+				569.6005859375,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_right",
+			"clip": "idle_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/idle_right_03.png",
+			"position": [
+				569.6005859375,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_right",
+			"clip": "idle_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/idle_right_04.png",
+			"position": [
+				569.6005859375,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_right",
+			"clip": "idle_right",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/idle_right_05.png",
+			"position": [
+				569.6005859375,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_right",
+			"clip": "idle_right",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/idle_right_06.png",
+			"position": [
+				569.6005859375,
+				488.0
+			]
+		},
+		{
+			"animation": "idle_right",
+			"clip": "idle_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/idle_right_07.png",
+			"position": [
+				569.6005859375,
+				488.0
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_00.png",
+			"position": [
+				513.697021484375,
+				489.697082519531
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_01.png",
+			"position": [
+				515.39404296875,
+				491.394165039062
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_02.png",
+			"position": [
+				517.091064453125,
+				493.091247558594
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_03.png",
+			"position": [
+				518.7880859375,
+				494.788330078125
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_04.png",
+			"position": [
+				520.485107421875,
+				496.485412597656
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_05.png",
+			"position": [
+				522.18212890625,
+				498.182495117188
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_06.png",
+			"position": [
+				523.879150390625,
+				499.879577636719
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_07.png",
+			"position": [
+				525.576171875,
+				501.57666015625
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_08.png",
+			"position": [
+				527.273193359375,
+				503.273742675781
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_09.png",
+			"position": [
+				528.97021484375,
+				504.970825195312
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_10.png",
+			"position": [
+				530.667236328125,
+				506.667907714844
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_11.png",
+			"position": [
+				532.3642578125,
+				508.364990234375
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_12.png",
+			"position": [
+				534.061279296875,
+				510.062072753906
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_13.png",
+			"position": [
+				535.75830078125,
+				511.759155273438
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_14.png",
+			"position": [
+				537.455322265625,
+				513.456176757812
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_15.png",
+			"position": [
+				539.15234375,
+				515.153198242188
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_16.png",
+			"position": [
+				540.849365234375,
+				516.850219726562
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_17.png",
+			"position": [
+				542.54638671875,
+				518.547241210938
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 18,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_18.png",
+			"position": [
+				544.243408203125,
+				520.244262695312
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 19,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_19.png",
+			"position": [
+				545.9404296875,
+				521.941284179688
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 20,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_20.png",
+			"position": [
+				547.637451171875,
+				523.638305664062
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 21,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_21.png",
+			"position": [
+				549.33447265625,
+				525.335327148438
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 22,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_22.png",
+			"position": [
+				551.031494140625,
+				527.032348632812
+			]
+		},
+		{
+			"animation": "walk_down_right",
+			"clip": "walk_down_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 23,
+			"path": "res://tests/output/eight_direction_motion/walk_down_right_23.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_right",
+			"clip": "idle_down_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/idle_down_right_00.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_right",
+			"clip": "idle_down_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/idle_down_right_01.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_right",
+			"clip": "idle_down_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/idle_down_right_02.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_right",
+			"clip": "idle_down_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/idle_down_right_03.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_right",
+			"clip": "idle_down_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/idle_down_right_04.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_right",
+			"clip": "idle_down_right",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/idle_down_right_05.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_right",
+			"clip": "idle_down_right",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/idle_down_right_06.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_right",
+			"clip": "idle_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/idle_down_right_07.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 0,
+			"fx_frame": 0,
+			"fx_visible": true,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_00.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 1,
+			"fx_frame": 1,
+			"fx_visible": true,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_01.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 1,
+			"fx_frame": 1,
+			"fx_visible": true,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_02.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_03.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_04.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 2,
+			"fx_frame": 2,
+			"fx_visible": true,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_05.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 3,
+			"fx_frame": 3,
+			"fx_visible": true,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_06.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 4,
+			"fx_frame": 4,
+			"fx_visible": true,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_07.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 4,
+			"fx_frame": 4,
+			"fx_visible": true,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_08.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 5,
+			"fx_frame": 5,
+			"fx_visible": true,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_09.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 6,
+			"fx_frame": 6,
+			"fx_visible": true,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_10.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 6,
+			"fx_frame": 6,
+			"fx_visible": true,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_11.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": true,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_12.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": true,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_13.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_14.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "attack_down_right",
+			"clip": "attack_down_right",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_15.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_right",
+			"clip": "attack_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_16.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_right",
+			"clip": "attack_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/attack_down_right_17.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_right",
+			"clip": "hurt_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_right_00.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_right",
+			"clip": "hurt_down_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_right_01.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_right",
+			"clip": "hurt_down_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_right_02.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_right",
+			"clip": "hurt_down_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_right_03.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_right",
+			"clip": "hurt_down_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_right_04.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "hurt_down_right",
+			"clip": "hurt_down_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_right_05.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "idle_down_right",
+			"clip": "hurt_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/hurt_down_right_06.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 0,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_00.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 0,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 1,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_01.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 2,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_02.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 1,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 3,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_03.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 4,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_04.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 2,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 5,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_05.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 6,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_06.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 3,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 7,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_07.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 8,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_08.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 4,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 9,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_09.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 10,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_10.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 5,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 11,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_11.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 12,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_12.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 6,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 13,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_13.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 14,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_14.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 7,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 15,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_15.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 16,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_16.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		},
+		{
+			"animation": "death_down_right",
+			"clip": "death_down_right",
+			"frame": 8,
+			"fx_frame": 7,
+			"fx_visible": false,
+			"index": 17,
+			"path": "res://tests/output/eight_direction_motion/death_down_right_17.png",
+			"position": [
+				552.728515625,
+				528.729370117188
+			]
+		}
+	],
+	"walk_sample_ms": 33.3333333333333
+}

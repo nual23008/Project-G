@@ -1,6 +1,8 @@
 extends RefCounted
 ## Single-slot versioned save; checksum, schema validation, temp+atomic rename and backup.
-const VERSION: int = 2
+const VERSION: int = 3
+const INVENTORY := preload("res://scripts/inventory/inventory.gd")
+const LEGACY_ITEMS: Array[String] = ["rust_sword","potion","herb","ore","echo_shard"]
 const PROGRESSION := preload("res://scripts/progression/progression.gd")
 const MAX_ORB_EXPERIENCE: int = 2000000000000
 const MAX_SPAWN_CYCLE: int = 1000000000000
@@ -35,7 +37,8 @@ func read_valid(file_path: String) -> Dictionary:
 	# a version-1 envelope cannot smuggle high HP, XP drops or a forged point pool.
 	if not _valid_snapshot_version(parser.data, version):
 		return {}
-	return _migrate_v1(parser.data) if version == 1 else _normalize_v2(parser.data)
+	var normalized: Dictionary = _migrate_v1(parser.data) if version == 1 else _normalize_v2(parser.data)
+	return _migrate_equipment(normalized) if version < 3 else normalized
 
 func load_game() -> Dictionary:
 	recovered_backup = false
@@ -55,6 +58,8 @@ func save_game(snapshot: Dictionary) -> bool:
 		last_error = "Trạng thái chưa hợp lệ để lưu."
 		return false
 	var normalized: Dictionary = _migrate_v1(snapshot) if not snapshot.has("progression") and not snapshot.has("vitals") else _normalize_v2(snapshot)
+	if not normalized.has("equipment"):
+		normalized = _migrate_equipment(normalized)
 	var payload: String = JSON.stringify(normalized)
 	var encoded: String = JSON.stringify({"version":VERSION,"payload":payload,"checksum":payload.sha256_text()})
 	if not _write(path+".tmp",encoded) or read_valid(path+".tmp").is_empty():
@@ -109,8 +114,17 @@ func valid_snapshot(data: Variant) -> bool:
 		return false
 	# Public compatibility for old callers passing a payload rather than an
 	# envelope. A partially-upgraded payload is invalid, never silently defaulted.
-	var version: int = VERSION if data.has("progression") or data.has("vitals") else 1
+	var version: int = 3 if data.has("equipment") else (2 if data.has("progression") or data.has("vitals") else 1)
 	return _valid_snapshot_version(data, version)
+
+func _migrate_equipment(data: Dictionary) -> Dictionary:
+	var result: Dictionary = data.duplicate(true)
+	var inventory: RefCounted = INVENTORY.new()
+	inventory.restore(result.inventory)
+	inventory.equip_starter()
+	result.inventory = inventory.slots.duplicate(true)
+	result.equipment = inventory.equipment.duplicate(true)
+	return result
 
 func _migrate_v1(data: Dictionary) -> Dictionary:
 	var migrated: Dictionary = data.duplicate(true)
@@ -133,7 +147,7 @@ func _normalize_v2(data: Dictionary) -> Dictionary:
 
 func _valid_snapshot_version(data: Variant, version: int) -> bool:
 	var maximum_health: int = 100
-	if version == VERSION:
+	if version >= 2:
 		if not data is Dictionary:
 			return false
 		var progression: RefCounted = PROGRESSION.new()
@@ -146,8 +160,12 @@ func _valid_snapshot_version(data: Variant, version: int) -> bool:
 	elif version != 1:
 		return false
 	elif not data is Dictionary or data.has("progression") or data.has("vitals"):
-		# These fields belong exclusively to v2. A flipped envelope version must
+		# These fields were introduced in v2. A flipped envelope version must
 		# trigger backup recovery, never reset an existing profile through migration.
+		return false
+	if version < 3 and data.has("equipment"):
+		return false
+	if version == 3 and not INVENTORY.valid_equipment(data.get("equipment"),items):
 		return false
 	if not data is Dictionary or not data.get("zone") in ["dawn_village","whispering_forest"] or not _point(data.get("position")) or not _integer(data.get("hp"),1,maximum_health):
 		return false
@@ -157,6 +175,8 @@ func _valid_snapshot_version(data: Variant, version: int) -> bool:
 		if not slot is Dictionary:
 			return false
 		if not slot.is_empty() and (not items.has(slot.get("id")) or not _integer(slot.get("count"),1,int(items[slot.id].max_stack))):
+			return false
+		if version < 3 and not slot.is_empty() and not str(slot.id) in LEGACY_ITEMS:
 			return false
 	var progress: Variant = data.get("quest")
 	if not progress is Dictionary or not progress.get("status") in ["available","active","completed"] or not progress.get("reward_claimed") is bool or not progress.get("events") is Dictionary:
@@ -182,7 +202,7 @@ func _valid_snapshot_version(data: Variant, version: int) -> bool:
 			return false
 		if version == 1 and area.has("spawn_cycles"):
 			return false
-		if version == VERSION:
+		if version >= 2:
 			var cycles: Variant = area.get("spawn_cycles", {})
 			if not cycles is Dictionary:
 				return false
@@ -198,12 +218,14 @@ func _valid_snapshot_version(data: Variant, version: int) -> bool:
 		for drop: Variant in area.drops:
 			if not drop is Dictionary or not drop.get("id") is String or drop.id.is_empty() or drop.id.length()>100 or seen.has(drop.id) or not _point(drop.get("at")):
 				return false
-			if version == VERSION and drop.get("kind") == "experience":
+			if version >= 2 and drop.get("kind") == "experience":
 				if not _integer(drop.get("amount"), 1, MAX_ORB_EXPERIENCE) or drop.has("item") or drop.has("count") or area.collected.has(drop.id):
 					return false
 				if drop.has("source_enemy") and not drop.source_enemy in ["scout_a", "scout_b", "guardian"]:
 					return false
 			elif drop.get("kind") != "drop" or not items.has(drop.get("item")) or not _integer(drop.get("count"), 1, 99):
+				return false
+			if version < 3 and drop.has("item") and not str(drop.item) in LEGACY_ITEMS:
 				return false
 			seen[drop.id] = true
 	return true

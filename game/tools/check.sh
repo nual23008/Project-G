@@ -5,6 +5,13 @@ GODOT_BIN="${GODOT_BIN:-/home/luan/Downloads/Godot_v4.7.2-stable_linux.x86_64}"
 mkdir -p tests/output
 "$GODOT_BIN" --headless --path . --import --log-file "$PWD/tests/output/import.log"
 if rg -n 'SCRIPT ERROR|^ERROR:' tests/output/import.log; then exit 1; fi
+python3 tests/launcher_pointer_test.py
+"$GODOT_BIN" --headless --path . --fixed-fps 60 --script res://tests/equipment_test.gd --log-file "$PWD/tests/output/equipment.log"
+if rg -n 'SCRIPT ERROR|^ERROR:|^FAIL:' tests/output/equipment.log; then exit 1; fi
+"$GODOT_BIN" --headless --path . --fixed-fps 60 --script res://tests/polish_controls_test.gd --log-file "$PWD/tests/output/polish-controls.log"
+if rg -n 'SCRIPT ERROR|^ERROR:|^FAIL:' tests/output/polish-controls.log; then exit 1; fi
+"$GODOT_BIN" --headless --path . --fixed-fps 60 --script res://tests/player_eight_direction_test.gd --log-file "$PWD/tests/output/player-eight-direction.log"
+if rg -n 'SCRIPT ERROR|^ERROR:|^FAIL:' tests/output/player-eight-direction.log; then exit 1; fi
 "$GODOT_BIN" --headless --path . --fixed-fps 60 --script res://tests/progression_model_test.gd --log-file "$PWD/tests/output/progression-model.log"
 if rg -n 'SCRIPT ERROR|^ERROR:|^FAIL:' tests/output/progression-model.log; then exit 1; fi
 "$GODOT_BIN" --headless --path . --fixed-fps 60 --script res://tests/progression_combat_test.gd --log-file "$PWD/tests/output/progression-combat.log"

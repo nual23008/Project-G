@@ -7,11 +7,17 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / 'assets/art_refresh'
-GROUPS = ['actors', 'props', 'world', 'ui_fx', 'progression']
+GROUPS = ['actors', 'props', 'world', 'ui_fx', 'progression', 'polish', 'equipment']
 REQUIRED = {'player','rowan','enemy','house','pine','oak','rock','lamp','crystal','fence','sign','fern','flowers','chest','portal',
             'rust_sword','potion','herb','ore','echo_shard','grass','stone_path','water','shore','firefly','glow',
             'ui_panel','ui_button','ui_health','sword_slash','enemy_strike','hit_spark','enemy_telegraph',
-            'experience_orb','level_up','empowered_slash','ui_experience','ui_energy','ui_stamina','ui_stats_panel'}
+            'experience_orb','level_up','empowered_slash','ui_experience','ui_energy','ui_stamina','ui_stats_panel','footstep_dust','falling_leaf'}
+CATALOG = json.loads((ROOT / 'resources/items/items.json').read_text())
+REQUIRED.add('player_hands')
+for item, data in CATALOG.items():
+    if data.get('allowed_slots'):
+        REQUIRED.add(item)
+        REQUIRED.update('gear_'+item+'_'+slot for slot in data['allowed_slots'])
 
 
 def merge():
@@ -27,7 +33,7 @@ def merge():
         entry['design_id'] = 'new_20261102:' + name
         for state in entry['states'].values():
             state['design_id'] = entry['design_id']
-        if name not in {'sword_slash','enemy_strike','hit_spark','enemy_telegraph','empowered_slash','level_up'}:
+        if name not in {'sword_slash','enemy_strike','hit_spark','enemy_telegraph','empowered_slash','level_up','footstep_dust'}:
             idle = [s for n,s in entry['states'].items() if n.startswith('idle') or n == 'normal']
             assert idle and all(s['count'] > 1 and s['loop'] for s in idle), (name, 'missing ambient loop')
     (ROOT / 'resources/art/manifest.json').write_text(json.dumps(registry,indent=2,ensure_ascii=False) + '\n')
@@ -36,6 +42,6 @@ def merge():
 
 if __name__ == '__main__':
     if '--merge-only' not in sys.argv:
-        for script in ['build_refresh_actors.py','build_refresh_props.py','build_refresh_world.py','build_refresh_ui_fx.py','build_progression_art.py']:
+        for script in ['build_refresh_actors.py','build_refresh_props.py','build_refresh_world.py','build_refresh_ui_fx.py','build_progression_art.py','build_polish_art.py','build_equipment_art.py']:
             subprocess.run([sys.executable,str(ROOT / 'tools' / script)],check=True)
     merge()

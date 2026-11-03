@@ -1,7 +1,148 @@
 {
- "rust_sword":{"name":"Kiếm lữ hành","description":"Lưỡi kiếm cũ nhưng đáng tin. Mang trong túi để dùng đòn cận chiến.","type":"weapon","max_stack":1,"damage":18,"icon":0},
- "potion":{"name":"Thuốc hồi phục","description":"Hồi 40 HP. Không tiêu hao khi máu đã đầy.","type":"consumable","max_stack":9,"heal":40,"icon":1},
- "herb":{"name":"Lá sương","description":"Thảo dược mọc bên những phiến đá ẩm.","type":"resource","max_stack":20,"icon":2},
- "ore":{"name":"Quặng ký ức","description":"Quặng nhạt màu thu được từ sinh vật tinh thể.","type":"resource","max_stack":20,"icon":3},
- "echo_shard":{"name":"Mảnh dư âm cổ","description":"Mảnh tinh thể tìm trong rừng. Giữ lại để Lyra nghiên cứu ở chương tiếp theo.","type":"quest","max_stack":1,"icon":4}
+  "rust_sword": {
+    "name": "Kiếm lữ hành",
+    "description": "Sát thương cơ bản 18. Phải cầm trong một tay để chém; kiếm nằm trong túi không tăng sát thương.",
+    "type": "weapon",
+    "max_stack": 1,
+    "damage": 18,
+    "icon": 0,
+    "allowed_slots": [
+      "weapon_left",
+      "weapon_right"
+    ],
+    "visual": "rust_sword"
+  },
+  "potion": {
+    "name": "Thuốc hồi phục",
+    "description": "Hồi 40 HP. Không tiêu hao khi máu đã đầy.",
+    "type": "consumable",
+    "max_stack": 9,
+    "heal": 40,
+    "icon": 1
+  },
+  "herb": {
+    "name": "Lá sương",
+    "description": "Thảo dược mọc bên những phiến đá ẩm.",
+    "type": "resource",
+    "max_stack": 20,
+    "icon": 2
+  },
+  "ore": {
+    "name": "Quặng ký ức",
+    "description": "Quặng nhạt màu thu được từ sinh vật tinh thể.",
+    "type": "resource",
+    "max_stack": 20,
+    "icon": 3
+  },
+  "echo_shard": {
+    "name": "Mảnh dư âm cổ",
+    "description": "Mảnh tinh thể tìm trong rừng. Giữ lại để Lyra nghiên cứu ở chương tiếp theo.",
+    "type": "quest",
+    "max_stack": 1,
+    "icon": 4
+  },
+  "traveler_hat": {
+    "name": "Mũ lữ hành",
+    "description": "Mũ nỉ màu rượu, viền đồng. Đổi ngoại hình, không tăng chỉ số.",
+    "type": "equipment",
+    "max_stack": 1,
+    "icon": 0,
+    "allowed_slots": [
+      "hat"
+    ],
+    "visual": "traveler_hat"
+  },
+  "indigo_coat": {
+    "name": "Áo choàng indigo",
+    "description": "Áo indigo viền vàng, kèm khăn kem và túi da. Trang phục ngoại hình.",
+    "type": "equipment",
+    "max_stack": 1,
+    "icon": 0,
+    "allowed_slots": [
+      "shirt"
+    ],
+    "visual": "indigo_coat"
+  },
+  "linen_tunic": {
+    "name": "Áo linen kem",
+    "description": "Áo linen màu kem, thay cho bộ áo indigo. Trang phục ngoại hình.",
+    "type": "equipment",
+    "max_stack": 1,
+    "icon": 0,
+    "allowed_slots": [
+      "shirt"
+    ],
+    "visual": "linen_tunic"
+  },
+  "traveler_pants": {
+    "name": "Quần lữ hành",
+    "description": "Quần vải taupe với đường may chắc, dùng cho cả hai chân. Trang phục ngoại hình.",
+    "type": "equipment",
+    "max_stack": 1,
+    "icon": 0,
+    "allowed_slots": [
+      "pants"
+    ],
+    "visual": "traveler_pants"
+  },
+  "leather_boot": {
+    "name": "Giày da",
+    "description": "Một chiếc giày da nâu. Mỗi chân cần một chiếc riêng. Trang phục ngoại hình.",
+    "type": "equipment",
+    "max_stack": 1,
+    "icon": 0,
+    "allowed_slots": [
+      "shoe_left",
+      "shoe_right"
+    ],
+    "visual": "leather_boot"
+  },
+  "amber_necklace": {
+    "name": "Vòng cổ hổ phách",
+    "description": "Vòng cổ có mặt hổ phách, bắt sáng nhẹ. Phụ kiện ngoại hình.",
+    "type": "equipment",
+    "max_stack": 1,
+    "icon": 0,
+    "allowed_slots": [
+      "necklace"
+    ],
+    "visual": "amber_necklace"
+  },
+  "copper_bracelet": {
+    "name": "Vòng tay đồng",
+    "description": "Một vòng tay đồng; đeo riêng ở tay trái hoặc phải. Phụ kiện ngoại hình.",
+    "type": "equipment",
+    "max_stack": 1,
+    "icon": 0,
+    "allowed_slots": [
+      "bracelet_left",
+      "bracelet_right"
+    ],
+    "visual": "copper_bracelet"
+  },
+  "leather_glove": {
+    "name": "Găng tay da",
+    "description": "Một găng da bảo vệ bàn tay. Mỗi tay dùng một chiếc. Trang phục ngoại hình.",
+    "type": "equipment",
+    "max_stack": 1,
+    "icon": 0,
+    "allowed_slots": [
+      "glove_left",
+      "glove_right"
+    ],
+    "visual": "leather_glove"
+  },
+  "steel_sword": {
+    "name": "Kiếm thép",
+    "description": "Sát thương cơ bản 24. Cầm ở một tay để chém; ưu tiên tay phải.",
+    "type": "weapon",
+    "max_stack": 1,
+    "icon": 0,
+    "allowed_slots": [
+      "weapon_left",
+      "weapon_right"
+    ],
+    "visual": "steel_sword",
+    "damage": 24
+  }
 }

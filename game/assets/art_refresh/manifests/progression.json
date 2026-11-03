@@ -212,12 +212,12 @@
     "resource": "res://resources/art/empowered_slash.tres",
     "texture": "res://assets/art_refresh/sheets/empowered_slash.png",
     "frame_size": [
-      72,
-      72
+      96,
+      96
     ],
     "pivot": [
-      36,
-      36
+      48,
+      48
     ],
     "columns": 8,
     "states": {
@@ -237,7 +237,7 @@
         "loop": false
       }
     },
-    "source": "Empowered state of the existing blade ribbon: identical curve/canvas/pivot/contact; violet energy and warm cream highlight",
+    "source": "Original96px tapered layered blade sweep: distinct anticipation/contact/overshoot/dispersal; copper/cream or violet; native grid sources/equipment_fx; build_equipment_fx.py",
     "backend": "SpriteFrames",
     "revision": "art_refresh",
     "contact_frame": 2,

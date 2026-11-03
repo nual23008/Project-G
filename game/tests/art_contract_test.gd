@@ -23,6 +23,13 @@ func run() -> void:
 	var registry: Dictionary = parsed
 	var required_ids: Array[String] = ["player", "rowan", "enemy", "house", "pine", "oak", "rock", "lamp", "crystal", "fence", "sign", "fern", "flowers", "chest", "portal", "rust_sword", "potion", "herb", "ore", "echo_shard", "sword_slash", "enemy_strike", "enemy_telegraph", "hit_spark", "grass", "stone_path", "water", "shore", "ui_panel", "ui_button", "ui_health", "firefly", "glow"]
 	required_ids.append_array(["experience_orb", "level_up", "empowered_slash", "ui_experience", "ui_energy", "ui_stamina", "ui_stats_panel"])
+	required_ids.append_array(["footstep_dust","falling_leaf"])
+	required_ids.append("player_hands")
+	var equipment_catalog: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://resources/items/items.json"))
+	for item: String in equipment_catalog:
+		if equipment_catalog[item].has("allowed_slots"):
+			if not required_ids.has(item): required_ids.append(item)
+			for slot: String in equipment_catalog[item].allowed_slots: required_ids.append("gear_"+item+"_"+slot)
 	for id: String in required_ids:
 		check(registry.has(id), "Visible type has a registered art resource: " + id)
 	for id: String in registry:
@@ -56,7 +63,11 @@ func validate_idle_without_interaction() -> void:
 		var sprite := node as AnimatedSprite2D
 		if not sprite.is_visible_in_tree():
 			continue
-		if not sprite.is_playing() or not sprite.sprite_frames.get_animation_loop(sprite.animation):
+		var running: bool = sprite.is_playing()
+		if sprite.has_meta(&"pose_clock"):
+			var clock: AnimatedSprite2D = sprite.get_meta(&"pose_clock")
+			running = clock.is_playing() and clock.animation == sprite.animation and clock.frame == sprite.frame
+		if not running or not sprite.sprite_frames.get_animation_loop(sprite.animation):
 			stopped.append(str(sprite.get_path()))
 		observations.append({"sprite": sprite, "frames": {}})
 	for _i: int in range(150):
@@ -119,7 +130,7 @@ func validate_asset(id: String, entry: Dictionary) -> void:
 	if not resource is SpriteFrames or not texture is Texture2D:
 		return
 	var sprite_frames: SpriteFrames = resource
-	if not id in ["sword_slash", "enemy_strike", "enemy_telegraph", "hit_spark", "empowered_slash", "level_up"]:
+	if not id in ["sword_slash", "enemy_strike", "enemy_telegraph", "hit_spark", "empowered_slash", "level_up", "footstep_dust"]:
 		var idle_states: Array[String] = []
 		for state: StringName in sprite_frames.get_animation_names():
 			if str(state).begins_with("idle") or state == &"normal":
@@ -149,7 +160,7 @@ func validate_asset(id: String, entry: Dictionary) -> void:
 	if id in ["sword_slash", "enemy_strike", "empowered_slash"]:
 		validate_contact(id, entry, sprite_frames)
 	if id == "player":
-		for direction: String in ["down", "left", "right", "up"]:
+		for direction: String in ["down", "left", "right", "up", "down_right", "down_left", "up_right", "up_left"]:
 			for state_name: String in ["idle", "walk", "attack", "hurt", "death"]:
 				check(sprite_frames.has_animation(state_name + "_" + direction), "Player behavior has directional animation: " + state_name + "_" + direction)
 

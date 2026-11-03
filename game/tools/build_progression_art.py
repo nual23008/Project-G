@@ -85,6 +85,15 @@ def effects():
         for n in range(15):
             angle=a-span/2+span*n/14;outer.append((round(36+math.cos(angle)*29),round(36+math.sin(angle)*29)));inner.append((round(36+math.cos(angle)*24),round(36+math.sin(angle)*24)))
         d.polygon(outer+inner[::-1],fill='#a980cc');d.line(outer,fill='#f6e3b0')
+        if i in [1,2,3,4]:
+            for layer,tone in enumerate(['#6a4b81','#c7a4e3','#fff0c9']):
+                points=[]
+                for k in range(13):
+                    angle=a-span*.6+span*k/12;r=23-layer*2+round(k/4)
+                    points.append((round(36+math.cos(angle)*r),round(36+math.sin(angle)*r)))
+                d.line(points,fill=tone,width=2 if layer == 0 else 1)
+        if i in [2,3]:
+            d.polygon([(62,35),(68,30),(65,36),(68,41),(61,37)],fill='#fff0c9')
         for j in range(3):
             angle=a-.2-j*.15;x=round(36+math.cos(angle)*31);y=round(36+math.sin(angle)*31);d.point((x,y),fill='#f0bc73')
         fs.append(grid(im,f'empowered_slash_{i}'))

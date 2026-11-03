@@ -14,4 +14,26 @@ if [[ ! -x "$ENGINE" ]]; then
     echo 'Không tìm thấy Godot 4. Đặt GODOT_BIN=/đường/dẫn/Godot rồi chạy lại.' >&2
     exit 1
 fi
-exec "$ENGINE" --path "$PROJECT_ROOT/game" "$@"
+# GNOME's typing guard disables a laptop touchpad while WASD is held. Scope
+# the override to this game process and restore the exact prior preference.
+touchpad_previous=""
+game_pid=""
+restore_pointer() {
+    if [[ -n "$touchpad_previous" ]]; then
+        gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing "$touchpad_previous" >/dev/null 2>&1 || true
+    fi
+}
+trap restore_pointer EXIT
+trap '[[ -z "$game_pid" ]] || kill -TERM "$game_pid" 2>/dev/null; exit 130' INT
+trap '[[ -z "$game_pid" ]] || kill -TERM "$game_pid" 2>/dev/null; exit 143' TERM HUP
+if [[ " $* " != *" --headless "* && " $* " != *" --script "* && " $* " != *" --editor "* ]] && command -v gsettings >/dev/null 2>&1; then
+    touchpad_previous="$(gsettings get org.gnome.desktop.peripherals.touchpad disable-while-typing 2>/dev/null || true)"
+    if [[ "$touchpad_previous" == "true" ]]; then
+        gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing false >/dev/null 2>&1 || touchpad_previous=""
+    else
+        touchpad_previous=""
+    fi
+fi
+"$ENGINE" --path "$PROJECT_ROOT/game" "$@" &
+game_pid=$!
+wait "$game_pid"

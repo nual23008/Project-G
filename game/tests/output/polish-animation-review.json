@@ -1,0 +1,311 @@
+{
+  "ok": true,
+  "engine_captures": 87,
+  "new_and_changed_art": {
+    "footstep_dust": {
+      "play": {
+        "playback_frames": 8,
+        "distinct_drawings": 8,
+        "fps": 24,
+        "loop": false
+      }
+    },
+    "falling_leaf": {
+      "idle": {
+        "playback_frames": 8,
+        "distinct_drawings": 6,
+        "fps": 8,
+        "loop": true
+      }
+    },
+    "sword_slash": {
+      "play": {
+        "playback_frames": 8,
+        "distinct_drawings": 8,
+        "fps": 33.333333333333336,
+        "loop": false
+      }
+    },
+    "empowered_slash": {
+      "play": {
+        "playback_frames": 8,
+        "distinct_drawings": 8,
+        "fps": 33.333333333333336,
+        "loop": false
+      }
+    },
+    "grass": {
+      "idle": {
+        "playback_frames": 4,
+        "distinct_drawings": 4,
+        "fps": 2,
+        "loop": true
+      }
+    },
+    "stone_path": {
+      "idle": {
+        "playback_frames": 4,
+        "distinct_drawings": 4,
+        "fps": 0.8,
+        "loop": true
+      },
+      "edges": {
+        "playback_frames": 4,
+        "distinct_drawings": 4,
+        "fps": 0.8,
+        "loop": true
+      }
+    },
+    "water": {
+      "idle": {
+        "playback_frames": 4,
+        "distinct_drawings": 4,
+        "fps": 5,
+        "loop": true
+      }
+    },
+    "player": {
+      "idle_down": {
+        "playback_frames": 8,
+        "distinct_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down": {
+        "playback_frames": 6,
+        "distinct_drawings": 6,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down": {
+        "playback_frames": 5,
+        "distinct_drawings": 4,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_left": {
+        "playback_frames": 8,
+        "distinct_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_left": {
+        "playback_frames": 6,
+        "distinct_drawings": 6,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_left": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_left": {
+        "playback_frames": 5,
+        "distinct_drawings": 4,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_left": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_right": {
+        "playback_frames": 8,
+        "distinct_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_right": {
+        "playback_frames": 6,
+        "distinct_drawings": 6,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_right": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_right": {
+        "playback_frames": 5,
+        "distinct_drawings": 4,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_right": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up": {
+        "playback_frames": 8,
+        "distinct_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up": {
+        "playback_frames": 6,
+        "distinct_drawings": 6,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up": {
+        "playback_frames": 5,
+        "distinct_drawings": 4,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_down_right": {
+        "playback_frames": 8,
+        "distinct_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down_right": {
+        "playback_frames": 6,
+        "distinct_drawings": 6,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down_right": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down_right": {
+        "playback_frames": 5,
+        "distinct_drawings": 4,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down_right": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_down_left": {
+        "playback_frames": 8,
+        "distinct_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down_left": {
+        "playback_frames": 6,
+        "distinct_drawings": 6,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down_left": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down_left": {
+        "playback_frames": 5,
+        "distinct_drawings": 4,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down_left": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up_right": {
+        "playback_frames": 8,
+        "distinct_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up_right": {
+        "playback_frames": 6,
+        "distinct_drawings": 6,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up_right": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up_right": {
+        "playback_frames": 5,
+        "distinct_drawings": 4,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up_right": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up_left": {
+        "playback_frames": 8,
+        "distinct_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up_left": {
+        "playback_frames": 6,
+        "distinct_drawings": 6,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up_left": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up_left": {
+        "playback_frames": 5,
+        "distinct_drawings": 4,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up_left": {
+        "playback_frames": 9,
+        "distinct_drawings": 9,
+        "fps": 10.0,
+        "loop": false
+      }
+    }
+  },
+  "note": "Renderer preview uses real Godot SubViewport logical sizes for 16:9, 16:10, and 21:9; physical Wayland window resizing is capped by the desktop. Source holds counted honestly."
+}

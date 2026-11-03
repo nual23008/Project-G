@@ -75,6 +75,11 @@ def grass(variation, frame):
     d.line((x, y - 1, x + lean, y - 3), fill=C['grass_light'])
     # Second leaf has a quarter-cycle delay; return pose is not a duplicate.
     d.line((x + 3, y + 1, x + 3 + [0, -1, 0, 1][phase], y - 1), fill=C['grass_patch'])
+    for tx,ty in [(2+variation%3,14),(12-variation%3,4),(7,8+variation%2)]:
+        d.line((tx,ty,tx-2,ty-2),fill=C['grass_shadow'])
+        d.line((tx,ty,tx+2,ty-3),fill=C['grass_patch'])
+        d.line((tx,ty-1,tx+lean,ty-4),fill=C['grass_light'] if ty == 14 else C['grass_patch'])
+        d.point((tx+lean,ty-4),fill=C['grass_tip'] if ty == 14 else C['grass_light'])
     return im
 
 
@@ -119,6 +124,10 @@ def flagstone(variation, frame):
     first, second = reflections[phase]
     d.point((x, y), fill=C[first])
     d.point((x + 1, y), fill=C[second])
+    for cx,cy in [(3,11),(13,6)]:
+        cx,cy=turn_point((cx,cy),variation%4)
+        d.line((cx,cy,cx+1,cy+2),fill=C['stone_shadow'])
+        d.point((cx-1,cy),fill=C['stone_edge'])
     return im
 
 
@@ -138,6 +147,10 @@ def water(variation, frame):
             d.line((xx + length - 1, y, xx + length, y), fill=C['water'])
             if j == 0 and phase in [1, 2]:
                 d.line((xx + 2, y - 1, xx + 3, y - 1), fill=C['water_crest'])
+    for xx,yy in [(2,14),(11,6)]:
+        xx=(xx+phase+variation)%16
+        d.line((xx,yy,xx+2,yy),fill=C['water'])
+        d.point(((xx+1)%16,yy-1),fill=C['water_lit'])
     return im
 
 

@@ -72,6 +72,22 @@ def slash(name, color):
             inner.append((round(36+math.cos(a)*(25-(3 if i in [2,3] else 0))),round(36+math.sin(a)*(25-(3 if i in [2,3] else 0)))))
         d.polygon(outer+inner[::-1],fill=color)
         d.line(outer,fill=CREAM,width=1)
+        if i in [1,2,3,4]:
+            # Tapered copper afterimage and cream blade core.
+            for layer in range(3):
+                points=[]
+                for n in range(13):
+                    t=n/12
+                    a=center-span*.6+span*t
+                    r=23-layer*2+round(t*3)
+                    points.append((round(36+math.cos(a)*r),round(36+math.sin(a)*r)))
+                d.line(points,fill=['#b57950',GOLD,CREAM][layer],width=2 if layer == 0 else 1)
+        if i in [2,3]:
+            d.line((62,32,67,36,62,40),fill='#fff0c9',width=2)
+            for k in range(5):
+                a=-.9+k*.42
+                x=round(36+math.cos(a)*33);y=round(36+math.sin(a)*33)
+                d.line((x,y,x+2,y+(-1 if k<2 else 1)),fill=GOLD)
         for k in range(3 if i>1 else 1):
             a=center-span/2-k*.16
             x=round(36+math.cos(a)*(30+k)); y=round(36+math.sin(a)*(30+k))

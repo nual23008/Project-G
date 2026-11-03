@@ -1,9 +1,19 @@
 extends CharacterBody2D
+const FOOTSTEP_ART: SpriteFrames = preload("res://resources/art/footstep_dust.tres")
+const FOOTSTEP_EFFECT := preload("res://scripts/combat/sprite_effect.gd")
+var stride_distance: float = 0.0
+var step_left: bool = false
+var equipment_visual: Node2D
+var weapon_contacts: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://resources/equipment/contacts.json"))
 
 signal fallen
 signal resources_changed(energy: float, max_energy: float, stamina: float, max_stamina: float)
 signal action_failed(reason: String)
 enum State { IDLE, WALK, ATTACK, HURT, DEATH }
+## Clockwise 45-degree sectors in screen space. Input.get_vector caps diagonal
+## length at one; facing changes the artwork/aim, never the movement speed.
+const FACING_NAMES: Array[String] = ["right", "down_right", "down", "down_left", "left", "up_left", "up", "up_right"]
+const FACING_VECTORS: Array[Vector2] = [Vector2.RIGHT, Vector2(0.7071067811865476,0.7071067811865476), Vector2.DOWN, Vector2(-0.7071067811865476,0.7071067811865476), Vector2.LEFT, Vector2(-0.7071067811865476,-0.7071067811865476), Vector2.UP, Vector2(0.7071067811865476,-0.7071067811865476)]
 const ATTACK_DURATION: float = 0.27
 const HURT_DURATION: float = 0.22
 const DEATH_DURATION: float = 0.9
@@ -50,6 +60,12 @@ var death_announced: bool = false
 @onready var melee: Node2D = $Melee
 
 func _ready() -> void:
+	equipment_visual = preload("res://scripts/player/equipment_visual.gd").new()
+	add_child(equipment_visual)
+	equipment_visual.setup(sprite)
+	var initial: Dictionary = preload("res://scripts/inventory/inventory.gd").STARTER.duplicate(true)
+	initial.weapon_right = "rust_sword"
+	equipment_visual.apply_equipment(initial)
 	crit_rng.randomize()
 	health.damaged.connect(_on_damaged)
 	melee.contact.connect(_on_swing_contact)
@@ -58,6 +74,8 @@ func _physics_process(delta: float) -> void:
 	cooldown = maxf(0.0,cooldown-delta)
 	state_time -= delta
 	if health.current <= 0:
+		# A death pose must not retain the final red invulnerability flash.
+		sprite.modulate = Color.WHITE
 		sprinting = false
 		if state != State.DEATH:
 			state = State.DEATH
@@ -89,16 +107,36 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * (run_speed if wants_sprint else walk_speed)
 	state = State.WALK if direction.length_squared() > 0.0 else State.IDLE
 	if state == State.WALK:
-		if absf(direction.x) > absf(direction.y):
-			facing = "right" if direction.x > 0.0 else "left"
-		else:
-			facing = "down" if direction.y > 0.0 else "up"
+		facing = _facing_from_vector(direction)
 	var before_move: Vector2 = position
 	move_and_slide()
 	# A held Shift against a wall is not a running movement and spends nothing.
 	_tick_resources(delta,wants_sprint and position.distance_squared_to(before_move) > 0.000001)
-	sprite.play(("walk_" if state == State.WALK else "idle_") + facing)
+	if state == State.WALK:
+		stride_distance += position.distance_to(before_move)
+		if stride_distance >= (16.0 if sprinting else 12.0):
+			stride_distance = 0.0
+			step_left = not step_left
+			FOOTSTEP_EFFECT.spawn(get_parent(),FOOTSTEP_ART,global_position+Vector2(-3 if step_left else 3,1),Vector2(12,12))
+	else:
+		stride_distance = 0.0
+	_play_locomotion()
 	sprite.speed_scale = (1.45 if sprinting else 1.0) * walk_speed / 72.0 if state == State.WALK else 1.0
+
+func _facing_from_vector(direction: Vector2) -> String:
+	if direction.is_zero_approx():
+		return facing
+	return FACING_NAMES[posmod(roundi(direction.angle() / (PI / 4.0)), 8)]
+
+func _play_locomotion() -> void:
+	var animation_name: String = ("walk_" if state == State.WALK else "idle_") + facing
+	# A turn during the stride changes the view without restarting the gait.
+	var keep_stride: bool = state == State.WALK and str(sprite.animation).begins_with("walk_") and str(sprite.animation) != animation_name
+	var previous_frame: int = sprite.frame
+	var previous_progress: float = sprite.frame_progress
+	sprite.play(animation_name)
+	if keep_stride:
+		sprite.set_frame_and_progress(previous_frame, previous_progress)
 
 func apply_stats(values: Dictionary, refill: bool = false) -> void:
 	# Main applies weapon base + damage_bonus exactly once. This method only
@@ -170,7 +208,20 @@ func _emit_resources() -> void:
 	resources_changed.emit(energy,max_energy,stamina,max_stamina)
 
 func aim_vector() -> Vector2:
-	return {"left":Vector2.LEFT,"right":Vector2.RIGHT,"up":Vector2.UP,"down":Vector2.DOWN}[facing]
+	var index: int = FACING_NAMES.find(facing)
+	return FACING_VECTORS[index] if index >= 0 else Vector2.DOWN
+
+func set_equipment(equipment: Dictionary) -> void:
+	if not is_instance_valid(equipment_visual): return
+	if equipment_visual.loadout != equipment and state == State.ATTACK:
+		# A weapon/clothing swap must not leave an old hit armed under new art.
+		# Keep its already-paid mana and cooldown, like any interrupted swing.
+		melee.cancel()
+		state = State.IDLE
+		state_time = 0.0
+		sprite.speed_scale = 1.0
+		sprite.play("idle_"+facing)
+	equipment_visual.apply_equipment(equipment)
 
 func attack(mouse_aim: bool = false) -> bool:
 	return _begin_attack(mouse_aim,false)
@@ -198,7 +249,10 @@ func _begin_attack(mouse_aim: bool, empowered: bool) -> bool:
 	if mouse_aim:
 		var aim: Vector2 = get_global_mouse_position()-global_position
 		if aim.length() > 5:
-			facing = ("right" if aim.x > 0 else "left") if absf(aim.x)>absf(aim.y) else ("down" if aim.y>0 else "up")
+			facing = _facing_from_vector(aim)
+	var hand: String = "weapon_right" if not str(equipment_visual.loadout.get("weapon_right","")).is_empty() else "weapon_left"
+	var contact: Array = weapon_contacts[facing][hand]
+	melee.weapon_contact_tip = Vector2(contact[0],contact[1])
 	if not melee.begin(aim_vector(),weapon_damage,empowered):
 		action_failed.emit("Đòn đánh chưa sẵn sàng.")
 		return false

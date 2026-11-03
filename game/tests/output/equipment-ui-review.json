@@ -1,0 +1,528 @@
+{
+	"captures": [
+		{
+			"animation": "idle_down",
+			"damage": 18,
+			"frame": 0,
+			"layers": {
+				"bare_hands": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"hat": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"pants": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "default",
+					"frame": 0,
+					"visible": false
+				},
+				"weapon_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "indigo_coat",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "",
+				"weapon_right": "rust_sword"
+			},
+			"name": "bag_default"
+		},
+		{
+			"animation": "idle_down",
+			"damage": 0,
+			"frame": 0,
+			"layers": {
+				"bare_hands": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"bracelet_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"glove_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"glove_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"hat": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"necklace": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"pants": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"shirt": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"shoe_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"shoe_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"weapon_left": {
+					"animation": "default",
+					"frame": 0,
+					"visible": false
+				},
+				"weapon_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				}
+			},
+			"loadout": {
+				"bracelet_left": "",
+				"bracelet_right": "",
+				"glove_left": "",
+				"glove_right": "",
+				"hat": "",
+				"necklace": "",
+				"pants": "",
+				"shirt": "",
+				"shoe_left": "",
+				"shoe_right": "",
+				"weapon_left": "",
+				"weapon_right": ""
+			},
+			"name": "bag_removed"
+		},
+		{
+			"animation": "idle_down",
+			"damage": 24,
+			"frame": 0,
+			"layers": {
+				"bare_hands": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"bracelet_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"hat": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"pants": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"shoe_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "bag_asymmetric"
+		},
+		{
+			"animation": "idle_down",
+			"damage": 24,
+			"frame": 0,
+			"layers": {
+				"bare_hands": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"bracelet_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"hat": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"pants": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"shoe_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "bag_wide_640x400"
+		},
+		{
+			"animation": "idle_down",
+			"damage": 24,
+			"frame": 0,
+			"layers": {
+				"bare_hands": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"bracelet_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"hat": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"pants": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"shoe_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "bag_wide_854x360"
+		},
+		{
+			"animation": "idle_down",
+			"damage": 24,
+			"frame": 0,
+			"layers": {
+				"bare_hands": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"bracelet_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"hat": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"pants": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				},
+				"shoe_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "world_asymmetric"
+		}
+	],
+	"failures": 0,
+	"renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)"
+}

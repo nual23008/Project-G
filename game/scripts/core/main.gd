@@ -10,7 +10,9 @@ const SAVES := preload("res://scripts/save/save_service.gd")
 const PROGRESSION := preload("res://scripts/progression/progression.gd")
 const EFFECT := preload("res://scripts/combat/sprite_effect.gd")
 const LEVEL_UP: SpriteFrames = preload("res://resources/art/level_up.tres")
-enum Mode { MENU, PLAYING, DIALOGUE, PAUSED, SETTINGS, INVENTORY_OPEN, JOURNAL, DEAD, CHARACTER }
+enum Mode { MENU, PLAYING, DIALOGUE, PAUSED, SETTINGS, INVENTORY_OPEN, JOURNAL, DEAD, CHARACTER, HUB_SYSTEM }
+const ZOOM_LEVELS: Array[float] = [0.75, 1.0, 1.25, 1.5, 2.0]
+var view_zoom: float = 1.0
 var mode: Mode = Mode.MENU
 var settings_return: Mode = Mode.MENU
 var world: Node2D
@@ -28,6 +30,9 @@ var areas: Dictionary = {}
 
 func _ready() -> void:
 	INPUT_SETUP.configure()
+	add_child(preload("res://scripts/core/desktop_pointer.gd").new())
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	get_viewport().size_changed.connect(_apply_zoom)
 	inventory = INVENTORY.new()
 	quests = QUESTS.new()
 	progression = PROGRESSION.new()
@@ -59,6 +64,11 @@ func _ready() -> void:
 	ui.respawn_requested.connect(respawn)
 	ui.character_requested.connect(open_character)
 	ui.allocate_stat_requested.connect(allocate_stat)
+	ui.hub_requested.connect(open_hub)
+	ui.hub_tab_requested.connect(select_hub_tab)
+	ui.zoom_requested.connect(change_zoom)
+	ui.equip_requested.connect(equip_item)
+	ui.unequip_requested.connect(unequip_item)
 	_replace_world(false)
 	_refresh_inventory()
 	ui.update_quest(quests)
@@ -95,6 +105,7 @@ func _replace_world(playing: bool, next_zone: String = "dawn_village") -> void:
 		world.camera.reset_smoothing()
 	ui.set_prompt(null)
 	_refresh_inventory()
+	_apply_zoom()
 
 func start_game() -> void:
 	dialogue.cancel()
@@ -104,6 +115,9 @@ func start_game() -> void:
 	inventory.clear()
 	inventory.add("rust_sword",1)
 	inventory.add("potion",3)
+	inventory.equip_starter()
+	inventory.add("steel_sword",1)
+	inventory.add("linen_tunic",1)
 	quests.restore({"status":"available","events":{},"reward_claimed":false})
 	_replace_world(true)
 	ui.set_met_rowan(false)
@@ -123,7 +137,9 @@ func _set_mode(next_mode: Mode) -> void:
 	get_tree().paused = mode != Mode.PLAYING
 	world.player.input_enabled = mode == Mode.PLAYING
 	world.player.stop()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	var screens: Dictionary = {Mode.MENU:"menu", Mode.PLAYING:"play", Mode.DIALOGUE:"dialogue", Mode.PAUSED:"pause", Mode.SETTINGS:"settings",Mode.INVENTORY_OPEN:"inventory",Mode.JOURNAL:"journal",Mode.DEAD:"death",Mode.CHARACTER:"character"}
+	screens[Mode.HUB_SYSTEM] = "system"
 	ui.show_screen(screens[mode])
 
 func pause_game() -> void:
@@ -131,11 +147,11 @@ func pause_game() -> void:
 		_set_mode(Mode.PAUSED)
 
 func resume_game() -> void:
-	if mode == Mode.PAUSED:
+	if mode in [Mode.PAUSED,Mode.HUB_SYSTEM]:
 		_set_mode(Mode.PLAYING)
 
 func open_settings() -> void:
-	if mode not in [Mode.MENU, Mode.PAUSED]:
+	if mode not in [Mode.MENU, Mode.PAUSED, Mode.HUB_SYSTEM]:
 		return
 	settings_return = mode
 	_set_mode(Mode.SETTINGS)
@@ -185,7 +201,7 @@ func _dialogue_finished(id: String) -> void:
 	world.open_gate(quests.status != "available")
 	ui.update_quest(quests)
 	if id == "rowan" and quests.status == "active":
-		ui.notify("Đã nhận Dư Âm Đầu Tiên. Cổng bắc đã mở; nhấn Q xem mục tiêu.")
+		ui.notify("Cổng bắc đã mở · E → Nhiệm vụ để xem mục tiêu.")
 	_set_mode(Mode.PLAYING)
 
 func close_dialogue() -> void:
@@ -198,7 +214,12 @@ func _set_effects(enabled: bool) -> void:
 	world.get_node("Atmosphere").visible = enabled
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("fullscreen"):
+	if event is InputEventKey and event.echo:
+		return
+	if event is InputEventMouseButton and event.pressed and event.button_index in [MOUSE_BUTTON_WHEEL_UP,MOUSE_BUTTON_WHEEL_DOWN] and mode == Mode.PLAYING:
+		change_zoom(1 if event.button_index == MOUSE_BUTTON_WHEEL_UP else -1)
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("fullscreen"):
 		var full: bool = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED if full else DisplayServer.WINDOW_MODE_FULLSCREEN)
 		ui.sync_fullscreen()
@@ -209,11 +230,14 @@ func _unhandled_input(event: InputEvent) -> void:
 			Mode.PAUSED: resume_game()
 			Mode.DIALOGUE: close_dialogue()
 			Mode.SETTINGS: close_settings()
-			Mode.INVENTORY_OPEN, Mode.JOURNAL, Mode.CHARACTER: close_overlay()
+			Mode.INVENTORY_OPEN, Mode.JOURNAL, Mode.CHARACTER, Mode.HUB_SYSTEM: close_overlay()
 		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("interact"):
 		if mode == Mode.PLAYING:
-			interact()
+			if world.player.interaction.get_target() != null or not event is InputEventMouseButton:
+				interact()
+			else:
+				world.player.empowered_attack(true)
 		elif mode == Mode.DIALOGUE:
 			advance_dialogue()
 		get_viewport().set_input_as_handled()
@@ -222,9 +246,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("inventory"):
 		if mode == Mode.PLAYING and world.player.hp>0:
-			_set_mode(Mode.INVENTORY_OPEN)
-		elif mode == Mode.INVENTORY_OPEN:
+			open_hub()
+		elif mode in [Mode.INVENTORY_OPEN,Mode.CHARACTER,Mode.JOURNAL,Mode.HUB_SYSTEM]:
 			close_overlay()
+		elif mode == Mode.DIALOGUE:
+			advance_dialogue()
+		elif mode == Mode.SETTINGS and settings_return == Mode.HUB_SYSTEM:
+			close_settings()
+			close_overlay()
+		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("journal"):
 		if mode == Mode.PLAYING and world.player.hp>0:
 			_set_mode(Mode.JOURNAL)
@@ -248,8 +278,29 @@ func _unhandled_input(event: InputEvent) -> void:
 		save_game()
 
 func close_overlay() -> void:
-	if mode in [Mode.INVENTORY_OPEN,Mode.JOURNAL,Mode.CHARACTER]:
+	if mode in [Mode.INVENTORY_OPEN,Mode.JOURNAL,Mode.CHARACTER,Mode.HUB_SYSTEM]:
 		_set_mode(Mode.PLAYING)
+
+func open_hub() -> void:
+	if mode == Mode.PLAYING and world.player.hp > 0:
+		_set_mode(Mode.INVENTORY_OPEN)
+
+func select_hub_tab(index: int) -> void:
+	if mode in [Mode.INVENTORY_OPEN,Mode.CHARACTER,Mode.JOURNAL,Mode.HUB_SYSTEM] and index >= 0 and index < 4:
+		_set_mode([Mode.INVENTORY_OPEN,Mode.CHARACTER,Mode.JOURNAL,Mode.HUB_SYSTEM][index])
+
+func change_zoom(step: int) -> void:
+	var index: int = ZOOM_LEVELS.find(view_zoom)
+	view_zoom = ZOOM_LEVELS[clampi(index+step,0,ZOOM_LEVELS.size()-1)] if step != 0 else 1.0
+	_apply_zoom()
+
+func _apply_zoom() -> void:
+	if not is_instance_valid(world):
+		return
+	var viewport_size: Vector2 = get_viewport().get_visible_rect().size
+	var minimum: float = maxf(viewport_size.x/(float(world.definition.width)*16.0),viewport_size.y/(float(world.definition.height)*16.0))
+	world.camera.zoom = Vector2.ONE * maxf(view_zoom,minimum)
+	ui.set_zoom(world.camera.zoom.x)
 
 func open_character() -> void:
 	if mode == Mode.PLAYING and world.player.hp > 0:
@@ -270,7 +321,7 @@ func _on_progression_changed() -> void:
 func _on_level_gained(_old_level: int, new_level: int, points: int) -> void:
 	if is_instance_valid(world):
 		EFFECT.spawn(world.actors, LEVEL_UP, world.player.global_position + Vector2(0,-18), Vector2(48,48))
-	ui.notify("Lên cấp "+str(new_level)+"! +"+str(points)+" điểm chỉ số · Nhấn C để phân bổ.")
+	ui.notify("Lên cấp "+str(new_level)+"! +"+str(points)+" điểm · E → Nâng điểm.")
 
 func _gain_experience(amount: int) -> void:
 	if mode != Mode.PLAYING or world.player.hp <= 0:
@@ -285,7 +336,16 @@ func _gain_experience(amount: int) -> void:
 func _refresh_inventory() -> void:
 	ui.update_inventory(inventory)
 	if is_instance_valid(world):
-		world.player.weapon_damage = int(inventory.database.rust_sword.damage) + int(progression.derived_stats().damage_bonus) if inventory.count("rust_sword")>0 else 0
+		world.player.weapon_damage = inventory.weapon_damage() + int(progression.derived_stats().damage_bonus) if inventory.weapon_damage()>0 else 0
+		world.player.set_equipment(inventory.equipment)
+
+func equip_item(index: int, slot: String) -> void:
+	if mode != Mode.INVENTORY_OPEN: return
+	if not inventory.equip(index,slot): ui.show_inventory_error(inventory.last_error)
+
+func unequip_item(slot: String) -> void:
+	if mode != Mode.INVENTORY_OPEN: return
+	if not inventory.unequip(slot): ui.show_inventory_error(inventory.last_error)
 
 func use_item(index: int) -> void:
 	if mode not in [Mode.PLAYING,Mode.INVENTORY_OPEN]:
@@ -379,10 +439,10 @@ func respawn() -> void:
 
 func snapshot() -> Dictionary:
 	areas[zone] = world.snapshot()
-	return {"zone":zone,"position":[world.player.position.x,world.player.position.y],"hp":world.player.hp,"inventory":inventory.slots.duplicate(true),"quest":quests.snapshot(),"flags":{"met_rowan":met_rowan},"areas":areas.duplicate(true),"progression":progression.snapshot(),"vitals":{"energy":world.player.energy,"stamina":world.player.stamina}}
+	return {"zone":zone,"position":[world.player.position.x,world.player.position.y],"hp":world.player.hp,"inventory":inventory.slots.duplicate(true),"equipment":inventory.equipment.duplicate(true),"quest":quests.snapshot(),"flags":{"met_rowan":met_rowan},"areas":areas.duplicate(true),"progression":progression.snapshot(),"vitals":{"energy":world.player.energy,"stamina":world.player.stamina}}
 
 func save_game() -> bool:
-	if mode not in [Mode.PLAYING,Mode.PAUSED] or world.player.hp<=0:
+	if mode not in [Mode.PLAYING,Mode.PAUSED,Mode.HUB_SYSTEM] or world.player.hp<=0:
 		return false
 	var success: bool = saves.save_game(snapshot())
 	var message: String = "Đã lưu hành trình. Có thể Tiếp tục từ màn hình chính." if success else saves.last_error
@@ -392,7 +452,7 @@ func save_game() -> bool:
 	return success
 
 func load_game() -> bool:
-	if mode not in [Mode.MENU,Mode.PAUSED]:
+	if mode not in [Mode.MENU,Mode.PAUSED,Mode.HUB_SYSTEM]:
 		return false
 	var data: Dictionary = saves.load_game()
 	if data.is_empty():
@@ -405,6 +465,7 @@ func load_game() -> bool:
 	areas = data.areas.duplicate(true)
 	met_rowan = bool(data.flags.met_rowan)
 	inventory.restore(data.inventory)
+	inventory.restore_equipment(data.equipment)
 	quests.restore(data.quest)
 	_replace_world(true,str(data.zone))
 	world.player.position = Vector2(data.position[0],data.position[1])

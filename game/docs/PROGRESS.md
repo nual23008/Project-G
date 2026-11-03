@@ -1,5 +1,65 @@
 # Tiến độ
 
+## 2026-11-03 — Trang bị 12 ô và hiệu ứng chém mới
+
+Đã phân tích và triển khai [tính năng trang bị](EQUIPMENT_IMPLEMENTATION.md). Nhấn **E** để mở hành trang, chọn vật phẩm trong túi → chọn ô phù hợp → Trang bị; chọn ô đang mặc → Tháo.
+
+- Đủ 12 ô: mũ, áo, quần, giày trái/phải, vòng cổ, vòng tay trái/phải, găng tay trái/phải, vũ khí trái/phải. Mỗi bên dùng một món riêng. Ngoại hình và preview thay theo từng ô; base bên dưới là trang phục linen kín đáo, không còn kiếm/áo/giày baked khi tháo.
+- Inventory giữ 16 ô túi cùng equipment riêng. Đổi đồ là giao dịch nguyên tử, dùng chính ô túi vừa trống để chứa món thay ra; tháo khi túi đầy báo lỗi và giữ nguyên đồ. Đổi trang bị giữa windup hủy pending hit/VFX, giữ mana/cooldown đã tiêu; giao dịch lỗi không hủy đòn.
+- Vũ khí đang cầm quyết định damage: tay phải ưu tiên, tay trái dự phòng; hai tay trống không chém hoặc tiêu mana. Kiếm lữ hành 18, kiếm thép 24 sát thương cơ bản. Hai vũ khí không cộng damage hoặc đánh hai hit. Quần áo/phụ kiện hiện đổi ngoại hình, chưa thêm bonus chỉ số, rarity hoặc độ bền. Game mới có bộ mặc sẵn và áo linen/kiếm thép để thay thử.
+- Hero cùng nhân dạng, đủ idle/walk/attack/hurt/death × 8 hướng trên tất cả lớp. `equipment_visual.gd` lấy animation/frame/progress từ clock gốc; không lệch chân hoặc contact. Idle có nhịp thở thân/đầu/tay 1 pixel, chân giữ đất. Manifest ghi số hình khác nhau và map hold thật, không tính frame trùng là hình mới.
+- Slash thường/cường hóa có sheet 96×96 riêng, lõi sáng, crescent, dư ảnh và mảnh tan; hit spark 48×48 riêng. Tip của từng tay/tám hướng được xuất từ frame vũ khí thật và dùng đặt VFX. Body/VFX/damage giữ contact frame 2, tick 0,1 giây; tầm, LOS, cost và cooldown giữ cân bằng hiện có.
+- Save **v3** lưu đủ 12 ô. V1/v2 qua checksum/schema gốc trước khi migrate trong bộ nhớ: giữ túi, quest, progression, vitals và world; đưa một kiếm có sẵn sang tay phải, cấp trang phục cosmetic khởi đầu. Đọc/load/has_save không ghi đĩa; save mới vẫn ghi tạm/xác minh/atomic rename/backup. Bộ test dùng file riêng, không ghi primary save người chơi.
+- Pipeline nhóm thứ 7 `build_equipment_art.py` + `build_equipment_fx.py`: **67 loại / 755 state / 5.590 lượt frame**. Có 17 lớp actor × 296 frame; mọi icon/lớp mới có nguồn, SpriteFrames, manifest và runtime riêng. Nguồn đầu/nhân dạng là bản active được giữ tại `assets/equipment/sources`; generator và native grid là master, chưa có `.pxo`; đợt này không dùng API trả phí.
+
+### Nghiệm thu trên mã và asset cuối
+
+- `bash game/tools/check.sh`: **5.326/5.326 assertions Godot + 5/5 kiểm tra launcher**, import không có lỗi script/resource. Suite trang bị 116; điều khiển 47; tám hướng 136; model/save 129; combat 83; UI 35; integration 30; art 4.612; làng 68; RPG 57; journey 13. Log tại `tests/output/equipment.log` và các log hồi quy tương ứng.
+- Kiểm tra 12 giao dịch mặc/tháo, hai bên độc lập, full bag không mất/nhân đôi đồ, đổi hai kiếm khác nhau khi túi đầy, compatibility, unarmed/left-only/right priority, ghost hit khi thay đồ, pause/UI preview, save v3 roundtrip và migration/backup/schema cũ. Không thay thế playtest tay dài.
+- Renderer Intel Iris Xe / Compatibility: **546 capture, 0 lỗi**, gồm 6 cảnh/UI, đủ tám hướng idle/walk/slash/hurt/death, left-only và empowered. Matrix SubViewport 640×360, 640×400, 854×360; không tuyên bố có màn hình phần cứng ultrawide. Đã xem contact sheet idle/chém/chết và ba trạng thái mặc/tháo/bất đối xứng. `gd_review.image_checks` **13/13 đạt**.
+- [Hành trang và các bộ mặc](../tests/output/equipment-outfits.png), [preview chém](../tests/output/equipment-slash.gif), [chém cường hóa](../tests/output/equipment-empowered.gif), [đi tám hướng](../tests/output/equipment-walk.gif), [idle](../tests/output/equipment-idle.gif), [hurt](../tests/output/equipment-hurt.gif), [death](../tests/output/equipment-death.gif). [Renderer](../tests/output/equipment-render-review.json), [timing/hold/contact](../tests/output/equipment-animation-review.json), [kiểm ảnh](../tests/output/equipment-image-review.json).
+- Guard **5.032 frame actor** không cắt biên hoặc vượt pivot; 29 loại được kiểm pixel/timing. Tất cả lớp cùng 40 state/FPS/frame count; contact tip nằm trên pixel thật của kiếm. Rebuild generator cuối + merge bảy fragment giữ đúng hash toàn bộ texture/resource/manifest/contact active: [kết quả](../tests/output/equipment-rebuild-review.json). Tái tạo render bằng `tests/equipment_preview.gd`, đóng gói bằng `tools/package_equipment_preview.py`.
+
+Khởi động lại bằng `bash run_game.sh` để nhận phiên bản mới. Không thêm dual-wield, vũ khí hai tay, đồ rơi trang bị mới hoặc chế tạo trong đợt này.
+
+## 2026-11-03 — Sửa chuột, toàn màn hình, zoom và hành trang chung E
+
+Đã phân tích và triển khai theo [đặc tả/kết quả chi tiết](POLISH_CONTROLS_AND_VISUALS.md). Giữ hero tám hướng, gameplay và save v2.
+
+- Máy GNOME/Wayland bật `disable-while-typing=true`, gây chặn touchpad khi giữ WASD; không có capture/warp chuột trong game. `desktop_pointer.gd` tạm tắt preference cho process game và restore khi exit. Launcher thêm trap restore khi engine lỗi/tín hiệu; headless/QA job không đổi desktop. Mouse Visible. Đã quan sát process native **true→false→true**, exit0; [record](../tests/output/polish-pointer-native-review.json). Chưa nhận là thử touchpad vật lý bằng tay.
+- Mặc định fullscreen, viewport expand/integer/nearest; vùng nhìn phủ tỷ lệ màn hình, HUD neo cạnh/overlay ở giữa. Zoom con lăn75/100/125/150/200%, nút−/+/100% trong cài đặt, giới hạn theo map tránh void. Zoom giữ trong phiên/khi đổi vùng, HUD không zoom.
+- E mở hành trang kể cả cạnh NPC: Túi đồ / Nâng điểm / Nhiệm vụ / Hệ thống. Dùng thuốc, tiêu điểm7chỉ số/batch, xem quest, lưu/tải/cài đặt/về menu trong bảng. Main giữ pause/giao dịch. E/Esc đóng; E trong hội thoại tiếp lời. Chuột phải tương tác gần/tầm nhìn hợp lệ, nếu không có target thì empowered; F dự phòng. Shortcut cũ còn tương thích, footer chỉ hướng dẫn nhóm điều khiển chính.
+- Đồ họa: bake bóng chân cùng96×64/pivot48,60 cho40state player; bụi bước theo quãng đường thật, tự hủy; slash thường/cường hóa thêm lõi/dư ảnh/flare; cỏ/khe đá/gợn nước nâng chi tiết;16lá rơi lệch phase/tốc độ. Contact body/VFX/hitbox vẫnframe2 ởtick0,1s, không đổi damage/cost/cooldown/collision.
+- Hai asset mới có nguồn grid/resource/manifest/runtime riêng: `footstep_dust`24×16/pivot12,12/play8@24 (8hình), `falling_leaf`16×16/pivot8,8/idle8@8 (6hình/2hold). Generator nhóm thứ6 `build_polish_art.py`; build tổng giữ đủ **42loại/97state/710lượt frame**. Không gọi paid API, không đổi nhân dạng hoặc ghép state thiết kế khác. Actor rebuild sau dọn code giữ đúng SHA-256sheet/resource/manifest.
+
+### Nghiệm thu trên mã cuối
+
+- `bash game/tools/check.sh`: **1.549/1.549 assertions Godot và5/5test launcher**, import sạch. Suite mới47; tám hướng128; model/save128; combat83; UI35; integration30; art960; làng68; RPG57; journey13. Log `tests/output/polish-controls.log` và các log hồi quy hiện có; launcher test kiểm normal/error/false preference/headless/termination trong tempdir.
+- Suite mới dùng input thật của engine: E/echo/nav, HP/điểm/potion/save/load/settings, pause, right-click context, zoom clamp/không zoom qua túi, chuyển chuột và click chém khi đang giữ phím đi, bụi sinh/hủy; layout cả4tab tại1280×720,1366×768,1920×1200,2560×1080. Đây là kiểm tự động, không thay thế playtest tay dài.
+- Renderer Intel Iris Xe/Compatibility: **87capture** gồm15ảnh cảnh/UI và72motion sample (36walk30Hz,18slash+18empowered60Hz). Wayland giới hạn resize cửa sổ vật lý; matrix render SubViewport logical640×360/683×384/640×400/854×360 kiểm16:9,16:10,21:9, không tuyên bố có màn hình phần cứng21:9. Đã xem bốn tab/settings/world/zoom/ultrawide và contact sheet. `gd_review.image_checks`13/13đạt.
+- [Preview chuyển động/chém](../tests/output/polish-motion.gif), [world màn rộng](../tests/output/polish/wide_2560x1080.png), [nâng điểm trong hành trang](../tests/output/polish/hub_1.png), [motion contact](../tests/output/polish-motion-contact.png), [renderer review](../tests/output/polish-render-review.json), [art/timing review](../tests/output/polish-animation-review.json), [image review](../tests/output/polish-image-review.json). Tái tạo bằng `tests/polish_preview.gd` và `tools/package_polish_preview.py`.
+
+Không ghi primary save hoặc dừng phiên game cũ đang mở; cần khởi động lại bằng `bash run_game.sh` để nhận mã/asset mới. Zoom chưa lưu qua các lần mở; không thêm cây ability/map mới, chưa QA gamepad/Windows/audio trong đợt này.
+
+## 2026-11-03 — Nhân vật di chuyển và animation tám hướng
+
+Yêu cầu tiếp tục: nhân vật đi đủ8hướng và có animation khi di chuyển. Trước sửa, vị trí đã đi chéo nhưng facing/art chỉ4hướng. Đã nối đủ8hướng vào runtime, giữ thiết kế hero đang active.
+
+- `player.gd`: tám sector45° cho hướng đi/aim, vector chéo chuẩn hóa; tốc độ khởi đầu vẫn72/112px/s. Walk đổi hướng giữ frame/progress; dừng về idle cùng hướng, giữ cadence sprint/Speed và khóa UI. J/R/chuột đánh chéo cùng body/VFX/hitbox, không đổi nhịp contact/cooldown/mana/damage.
+- Thêm4hướng chéo ×5state (idle/walk/attack/hurt/death), **148lượt frame mới**. Player40state/296frame,96×64,pivot48,60. Tổng manifest40loại/95state/694frame. Sheet/resource/manifest/runtime/generator đều cập nhật; không dùng candidate SpriteFusion chưa duyệt. Walk mỗi hướng có6hình khác; idle8lượt/6hình, không giả animation bằng frame trùng toàn bộ.
+- Built-in ImageGen tạo hai nguồn cùng tóc/khăn/áo/vật liệu/palette hero; đã sửa góc lên phải từ ngang sang lưng. PNG/prompt/reference lưu `assets/art_refresh/sources/hero_{walk,attack}_diagonal.png`, `hero_diagonal_generation.json`. Không dùng paid API; chưa có `.pxo`. Actor generator giữ alpha/canvas/pivot, loại speck nhỏ sau downsample tránh neo chân vào pixel rời. [Brief chi tiết](PLAYER_EIGHT_DIRECTION.md).
+
+### Nghiệm thu
+
+Godot4.7.2 / Linux Compatibility. `bash game/tools/check.sh`: **1.474/1.474 assertions đạt**, import sạch. Bộ tám hướng mới128, model/save128, combat83, UI35, integration30, art932, hồi quy làng68, RPG57, journey13. Save kiểm thử riêng; không đổi schema hoặc save người chơi.
+
+- [Suite tám hướng](../tests/player_eight_direction_test.gd) thử input/physics thật cả8hướng, tốc độ đi/chạy, idle không input, cadence/chuyển hướng giữa bước, opposing keys, sector aim, trượt tường, UI lock, hurt/death và một hit đúng frame2body/VFX ở tick0,1s. Log `tests/output/player-eight-direction.log`.
+- Guard cả **350frame actor**, không cắt biên/bottom vượt pivot; idle/walk/hurt đáy60. Kiểm pixel của40clip player:296lượt/272hình khác khi đếm riêng từng clip; không clip tĩnh, walk đủ6hình, loop seam không vượt2,5×medianstep. Giữ holds thật.
+- Renderer Intel Iris Xe: **428ảnh thật** trong map qua input, đủ6frame walk/hướng; idle8sample/1,6s không trôi, bốn hướng chéo có attack/hurt/death. Đã xem identity/dải frame đi/chém/chết và preview đã đóng gói. [GIF đi8hướng](../tests/output/eight-direction-walk.gif), [idle](../tests/output/eight-direction-idle.gif), [attack](../tests/output/eight-direction-attack.gif), [hurt](../tests/output/eight-direction-hurt.gif), [death](../tests/output/eight-direction-death.gif), [ảnh trong game](../tests/output/eight-direction-in-game.png), [review timing/frame](../tests/output/eight-direction-animation-review.json). Fixture ngắt mở menu chết giữa các take để quay state; hồi quy cũ kiểm luồng chết thật.
+- Generator dựng lại sheet/resource/manifest **đúng SHA-256**. `gd_review.image_checks` kiểm render/contact; kết quả `tests/output/eight-direction-image-review.json`. Render log `tests/output/eight-direction-render.log`; script tái tạo `tests/player_eight_direction_preview.gd` + `tools/package_eight_direction_preview.py`.
+
+Điều khiển: WASD/mũi tên, giữ hai phím để đi chéo; Shift chạy. Khởi động `bash run_game.sh`. Không thêm hành vi/map/NPC; chưa playtest tay dài hoặc gamepad.
+
 ## 2026-11-02 — Bàn giao phiên: skill Pixelorama và rà soát asset hiện tại
 
 Người dùng kết thúc phiên vì hết quota và yêu cầu ghi lại để tiếp tục lần sau. Đã tạo skill và đọc bộ asset hiện tại; chưa có yêu cầu sản xuất hoặc thay thế đồ họa tiếp theo. Việc rà soát này không sửa asset, scene, gameplay hoặc save.

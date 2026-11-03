@@ -1,0 +1,1311 @@
+{
+	"captures": [
+		{
+			"animation": "idle_down",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "world_100",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "world_075",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 0.75
+		},
+		{
+			"animation": "idle_down",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "world_150",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.5
+		},
+		{
+			"animation": "idle_down",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "hub_0",
+			"screen": "inventory",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "hub_1",
+			"screen": "character",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "hub_2",
+			"screen": "journal",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "hub_3",
+			"screen": "system",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "settings",
+			"screen": "settings",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "wide_1366x768",
+			"screen": "play",
+			"size": [
+				683,
+				384
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "stats_1366x768",
+			"screen": "character",
+			"size": [
+				683,
+				384
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "wide_1920x1200",
+			"screen": "play",
+			"size": [
+				640,
+				400
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "stats_1920x1200",
+			"screen": "character",
+			"size": [
+				640,
+				400
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "wide_2560x1080",
+			"screen": "play",
+			"size": [
+				854,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "stats_2560x1080",
+			"screen": "character",
+			"size": [
+				854,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_00",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_01",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_02",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_03",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_04",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_05",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_06",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_07",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_08",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_09",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 3,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_10",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 3,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_11",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 3,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_12",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 4,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_13",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 4,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_14",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 4,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_15",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 5,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_16",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 5,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_17",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 5,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_18",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 5,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_19",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_20",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_21",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_22",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_23",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_24",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_25",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_26",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_27",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_28",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_29",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 3,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_30",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 3,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_31",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 3,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_32",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 4,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_33",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 4,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_34",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "walk_down_right",
+			"frame": 4,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "walk_35",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_00",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_01",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_02",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_03",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_04",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_05",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 3,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_06",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 4,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_07",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 4,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_08",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 5,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_09",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 6,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_10",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 6,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_11",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 7,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_12",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 7,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_13",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 8,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_14",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 8,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_15",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_up_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_16",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_up_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "slash_17",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_00",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_01",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_02",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_03",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_04",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 2,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_05",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 3,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_06",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 4,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_07",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 4,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_08",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 5,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_09",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 6,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_10",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 6,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_11",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 7,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_12",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 7,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_13",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 8,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_14",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "attack_up_right",
+			"frame": 8,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_15",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_up_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_16",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_up_right",
+			"frame": 0,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "empowered_17",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		},
+		{
+			"animation": "idle_down",
+			"frame": 1,
+			"mouse": [
+				1022.0,
+				1036.0
+			],
+			"name": "forest",
+			"screen": "play",
+			"size": [
+				640,
+				360
+			],
+			"zoom": 1.0
+		}
+	],
+	"failures": 0,
+	"renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)"
+}

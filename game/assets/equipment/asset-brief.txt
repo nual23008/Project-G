@@ -1,0 +1,14 @@
+subject      : coherent removable fantasy hero, fixing detached neck/limbs and idle pixel swim
+role in game : same hero, 12 independently removable equipment slots, eight directions
+canvas       : 96x64; feet pivot 48,60; head identity preserved at native scale
+palette      : existing amber/indigo/plum/leather identity; fixed skin/linen ramps; light top-left
+block        : 1px native character scale (body ~28x52), no resampling or random glints
+must read as : one connected person with attached neck, shoulders, hands and feet
+states       : idle8, walk6, attack9, hurt5, death9 per direction; honest holds
+deliverable  : dedicated layer PNGs/SpriteFrames/manifest, rig anchors, motion previews and QA
+process      : native joint-authored body/clothes, overlapping neck/shoulder/waist/wrist/ankle;
+               reusable face/hair identity only; no colour-mask clothing cuts; rigid blades
+gate         : connected opaque base, attached gear, grounded idle soles, fixed head/neck origin;
+               no stochastic highlight edits; all clips have real drawings; engine regression
+report       : show stripped/default/asymmetric body, all states/directions, compare old defects;
+               no Pixelorama source or hand-authored editor session claimed

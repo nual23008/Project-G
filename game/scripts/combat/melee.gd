@@ -16,13 +16,14 @@ var team: String = "player"
 var hit_applied: bool = false
 var visual: AnimatedSprite2D
 var empowered_swing: bool = false
+var weapon_contact_tip := Vector2(28,-22)
 
 func _ready() -> void:
 	visual = AnimatedSprite2D.new()
 	visual.name = "SwingSprite"
 	visual.sprite_frames = PLAYER_EFFECT if team == "player" else ENEMY_EFFECT
 	visual.centered = false
-	visual.offset = Vector2(-36,-36)
+	visual.offset = Vector2(-48,-48) if team == "player" else Vector2(-36,-36)
 	# Match the new actor's hand height; the ground-space hit query stays stable.
 	visual.position.y = -30 if team == "player" else -18
 	visual.animation = &"play"
@@ -33,6 +34,9 @@ func begin(aim: Vector2, amount: int, empowered: bool = false) -> bool:
 	if remaining > 0.0:
 		return false
 	direction = aim.normalized() if aim.length_squared() > 0 else Vector2.DOWN
+	if team == "player":
+		# Contact crest at radius34 meets the equipped blade's projected tip.
+		visual.position = weapon_contact_tip-direction*36
 	damage = amount
 	empowered_swing = empowered and team == "player"
 	visual.sprite_frames = EMPOWERED_EFFECT if empowered_swing else PLAYER_EFFECT if team == "player" else ENEMY_EFFECT

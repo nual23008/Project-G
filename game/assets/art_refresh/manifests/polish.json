@@ -1,0 +1,68 @@
+{
+  "footstep_dust": {
+    "resource": "res://resources/art/footstep_dust.tres",
+    "texture": "res://assets/art_refresh/sheets/footstep_dust.png",
+    "frame_size": [
+      24,
+      16
+    ],
+    "pivot": [
+      12,
+      12
+    ],
+    "columns": 8,
+    "states": {
+      "play": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 24,
+        "loop": false
+      }
+    },
+    "source": "Original native ochre/stone dust clusters; build_polish_art.py; editable grids in sources/props/footstep_dust. Eight dispersal drawings; no collision or save state.",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh"
+  },
+  "falling_leaf": {
+    "resource": "res://resources/art/falling_leaf.tres",
+    "texture": "res://assets/art_refresh/sheets/falling_leaf.png",
+    "frame_size": [
+      16,
+      16
+    ],
+    "pivot": [
+      8,
+      8
+    ],
+    "columns": 8,
+    "states": {
+      "idle": {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 8,
+        "fps": 8,
+        "loop": true
+      }
+    },
+    "source": "Original native olive/amber tumbling leaf; build_polish_art.py; editable eight-frame grid source; upper-left warm highlights.",
+    "backend": "SpriteFrames",
+    "revision": "art_refresh"
+  }
+}

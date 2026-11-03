@@ -31,7 +31,7 @@ func _ready() -> void:
 	pivot = Vector2(anchor[0],anchor[1])
 	visual = AnimatedSprite2D.new()
 	visual.name = "ObjectSprite"
-	visual.sprite_frames = ART[art_id]
+	visual.sprite_frames = load(str(manifest[art_id].resource))
 	visual.centered = false
 	visual.offset = -pivot
 	add_child(visual)

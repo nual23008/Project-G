@@ -2,6 +2,8 @@ extends Node2D
 ## Manifest-backed warm light and fireflies; positions are snapped to art pixels.
 const GLOW: SpriteFrames = preload("res://resources/art/glow.tres")
 const FIREFLY: SpriteFrames = preload("res://resources/art/firefly.tres")
+const LEAF: SpriteFrames = preload("res://resources/art/falling_leaf.tres")
+var leaves: Array[AnimatedSprite2D] = []
 var elapsed: float = 0.0
 var lights: Array[Vector2] = [Vector2(440, 375), Vector2(600, 375), Vector2(472, 547), Vector2(552, 547), Vector2(512, 305)]
 var motes: Array[AnimatedSprite2D] = []
@@ -25,12 +27,24 @@ func _ready() -> void:
 		mote.frame = i % FIREFLY.get_frame_count(&"idle")
 		motes.append(mote)
 	_update_motes()
+	for i: int in range(16):
+		var leaf := AnimatedSprite2D.new()
+		leaf.sprite_frames = LEAF
+		leaf.name = "DriftingLeaf"+str(i)
+		leaf.modulate.a = 0.6
+		add_child(leaf)
+		leaf.play(&"idle")
+		leaf.frame = i%8
+		leaf.speed_scale = 0.6+float(i%4)*0.12
+		leaves.append(leaf)
 
 func _process(delta: float) -> void:
 	elapsed += delta
 	_update_motes()
 
 func _update_motes() -> void:
+	for i: int in range(leaves.size()):
+		leaves[i].position = Vector2(150+fmod(i*91+elapsed*(5+i%3),760),160+fmod(i*57+elapsed*(9+i%4),530)).round()
 	for i: int in range(motes.size()):
 		var x: float = 155.0 + fmod(i * 73.0, 730.0) + sin(elapsed * 0.31 + i) * 8.0
 		var y: float = 185.0 + fmod(i * 47.0, 440.0) + cos(elapsed * 0.27 + i * 2.0) * 7.0

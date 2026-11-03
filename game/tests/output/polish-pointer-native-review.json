@@ -1,0 +1,11 @@
+{
+  "before": "true",
+  "values_during_game": [
+    "true",
+    "false",
+    "true"
+  ],
+  "after": "true",
+  "exit_code": 0,
+  "ok": true
+}

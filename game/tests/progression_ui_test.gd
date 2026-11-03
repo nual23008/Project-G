@@ -36,7 +36,7 @@ func run() -> void:
 	check(ui.xp_label.text == "XP 0 / 100" and ui.level_label.text.contains("CẤP 1"), "Fresh model shows actual level one and zero XP")
 	check(ui.xp_bar.size.x == 0 and not ui.xp_bar.visible, "Zero XP does not draw a fake progress fill")
 	var request: Dictionary = {"key": "", "amount": 0, "hits": 0, "open": 0, "close": 0}
-	ui.character_requested.connect(func() -> void: request.open += 1)
+	ui.hub_requested.connect(func() -> void: request.open += 1)
 	ui.overlay_close_requested.connect(func() -> void: request.close += 1)
 	ui.allocate_stat_requested.connect(func(key: String, amount: int) -> void:
 		request.key = key
@@ -90,12 +90,13 @@ func run() -> void:
 		check(fits(ui.stat_widgets[stat].value) and fits(ui.stat_widgets[stat].allocated), "The full legal level-9999 allocation remains readable for " + stat)
 	await frames(2)
 	var inside: bool = true
+	var viewport_size: Vector2 = ui.get_viewport_rect().size
 	for node: Node in ui.find_children("*", "Label", true, false):
 		var label := node as Label
 		if label.is_visible_in_tree():
 			var rect: Rect2 = label.get_global_rect()
-			inside = inside and rect.position.x >= -0.5 and rect.position.y >= -0.5 and rect.end.x <= 640.5 and rect.end.y <= 360.5
-	check(inside, "Visible character labels remain inside the 640x360 viewport")
+			inside = inside and rect.position.x >= -0.5 and rect.position.y >= -0.5 and rect.end.x <= viewport_size.x+0.5 and rect.end.y <= viewport_size.y+0.5
+	check(inside, "Visible character labels remain inside the expanded viewport")
 	var card: Panel = ui.character_panel.find_child("StatsPanel", true, false)
 	var skin: StyleBoxTexture = card.get_theme_stylebox("panel")
 	var initial: Texture2D = skin.texture

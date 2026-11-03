@@ -6,6 +6,18 @@
   ],
   "walk_common_scale": 0.21875,
   "attack_common_scale": 0.2640467171717172,
+  "diagonal_walk_common_scale": 0.21875,
+  "diagonal_attack_common_scale": 0.25754310344827586,
+  "directions": [
+    "down",
+    "left",
+    "right",
+    "up",
+    "down_right",
+    "down_left",
+    "up_right",
+    "up_left"
+  ],
   "alpha_threshold": 210,
   "renderer": "Pillow packing only; Godot rendering is run by integration owner"
 }
