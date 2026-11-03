@@ -9,6 +9,8 @@ var lights: Array[Vector2] = [Vector2(440, 375), Vector2(600, 375), Vector2(472,
 var motes: Array[AnimatedSprite2D] = []
 
 func _ready() -> void:
+	# These visual motes move per rendered frame, independently of physics.
+	physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_OFF
 	for i: int in range(lights.size()):
 		var point: Vector2 = lights[i]
 		var glow := AnimatedSprite2D.new()
@@ -44,8 +46,8 @@ func _process(delta: float) -> void:
 
 func _update_motes() -> void:
 	for i: int in range(leaves.size()):
-		leaves[i].position = Vector2(150+fmod(i*91+elapsed*(5+i%3),760),160+fmod(i*57+elapsed*(9+i%4),530)).round()
+		leaves[i].position = Vector2(150+fmod(i*91+elapsed*(5+i%3),760),160+fmod(i*57+elapsed*(9+i%4),530))
 	for i: int in range(motes.size()):
 		var x: float = 155.0 + fmod(i * 73.0, 730.0) + sin(elapsed * 0.31 + i) * 8.0
 		var y: float = 185.0 + fmod(i * 47.0, 440.0) + cos(elapsed * 0.27 + i * 2.0) * 7.0
-		motes[i].position = Vector2(x, y).round()
+		motes[i].position = Vector2(x, y)

@@ -1,0 +1,60 @@
+{
+  "file": "/tmp/final-front-base.png",
+  "size": [
+    96,
+    64
+  ],
+  "opaque_px": 946,
+  "results": [
+    {
+      "check": "colour count",
+      "value": 20,
+      "pass": true,
+      "detail": "limit 32, palette project_equipment has 37"
+    },
+    {
+      "check": "palette drift",
+      "value": 0,
+      "pass": true,
+      "detail": "all on palette"
+    },
+    {
+      "check": "anti-alias suspects",
+      "value": 0,
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "check": "isolated pixels",
+      "value": "0 (0.0%)",
+      "pass": true,
+      "detail": "limit 2% \u2014 these read as noise, not detail"
+    },
+    {
+      "check": "dominant run length",
+      "value": "2px (40% of runs)",
+      "pass": true,
+      "detail": "want one clear feature scale; 9 distinct run lengths seen"
+    },
+    {
+      "check": "banded shading",
+      "value": "0 touching near-tone pairs",
+      "pass": true,
+      "detail": "every touching tone pair differs by >= 6.0 luminance"
+    },
+    {
+      "check": "light consistency",
+      "value": "2/2 declared materials lit from the tl",
+      "pass": true,
+      "detail": "brightest #f5cd9a +4px; brightest #e4d3ac +3px  (positive = highlight sits on the light side)"
+    },
+    {
+      "check": "silhouette cleanliness",
+      "value": "5 notches, 0 spikes",
+      "pass": true,
+      "detail": "limit 8 \u2014 1px edge jitter is the machine-made tell"
+    }
+  ],
+  "exit_code": 0,
+  "scope": "Final idle_down base only, declared project palette/skin/linen ramps. Rear/profile motion separately validated by rig tests and rendered captures."
+}

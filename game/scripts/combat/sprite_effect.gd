@@ -9,6 +9,7 @@ static func spawn(parent: Node, frames: SpriteFrames, at: Vector2, pivot: Vector
 	effect.offset = -pivot
 	parent.add_child(effect)
 	effect.global_position = at
+	effect.reset_physics_interpolation()
 	effect.animation_finished.connect(effect.queue_free)
 	effect.play(state)
 	return effect

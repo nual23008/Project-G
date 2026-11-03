@@ -168,6 +168,8 @@
         "count": 8,
         "fps": 5,
         "loop": true,
+        "direction": "down",
+        "body_view": "front",
         "distinct_drawings": 2,
         "reused_drawings": 6,
         "frame_drawings": [
@@ -193,15 +195,17 @@
         "count": 6,
         "fps": 9,
         "loop": true,
-        "distinct_drawings": 3,
-        "reused_drawings": 3,
+        "direction": "down",
+        "body_view": "front",
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
         "frame_drawings": [
           0,
           1,
-          1,
-          0,
           2,
-          2
+          3,
+          4,
+          5
         ]
       },
       "attack_down": {
@@ -219,6 +223,8 @@
         "count": 9,
         "fps": 33.33333333333333,
         "loop": false,
+        "direction": "down",
+        "body_view": "front",
         "distinct_drawings": 7,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -244,6 +250,8 @@
         "count": 5,
         "fps": 22.727272727272727,
         "loop": false,
+        "direction": "down",
+        "body_view": "front",
         "distinct_drawings": 3,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -269,6 +277,8 @@
         "count": 9,
         "fps": 10.0,
         "loop": false,
+        "direction": "down",
+        "body_view": "front",
         "distinct_drawings": 9,
         "reused_drawings": 0,
         "frame_drawings": [
@@ -297,6 +307,8 @@
         "count": 8,
         "fps": 5,
         "loop": true,
+        "direction": "left",
+        "body_view": "profile",
         "distinct_drawings": 2,
         "reused_drawings": 6,
         "frame_drawings": [
@@ -322,15 +334,17 @@
         "count": 6,
         "fps": 9,
         "loop": true,
-        "distinct_drawings": 3,
-        "reused_drawings": 3,
+        "direction": "left",
+        "body_view": "profile",
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
         "frame_drawings": [
           0,
           1,
-          1,
-          0,
           2,
-          2
+          3,
+          4,
+          5
         ]
       },
       "attack_left": {
@@ -348,6 +362,8 @@
         "count": 9,
         "fps": 33.33333333333333,
         "loop": false,
+        "direction": "left",
+        "body_view": "profile",
         "distinct_drawings": 7,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -373,6 +389,8 @@
         "count": 5,
         "fps": 22.727272727272727,
         "loop": false,
+        "direction": "left",
+        "body_view": "profile",
         "distinct_drawings": 3,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -398,6 +416,8 @@
         "count": 9,
         "fps": 10.0,
         "loop": false,
+        "direction": "left",
+        "body_view": "profile",
         "distinct_drawings": 9,
         "reused_drawings": 0,
         "frame_drawings": [
@@ -426,6 +446,8 @@
         "count": 8,
         "fps": 5,
         "loop": true,
+        "direction": "right",
+        "body_view": "profile",
         "distinct_drawings": 2,
         "reused_drawings": 6,
         "frame_drawings": [
@@ -451,15 +473,17 @@
         "count": 6,
         "fps": 9,
         "loop": true,
-        "distinct_drawings": 3,
-        "reused_drawings": 3,
+        "direction": "right",
+        "body_view": "profile",
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
         "frame_drawings": [
           0,
           1,
-          1,
-          0,
           2,
-          2
+          3,
+          4,
+          5
         ]
       },
       "attack_right": {
@@ -477,6 +501,8 @@
         "count": 9,
         "fps": 33.33333333333333,
         "loop": false,
+        "direction": "right",
+        "body_view": "profile",
         "distinct_drawings": 7,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -502,6 +528,8 @@
         "count": 5,
         "fps": 22.727272727272727,
         "loop": false,
+        "direction": "right",
+        "body_view": "profile",
         "distinct_drawings": 3,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -527,6 +555,8 @@
         "count": 9,
         "fps": 10.0,
         "loop": false,
+        "direction": "right",
+        "body_view": "profile",
         "distinct_drawings": 9,
         "reused_drawings": 0,
         "frame_drawings": [
@@ -555,6 +585,8 @@
         "count": 8,
         "fps": 5,
         "loop": true,
+        "direction": "up",
+        "body_view": "back",
         "distinct_drawings": 2,
         "reused_drawings": 6,
         "frame_drawings": [
@@ -580,15 +612,17 @@
         "count": 6,
         "fps": 9,
         "loop": true,
-        "distinct_drawings": 3,
-        "reused_drawings": 3,
+        "direction": "up",
+        "body_view": "back",
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
         "frame_drawings": [
           0,
           1,
-          1,
-          0,
           2,
-          2
+          3,
+          4,
+          5
         ]
       },
       "attack_up": {
@@ -606,6 +640,8 @@
         "count": 9,
         "fps": 33.33333333333333,
         "loop": false,
+        "direction": "up",
+        "body_view": "back",
         "distinct_drawings": 7,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -631,6 +667,8 @@
         "count": 5,
         "fps": 22.727272727272727,
         "loop": false,
+        "direction": "up",
+        "body_view": "back",
         "distinct_drawings": 3,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -656,6 +694,8 @@
         "count": 9,
         "fps": 10.0,
         "loop": false,
+        "direction": "up",
+        "body_view": "back",
         "distinct_drawings": 9,
         "reused_drawings": 0,
         "frame_drawings": [
@@ -684,6 +724,8 @@
         "count": 8,
         "fps": 5,
         "loop": true,
+        "direction": "down_right",
+        "body_view": "front",
         "distinct_drawings": 2,
         "reused_drawings": 6,
         "frame_drawings": [
@@ -709,15 +751,17 @@
         "count": 6,
         "fps": 9,
         "loop": true,
-        "distinct_drawings": 3,
-        "reused_drawings": 3,
+        "direction": "down_right",
+        "body_view": "front",
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
         "frame_drawings": [
           0,
           1,
-          1,
-          0,
           2,
-          2
+          3,
+          4,
+          5
         ]
       },
       "attack_down_right": {
@@ -735,6 +779,8 @@
         "count": 9,
         "fps": 33.33333333333333,
         "loop": false,
+        "direction": "down_right",
+        "body_view": "front",
         "distinct_drawings": 7,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -760,14 +806,16 @@
         "count": 5,
         "fps": 22.727272727272727,
         "loop": false,
-        "distinct_drawings": 2,
-        "reused_drawings": 3,
+        "direction": "down_right",
+        "body_view": "front",
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "frame_drawings": [
           0,
-          0,
-          0,
           1,
-          1
+          0,
+          2,
+          2
         ]
       },
       "death_down_right": {
@@ -785,6 +833,8 @@
         "count": 9,
         "fps": 10.0,
         "loop": false,
+        "direction": "down_right",
+        "body_view": "front",
         "distinct_drawings": 9,
         "reused_drawings": 0,
         "frame_drawings": [
@@ -813,6 +863,8 @@
         "count": 8,
         "fps": 5,
         "loop": true,
+        "direction": "down_left",
+        "body_view": "front",
         "distinct_drawings": 2,
         "reused_drawings": 6,
         "frame_drawings": [
@@ -838,15 +890,17 @@
         "count": 6,
         "fps": 9,
         "loop": true,
-        "distinct_drawings": 3,
-        "reused_drawings": 3,
+        "direction": "down_left",
+        "body_view": "front",
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
         "frame_drawings": [
           0,
           1,
-          1,
-          0,
           2,
-          2
+          3,
+          4,
+          5
         ]
       },
       "attack_down_left": {
@@ -864,6 +918,8 @@
         "count": 9,
         "fps": 33.33333333333333,
         "loop": false,
+        "direction": "down_left",
+        "body_view": "front",
         "distinct_drawings": 7,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -889,14 +945,16 @@
         "count": 5,
         "fps": 22.727272727272727,
         "loop": false,
-        "distinct_drawings": 2,
-        "reused_drawings": 3,
+        "direction": "down_left",
+        "body_view": "front",
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "frame_drawings": [
           0,
-          0,
-          0,
           1,
-          1
+          0,
+          2,
+          2
         ]
       },
       "death_down_left": {
@@ -914,6 +972,8 @@
         "count": 9,
         "fps": 10.0,
         "loop": false,
+        "direction": "down_left",
+        "body_view": "front",
         "distinct_drawings": 9,
         "reused_drawings": 0,
         "frame_drawings": [
@@ -942,6 +1002,8 @@
         "count": 8,
         "fps": 5,
         "loop": true,
+        "direction": "up_right",
+        "body_view": "back",
         "distinct_drawings": 2,
         "reused_drawings": 6,
         "frame_drawings": [
@@ -967,15 +1029,17 @@
         "count": 6,
         "fps": 9,
         "loop": true,
-        "distinct_drawings": 3,
-        "reused_drawings": 3,
+        "direction": "up_right",
+        "body_view": "back",
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
         "frame_drawings": [
           0,
           1,
-          1,
-          0,
           2,
-          2
+          3,
+          4,
+          5
         ]
       },
       "attack_up_right": {
@@ -993,6 +1057,8 @@
         "count": 9,
         "fps": 33.33333333333333,
         "loop": false,
+        "direction": "up_right",
+        "body_view": "back",
         "distinct_drawings": 7,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -1018,14 +1084,16 @@
         "count": 5,
         "fps": 22.727272727272727,
         "loop": false,
-        "distinct_drawings": 2,
-        "reused_drawings": 3,
+        "direction": "up_right",
+        "body_view": "back",
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "frame_drawings": [
           0,
-          0,
-          0,
           1,
-          1
+          0,
+          2,
+          2
         ]
       },
       "death_up_right": {
@@ -1043,6 +1111,8 @@
         "count": 9,
         "fps": 10.0,
         "loop": false,
+        "direction": "up_right",
+        "body_view": "back",
         "distinct_drawings": 9,
         "reused_drawings": 0,
         "frame_drawings": [
@@ -1071,6 +1141,8 @@
         "count": 8,
         "fps": 5,
         "loop": true,
+        "direction": "up_left",
+        "body_view": "back",
         "distinct_drawings": 2,
         "reused_drawings": 6,
         "frame_drawings": [
@@ -1096,15 +1168,17 @@
         "count": 6,
         "fps": 9,
         "loop": true,
-        "distinct_drawings": 3,
-        "reused_drawings": 3,
+        "direction": "up_left",
+        "body_view": "back",
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
         "frame_drawings": [
           0,
           1,
-          1,
-          0,
           2,
-          2
+          3,
+          4,
+          5
         ]
       },
       "attack_up_left": {
@@ -1122,6 +1196,8 @@
         "count": 9,
         "fps": 33.33333333333333,
         "loop": false,
+        "direction": "up_left",
+        "body_view": "back",
         "distinct_drawings": 7,
         "reused_drawings": 2,
         "frame_drawings": [
@@ -1147,14 +1223,16 @@
         "count": 5,
         "fps": 22.727272727272727,
         "loop": false,
-        "distinct_drawings": 2,
-        "reused_drawings": 3,
+        "direction": "up_left",
+        "body_view": "back",
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "frame_drawings": [
           0,
-          0,
-          0,
           1,
-          1
+          0,
+          2,
+          2
         ]
       },
       "death_up_left": {
@@ -1172,6 +1250,8 @@
         "count": 9,
         "fps": 10.0,
         "loop": false,
+        "direction": "up_left",
+        "body_view": "back",
         "distinct_drawings": 9,
         "reused_drawings": 0,
         "frame_drawings": [

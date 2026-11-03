@@ -132,7 +132,7 @@ func _ready() -> void:
 	_create_theme()
 	var catalog: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://resources/items/items.json"))
 	for id: String in catalog:
-		if not ITEM_ART.has(id): ITEM_ART[id] = load("res://resources/art/"+id+".tres")
+		_item_art(id)
 	_build_menu()
 	_build_hud()
 	_build_pause()
@@ -210,7 +210,17 @@ func _art_style(frames: SpriteFrames, state: StringName) -> StyleBoxTexture:
 	material_styles.append({"style": style, "frames": frames, "state": state, "frame": 0})
 	return style
 
+func _item_art(id: String) -> SpriteFrames:
+	# Resolve at use as well as startup: a catalog item never assumes an old
+	# five-item UI cache already knows its icon (including steel_sword).
+	if not ITEM_ART.has(id):
+		var resource_path: String = "res://resources/art/"+id+".tres"
+		ITEM_ART[id] = load(resource_path) if ResourceLoader.exists(resource_path) else null
+		if ITEM_ART[id] == null: push_error("Missing item animation resource: "+resource_path)
+	return ITEM_ART[id] as SpriteFrames
+
 func _art_frame(frames: SpriteFrames, state: StringName) -> Texture2D:
+	if frames == null: return null
 	var count: int = frames.get_frame_count(state)
 	var index: int = int(art_clock * frames.get_animation_speed(state))
 	index = posmod(index, count) if frames.get_animation_loop(state) else mini(index, count - 1)
@@ -236,11 +246,11 @@ func _animate_art(delta: float) -> void:
 	if inventory_panel.visible and inventory_model != null:
 		for slot: String in equipment_buttons:
 			var id: String = str(inventory_model.equipment[slot])
-			if not id.is_empty(): equipment_buttons[slot].icon = _art_frame(ITEM_ART[id],&"idle")
+			if not id.is_empty(): equipment_buttons[slot].icon = _art_frame(_item_art(id),&"idle")
 		for i: int in range(inventory_buttons.size()):
 			var slot: Dictionary = inventory_model.slots[i]
 			if not slot.is_empty():
-				var frames: SpriteFrames = ITEM_ART[str(slot.id)]
+				var frames: SpriteFrames = _item_art(str(slot.id))
 				inventory_buttons[i].icon = _art_frame(frames, &"idle")
 
 func _root() -> Control:
@@ -674,7 +684,7 @@ func update_inventory(model: RefCounted) -> void:
 	for slot: String in equipment_buttons:
 		var button: Button = equipment_buttons[slot]
 		var id: String = str(model.equipment[slot])
-		button.icon = null if id.is_empty() else _art_frame(ITEM_ART[id],&"idle")
+		button.icon = null if id.is_empty() else _art_frame(_item_art(id),&"idle")
 		button.size = Vector2(92,31)
 		button.tooltip_text = button.text+": "+("Trống" if id.is_empty() else str(model.database[id].name))
 		button.set_pressed_no_signal(slot == selected_equipment)
@@ -688,7 +698,7 @@ func update_inventory(model: RefCounted) -> void:
 		button.tooltip_text = "Ô trống"
 		if not slot.is_empty():
 			var item: Dictionary = model.database[slot.id]
-			var frames: SpriteFrames = ITEM_ART[str(slot.id)]
+			var frames: SpriteFrames = _item_art(str(slot.id))
 			button.icon = _art_frame(frames, &"idle")
 			button.text = str(slot.count)
 			button.tooltip_text = str(item.name)+"\n"+str(item.description)

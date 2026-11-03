@@ -44,6 +44,9 @@ func begin(aim: Vector2, amount: int, empowered: bool = false) -> bool:
 	hit_applied = false
 	struck.clear()
 	visual.rotation = direction.angle()
+	# A new swing direction is a discontinuous pose, not a rotation to blend
+	# from the previous hidden swing when physics interpolation is enabled.
+	visual.reset_physics_interpolation()
 	visual.frame = 0
 	visual.show()
 	return true

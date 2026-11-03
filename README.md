@@ -35,3 +35,7 @@ Kiểm tra tự động: `bash game/tools/check.sh` (có thể đặt `GODOT_BIN
 Không cần Python/Pillow để chơi. Tạo lại art đang dùng bằng `python3 game/tools/build_art_refresh.py` (cần Pillow và các pixel skills đã cài). Bảy generator theo nhóm tạo source/sheet/resource, rồi merge manifest; không fallback về ảnh cũ. Bộ `art_stage1` và các generator Phase 1/2 được giữ làm lịch sử, không còn là pipeline active. Xem [asset-manifest](game/docs/asset-manifest.md) và [brief thay đồ họa](game/docs/ART_REFRESH_BRIEF.md).
 
 Trang bị12ô + slash mới: [phân tích/nguồn/QA](game/docs/EQUIPMENT_IMPLEMENTATION.md), [ảnh các bộ đồ](game/tests/output/equipment-outfits.png), [chém8hướng](game/tests/output/equipment-slash.gif). Savev3 lưu cả đồ mặc; kiếm cũ được chuyển sang tay phải một lần khi đọc savecũ. Vũ khí phải ưu tiên, tay trái dự phòng; quần áo/phụ kiện hiện là cosmetic.
+
+Sửa lỗi đầu/thân và idle: [ảnh trước/sau](game/tests/output/equipment-neck-before-after.png), [idle thân trần tám hướng](game/tests/output/equipment-body-idle.gif). Body/trang phục hiện dựng theo khớp chung, mỗi lớp có frame riêng; Nearest giữ nét pixel khi phóng preview. [Nguyên nhân log và nghiệm thu](game/docs/EQUIPMENT_IMPLEMENTATION.md).
+
+Bản sửa di chuyển/quay lưng: [phân tích và đo thật](game/docs/MOVEMENT_AND_REAR_VIEW.md), [ảnh mặt trước/mặt lưng](game/tests/output/movement-rear-view.png), [đi đủ hướng](game/tests/output/movement-rear-walk.gif). VSync theo màn hình, physics60Hz/render nội suy, giữ Nearest; toàn thân và trang bị quay lưng cùng đầu. Khởi động lại để nạp mã và animation mới.

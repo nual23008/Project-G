@@ -1,0 +1,15 @@
+{
+	"csv": "res://tests/output/movement-baseline-canvas.csv",
+	"duration": 6.0,
+	"frames": 758,
+	"max_fps": 0,
+	"nodes": 1249.0,
+	"refresh_hz": 143.889999389648,
+	"renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+	"root_size": [
+		1920,
+		1200
+	],
+	"tag": "baseline-canvas",
+	"viewport": "(640.0, 400.0)"
+}

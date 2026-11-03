@@ -4,13 +4,17 @@ const ORDER: Array[String] = ["pants","shoe_left","shoe_right","shirt","bare_han
 var base: AnimatedSprite2D
 var parts: Dictionary = {}
 var loadout: Dictionary = {}
+var _last_animation: StringName = &""
+var _last_frame: int = -1
 
 func setup(actor: AnimatedSprite2D) -> void:
 	base = actor
+	base.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	base.frame_changed.connect(sync_pose)
 	base.animation_changed.connect(sync_pose)
 	for slot: String in ORDER:
 		var part := AnimatedSprite2D.new()
+		part.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 		part.name = "Equipment_"+slot
 		part.centered = false
 		part.offset = Vector2(-48,-60)
@@ -19,6 +23,8 @@ func setup(actor: AnimatedSprite2D) -> void:
 		parts[slot] = part
 
 func apply_equipment(equipment: Dictionary) -> void:
+	if loadout == equipment: return
+	var previous: Dictionary = loadout
 	loadout = equipment.duplicate(true)
 	for slot: String in ORDER:
 		var part: AnimatedSprite2D = parts[slot]
@@ -27,13 +33,17 @@ func apply_equipment(equipment: Dictionary) -> void:
 			part.visible = true
 			part.sprite_frames = preload("res://resources/art/player_hands.tres")
 			continue
+		if previous.get(slot,"") == id and part.sprite_frames != null: continue
 		part.visible = not id.is_empty()
 		if not id.is_empty():
 			part.sprite_frames = load("res://resources/art/gear_"+id+"_"+slot+".tres")
-	sync_pose()
+	sync_pose(true)
 
-func sync_pose() -> void:
+func sync_pose(force: bool = false) -> void:
 	if not is_instance_valid(base): return
+	if not force and base.animation == _last_animation and base.frame == _last_frame: return
+	_last_animation = base.animation
+	_last_frame = base.frame
 	for part: AnimatedSprite2D in parts.values():
 		if not part.visible or part.sprite_frames == null: continue
 		part.animation = base.animation
@@ -41,6 +51,5 @@ func sync_pose() -> void:
 		part.set_frame_and_progress(base.frame,base.frame_progress)
 
 func _process(_delta: float) -> void:
-	if is_instance_valid(base):
+	if is_instance_valid(base) and modulate != base.modulate:
 		modulate = base.modulate
-		sync_pose()

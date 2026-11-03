@@ -137,6 +137,8 @@ func _set_mode(next_mode: Mode) -> void:
 	get_tree().paused = mode != Mode.PLAYING
 	world.player.input_enabled = mode == Mode.PLAYING
 	world.player.stop()
+	if mode != Mode.MENU:
+		world.snap_camera_to_player()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	var screens: Dictionary = {Mode.MENU:"menu", Mode.PLAYING:"play", Mode.DIALOGUE:"dialogue", Mode.PAUSED:"pause", Mode.SETTINGS:"settings",Mode.INVENTORY_OPEN:"inventory",Mode.JOURNAL:"journal",Mode.DEAD:"death",Mode.CHARACTER:"character"}
 	screens[Mode.HUB_SYSTEM] = "system"
@@ -397,8 +399,7 @@ func travel(destination: String) -> void:
 	else:
 		quests.record("area_entered",destination)
 	world.player.health.immunity = 0.8
-	world.camera.position = world.player.position.round()
-	world.camera.reset_smoothing()
+	world.snap_camera_to_player()
 	_set_mode(Mode.PLAYING)
 	world.modulate.a = 0.0
 	world.create_tween().tween_property(world,"modulate:a",1.0,0.25)
@@ -472,8 +473,7 @@ func load_game() -> bool:
 	world.player.health.restore(int(data.hp))
 	world.player.restore_vitals(float(data.vitals.energy), float(data.vitals.stamina))
 	world.player.health.immunity = 0.8
-	world.camera.position = world.player.position.round()
-	world.camera.reset_smoothing()
+	world.snap_camera_to_player()
 	_set_mode(Mode.PLAYING)
 	ui.notify("Đã khôi phục bản dự phòng hợp lệ." if saves.recovered_backup else "Đã tải hành trình.")
 	return true

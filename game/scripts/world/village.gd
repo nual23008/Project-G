@@ -19,8 +19,16 @@ var obstacle_count: int = 0
 @onready var ground: TileMapLayer = $Ground
 @onready var actors: Node2D = $Actors
 @onready var camera: Camera2D = $Camera
+var _previous_player_position: Vector2
+var _current_player_position: Vector2
 
 func _ready() -> void:
+	# Simulation stays at 60 Hz. Follow after the player, then present using the
+	# same interpolated transform as the actor on high refresh displays.
+	process_physics_priority = 100
+	process_priority = 100
+	camera.physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_OFF
+	camera.process_callback = Camera2D.CAMERA2D_PROCESS_IDLE
 	if not content_state.has("spawn_cycles"):
 		content_state.spawn_cycles = {}
 	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(definition_path))
@@ -73,12 +81,32 @@ func _ready() -> void:
 		enemy.defeated.connect(_on_enemy_defeated)
 	camera.limit_right = int(definition.width) * TILE
 	camera.limit_bottom = int(definition.height) * TILE
-	camera.position = player.position.round()
-	camera.reset_smoothing()
+	snap_camera_to_player()
 
 func _physics_process(_delta: float) -> void:
-	# Integer camera positions and no subpixel smoothing prevent pixel shimmer.
-	camera.position = player.position.round()
+	_previous_player_position = _current_player_position
+	_current_player_position = player.global_position
+	camera.position = player.position
+
+func _process(_delta: float) -> void:
+	camera.global_position = get_presented_player_position()
+	camera.force_update_scroll()
+
+func get_presented_player_position() -> Vector2:
+	# Node2D has no get_global_transform_interpolated in this engine. Keep the
+	# same previous/current physics samples used by the 2D renderer instead.
+	if get_tree().is_physics_interpolation_enabled():
+		return _previous_player_position.lerp(_current_player_position,Engine.get_physics_interpolation_fraction())
+	return player.global_position
+
+func snap_camera_to_player() -> void:
+	# Teleports/load/travel have no previous motion to blend from.
+	player.reset_physics_interpolation()
+	_previous_player_position = player.global_position
+	_current_player_position = player.global_position
+	camera.position = player.position
+	camera.reset_smoothing()
+	camera.force_update_scroll()
 
 func _create_tiles() -> void:
 	var atlas := TileSetAtlasSource.new()

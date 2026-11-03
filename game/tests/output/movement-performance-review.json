@@ -1,0 +1,414 @@
+{
+  "baseline": {
+    "metadata": {
+      "csv": "res://tests/output/movement-baseline.csv",
+      "duration": 6.0,
+      "frames": 347,
+      "max_fps": 60,
+      "nodes": 1249.0,
+      "refresh_hz": 143.889999389648,
+      "renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+      "root_size": [
+        1920,
+        1200
+      ],
+      "tag": "baseline",
+      "viewport": "(640.0, 400.0)"
+    },
+    "frames": {
+      "n": 347,
+      "mean_ms": 17.304259365994238,
+      "p50_ms": 16.536,
+      "p95_ms": 48.45139999999969,
+      "p99_ms": 64.78796,
+      "max_ms": 66.314,
+      "min_ms": 2.056,
+      "hitches": 18,
+      "low_1pct_fps": 15.2469239330965,
+      "mean_fps": 57.78924014310414
+    },
+    "render_cpu": {
+      "n": 347,
+      "mean_ms": 1.016536024530614,
+      "p50_ms": 0.97200000286102,
+      "p95_ms": 1.402699983119968,
+      "p99_ms": 1.6027000212669402,
+      "max_ms": 1.7059999704361,
+      "min_ms": 0.61699998378754,
+      "hitches": 0,
+      "low_1pct_fps": 603.1363115811606,
+      "mean_fps": 983.732967517556
+    },
+    "gpu": {
+      "n": 347,
+      "mean_ms": 0.5750000004466054,
+      "p50_ms": 0.57300001382828,
+      "p95_ms": 0.61900001764297,
+      "p99_ms": 0.6466199922561636,
+      "max_ms": 0.66000002622604,
+      "min_ms": 0.3129999935627,
+      "hitches": 0,
+      "low_1pct_fps": 1522.070003069145,
+      "mean_fps": 1739.1304334318174
+    },
+    "camera_model_gap_max": 1.6007080078125
+  },
+  "baseline-uncapped": {
+    "metadata": {
+      "csv": "res://tests/output/movement-baseline-uncapped.csv",
+      "duration": 6.0,
+      "frames": 756,
+      "max_fps": 0,
+      "nodes": 1249.0,
+      "refresh_hz": 143.889999389648,
+      "renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+      "root_size": [
+        1920,
+        1200
+      ],
+      "tag": "baseline-uncapped",
+      "viewport": "(640.0, 400.0)"
+    },
+    "frames": {
+      "n": 756,
+      "mean_ms": 7.944838624338624,
+      "p50_ms": 6.9505,
+      "p95_ms": 8.847000000000001,
+      "p99_ms": 49.51675000000005,
+      "max_ms": 56.754,
+      "min_ms": 1.599,
+      "hitches": 24,
+      "low_1pct_fps": 18.656567244931413,
+      "mean_fps": 125.86788068124493
+    },
+    "render_cpu": {
+      "n": 756,
+      "mean_ms": 1.279232803712446,
+      "p50_ms": 1.2774999737739599,
+      "p95_ms": 1.8014999628066974,
+      "p99_ms": 2.155450034141543,
+      "max_ms": 2.60800004005432,
+      "min_ms": 0.68699997663498,
+      "hitches": 2,
+      "low_1pct_fps": 428.7376700855232,
+      "mean_fps": 781.7185402828259
+    },
+    "gpu": {
+      "n": 756,
+      "mean_ms": 0.5248029097993537,
+      "p50_ms": 0.55249997973442,
+      "p95_ms": 0.61900001764297,
+      "p99_ms": 0.6806999921798718,
+      "max_ms": 5.15299987792969,
+      "min_ms": 0.29300001263618,
+      "hitches": 4,
+      "low_1pct_fps": 512.4075943099316,
+      "mean_fps": 1905.4772397933673
+    },
+    "camera_model_gap_max": 1.6007080078125
+  },
+  "baseline-canvas": {
+    "metadata": {
+      "csv": "res://tests/output/movement-baseline-canvas.csv",
+      "duration": 6.0,
+      "frames": 758,
+      "max_fps": 0,
+      "nodes": 1249.0,
+      "refresh_hz": 143.889999389648,
+      "renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+      "root_size": [
+        1920,
+        1200
+      ],
+      "tag": "baseline-canvas",
+      "viewport": "(640.0, 400.0)"
+    },
+    "frames": {
+      "n": 758,
+      "mean_ms": 7.919514511873351,
+      "p50_ms": 6.942,
+      "p95_ms": 8.18615,
+      "p99_ms": 46.54325999999995,
+      "max_ms": 54.359,
+      "min_ms": 3.431,
+      "hitches": 20,
+      "low_1pct_fps": 19.385641332402823,
+      "mean_fps": 126.27036651056673
+    },
+    "render_cpu": {
+      "n": 758,
+      "mean_ms": 1.236131925853387,
+      "p50_ms": 1.2849999666214,
+      "p95_ms": 1.708149951696396,
+      "p99_ms": 1.7951499807834608,
+      "max_ms": 2.03200006484985,
+      "min_ms": 0.73600000143051,
+      "hitches": 0,
+      "low_1pct_fps": 535.4547510655544,
+      "mean_fps": 808.9751417993926
+    },
+    "gpu": {
+      "n": 758,
+      "mean_ms": 2.5070659629902297,
+      "p50_ms": 2.45900011062622,
+      "p95_ms": 3.2264500737190245,
+      "p99_ms": 3.7341699910163864,
+      "max_ms": 5.19099998474121,
+      "min_ms": 1.77799999713898,
+      "hitches": 1,
+      "low_1pct_fps": 231.95705684594063,
+      "mean_fps": 398.8726322969497
+    },
+    "camera_model_gap_max": 1.6007080078125
+  },
+  "optimized": {
+    "metadata": {
+      "csv": "res://tests/output/movement-optimized.csv",
+      "duration": 6.0,
+      "frames": 5,
+      "interpolation": true,
+      "max_fps": 0,
+      "nodes": 1249.0,
+      "refresh_hz": 143.889999389648,
+      "renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+      "root_size": [
+        1280,
+        763
+      ],
+      "stretch": 1,
+      "tag": "optimized",
+      "valid_foreground_run": false,
+      "viewport": "(640.0, 381.0)"
+    },
+    "frames": {
+      "n": 5,
+      "mean_ms": 1201.3870000000002,
+      "p50_ms": 1001.236,
+      "p95_ms": 1802.0171999999998,
+      "p99_ms": 1962.15544,
+      "max_ms": 2002.19,
+      "min_ms": 1001.012,
+      "hitches": 0,
+      "low_1pct_fps": 0.4994530988567518,
+      "mean_fps": 0.8323712508958394
+    },
+    "render_cpu": {
+      "n": 5,
+      "mean_ms": 1.194199967384338,
+      "p50_ms": 0.8759999871254,
+      "p95_ms": 3.5305998921394317,
+      "p99_ms": 4.054919874668119,
+      "max_ms": 4.18599987030029,
+      "min_ms": 0.0,
+      "hitches": 1,
+      "low_1pct_fps": 238.89155064122426,
+      "mean_fps": 837.3806961243727
+    },
+    "gpu": {
+      "n": 5,
+      "mean_ms": 0.93140001296997,
+      "p50_ms": 1.48300004005432,
+      "p95_ms": 1.635000038146972,
+      "p99_ms": 1.6606000518798822,
+      "max_ms": 1.66700005531311,
+      "min_ms": 0.0,
+      "hitches": 0,
+      "low_1pct_fps": 599.8800040904448,
+      "mean_fps": 1073.6525510787617
+    },
+    "camera_model_gap_max": 1.09408569335938,
+    "actual_screen_center_error_max": 0.0
+  },
+  "notes": [
+    "Baseline and uncapped isolation probes: same original source/root1920x1200 before camera changes.",
+    "Current foreground/fullscreen runs can be compositor throttled: valid_foreground_run=false samples excluded from FPS conclusions.",
+    "No screenshots or readbacks inside timed frames. CPU/GPU scope is renderer timing, not total application time.",
+    "Physics and save model stay at60Hz; camera correctness also checked against viewport canvas transform in eight directions.",
+    "Final budget sample: VSync disabled only by QA command to bypass background compositor throttling, cap144, actual1280x763 window. Product VSync remains enabled and physics60Hz. Do not compare this FPS directly against the original fullscreen baseline.",
+    "User kept final window visible. Windowed final sample uses production VSync1/max_fps0, actual1280x763. Fullscreen baseline has a different resolution, so treat this as current-machine validation rather than a strict fullscreen A/B."
+  ],
+  "final_render_budget": {
+    "metadata": {
+      "csv": "res://tests/output/movement-render-budget.csv",
+      "duration": 6.0,
+      "frames": 782,
+      "interpolation": true,
+      "max_fps": 144,
+      "nodes": 1249.0,
+      "refresh_hz": 143.889999389648,
+      "renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+      "root_size": [
+        1280,
+        763
+      ],
+      "stretch": 1,
+      "tag": "render-budget",
+      "valid_foreground_run": true,
+      "viewport": "(640.0, 381.0)",
+      "vsync_disabled_by_cli": true,
+      "purpose": "Final render-budget probe with cap144, not a production VSync FPS guarantee"
+    },
+    "frame_ms": {
+      "mean": 7.674815856777494,
+      "p50": 6.9325,
+      "p95": 7.3248500000000005,
+      "p99": 48.66684000000003,
+      "max": 56.715
+    },
+    "render_cpu_ms": {
+      "mean": 0.8166419437626744,
+      "p50": 0.79299998283386,
+      "p95": 1.0,
+      "p99": 1.397500002384188,
+      "max": 1.57700002193451
+    },
+    "gpu_ms": {
+      "mean": 1.401966753518185,
+      "p50": 1.39350003004074,
+      "p95": 1.51499998569489,
+      "p99": 1.5655200135707878,
+      "max": 3.42000007629395
+    },
+    "script_process_wall_ms": {
+      "mean": 0.07904475703324808,
+      "p50": 0.072,
+      "p95": 0.121,
+      "p99": 0.18857000000000015,
+      "max": 0.28
+    },
+    "actual_screen_center_error_px": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0
+    },
+    "subtick_motion_samples": 445,
+    "fps": 130.29628575608334
+  },
+  "foreground_windowed_final": {
+    "metadata": {
+      "csv": "res://tests/output/movement-foreground-final.csv",
+      "duration": 6.0,
+      "frames": 776,
+      "interpolation": true,
+      "max_fps": 0,
+      "nodes": 1249.0,
+      "refresh_hz": 143.889999389648,
+      "renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+      "root_size": [
+        1280,
+        763
+      ],
+      "stretch": 1,
+      "tag": "foreground-final",
+      "valid_foreground_run": true,
+      "viewport": "(640.0, 381.0)",
+      "vsync": 1,
+      "vsync_disabled_by_cli": false
+    },
+    "frame_ms": {
+      "mean": 7.740009020618556,
+      "p50": 6.931,
+      "p95": 7.259,
+      "p99": 43.668,
+      "max": 52.779
+    },
+    "actual_screen_center_error_px": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0
+    },
+    "fps": 129.1988158329153,
+    "render_cpu_ms": {
+      "mean": 1.0004432981008107,
+      "p50": 0.886500000953675,
+      "p95": 1.5352500379085576,
+      "p99": 1.6702500283718076,
+      "max": 1.75199997425079
+    },
+    "gpu_ms": {
+      "mean": 1.220260309804346,
+      "p50": 1.19900000095367,
+      "p95": 1.31599998474121,
+      "p99": 2.200999975204465,
+      "max": 3.07500004768372
+    },
+    "script_process_wall_ms": {
+      "mean": 0.12225644329896908,
+      "p50": 0.112,
+      "p95": 0.196,
+      "p99": 0.25075000000000003,
+      "max": 0.348
+    }
+  },
+  "foreground_fullscreen_final": {
+    "metadata": {
+      "csv": "res://tests/output/movement-foreground-fullscreen.csv",
+      "duration": 6.0,
+      "frames": 754,
+      "interpolation": true,
+      "max_fps": 0,
+      "nodes": 1249.0,
+      "refresh_hz": 143.889999389648,
+      "renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+      "root_size": [
+        1920,
+        1200
+      ],
+      "stretch": 1,
+      "tag": "foreground-fullscreen",
+      "valid_foreground_run": true,
+      "viewport": "(640.0, 400.0)",
+      "vsync": 1,
+      "vsync_disabled_by_cli": false
+    },
+    "frame_ms": {
+      "mean": 7.964978779840849,
+      "p50": 6.949,
+      "p95": 8.7444,
+      "p99": 46.89545000000013,
+      "max": 54.46
+    },
+    "fps": 125.54961257787322,
+    "render_cpu_ms": {
+      "mean": 1.1755000008986547,
+      "p50": 1.152999997138975,
+      "p95": 1.671350020170214,
+      "p99": 1.7482899904251075,
+      "max": 1.83399999141693
+    },
+    "gpu_ms": {
+      "mean": 2.5300238698483777,
+      "p50": 2.48300004005432,
+      "p95": 2.7423500776290926,
+      "p99": 3.7132900238037077,
+      "max": 3.77500009536743
+    },
+    "actual_screen_center_error_px": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0
+    },
+    "subtick_motion_samples": 419,
+    "script_process_wall_ms": {
+      "mean": 0.1422055702917772,
+      "p50": 0.146,
+      "p95": 0.215,
+      "p99": 0.29105000000000036,
+      "max": 0.41
+    }
+  },
+  "conclusion": {
+    "baseline_fps": 57.78924014310414,
+    "final_fps": 125.54961257787322,
+    "baseline_p95_ms": 48.45139999999969,
+    "final_p95_ms": 8.7444,
+    "scope": "Same Iris Xe, screen143.89Hz, fullscreen1920x1200, logical640x400,1249nodes,6s walking after warmup. Final window kept visible by user. Both have VSync enabled; product maxfps0/physics60Hz. Repeated runs on other hardware not claimed."
+  },
+  "percentile_method": "Type 7: interpolate sorted samples at (n-1)*p, used consistently in final comparison. Earlier commentary used lower-sample estimates; FPS based on arithmetic mean is unchanged."
+}

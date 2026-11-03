@@ -1,0 +1,32 @@
+{
+  "sessions": [
+    {
+      "log": "godot2026-11-03T06.43.20.log",
+      "script_errors": 5,
+      "unique_errors": [
+        "SCRIPT ERROR: Invalid access to property or key 'equip_requested' on a base object of type 'Control (game_ui.gd)'.",
+        "SCRIPT ERROR: Invalid access to property or key 'steel_sword' on a base object of type 'Dictionary'.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'set_equipment' in base 'CharacterBody2D (player.gd)'."
+      ]
+    },
+    {
+      "log": "godot2026-11-03T09.25.33.log",
+      "script_errors": 226,
+      "unique_errors": [
+        "SCRIPT ERROR: Invalid access to property or key 'equip_requested' on a base object of type 'Control (game_ui.gd)'.",
+        "SCRIPT ERROR: Invalid access to property or key 'steel_sword' on a base object of type 'Dictionary'.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'set_equipment' in base 'CharacterBody2D (player.gd)'."
+      ]
+    },
+    {
+      "log": "godot2026-11-03T10.00.38.log",
+      "script_errors": 0,
+      "unique_errors": []
+    }
+  ],
+  "affected_session_started": "2026-11-03 09:25:33 +07:00",
+  "replaced_ui_and_player_source_mtime": "2026-11-03 09:28:30 +07:00",
+  "evidence": "Affected log calls UI update_inventory at line641; current implementation is later in the file. It also reports missing equip_requested signal and set_equipment API that exist on disk. A fresh 10:00 session has no script errors.",
+  "cause": "Running session mixed cached scripts from before equipment API changes with files/catalog modified during that session.",
+  "fix": "New session loads coherent source; item icon access now resolves lazily at use, with an empty-cache regression across the full catalog. No missing-player-method guard that would silently leave character art outdated."
+}

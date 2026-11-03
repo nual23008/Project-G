@@ -86,6 +86,18 @@ func run() -> void:
 	root.add_child(main)
 	main.start_game()
 	await frames()
+	check(main.world.player.has_method("set_equipment") and main.ui.has_signal("equip_requested"),"Fresh runtime includes the complete equipment API and UI signals")
+	main.ui.ITEM_ART.clear()
+	main.ui.update_inventory(main.inventory)
+	check(main.ui.ITEM_ART.has("steel_sword") and main.ui.ITEM_ART.steel_sword != null,"Inventory rebuilds a missing steel sword icon cache at use without a Dictionary error")
+	var complete_icons: bool = true
+	for id: String in main.inventory.database:
+		complete_icons = complete_icons and main.ui._item_art(id) != null
+	check(complete_icons,"Every catalog item resolves its own animation even after the entire icon cache is cleared")
+	var nearest_filters: bool = main.world.player.sprite.texture_filter == CanvasItem.TEXTURE_FILTER_NEAREST and main.ui.equipment_preview.base.texture_filter == CanvasItem.TEXTURE_FILTER_NEAREST
+	for part: AnimatedSprite2D in main.world.player.equipment_visual.parts.values():
+		nearest_filters = nearest_filters and part.texture_filter == CanvasItem.TEXTURE_FILTER_NEAREST
+	check(nearest_filters,"Body, all equipment layers and bag preview use nearest filtering even under a linear parent viewport")
 	var target := Node2D.new()
 	target.position = main.world.player.position+Vector2(0,26)
 	target.add_to_group("enemies")

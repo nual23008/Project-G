@@ -2,6 +2,7 @@
   "ok": true,
   "engine_captures": 546,
   "actor_layer_frames_guarded": 5032,
+  "nearest_preview_colours": 21,
   "art": {
     "player": {
       "idle_down": {
@@ -20,15 +21,15 @@
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 8,
-        "reused_drawings": 1,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 4,
-        "reused_drawings": 1,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -55,8 +56,599 @@
       },
       "attack_left": {
         "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_left": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_left": {
+        "frames": 9,
         "distinct_drawings": 9,
         "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_right": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_right": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_right": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_right": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_right": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_down_right": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down_right": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down_right": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down_right": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down_right": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_down_left": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down_left": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down_left": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down_left": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down_left": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up_right": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up_right": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up_right": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up_right": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up_right": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up_left": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up_left": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up_left": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up_left": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up_left": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      }
+    },
+    "player_hands": {
+      "idle_down": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down": {
+        "frames": 9,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_left": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_left": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_left": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_left": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_left": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_right": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_right": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_right": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_right": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_right": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up": {
+        "frames": 9,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_down_right": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down_right": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down_right": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down_right": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down_right": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_down_left": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down_left": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down_left": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down_left": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down_left": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up_right": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up_right": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up_right": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up_right": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up_right": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up_left": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up_left": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up_left": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up_left": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up_left": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      }
+    },
+    "sword_slash": {
+      "play": {
+        "frames": 8,
+        "distinct_drawings": 8,
+        "reused_drawings": 0,
+        "fps": 33.333333333333336,
+        "loop": false
+      }
+    },
+    "empowered_slash": {
+      "play": {
+        "frames": 8,
+        "distinct_drawings": 8,
+        "reused_drawings": 0,
+        "fps": 33.333333333333336,
+        "loop": false
+      }
+    },
+    "hit_spark": {
+      "play": {
+        "frames": 8,
+        "distinct_drawings": 8,
+        "reused_drawings": 0,
+        "fps": 30,
+        "loop": false
+      }
+    },
+    "gear_rust_sword_weapon_left": {
+      "idle_down": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down": {
+        "frames": 9,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_left": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_left": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_left": {
+        "frames": 9,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
@@ -90,15 +682,15 @@
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 4,
-        "reused_drawings": 1,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -111,8 +703,8 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 4,
-        "reused_drawings": 4,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -125,8 +717,8 @@
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
@@ -167,8 +759,8 @@
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 4,
-        "reused_drawings": 1,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -202,8 +794,8 @@
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 4,
-        "reused_drawings": 1,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -230,15 +822,15 @@
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 4,
-        "reused_drawings": 1,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -265,15 +857,15 @@
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 2,
-        "reused_drawings": 3,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -285,7 +877,7 @@
         "loop": false
       }
     },
-    "player_hands": {
+    "gear_rust_sword_weapon_right": {
       "idle_down": {
         "frames": 8,
         "distinct_drawings": 2,
@@ -372,8 +964,8 @@
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
@@ -393,8 +985,8 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 4,
-        "reused_drawings": 4,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -449,8 +1041,8 @@
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 4,
-        "reused_drawings": 1,
+        "distinct_drawings": 5,
+        "reused_drawings": 0,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -477,8 +1069,8 @@
       },
       "attack_down_left": {
         "frames": 9,
-        "distinct_drawings": 7,
-        "reused_drawings": 2,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
@@ -505,22 +1097,22 @@
       },
       "walk_up_right": {
         "frames": 6,
-        "distinct_drawings": 5,
-        "reused_drawings": 1,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
         "fps": 9,
         "loop": true
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 4,
-        "reused_drawings": 1,
+        "distinct_drawings": 5,
+        "reused_drawings": 0,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -554,599 +1146,8 @@
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 2,
-        "reused_drawings": 3,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_up_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      }
-    },
-    "sword_slash": {
-      "play": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 33.333333333333336,
-        "loop": false
-      }
-    },
-    "empowered_slash": {
-      "play": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 33.333333333333336,
-        "loop": false
-      }
-    },
-    "hit_spark": {
-      "play": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 30,
-        "loop": false
-      }
-    },
-    "gear_rust_sword_weapon_left": {
-      "idle_down": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_down": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_down": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_down": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_down": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_left": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_left": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_left": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_right": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_right": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_right": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_up": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_up": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_up": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_up": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_up": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_down_right": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_down_right": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_down_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_down_right": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_down_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_down_left": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_down_left": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_down_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_down_left": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_down_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_up_right": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_up_right": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_up_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_up_right": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_up_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_up_left": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_up_left": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_up_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_up_left": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_up_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      }
-    },
-    "gear_rust_sword_weapon_right": {
-      "idle_down": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_down": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_down": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_down": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_down": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_left": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_left": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_left": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_right": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_right": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_right": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_up": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_up": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_up": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_up": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_up": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_down_right": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_down_right": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_down_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_down_right": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_down_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_down_left": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_down_left": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_down_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_down_left": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_down_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_up_right": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_up_right": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_up_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_up_right": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_up_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_up_left": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_up_left": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_up_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_up_left": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 1,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1161,29 +1162,29 @@
     "gear_traveler_hat_hat": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1196,29 +1197,29 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_left": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1231,29 +1232,29 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_right": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1266,29 +1267,29 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1301,29 +1302,29 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down_right": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1336,29 +1337,29 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down_left": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_down_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1371,29 +1372,29 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up_right": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1406,29 +1407,29 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up_left": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1443,29 +1444,29 @@
     "gear_indigo_coat_shirt": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 2,
         "fps": 9,
         "loop": true
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1478,8 +1479,8 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1492,15 +1493,15 @@
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1513,8 +1514,8 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1527,15 +1528,15 @@
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1548,29 +1549,29 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 2,
         "fps": 9,
         "loop": true
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1583,8 +1584,8 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1597,15 +1598,15 @@
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1618,8 +1619,8 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1632,15 +1633,15 @@
       },
       "attack_down_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1653,8 +1654,8 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1667,15 +1668,15 @@
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1688,8 +1689,8 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1702,15 +1703,15 @@
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1725,29 +1726,29 @@
     "gear_linen_tunic_shirt": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 2,
         "fps": 9,
         "loop": true
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1760,8 +1761,8 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1774,15 +1775,15 @@
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1795,8 +1796,8 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1809,15 +1810,15 @@
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1830,29 +1831,29 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 2,
         "fps": 9,
         "loop": true
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1865,8 +1866,8 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1879,15 +1880,15 @@
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1900,8 +1901,8 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1914,15 +1915,15 @@
       },
       "attack_down_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1935,8 +1936,8 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1949,15 +1950,15 @@
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -1970,8 +1971,8 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -1984,15 +1985,15 @@
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2007,8 +2008,8 @@
     "gear_traveler_pants_pants": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2021,15 +2022,15 @@
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2042,8 +2043,8 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2056,15 +2057,15 @@
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2077,8 +2078,8 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2091,15 +2092,15 @@
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2112,8 +2113,8 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2126,15 +2127,15 @@
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2147,8 +2148,8 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2161,15 +2162,15 @@
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2182,8 +2183,8 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2196,15 +2197,15 @@
       },
       "attack_down_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2217,8 +2218,8 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2231,15 +2232,15 @@
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2252,8 +2253,8 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2266,15 +2267,15 @@
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2289,29 +2290,29 @@
     "gear_leather_boot_shoe_left": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 2,
         "fps": 9,
         "loop": true
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 3,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2324,8 +2325,8 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2338,15 +2339,15 @@
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 3,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2359,8 +2360,8 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2373,15 +2374,15 @@
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 3,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2394,29 +2395,29 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 2,
         "fps": 9,
         "loop": true
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 3,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2429,8 +2430,8 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2443,15 +2444,15 @@
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2464,8 +2465,8 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2478,15 +2479,15 @@
       },
       "attack_down_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2499,8 +2500,8 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2513,15 +2514,15 @@
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2534,8 +2535,8 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2548,15 +2549,15 @@
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2571,29 +2572,29 @@
     "gear_leather_boot_shoe_right": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 2,
         "fps": 9,
         "loop": true
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 3,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2606,8 +2607,8 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2620,15 +2621,15 @@
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 3,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2641,8 +2642,8 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2655,15 +2656,15 @@
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 3,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2676,29 +2677,29 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 2,
         "fps": 9,
         "loop": true
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 3,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2711,8 +2712,8 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2725,15 +2726,15 @@
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2746,8 +2747,8 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2760,15 +2761,15 @@
       },
       "attack_down_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2781,8 +2782,8 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2795,15 +2796,15 @@
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2816,8 +2817,8 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -2830,15 +2831,15 @@
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2853,29 +2854,29 @@
     "gear_amber_necklace_necklace": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2888,29 +2889,29 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_left": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2923,29 +2924,29 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_right": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2958,29 +2959,29 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -2993,29 +2994,29 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down_right": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3028,29 +3029,29 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down_left": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_down_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3063,29 +3064,29 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up_right": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3098,29 +3099,29 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up_left": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 4,
         "fps": 9,
         "loop": true
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 6,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3135,29 +3136,29 @@
     "gear_copper_bracelet_bracelet_left": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
         "fps": 9,
         "loop": true
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3170,8 +3171,8 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3184,15 +3185,15 @@
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3205,29 +3206,29 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_right": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
         "fps": 9,
         "loop": true
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3240,29 +3241,29 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
         "fps": 9,
         "loop": true
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3275,8 +3276,8 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3289,15 +3290,15 @@
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3310,8 +3311,8 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3324,15 +3325,15 @@
       },
       "attack_down_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3345,8 +3346,8 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3359,15 +3360,15 @@
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3380,8 +3381,8 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3394,15 +3395,15 @@
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3417,29 +3418,29 @@
     "gear_copper_bracelet_bracelet_right": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
         "fps": 9,
         "loop": true
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3452,8 +3453,8 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3466,15 +3467,15 @@
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3487,8 +3488,8 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3501,15 +3502,15 @@
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3522,29 +3523,29 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
         "fps": 9,
         "loop": true
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3557,8 +3558,8 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3571,15 +3572,15 @@
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3592,8 +3593,8 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3606,15 +3607,15 @@
       },
       "attack_down_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3627,8 +3628,8 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3641,15 +3642,15 @@
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3662,29 +3663,29 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up_left": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
         "fps": 9,
         "loop": true
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3699,29 +3700,29 @@
     "gear_leather_glove_glove_left": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
         "fps": 9,
         "loop": true
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3734,8 +3735,8 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3748,15 +3749,15 @@
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3769,8 +3770,8 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3783,15 +3784,15 @@
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3804,29 +3805,29 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 7,
-        "reused_drawings": 1,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
         "fps": 9,
         "loop": true
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 7,
-        "reused_drawings": 2,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up": {
         "frames": 5,
-        "distinct_drawings": 4,
-        "reused_drawings": 1,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3839,8 +3840,8 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3853,15 +3854,15 @@
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3874,8 +3875,8 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3895,8 +3896,8 @@
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3909,8 +3910,8 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3923,15 +3924,15 @@
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3944,8 +3945,8 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -3958,15 +3959,15 @@
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -3981,29 +3982,29 @@
     "gear_leather_glove_glove_right": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_down": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
         "fps": 9,
         "loop": true
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 6,
+        "reused_drawings": 3,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4016,8 +4017,8 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4030,15 +4031,15 @@
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4051,8 +4052,8 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4065,15 +4066,15 @@
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4086,15 +4087,297 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 7,
-        "reused_drawings": 1,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up": {
         "frames": 6,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up": {
+        "frames": 9,
+        "distinct_drawings": 5,
+        "reused_drawings": 4,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_down_right": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down_right": {
+        "frames": 6,
         "distinct_drawings": 6,
         "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down_right": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down_right": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down_right": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_down_left": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down_left": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down_left": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down_left": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down_left": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up_right": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up_right": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up_right": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up_right": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up_right": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up_left": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up_left": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_up_left": {
+        "frames": 9,
+        "distinct_drawings": 7,
+        "reused_drawings": 2,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_up_left": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_up_left": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      }
+    },
+    "gear_steel_sword_weapon_left": {
+      "idle_down": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_down": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_down": {
+        "frames": 9,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_down": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_down": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_left": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_left": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_left": {
+        "frames": 9,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_left": {
+        "frames": 5,
+        "distinct_drawings": 4,
+        "reused_drawings": 1,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_left": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_right": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_right": {
+        "frames": 6,
+        "distinct_drawings": 6,
+        "reused_drawings": 0,
+        "fps": 9,
+        "loop": true
+      },
+      "attack_right": {
+        "frames": 9,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
+        "fps": 33.33333333333333,
+        "loop": false
+      },
+      "hurt_right": {
+        "frames": 5,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
+        "fps": 22.727272727272727,
+        "loop": false
+      },
+      "death_right": {
+        "frames": 9,
+        "distinct_drawings": 9,
+        "reused_drawings": 0,
+        "fps": 10.0,
+        "loop": false
+      },
+      "idle_up": {
+        "frames": 8,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
+        "fps": 5,
+        "loop": true
+      },
+      "walk_up": {
+        "frames": 6,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
         "fps": 9,
         "loop": true
       },
@@ -4121,8 +4404,8 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4135,15 +4418,15 @@
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4156,8 +4439,8 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4177,8 +4460,8 @@
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4191,8 +4474,8 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 6,
-        "reused_drawings": 2,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4205,297 +4488,15 @@
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_up_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_up_left": {
-        "frames": 8,
-        "distinct_drawings": 6,
+        "distinct_drawings": 3,
         "reused_drawings": 2,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_up_left": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_up_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_up_left": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_up_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      }
-    },
-    "gear_steel_sword_weapon_left": {
-      "idle_down": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_down": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_down": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_down": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_down": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_left": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_left": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_left": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_right": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_right": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_right": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_up": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_up": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_up": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_up": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_up": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_down_right": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_down_right": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_down_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_down_right": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_down_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_down_left": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_down_left": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_down_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_down_left": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
-        "fps": 22.727272727272727,
-        "loop": false
-      },
-      "death_down_left": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 10.0,
-        "loop": false
-      },
-      "idle_up_right": {
-        "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
-        "fps": 5,
-        "loop": true
-      },
-      "walk_up_right": {
-        "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
-        "fps": 9,
-        "loop": true
-      },
-      "attack_up_right": {
-        "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
-        "fps": 33.33333333333333,
-        "loop": false
-      },
-      "hurt_up_right": {
-        "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4508,8 +4509,8 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4522,15 +4523,15 @@
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4545,8 +4546,8 @@
     "gear_steel_sword_weapon_right": {
       "idle_down": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4559,15 +4560,15 @@
       },
       "attack_down": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 1,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4580,8 +4581,8 @@
       },
       "idle_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4594,15 +4595,15 @@
       },
       "attack_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 1,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4615,8 +4616,8 @@
       },
       "idle_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4629,15 +4630,15 @@
       },
       "attack_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_right": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 1,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4650,29 +4651,29 @@
       },
       "idle_up": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
       "walk_up": {
         "frames": 6,
-        "distinct_drawings": 6,
-        "reused_drawings": 0,
+        "distinct_drawings": 5,
+        "reused_drawings": 1,
         "fps": 9,
         "loop": true
       },
       "attack_up": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 2,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4685,8 +4686,8 @@
       },
       "idle_down_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4699,8 +4700,8 @@
       },
       "attack_down_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
@@ -4720,8 +4721,8 @@
       },
       "idle_down_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4734,15 +4735,15 @@
       },
       "attack_down_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_down_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 1,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4755,8 +4756,8 @@
       },
       "idle_up_right": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4769,8 +4770,8 @@
       },
       "attack_up_right": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
@@ -4790,8 +4791,8 @@
       },
       "idle_up_left": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 2,
+        "reused_drawings": 6,
         "fps": 5,
         "loop": true
       },
@@ -4804,15 +4805,15 @@
       },
       "attack_up_left": {
         "frames": 9,
-        "distinct_drawings": 9,
-        "reused_drawings": 0,
+        "distinct_drawings": 8,
+        "reused_drawings": 1,
         "fps": 33.33333333333333,
         "loop": false
       },
       "hurt_up_left": {
         "frames": 5,
-        "distinct_drawings": 5,
-        "reused_drawings": 0,
+        "distinct_drawings": 4,
+        "reused_drawings": 1,
         "fps": 22.727272727272727,
         "loop": false
       },
@@ -4827,15 +4828,15 @@
     "traveler_hat": {
       "icon": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       },
       "idle": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       }
@@ -4843,15 +4844,15 @@
     "indigo_coat": {
       "icon": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       },
       "idle": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       }
@@ -4859,15 +4860,15 @@
     "linen_tunic": {
       "icon": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       },
       "idle": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       }
@@ -4875,15 +4876,15 @@
     "traveler_pants": {
       "icon": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       },
       "idle": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       }
@@ -4891,15 +4892,15 @@
     "leather_boot": {
       "icon": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       },
       "idle": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       }
@@ -4907,15 +4908,15 @@
     "amber_necklace": {
       "icon": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       },
       "idle": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       }
@@ -4923,15 +4924,15 @@
     "copper_bracelet": {
       "icon": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       },
       "idle": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       }
@@ -4939,15 +4940,15 @@
     "leather_glove": {
       "icon": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       },
       "idle": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       }
@@ -4955,15 +4956,15 @@
     "steel_sword": {
       "icon": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       },
       "idle": {
         "frames": 8,
-        "distinct_drawings": 8,
-        "reused_drawings": 0,
+        "distinct_drawings": 3,
+        "reused_drawings": 5,
         "fps": 5,
         "loop": true
       }
@@ -4972,82 +4973,82 @@
   "contacts": {
     "down": {
       "weapon_left": [
-        12,
+        4,
         -3
       ],
       "weapon_right": [
-        2,
-        -2
+        -4,
+        -3
       ]
     },
     "left": {
       "weapon_left": [
-        -13,
-        -21
+        -27,
+        -25
       ],
       "weapon_right": [
-        -33,
-        -18
+        -31,
+        -25
       ]
     },
     "right": {
       "weapon_left": [
-        32,
-        -21
+        31,
+        -25
       ],
       "weapon_right": [
-        32,
-        -18
+        27,
+        -25
       ]
     },
     "up": {
       "weapon_left": [
-        -9,
-        -39
+        -4,
+        -49
       ],
       "weapon_right": [
-        1,
-        -41
+        4,
+        -49
       ]
     },
     "down_right": {
       "weapon_left": [
-        26,
+        24,
         -8
       ],
       "weapon_right": [
-        23,
-        -5
+        18,
+        -7
       ]
     },
     "down_left": {
       "weapon_left": [
-        -7,
-        -8
+        -18,
+        -7
       ],
       "weapon_right": [
         -24,
-        -4
+        -8
       ]
     },
     "up_right": {
       "weapon_left": [
-        5,
-        -34
+        18,
+        -43
       ],
       "weapon_right": [
-        22,
-        -34
+        24,
+        -42
       ]
     },
     "up_left": {
       "weapon_left": [
-        -22,
-        -34
+        -24,
+        -42
       ],
       "weapon_right": [
-        -19,
-        -35
+        -18,
+        -43
       ]
     }
   },

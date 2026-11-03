@@ -1,0 +1,287 @@
+{
+  "ok": true,
+  "clips_reviewed": 40,
+  "note": "Final rear/profile/front rig; consecutive holds removed only for geometry comparison. Zero baseline tolerance; nonloops skip loop seam. Actual timing preserved.",
+  "clips": [
+    {
+      "state": "idle_down",
+      "playback_frames": 8,
+      "distinct_drawings": 2,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 147/6144 px (2.4%), median step 147 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 3 frames, PASS"
+    },
+    {
+      "state": "walk_down",
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 528/6144 px (8.6%), median step 448 px\n  ok    last->first change 39/6144 px (0.6%)\nloopcheck: 6 frames, PASS"
+    },
+    {
+      "state": "attack_down",
+      "playback_frames": 9,
+      "distinct_drawings": 7,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 680/6144 px (11.1%), median step 531 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 8 frames, PASS"
+    },
+    {
+      "state": "hurt_down",
+      "playback_frames": 5,
+      "distinct_drawings": 3,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 458/6144 px (7.5%), median step 448 px\n  ok    last->first change 458/6144 px (7.5%)\nloopcheck: 4 frames, PASS"
+    },
+    {
+      "state": "death_down",
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 968/6144 px (15.8%), median step 848 px\n  ok    last->first change 1493/6144 px (24.3%)\nloopcheck: 9 frames, PASS"
+    },
+    {
+      "state": "idle_left",
+      "playback_frames": 8,
+      "distinct_drawings": 2,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 97/6144 px (1.6%), median step 97 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 3 frames, PASS"
+    },
+    {
+      "state": "walk_left",
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 554/6144 px (9.0%), median step 495 px\n  ok    last->first change 136/6144 px (2.2%)\nloopcheck: 6 frames, PASS"
+    },
+    {
+      "state": "attack_left",
+      "playback_frames": 9,
+      "distinct_drawings": 7,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 558/6144 px (9.1%), median step 452 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 8 frames, PASS"
+    },
+    {
+      "state": "hurt_left",
+      "playback_frames": 5,
+      "distinct_drawings": 3,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 495/6144 px (8.1%), median step 495 px\n  ok    last->first change 456/6144 px (7.4%)\nloopcheck: 4 frames, PASS"
+    },
+    {
+      "state": "death_left",
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 829/6144 px (13.5%), median step 785 px\n  ok    last->first change 1281/6144 px (20.8%)\nloopcheck: 9 frames, PASS"
+    },
+    {
+      "state": "idle_right",
+      "playback_frames": 8,
+      "distinct_drawings": 2,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 102/6144 px (1.7%), median step 102 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 3 frames, PASS"
+    },
+    {
+      "state": "walk_right",
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 568/6144 px (9.2%), median step 509 px\n  ok    last->first change 164/6144 px (2.7%)\nloopcheck: 6 frames, PASS"
+    },
+    {
+      "state": "attack_right",
+      "playback_frames": 9,
+      "distinct_drawings": 7,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 565/6144 px (9.2%), median step 473 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 8 frames, PASS"
+    },
+    {
+      "state": "hurt_right",
+      "playback_frames": 5,
+      "distinct_drawings": 3,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 505/6144 px (8.2%), median step 505 px\n  ok    last->first change 464/6144 px (7.6%)\nloopcheck: 4 frames, PASS"
+    },
+    {
+      "state": "death_right",
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 834/6144 px (13.6%), median step 772 px\n  ok    last->first change 1291/6144 px (21.0%)\nloopcheck: 9 frames, PASS"
+    },
+    {
+      "state": "idle_up",
+      "playback_frames": 8,
+      "distinct_drawings": 2,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 122/6144 px (2.0%), median step 122 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 3 frames, PASS"
+    },
+    {
+      "state": "walk_up",
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 482/6144 px (7.8%), median step 413 px\n  ok    last->first change 52/6144 px (0.8%)\nloopcheck: 6 frames, PASS"
+    },
+    {
+      "state": "attack_up",
+      "playback_frames": 9,
+      "distinct_drawings": 7,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 617/6144 px (10.0%), median step 458 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 8 frames, PASS"
+    },
+    {
+      "state": "hurt_up",
+      "playback_frames": 5,
+      "distinct_drawings": 3,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 423/6144 px (6.9%), median step 415 px\n  ok    last->first change 423/6144 px (6.9%)\nloopcheck: 4 frames, PASS"
+    },
+    {
+      "state": "death_up",
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 950/6144 px (15.5%), median step 825 px\n  ok    last->first change 1410/6144 px (22.9%)\nloopcheck: 9 frames, PASS"
+    },
+    {
+      "state": "idle_down_right",
+      "playback_frames": 8,
+      "distinct_drawings": 2,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 110/6144 px (1.8%), median step 110 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 3 frames, PASS"
+    },
+    {
+      "state": "walk_down_right",
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 603/6144 px (9.8%), median step 547 px\n  ok    last->first change 194/6144 px (3.2%)\nloopcheck: 6 frames, PASS"
+    },
+    {
+      "state": "attack_down_right",
+      "playback_frames": 9,
+      "distinct_drawings": 7,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 630/6144 px (10.3%), median step 478 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 8 frames, PASS"
+    },
+    {
+      "state": "hurt_down_right",
+      "playback_frames": 5,
+      "distinct_drawings": 3,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 595/6144 px (9.7%), median step 595 px\n  ok    last->first change 552/6144 px (9.0%)\nloopcheck: 4 frames, PASS"
+    },
+    {
+      "state": "death_down_right",
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 924/6144 px (15.0%), median step 772 px\n  ok    last->first change 1413/6144 px (23.0%)\nloopcheck: 9 frames, PASS"
+    },
+    {
+      "state": "idle_down_left",
+      "playback_frames": 8,
+      "distinct_drawings": 2,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 114/6144 px (1.9%), median step 114 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 3 frames, PASS"
+    },
+    {
+      "state": "walk_down_left",
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 615/6144 px (10.0%), median step 572 px\n  ok    last->first change 107/6144 px (1.7%)\nloopcheck: 6 frames, PASS"
+    },
+    {
+      "state": "attack_down_left",
+      "playback_frames": 9,
+      "distinct_drawings": 7,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 656/6144 px (10.7%), median step 500 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 8 frames, PASS"
+    },
+    {
+      "state": "hurt_down_left",
+      "playback_frames": 5,
+      "distinct_drawings": 3,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 612/6144 px (10.0%), median step 612 px\n  ok    last->first change 566/6144 px (9.2%)\nloopcheck: 4 frames, PASS"
+    },
+    {
+      "state": "death_down_left",
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 917/6144 px (14.9%), median step 790 px\n  ok    last->first change 1461/6144 px (23.8%)\nloopcheck: 9 frames, PASS"
+    },
+    {
+      "state": "idle_up_right",
+      "playback_frames": 8,
+      "distinct_drawings": 2,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 106/6144 px (1.7%), median step 106 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 3 frames, PASS"
+    },
+    {
+      "state": "walk_up_right",
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 588/6144 px (9.6%), median step 561 px\n  ok    last->first change 121/6144 px (2.0%)\nloopcheck: 6 frames, PASS"
+    },
+    {
+      "state": "attack_up_right",
+      "playback_frames": 9,
+      "distinct_drawings": 7,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 614/6144 px (10.0%), median step 474 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 8 frames, PASS"
+    },
+    {
+      "state": "hurt_up_right",
+      "playback_frames": 5,
+      "distinct_drawings": 3,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 603/6144 px (9.8%), median step 603 px\n  ok    last->first change 577/6144 px (9.4%)\nloopcheck: 4 frames, PASS"
+    },
+    {
+      "state": "death_up_right",
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 880/6144 px (14.3%), median step 790 px\n  ok    last->first change 1415/6144 px (23.0%)\nloopcheck: 9 frames, PASS"
+    },
+    {
+      "state": "idle_up_left",
+      "playback_frames": 8,
+      "distinct_drawings": 2,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 99/6144 px (1.6%), median step 99 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 3 frames, PASS"
+    },
+    {
+      "state": "walk_up_left",
+      "playback_frames": 6,
+      "distinct_drawings": 6,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 602/6144 px (9.8%), median step 555 px\n  ok    last->first change 196/6144 px (3.2%)\nloopcheck: 6 frames, PASS"
+    },
+    {
+      "state": "attack_up_left",
+      "playback_frames": 9,
+      "distinct_drawings": 7,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 623/6144 px (10.1%), median step 476 px\n  ok    last->first change 0/6144 px (0.0%)\nloopcheck: 8 frames, PASS"
+    },
+    {
+      "state": "hurt_up_left",
+      "playback_frames": 5,
+      "distinct_drawings": 3,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 623/6144 px (10.1%), median step 623 px\n  ok    last->first change 597/6144 px (9.7%)\nloopcheck: 4 frames, PASS"
+    },
+    {
+      "state": "death_up_left",
+      "playback_frames": 9,
+      "distinct_drawings": 9,
+      "ok": true,
+      "output": "ok    baseline stable (spread 0px)\n  ok    largest inter-frame change 925/6144 px (15.1%), median step 795 px\n  ok    last->first change 1411/6144 px (23.0%)\nloopcheck: 9 frames, PASS"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "errors": [],
+  "primary_and_backup_unchanged": true,
+  "pointer_restored": true,
+  "note": "Normal launcher/final source, menu cold boot; VSync disabled only for this automated background smoke to avoid compositor throttling, cap144, auto quit120 frames. Foreground/fullscreen performance separately measured with production VSync enabled."
+}

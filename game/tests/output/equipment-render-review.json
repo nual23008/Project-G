@@ -2787,71 +2787,71 @@
 		{
 			"animation": "attack_down",
 			"damage": 24,
-			"frame": 3,
+			"frame": 5,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_down",
-					"frame": 3,
+					"frame": 5,
 					"visible": true
 				}
 			},
@@ -2874,71 +2874,71 @@
 		{
 			"animation": "attack_down",
 			"damage": 24,
-			"frame": 4,
+			"frame": 6,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_down",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				}
 			},
@@ -3135,71 +3135,71 @@
 		{
 			"animation": "attack_down",
 			"damage": 24,
-			"frame": 8,
+			"frame": 7,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_down",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				}
 			},
@@ -4527,71 +4527,71 @@
 		{
 			"animation": "death_down",
 			"damage": 24,
-			"frame": 0,
+			"frame": 1,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				}
 			},
@@ -4701,71 +4701,71 @@
 		{
 			"animation": "death_down",
 			"damage": 24,
-			"frame": 1,
+			"frame": 2,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				}
 			},
@@ -4875,71 +4875,71 @@
 		{
 			"animation": "death_down",
 			"damage": 24,
-			"frame": 2,
+			"frame": 3,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				}
 			},
@@ -5049,71 +5049,71 @@
 		{
 			"animation": "death_down",
 			"damage": 24,
-			"frame": 3,
+			"frame": 4,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				}
 			},
@@ -5223,71 +5223,71 @@
 		{
 			"animation": "death_down",
 			"damage": 24,
-			"frame": 4,
+			"frame": 5,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				}
 			},
@@ -5397,71 +5397,71 @@
 		{
 			"animation": "death_down",
 			"damage": 24,
-			"frame": 5,
+			"frame": 6,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				}
 			},
@@ -10704,71 +10704,71 @@
 		{
 			"animation": "death_down_left",
 			"damage": 24,
-			"frame": 4,
+			"frame": 5,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down_left",
-					"frame": 4,
+					"frame": 5,
 					"visible": true
 				}
 			},
@@ -10878,71 +10878,71 @@
 		{
 			"animation": "death_down_left",
 			"damage": 24,
-			"frame": 5,
+			"frame": 6,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down_left",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				}
 			},
@@ -11052,71 +11052,71 @@
 		{
 			"animation": "death_down_left",
 			"damage": 24,
-			"frame": 6,
+			"frame": 7,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down_left",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				}
 			},
@@ -13401,71 +13401,71 @@
 		{
 			"animation": "attack_left",
 			"damage": 24,
-			"frame": 1,
+			"frame": 2,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				}
 			},
@@ -13662,93 +13662,6 @@
 		{
 			"animation": "attack_left",
 			"damage": 24,
-			"frame": 2,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "attack_left",
-					"frame": 2,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "slash_left_05"
-		},
-		{
-			"animation": "attack_left",
-			"damage": 24,
 			"frame": 3,
 			"layers": {
 				"bare_hands": {
@@ -13831,7 +13744,7 @@
 				"weapon_left": "rust_sword",
 				"weapon_right": "steel_sword"
 			},
-			"name": "slash_left_06"
+			"name": "slash_left_05"
 		},
 		{
 			"animation": "attack_left",
@@ -13901,6 +13814,93 @@
 				"weapon_right": {
 					"animation": "attack_left",
 					"frame": 4,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "slash_left_06"
+		},
+		{
+			"animation": "attack_left",
+			"damage": 24,
+			"frame": 5,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_left",
+					"frame": 5,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "attack_left",
+					"frame": 5,
 					"visible": true
 				}
 			},
@@ -14269,73 +14269,73 @@
 			"name": "slash_left_11"
 		},
 		{
-			"animation": "idle_left",
+			"animation": "attack_left",
 			"damage": 24,
-			"frame": 0,
+			"frame": 8,
 			"layers": {
 				"bare_hands": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_left": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_right": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"glove_left": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"glove_right": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"hat": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"necklace": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"pants": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"shirt": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_left": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_right": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_left": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_right": {
-					"animation": "idle_left",
-					"frame": 0,
+					"animation": "attack_left",
+					"frame": 8,
 					"visible": true
 				}
 			},
@@ -15663,71 +15663,71 @@
 		{
 			"animation": "death_left",
 			"damage": 24,
-			"frame": 1,
+			"frame": 2,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				}
 			},
@@ -15837,71 +15837,71 @@
 		{
 			"animation": "death_left",
 			"damage": 24,
-			"frame": 2,
+			"frame": 3,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_left",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				}
 			},
@@ -16011,71 +16011,71 @@
 		{
 			"animation": "death_left",
 			"damage": 24,
-			"frame": 3,
+			"frame": 4,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_left",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				}
 			},
@@ -16620,71 +16620,71 @@
 		{
 			"animation": "death_left",
 			"damage": 24,
-			"frame": 7,
+			"frame": 8,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_left",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				}
 			},
@@ -17316,71 +17316,71 @@
 		{
 			"animation": "walk_up_left",
 			"damage": 24,
-			"frame": 3,
+			"frame": 2,
 			"layers": {
 				"bare_hands": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"hat": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"pants": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "walk_up_left",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				}
 			},
@@ -17751,71 +17751,71 @@
 		{
 			"animation": "walk_up_left",
 			"damage": 24,
-			"frame": 0,
+			"frame": 5,
 			"layers": {
 				"bare_hands": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"hat": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"pants": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "walk_up_left",
-					"frame": 0,
+					"frame": 5,
 					"visible": true
 				}
 			},
@@ -18882,71 +18882,71 @@
 		{
 			"animation": "attack_up_left",
 			"damage": 24,
-			"frame": 1,
+			"frame": 2,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_up_left",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				}
 			},
@@ -19056,93 +19056,6 @@
 		{
 			"animation": "attack_up_left",
 			"damage": 24,
-			"frame": 2,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "attack_up_left",
-					"frame": 2,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "slash_up_left_04"
-		},
-		{
-			"animation": "attack_up_left",
-			"damage": 24,
 			"frame": 3,
 			"layers": {
 				"bare_hands": {
@@ -19225,7 +19138,7 @@
 				"weapon_left": "rust_sword",
 				"weapon_right": "steel_sword"
 			},
-			"name": "slash_up_left_05"
+			"name": "slash_up_left_04"
 		},
 		{
 			"animation": "attack_up_left",
@@ -19295,6 +19208,93 @@
 				"weapon_right": {
 					"animation": "attack_up_left",
 					"frame": 4,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "slash_up_left_05"
+		},
+		{
+			"animation": "attack_up_left",
+			"damage": 24,
+			"frame": 5,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_up_left",
+					"frame": 5,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "attack_up_left",
+					"frame": 5,
 					"visible": true
 				}
 			},
@@ -19317,71 +19317,71 @@
 		{
 			"animation": "attack_up_left",
 			"damage": 24,
-			"frame": 4,
+			"frame": 6,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_up_left",
-					"frame": 4,
+					"frame": 6,
 					"visible": true
 				}
 			},
@@ -19400,180 +19400,6 @@
 				"weapon_right": "steel_sword"
 			},
 			"name": "slash_up_left_07"
-		},
-		{
-			"animation": "attack_up_left",
-			"damage": 24,
-			"frame": 6,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "slash_up_left_08"
-		},
-		{
-			"animation": "attack_up_left",
-			"damage": 24,
-			"frame": 6,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "attack_up_left",
-					"frame": 6,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "slash_up_left_09"
 		},
 		{
 			"animation": "attack_up_left",
@@ -19643,6 +19469,180 @@
 				"weapon_right": {
 					"animation": "attack_up_left",
 					"frame": 7,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "slash_up_left_08"
+		},
+		{
+			"animation": "attack_up_left",
+			"damage": 24,
+			"frame": 7,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "attack_up_left",
+					"frame": 7,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "slash_up_left_09"
+		},
+		{
+			"animation": "attack_up_left",
+			"damage": 24,
+			"frame": 8,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_up_left",
+					"frame": 8,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "attack_up_left",
+					"frame": 8,
 					"visible": true
 				}
 			},
@@ -19750,73 +19750,73 @@
 			"name": "slash_up_left_11"
 		},
 		{
-			"animation": "attack_up_left",
+			"animation": "idle_up_left",
 			"damage": 24,
-			"frame": 8,
+			"frame": 0,
 			"layers": {
 				"bare_hands": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_left": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_right": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"glove_left": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"glove_right": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"hat": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"necklace": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"pants": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"shirt": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_left": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_right": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_left": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_right": {
-					"animation": "attack_up_left",
-					"frame": 8,
+					"animation": "idle_up_left",
+					"frame": 0,
 					"visible": true
 				}
 			},
@@ -20274,71 +20274,71 @@
 		{
 			"animation": "hurt_up_left",
 			"damage": 24,
-			"frame": 0,
+			"frame": 1,
 			"layers": {
 				"bare_hands": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"hat": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"pants": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "hurt_up_left",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				}
 			},
@@ -22797,71 +22797,71 @@
 		{
 			"animation": "walk_up",
 			"damage": 24,
-			"frame": 2,
+			"frame": 3,
 			"layers": {
 				"bare_hands": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"hat": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"pants": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "walk_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				}
 			},
@@ -23232,71 +23232,71 @@
 		{
 			"animation": "walk_up",
 			"damage": 24,
-			"frame": 5,
+			"frame": 0,
 			"layers": {
 				"bare_hands": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"hat": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"pants": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "walk_up",
-					"frame": 5,
+					"frame": 0,
 					"visible": true
 				}
 			},
@@ -24189,71 +24189,71 @@
 		{
 			"animation": "attack_up",
 			"damage": 24,
-			"frame": 0,
+			"frame": 1,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				}
 			},
@@ -24537,71 +24537,71 @@
 		{
 			"animation": "attack_up",
 			"damage": 24,
-			"frame": 2,
+			"frame": 3,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_up",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				}
 			},
@@ -24711,93 +24711,6 @@
 		{
 			"animation": "attack_up",
 			"damage": 24,
-			"frame": 4,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "attack_up",
-					"frame": 4,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "slash_up_06"
-		},
-		{
-			"animation": "attack_up",
-			"damage": 24,
 			"frame": 5,
 			"layers": {
 				"bare_hands": {
@@ -24880,7 +24793,7 @@
 				"weapon_left": "rust_sword",
 				"weapon_right": "steel_sword"
 			},
-			"name": "slash_up_07"
+			"name": "slash_up_06"
 		},
 		{
 			"animation": "attack_up",
@@ -24950,6 +24863,93 @@
 				"weapon_right": {
 					"animation": "attack_up",
 					"frame": 6,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "slash_up_07"
+		},
+		{
+			"animation": "attack_up",
+			"damage": 24,
+			"frame": 7,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_up",
+					"frame": 7,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "attack_up",
+					"frame": 7,
 					"visible": true
 				}
 			},
@@ -25059,93 +25059,6 @@
 		{
 			"animation": "attack_up",
 			"damage": 24,
-			"frame": 7,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "attack_up",
-					"frame": 7,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "slash_up_10"
-		},
-		{
-			"animation": "attack_up",
-			"damage": 24,
 			"frame": 8,
 			"layers": {
 				"bare_hands": {
@@ -25211,6 +25124,93 @@
 				"weapon_right": {
 					"animation": "attack_up",
 					"frame": 8,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "slash_up_10"
+		},
+		{
+			"animation": "idle_up",
+			"damage": 24,
+			"frame": 0,
+			"layers": {
+				"bare_hands": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"hat": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"pants": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "idle_up",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "idle_up",
+					"frame": 0,
 					"visible": true
 				}
 			},
@@ -25755,71 +25755,71 @@
 		{
 			"animation": "hurt_up",
 			"damage": 24,
-			"frame": 0,
+			"frame": 1,
 			"layers": {
 				"bare_hands": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"hat": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"pants": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "hurt_up",
-					"frame": 0,
+					"frame": 1,
 					"visible": true
 				}
 			},
@@ -26103,71 +26103,71 @@
 		{
 			"animation": "hurt_up",
 			"damage": 24,
-			"frame": 3,
+			"frame": 4,
 			"layers": {
 				"bare_hands": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"hat": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"pants": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "hurt_up",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				}
 			},
@@ -30018,6 +30018,93 @@
 		{
 			"animation": "attack_up_right",
 			"damage": 24,
+			"frame": 2,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "attack_up_right",
+					"frame": 2,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "slash_up_right_04"
+		},
+		{
+			"animation": "attack_up_right",
+			"damage": 24,
 			"frame": 3,
 			"layers": {
 				"bare_hands": {
@@ -30100,7 +30187,7 @@
 				"weapon_left": "rust_sword",
 				"weapon_right": "steel_sword"
 			},
-			"name": "slash_up_right_04"
+			"name": "slash_up_right_05"
 		},
 		{
 			"animation": "attack_up_right",
@@ -30187,7 +30274,7 @@
 				"weapon_left": "rust_sword",
 				"weapon_right": "steel_sword"
 			},
-			"name": "slash_up_right_05"
+			"name": "slash_up_right_06"
 		},
 		{
 			"animation": "attack_up_right",
@@ -30257,93 +30344,6 @@
 				"weapon_right": {
 					"animation": "attack_up_right",
 					"frame": 5,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "slash_up_right_06"
-		},
-		{
-			"animation": "attack_up_right",
-			"damage": 24,
-			"frame": 6,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_up_right",
-					"frame": 6,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "attack_up_right",
-					"frame": 6,
 					"visible": true
 				}
 			},
@@ -30453,6 +30453,93 @@
 		{
 			"animation": "attack_up_right",
 			"damage": 24,
+			"frame": 6,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "attack_up_right",
+					"frame": 6,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "slash_up_right_09"
+		},
+		{
+			"animation": "attack_up_right",
+			"damage": 24,
 			"frame": 7,
 			"layers": {
 				"bare_hands": {
@@ -30535,163 +30622,76 @@
 				"weapon_left": "rust_sword",
 				"weapon_right": "steel_sword"
 			},
-			"name": "slash_up_right_09"
-		},
-		{
-			"animation": "attack_up_right",
-			"damage": 24,
-			"frame": 8,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "attack_up_right",
-					"frame": 8,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
 			"name": "slash_up_right_10"
 		},
 		{
 			"animation": "attack_up_right",
 			"damage": 24,
-			"frame": 8,
+			"frame": 7,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_up_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				}
 			},
@@ -30712,73 +30712,73 @@
 			"name": "slash_up_right_11"
 		},
 		{
-			"animation": "idle_up_right",
+			"animation": "attack_up_right",
 			"damage": 24,
-			"frame": 0,
+			"frame": 8,
 			"layers": {
 				"bare_hands": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_left": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_right": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"glove_left": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"glove_right": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"hat": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"necklace": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"pants": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"shirt": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_left": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_right": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_left": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_right": {
-					"animation": "idle_up_right",
-					"frame": 0,
+					"animation": "attack_up_right",
+					"frame": 8,
 					"visible": true
 				}
 			},
@@ -31323,93 +31323,6 @@
 		{
 			"animation": "hurt_up_right",
 			"damage": 24,
-			"frame": 1,
-			"layers": {
-				"bare_hands": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"hat": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"pants": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "hurt_up_right",
-					"frame": 1,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "hurt_up_right_01"
-		},
-		{
-			"animation": "hurt_up_right",
-			"damage": 24,
 			"frame": 2,
 			"layers": {
 				"bare_hands": {
@@ -31475,6 +31388,93 @@
 				"weapon_right": {
 					"animation": "hurt_up_right",
 					"frame": 2,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "hurt_up_right_01"
+		},
+		{
+			"animation": "hurt_up_right",
+			"damage": 24,
+			"frame": 3,
+			"layers": {
+				"bare_hands": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"hat": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"pants": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "hurt_up_right",
+					"frame": 3,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "hurt_up_right",
+					"frame": 3,
 					"visible": true
 				}
 			},
@@ -31584,93 +31584,6 @@
 		{
 			"animation": "hurt_up_right",
 			"damage": 24,
-			"frame": 3,
-			"layers": {
-				"bare_hands": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"hat": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"pants": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "hurt_up_right",
-					"frame": 3,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "hurt_up_right_04"
-		},
-		{
-			"animation": "hurt_up_right",
-			"damage": 24,
 			"frame": 4,
 			"layers": {
 				"bare_hands": {
@@ -31736,6 +31649,93 @@
 				"weapon_right": {
 					"animation": "hurt_up_right",
 					"frame": 4,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "hurt_up_right_04"
+		},
+		{
+			"animation": "idle_up_right",
+			"damage": 24,
+			"frame": 0,
+			"layers": {
+				"bare_hands": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"hat": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"pants": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "idle_up_right",
+					"frame": 0,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "idle_up_right",
+					"frame": 0,
 					"visible": true
 				}
 			},
@@ -32280,71 +32280,71 @@
 		{
 			"animation": "death_up_right",
 			"damage": 24,
-			"frame": 3,
+			"frame": 2,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_up_right",
-					"frame": 3,
+					"frame": 2,
 					"visible": true
 				}
 			},
@@ -32454,71 +32454,71 @@
 		{
 			"animation": "death_up_right",
 			"damage": 24,
-			"frame": 4,
+			"frame": 3,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_up_right",
-					"frame": 4,
+					"frame": 3,
 					"visible": true
 				}
 			},
@@ -32628,71 +32628,71 @@
 		{
 			"animation": "death_up_right",
 			"damage": 24,
-			"frame": 5,
+			"frame": 4,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_up_right",
-					"frame": 5,
+					"frame": 4,
 					"visible": true
 				}
 			},
@@ -32802,71 +32802,71 @@
 		{
 			"animation": "death_up_right",
 			"damage": 24,
-			"frame": 6,
+			"frame": 5,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_up_right",
-					"frame": 6,
+					"frame": 5,
 					"visible": true
 				}
 			},
@@ -32976,71 +32976,71 @@
 		{
 			"animation": "death_up_right",
 			"damage": 24,
-			"frame": 7,
+			"frame": 6,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_up_right",
-					"frame": 7,
+					"frame": 6,
 					"visible": true
 				}
 			},
@@ -35847,93 +35847,6 @@
 		{
 			"animation": "attack_right",
 			"damage": 24,
-			"frame": 4,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "attack_right",
-					"frame": 4,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "slash_right_08"
-		},
-		{
-			"animation": "attack_right",
-			"damage": 24,
 			"frame": 5,
 			"layers": {
 				"bare_hands": {
@@ -35999,6 +35912,93 @@
 				"weapon_right": {
 					"animation": "attack_right",
 					"frame": 5,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "slash_right_08"
+		},
+		{
+			"animation": "attack_right",
+			"damage": 24,
+			"frame": 6,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_right",
+					"frame": 6,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "attack_right",
+					"frame": 6,
 					"visible": true
 				}
 			},
@@ -36108,71 +36108,71 @@
 		{
 			"animation": "attack_right",
 			"damage": 24,
-			"frame": 6,
+			"frame": 7,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				}
 			},
@@ -37065,71 +37065,71 @@
 		{
 			"animation": "hurt_right",
 			"damage": 24,
-			"frame": 3,
+			"frame": 4,
 			"layers": {
 				"bare_hands": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"hat": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"pants": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "hurt_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				}
 			},
@@ -37587,71 +37587,71 @@
 		{
 			"animation": "death_right",
 			"damage": 24,
-			"frame": 1,
+			"frame": 2,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_right",
-					"frame": 1,
+					"frame": 2,
 					"visible": true
 				}
 			},
@@ -37761,71 +37761,71 @@
 		{
 			"animation": "death_right",
 			"damage": 24,
-			"frame": 2,
+			"frame": 3,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_right",
-					"frame": 2,
+					"frame": 3,
 					"visible": true
 				}
 			},
@@ -37935,71 +37935,71 @@
 		{
 			"animation": "death_right",
 			"damage": 24,
-			"frame": 3,
+			"frame": 4,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				}
 			},
@@ -38544,71 +38544,71 @@
 		{
 			"animation": "death_right",
 			"damage": 24,
-			"frame": 8,
+			"frame": 7,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_right",
-					"frame": 8,
+					"frame": 7,
 					"visible": true
 				}
 			},
@@ -40980,71 +40980,71 @@
 		{
 			"animation": "attack_down_right",
 			"damage": 24,
-			"frame": 2,
+			"frame": 4,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 4,
 					"visible": true
 				}
 			},
@@ -41067,71 +41067,71 @@
 		{
 			"animation": "attack_down_right",
 			"damage": 24,
-			"frame": 3,
+			"frame": 4,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_down_right",
-					"frame": 3,
+					"frame": 4,
 					"visible": true
 				}
 			},
@@ -41150,180 +41150,6 @@
 				"weapon_right": "steel_sword"
 			},
 			"name": "slash_down_right_05"
-		},
-		{
-			"animation": "attack_down_right",
-			"damage": 24,
-			"frame": 4,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "slash_down_right_06"
-		},
-		{
-			"animation": "attack_down_right",
-			"damage": 24,
-			"frame": 4,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "attack_down_right",
-					"frame": 4,
-					"visible": true
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": "steel_sword"
-			},
-			"name": "slash_down_right_07"
 		},
 		{
 			"animation": "attack_down_right",
@@ -41410,7 +41236,7 @@
 				"weapon_left": "rust_sword",
 				"weapon_right": "steel_sword"
 			},
-			"name": "slash_down_right_08"
+			"name": "slash_down_right_06"
 		},
 		{
 			"animation": "attack_down_right",
@@ -41480,6 +41306,180 @@
 				"weapon_right": {
 					"animation": "attack_down_right",
 					"frame": 6,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "slash_down_right_07"
+		},
+		{
+			"animation": "attack_down_right",
+			"damage": 24,
+			"frame": 6,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": "steel_sword"
+			},
+			"name": "slash_down_right_08"
+		},
+		{
+			"animation": "attack_down_right",
+			"damage": 24,
+			"frame": 7,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_down_right",
+					"frame": 7,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "attack_down_right",
+					"frame": 7,
 					"visible": true
 				}
 			},
@@ -41502,71 +41502,71 @@
 		{
 			"animation": "attack_down_right",
 			"damage": 24,
-			"frame": 6,
+			"frame": 7,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				}
 			},
@@ -41589,71 +41589,71 @@
 		{
 			"animation": "attack_down_right",
 			"damage": 24,
-			"frame": 7,
+			"frame": 8,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "attack_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				}
 			},
@@ -41674,73 +41674,73 @@
 			"name": "slash_down_right_11"
 		},
 		{
-			"animation": "attack_down_right",
+			"animation": "idle_down_right",
 			"damage": 24,
-			"frame": 7,
+			"frame": 0,
 			"layers": {
 				"bare_hands": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_left": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_right": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"glove_left": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"glove_right": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"hat": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"necklace": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"pants": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shirt": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_left": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_right": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_left": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_right": {
-					"animation": "attack_down_right",
-					"frame": 7,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				}
 			},
@@ -41761,73 +41761,73 @@
 			"name": "slash_down_right_12"
 		},
 		{
-			"animation": "attack_down_right",
+			"animation": "idle_down_right",
 			"damage": 24,
-			"frame": 8,
+			"frame": 0,
 			"layers": {
 				"bare_hands": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_right": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"glove_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"glove_right": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"hat": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"necklace": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"pants": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shirt": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_right": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_right": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				}
 			},
@@ -41848,73 +41848,73 @@
 			"name": "slash_down_right_13"
 		},
 		{
-			"animation": "attack_down_right",
+			"animation": "idle_down_right",
 			"damage": 24,
-			"frame": 8,
+			"frame": 0,
 			"layers": {
 				"bare_hands": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_right": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"glove_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"glove_right": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"hat": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"necklace": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"pants": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shirt": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_right": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_right": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				}
 			},
@@ -43764,71 +43764,71 @@
 		{
 			"animation": "death_down_right",
 			"damage": 24,
-			"frame": 5,
+			"frame": 6,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down_right",
-					"frame": 5,
+					"frame": 6,
 					"visible": true
 				}
 			},
@@ -43938,71 +43938,71 @@
 		{
 			"animation": "death_down_right",
 			"damage": 24,
-			"frame": 6,
+			"frame": 7,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down_right",
-					"frame": 6,
+					"frame": 7,
 					"visible": true
 				}
 			},
@@ -44112,71 +44112,71 @@
 		{
 			"animation": "death_down_right",
 			"damage": 24,
-			"frame": 7,
+			"frame": 8,
 			"layers": {
 				"bare_hands": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"hat": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"pants": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_right": {
 					"animation": "death_down_right",
-					"frame": 7,
+					"frame": 8,
 					"visible": true
 				}
 			},
@@ -44547,66 +44547,66 @@
 		{
 			"animation": "attack_down_right",
 			"damage": 18,
-			"frame": 2,
+			"frame": 1,
 			"layers": {
 				"bare_hands": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"bracelet_left": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"bracelet_right": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"glove_left": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"glove_right": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"hat": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"necklace": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"pants": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"shirt": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"shoe_left": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"shoe_right": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"weapon_left": {
 					"animation": "attack_down_right",
-					"frame": 2,
+					"frame": 1,
 					"visible": true
 				},
 				"weapon_right": {
@@ -45328,68 +45328,68 @@
 			"name": "left_slash_10"
 		},
 		{
-			"animation": "idle_down_right",
+			"animation": "attack_down_right",
 			"damage": 18,
-			"frame": 0,
+			"frame": 8,
 			"layers": {
 				"bare_hands": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_left": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"bracelet_right": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"glove_left": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"glove_right": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"hat": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"necklace": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"pants": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"shirt": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_left": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"shoe_right": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_left": {
-					"animation": "idle_down_right",
-					"frame": 0,
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_right": {
@@ -46374,93 +46374,6 @@
 		{
 			"animation": "attack_down_right",
 			"damage": 18,
-			"frame": 2,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_down_right",
-					"frame": 2,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "idle_down",
-					"frame": 0,
-					"visible": false
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": ""
-			},
-			"name": "empowered_05"
-		},
-		{
-			"animation": "attack_down_right",
-			"damage": 18,
 			"frame": 3,
 			"layers": {
 				"bare_hands": {
@@ -46543,7 +46456,7 @@
 				"weapon_left": "rust_sword",
 				"weapon_right": ""
 			},
-			"name": "empowered_06"
+			"name": "empowered_05"
 		},
 		{
 			"animation": "attack_down_right",
@@ -46630,7 +46543,7 @@
 				"weapon_left": "rust_sword",
 				"weapon_right": ""
 			},
-			"name": "empowered_07"
+			"name": "empowered_06"
 		},
 		{
 			"animation": "attack_down_right",
@@ -46695,6 +46608,93 @@
 				"weapon_left": {
 					"animation": "attack_down_right",
 					"frame": 5,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": ""
+			},
+			"name": "empowered_07"
+		},
+		{
+			"animation": "attack_down_right",
+			"damage": 18,
+			"frame": 6,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_down_right",
+					"frame": 6,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_down_right",
+					"frame": 6,
 					"visible": true
 				},
 				"weapon_right": {
@@ -46809,93 +46809,6 @@
 		{
 			"animation": "attack_down_right",
 			"damage": 18,
-			"frame": 6,
-			"layers": {
-				"bare_hands": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"bracelet_left": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"bracelet_right": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"glove_left": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"glove_right": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"hat": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"necklace": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"pants": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"shirt": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"shoe_left": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"shoe_right": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"weapon_left": {
-					"animation": "attack_down_right",
-					"frame": 6,
-					"visible": true
-				},
-				"weapon_right": {
-					"animation": "idle_down",
-					"frame": 0,
-					"visible": false
-				}
-			},
-			"loadout": {
-				"bracelet_left": "copper_bracelet",
-				"bracelet_right": "copper_bracelet",
-				"glove_left": "leather_glove",
-				"glove_right": "leather_glove",
-				"hat": "traveler_hat",
-				"necklace": "amber_necklace",
-				"pants": "traveler_pants",
-				"shirt": "linen_tunic",
-				"shoe_left": "leather_boot",
-				"shoe_right": "leather_boot",
-				"weapon_left": "rust_sword",
-				"weapon_right": ""
-			},
-			"name": "empowered_10"
-		},
-		{
-			"animation": "attack_down_right",
-			"damage": 18,
 			"frame": 7,
 			"layers": {
 				"bare_hands": {
@@ -46956,6 +46869,93 @@
 				"weapon_left": {
 					"animation": "attack_down_right",
 					"frame": 7,
+					"visible": true
+				},
+				"weapon_right": {
+					"animation": "idle_down",
+					"frame": 0,
+					"visible": false
+				}
+			},
+			"loadout": {
+				"bracelet_left": "copper_bracelet",
+				"bracelet_right": "copper_bracelet",
+				"glove_left": "leather_glove",
+				"glove_right": "leather_glove",
+				"hat": "traveler_hat",
+				"necklace": "amber_necklace",
+				"pants": "traveler_pants",
+				"shirt": "linen_tunic",
+				"shoe_left": "leather_boot",
+				"shoe_right": "leather_boot",
+				"weapon_left": "rust_sword",
+				"weapon_right": ""
+			},
+			"name": "empowered_10"
+		},
+		{
+			"animation": "attack_down_right",
+			"damage": 18,
+			"frame": 8,
+			"layers": {
+				"bare_hands": {
+					"animation": "attack_down_right",
+					"frame": 8,
+					"visible": true
+				},
+				"bracelet_left": {
+					"animation": "attack_down_right",
+					"frame": 8,
+					"visible": true
+				},
+				"bracelet_right": {
+					"animation": "attack_down_right",
+					"frame": 8,
+					"visible": true
+				},
+				"glove_left": {
+					"animation": "attack_down_right",
+					"frame": 8,
+					"visible": true
+				},
+				"glove_right": {
+					"animation": "attack_down_right",
+					"frame": 8,
+					"visible": true
+				},
+				"hat": {
+					"animation": "attack_down_right",
+					"frame": 8,
+					"visible": true
+				},
+				"necklace": {
+					"animation": "attack_down_right",
+					"frame": 8,
+					"visible": true
+				},
+				"pants": {
+					"animation": "attack_down_right",
+					"frame": 8,
+					"visible": true
+				},
+				"shirt": {
+					"animation": "attack_down_right",
+					"frame": 8,
+					"visible": true
+				},
+				"shoe_left": {
+					"animation": "attack_down_right",
+					"frame": 8,
+					"visible": true
+				},
+				"shoe_right": {
+					"animation": "attack_down_right",
+					"frame": 8,
+					"visible": true
+				},
+				"weapon_left": {
+					"animation": "attack_down_right",
+					"frame": 8,
 					"visible": true
 				},
 				"weapon_right": {
@@ -47068,68 +47068,68 @@
 			"name": "empowered_12"
 		},
 		{
-			"animation": "attack_down_right",
+			"animation": "idle_down_right",
 			"damage": 18,
-			"frame": 8,
+			"frame": 0,
 			"layers": {
 				"bare_hands": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"bracelet_right": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"glove_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"glove_right": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"hat": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"necklace": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"pants": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shirt": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"shoe_right": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_left": {
-					"animation": "attack_down_right",
-					"frame": 8,
+					"animation": "idle_down_right",
+					"frame": 0,
 					"visible": true
 				},
 				"weapon_right": {

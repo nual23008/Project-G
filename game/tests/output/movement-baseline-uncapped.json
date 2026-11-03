@@ -1,0 +1,15 @@
+{
+	"csv": "res://tests/output/movement-baseline-uncapped.csv",
+	"duration": 6.0,
+	"frames": 756,
+	"max_fps": 0,
+	"nodes": 1249.0,
+	"refresh_hz": 143.889999389648,
+	"renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+	"root_size": [
+		1920,
+		1200
+	],
+	"tag": "baseline-uncapped",
+	"viewport": "(640.0, 400.0)"
+}

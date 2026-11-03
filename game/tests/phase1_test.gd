@@ -91,7 +91,7 @@ func _run() -> void:
 	await walk(["move_right", "sprint"], 30)
 	check(player.position.x-start.x > distances[0]*1.4, "Shift sprint increases speed")
 	check(player.sprite.animation == "idle_right", "Walk returns to directional idle")
-	check(main.world.camera.position == player.position.round(), "Camera follows rounded player position")
+	check(main.world.camera.position.is_equal_approx(main.world.get_presented_player_position()), "Camera follows the presented player without logical-pixel snapping")
 	# Independent static obstacles: house, tree, NPC, fence, water and world bounds.
 	player.position = Vector2(736, 386)
 	await frames(2)

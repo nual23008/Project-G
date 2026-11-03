@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "checks": 5437,
+  "base_frames": 296,
+  "individual_equipment_composites": 4440,
+  "errors": [],
+  "scope": "Opaque anatomical connectivity in every state/direction, each equipped layer, fixed idle head/soles; mutation check cuts neck and must fail."
+}

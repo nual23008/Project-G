@@ -58,6 +58,17 @@ def main():
             sh=Image.open(ROOT/e['texture'].removeprefix('res://')).convert('RGBA');f=sh.crop((idx%12*96,idx//12*64,idx%12*96+96,idx//12*64+64))
             assert f.getpixel((point[0]+48,point[1]+60))[3]>0,(direction,side,'tip anchor outside weapon')
     walk=grid('walk',12,[70,60,70]*4);idle=grid('idle',8,200)
+    # Explicit front/back comparison from unmodified engine captures.
+    rear=[]
+    for index in range(12):
+        strip=Image.new('RGB',(912,260),'#282431');draw=ImageDraw.Draw(strip)
+        for col,direction in enumerate(['down','up','up_left','up_right']):
+            source=Image.open(FRAMES/f'walk_{direction}_{index:02}.png').convert('RGB')
+            crop=source.crop((284,116,356,188)).resize((216,216),Image.Resampling.NEAREST)
+            strip.paste(crop,(col*228+6,28));draw.text((col*228+8,8),direction+(' / front' if col==0 else ' / back'),fill='#f6e3b0')
+        rear.append(strip)
+    rear[4].save(OUT/'movement-rear-view.png')
+    rear[0].save(OUT/'movement-rear-walk.gif',save_all=True,append_images=rear[1:],duration=[70,60,70]*4,loop=0)
     slash=grid('slash',18,[20,10,20]*6);hurt=grid('hurt',7,[30,30,40,30,30,40,30]);death=grid('death',18,50)
     for kind in ['left_slash','empowered']:
         frames=[Image.open(FRAMES/f'{kind}_{i:02}.png').convert('RGB') for i in range(18)]
@@ -70,7 +81,31 @@ def main():
     image=Image.new('RGB',(1920,360),'#282431')
     for i,scene in enumerate(scenes):image.paste(scene,(640*i,0))
     image.save(OUT/'equipment-outfits.png')
-    (OUT/'equipment-animation-review.json').write_text(json.dumps({'ok':True,'engine_captures':len(review['captures']),'actor_layer_frames_guarded':guards,'art':art,'contacts':contacts,'note':'Real renderer inputs and health events; paper-doll layers share the base frame clock. Holds counted honestly; no hidden RGB/static-loop substitution.'},indent=2)+'\n')
+    # A 2x paper doll must keep source colours. A linear parent viewport used
+    # to turn this ~20-colour stripped body into >1,000 blended shades.
+    preview=Image.open(FRAMES/'bag_removed.png').convert('RGB').crop((285,120,340,225))
+    preview_colours=len(set(preview.get_flattened_data()))
+    assert preview_colours<=32,('paper-doll preview is filtered/blurry',preview_colours)
+    body_review=OUT/'equipment-body-render-review.json'
+    if body_review.exists():
+        body=json.loads(body_review.read_text());assert body['failures']==0
+        for take in body['captures']:
+            if take['name'].startswith('body_idle_'):
+                assert not any(take['loadout'].values()),take['name']
+                for slot,layer in take['layers'].items():
+                    if layer['visible']:assert layer['animation']==take['animation'] and layer['frame']==take['frame']
+        body_frames=grid('body_idle',8,200)
+        (OUT/'equipment-body_idle.gif').replace(OUT/'equipment-body-idle.gif')
+        body_frames[0].save(OUT/'equipment-neck-fixed.png')
+        before=OUT/'equipment-neck-before.png'
+        if before.exists():
+            comparison=Image.new('RGB',(360,278),'#41313e');draw=ImageDraw.Draw(comparison)
+            old=Image.open(before).convert('RGB');old.thumbnail((164,240),Image.Resampling.NEAREST)
+            comparison.paste(old,(6,28))
+            new=Image.open(FRAMES/'bag_removed.png').convert('RGB').crop((275,112,355,232)).resize((160,240),Image.Resampling.NEAREST)
+            comparison.paste(new,(192,28));draw.text((8,8),'BEFORE / supplied image',fill='#f6e3b0');draw.text((194,8),'AFTER / engine render',fill='#f6e3b0')
+            comparison.save(OUT/'equipment-neck-before-after.png')
+    (OUT/'equipment-animation-review.json').write_text(json.dumps({'ok':True,'engine_captures':len(review['captures']),'actor_layer_frames_guarded':guards,'nearest_preview_colours':preview_colours,'art':art,'contacts':contacts,'note':'Real renderer inputs and health events; paper-doll layers share the base frame clock. Holds counted honestly; no hidden RGB/static-loop substitution.'},indent=2)+'\n')
     print(json.dumps({'ok':True,'engine_captures':len(review['captures']),'actor_frames_guarded':guards,'art_types_reviewed':len(art)}))
 
 

@@ -1,0 +1,18 @@
+{
+	"csv": "res://tests/output/movement-optimized-windowed.csv",
+	"duration": 6.0,
+	"frames": 5,
+	"interpolation": true,
+	"max_fps": 0,
+	"nodes": 1249.0,
+	"refresh_hz": 143.889999389648,
+	"renderer": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+	"root_size": [
+		1920,
+		1200
+	],
+	"stretch": 1,
+	"tag": "optimized-windowed",
+	"valid_foreground_run": false,
+	"viewport": "(640.0, 400.0)"
+}

@@ -43,6 +43,7 @@ func run() -> void:
 	root.size = Vector2i(640,360)
 	DirAccess.make_dir_recursive_absolute(OUT)
 	view = SubViewport.new()
+	view.canvas_item_default_texture_filter = Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_NEAREST
 	view.size = Vector2i(640,360)
 	view.render_target_update_mode = SubViewport.UPDATE_ALWAYS
 	root.add_child(view)
@@ -73,6 +74,20 @@ func run() -> void:
 	main.close_overlay()
 	await frames()
 	await capture("world_asymmetric")
+	if OS.get_cmdline_user_args().has("--body-only"):
+		main.open_hub()
+		for slot: String in INV.EQUIPMENT_SLOTS: main.unequip_item(slot)
+		main.close_overlay()
+		main.ui.hide()
+		for direction: String in ["down","down_left","left","up_left","up","up_right","right","down_right"]:
+			main.world.player.position = Vector2(512,488)
+			main.world.player.facing = direction
+			main.world.player.sprite.play("idle_"+direction)
+			for i: int in range(8):
+				await frames(12)
+				await capture("body_idle_"+direction+"_%02d" % i)
+		await finish("res://tests/output/equipment-body-render-review.json")
+		return
 	if OS.get_cmdline_user_args().has("--ui-only"):
 		await finish("res://tests/output/equipment-ui-review.json")
 		return

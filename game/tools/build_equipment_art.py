@@ -6,9 +6,8 @@ is never left baked into the runtime base. Each anatomical side owns its frames.
 """
 from pathlib import Path
 from PIL import Image, ImageDraw
-import json, math, statistics
+import json, statistics
 from art_refresh_common import ROOT, BASE, canvas, register, fragment
-from build_refresh_actors import rotate_layer
 from build_refresh_props import write_grid
 
 SRC=ROOT/'assets/equipment/sources'
@@ -39,13 +38,13 @@ def head_info(im):
 from equipment_rig import draw_layers, head_image, collapse, ANCHORS
 
 
-def frames_for(im,direction,state,index,head):
+def frames_for(direction,state,index,head):
     hx,ht=head_info(head)
-    return draw_layers(direction,state,index,head_image(head,hx,ht),CONTACTS)
+    return draw_layers(direction,state,index,head_image(head,hx,ht,direction),CONTACTS)
 
 
 def icon(name,index):
-    im=canvas(24,24);d=ImageDraw.Draw(im);light=['#b99362','#f0bc73','#ffe0a0','#f6e3b0'][index%4]
+    im=canvas(24,24);d=ImageDraw.Draw(im)
     if 'sword' in name:
         d.polygon([(5,19),(7,14),(17,3),(20,2),(19,6),(9,17)],fill='#bdc4ba',outline=INK);d.line((8,14,18,3),fill='#f6e3b0');d.line((4,13,11,19),fill='#dfaf69',width=2);d.line((4,21,8,16),fill='#614234',width=3)
     elif name=='traveler_hat':
@@ -62,9 +61,8 @@ def icon(name,index):
         d.arc((4,3,19,19),0,340,fill='#ac7949',width=2);d.polygon([(12,13),(16,17),(12,22),(8,17)],fill='#f0bc73',outline='#705142');d.line((11,15,11,18),fill='#ffe0a0')
     else:
         d.ellipse((4,5,20,19),fill='#705142',outline=INK,width=2);d.ellipse((7,8,17,16),fill=(0,0,0,0));d.arc((4,5,20,19),175,320,fill='#dfaf69',width=3)
-    points=[(x,y) for y in range(24) for x in range(24) if im.getpixel((x,y))[3]>180]
-    x,y=points[(index*7+len(points)//3)%len(points)];d.point((x,y),fill=light)
-    return im
+    # Rigid pendulum sway, not a highlight jumping between unrelated pixels.
+    return im.rotate([0,0,-4,-4,0,0,4,4][index],Image.Resampling.NEAREST,center=(12,12))
 
 
 def annotate_drawings(registry):
@@ -72,7 +70,11 @@ def annotate_drawings(registry):
     for entry in registry.values():
         sheet=Image.open(ROOT/entry['texture'].removeprefix('res://')).convert('RGBA')
         w,h=entry['frame_size'];cols=entry['columns']
-        for meta in entry['states'].values():
+        for state,meta in entry['states'].items():
+            if entry['frame_size']==[96,64]:
+                direction=state.split('_',1)[1]
+                meta['direction']=direction
+                meta['body_view']='back' if direction.startswith('up') else 'profile' if direction in ['left','right'] else 'front'
             drawings=[];mapping=[]
             for i in meta['indices']:
                 frame=sheet.crop((i%cols*w,i//cols*h,i%cols*w+w,i//cols*h+h))
@@ -90,11 +92,11 @@ def main():
         head=cell(META['states']['idle_'+direction]['indices'][0]);idle_layers=None
         for state in ['idle','walk','attack','hurt']:
             name=state+'_'+direction;meta=META['states'][name]
-            layers=[frames_for(cell(i),direction,state,n,head) for n,i in enumerate(meta['indices'])]
+            layers=[frames_for(direction,state,n,head) for n,i in enumerate(meta['indices'])]
             if state=='idle':idle_layers=layers[0]
             base_states[name]=([x['base'] for x in layers],meta['fps'],meta['loop'])
             for p in PARTS:part_states[p][name]=([x[p] for x in layers],meta['fps'],meta['loop'])
-        name='death_'+direction;meta=META['states'][name];layers=[collapse(idle_layers,i) for i in range(9)]
+        name='death_'+direction;meta=META['states'][name];layers=[collapse(frames_for(direction,'death',i,head),i) for i in range(9)]
         base_states[name]=([x['base'] for x in layers],meta['fps'],False)
         for p in PARTS:part_states[p][name]=([x[p] for x in layers],meta['fps'],False)
     register(reg,'player',base_states,(48,60),'Native connected anatomy with neck/shoulder/hip/wrist/ankle overlap; preserved directional face/hair identity only. build_equipment_art.py; assets/equipment/sources. All states share frame/pivot/rig.',contact_frame=2,contact_time=.084,duration=.27)
@@ -105,7 +107,7 @@ def main():
         if item!='rust_sword':
             fs=[icon(item,i) for i in range(8)]
             for i,im in enumerate(fs):write_grid(im,f'equipment_icons/{item}-{i:02}')
-            register(reg,item,{'icon':(fs,5,True),'idle':(fs,5,True)},(12,22),'Original native fantasy equipment icon and material glint; build_equipment_art.py; editable sources/props/equipment_icons')
+            register(reg,item,{'icon':(fs,5,True),'idle':(fs,5,True)},(12,22),'Native fantasy equipment icon with coherent rigid sway and honest holds; build_equipment_art.py; editable sources/props/equipment_icons')
         for slot in CAT[item]['allowed_slots']:
             states=part_states[slot]
             if item in ['linen_tunic','steel_sword']:
@@ -123,11 +125,12 @@ def main():
                         copies.append(im)
                     changed[name]=(copies,fps,loop)
                 states=changed
-            register(reg,'gear_'+item+'_'+slot,states,(48,60),'Native joint-authored synchronized anatomical '+slot+' layer for '+item+'; active hero cloth segmentation/native accessory source; build_equipment_art.py. Same pose indices/feet/physics contact as player.',family_id='hero_modular_20261103')
+            register(reg,'gear_'+item+'_'+slot,states,(48,60),'Native joint-authored synchronized anatomical '+slot+' layer for '+item+'; native joint drawings from equipment_rig.py; no body colour masks; build_equipment_art.py. Same pose indices/feet/physics contact as player.',family_id='hero_modular_20261103')
     annotate_drawings(reg)
     fragment('equipment',reg)
     contact_path=ROOT/'resources/equipment/contacts.json'
     contact_path.parent.mkdir(parents=True,exist_ok=True)
+    (contact_path.parent/'rig_anchors.json').write_text(json.dumps(ANCHORS,indent=2)+'\n')
     contact_path.write_text(json.dumps(CONTACTS,indent=2)+'\n')
     from build_equipment_fx import build
     build()
